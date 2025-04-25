@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giới thiệu</title>
+        <link rel="shortcut icon" href="./pictures/f8-logo.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+        <div class="BG-color"></div>
+        <div class="Popup" id="Popup-sign">
+            <div class="Login-popup">
+                <div class="login-content">
+                <span class="btn-close" id="btn-close">&times;</span>
+                <header>
+                    <img src="./pictures/f8-logo.svg" alt="">
+                    <h2>Đăng nhập vào f8</h2>
+                </header>
+                <main>
+                    <div class="form-toggle">
+                        <button class="toggle-btn active" id="loginToggle">Đăng nhập</button>
+                        <button class="toggle-btn" id="signupToggle">Đăng ký</button>
+                    </div>
+                    <div class="login-option">
+                        <form id="loginForm" class="auth-form active">
+                            <div class="form-group">
+                                <input type="email" id="loginEmail" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="loginPassword" placeholder="Mật khẩu" required>
+                            </div>  
+                            <button type="submit" class="btn-submit">Đăng nhập</button>
+                        </form>
+                        <form id="signupForm" class="auth-form">
+                            <div class="form-group">
+                                <input type="text" id="signupName" placeholder="Họ và tên" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="signupEmail" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="signupPassword" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="signupConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+                            </div>
+                            <button type="submit" class="btn-submit">Đăng ký</button>
+                        </form>
+                        <p style="color: black; font-size: 12px; margin: 10px;">Hoặc đăng nhập bằng</p>
+                        <div id="google-btn"></div>
+                    </div>
+                </main>
+            </div>
+                <div class="login-image">
+                    <img src="./pictures/homepage/pexels-olia-danilevich-4974922.jpg" alt="Ảnh đẹp">
+                    <div class="quote-text">"Learning to code is learning to create and innovate."</div>
+                </div>
+            </div>   
+        </div> 
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <a href="/main.html">
+                        <img src="./pictures/f8-logo.svg" alt="Logo" class="logo">
+                        <p><strong>Học lập trình để đi làm</strong></p>
+                    </a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm...">
+                </div>
+                <div class="account">
+                    <div class="signup">
+                        <button class="btn-signup" id="open-popup-sign">Đăng ký</button>
+                    </div>
+                    <div class="login">
+                        <button class="btn-login" id="open-popup-btn">Đăng nhập</button>
+                    </div>
+                </div>
+            </header>
+            <div class="sidebar">
+                <div class="logo-sidebar">
+                    <div class="homepage">
+                        <a href="/main.html">
+                            <img src="./pictures/home-1-svgrepo-com.svg" alt="HomePage">
+                            <p>Trang chủ</p>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/about.html">
+                            <img src="./pictures/address-card-regular.svg" alt="About">
+                            <p>Giới thiệu</p>
+                        </a>
+                    </div>                   
+                    <div class="news">
+                        <a href="/blog.html">
+                            <img src="./pictures/news-svgrepo-com.svg" alt="HomePage">
+                            <p>Bài viết</p>
+                        </a>
+                    </div>
+                    <div class="news">
+                        <a href="./cart.html">
+                            <img src="./pictures/homepage/cart-shopping-solid.svg" alt="HomePage">
+                            <p>Giỏ hàng</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <main>
+                <div class="body">
+                    <div class="about-section">
+                        <div class="container1">
+                          <h5>GIỚI THIỆU VỀ F8</h5>
+                          <div class="content">
+                            <div class="image">
+                              <img src="pictures/anhnenf8.png" alt="F8 Fullstack">
+                            </div>
+                            <div class="text">
+                              <h6 style="color: dodgerblue;">BẠN CÓ BIẾT?</h6>
+                              <p style="color:black">Ngoài kia có rất nhiều bạn làm sai nghề, tư duy an phận và bị chôn chân với một công việc không đủ vui, không đủ sống, các bạn ấy gặp hết khủng hoảng tuổi này tới tuổi kia.</p>
+                              <p style="color:black">Tuổi 22 đang ngỡ ngàng không biết mình nên làm nghề gì. Tuổi 28 thì bàng hoàng không biết lương như mình thì lập gia đình và nuôi dạy con cái làm sao. Tuổi 40 nuối tiếc thanh xuân của mình liệu có phải đã phí hoài không nhỉ...</p>
+                              <p style="color:black"">Mọi chuyện sẽ rất khác nếu họ được định hướng công việc phù hợp, biết cách đặt cho mình một mục tiêu rõ ràng và có đầy đủ kĩ năng cần thiết để phát triển sự nghiệp.</p>
+                              <p style="color:black">F8 tin rằng con người Việt Nam không hề thua kém gì so với con người ở bất cứ nơi đâu. Con rồng cháu tiên hoàn toàn có thể trở thành công dân toàn cầu để sánh vai cùng các cường quốc năm châu.</p>
+                              <p style="color:black">F8 mong muốn trở thành một tổ chức góp phần tạo nên sự thay đổi đó, và việc tạo ra cộng đồng học lập trình mới chỉ là điểm bắt đầu. Chúng tôi đang nỗ lực tạo ra các khoá học có nội dung chất lượng vượt trội, giúp học viên sau khi hoàn thành khóa học có thể trở thành những lập trình viên luôn được nhiều công ty săn đón.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="vision-values-section">
+                            <div class="container-narrow">
+                              <h6 class="section-title">TẦM NHÌN</h6>
+                              <p>
+                                Trở thành công ty công nghệ giáo dục có vị thế vững vàng trên thị trường, với các sản phẩm hỗ trợ học lập trình chất lượng, thông minh và hiệu quả. F8 sẽ nổi tiếng bởi chất lượng sản phẩm vượt trội và được cộng đồng tin tưởng chứ không phải vì tiếp thị tốt.
+                              </p>
+                      
+                              <h6 class="section-title">GIÁ TRỊ CỐT LÕI</h6>
+                      
+                              <p><strong>Sự tử tế:</strong> Từ tử tế trong chính người F8 với nhau và tử tế với học viên là kim chỉ nam phấn đấu. Đã làm sản phẩm là phải chất lượng và chứng minh được hiệu quả, bất kể là sản phẩm miễn phí hay giá rẻ. Làm ra phải thấy muốn để người thân mình dùng.</p>
+                      
+                              <p><strong>Tư duy số:</strong> Sản phẩm làm ra không phải là để vừa lòng đội ngũ trong công ty. Sản phẩm làm ra với mục tiêu cao nhất là người học thấy dễ học, được truyền cảm hứng tự học, học tới bài học cuối cùng và người học có thể tự tay làm ra những dự án bằng kiến thức đã học.</p>
+                      
+                              <p><strong>Luôn đổi mới và không ngừng học:</strong> Học từ chính đối thủ, học từ những công ty công nghệ giáo dục tốt trên thế giới và luôn luôn lắng nghe mọi góp ý từ phía học viên.</p>
+                      
+                              <p><strong>Tư duy bền vững:</strong> Có hai thứ đáng để đầu tư giúp mang lại thành quả tài chính tốt nhất trong dài hạn của một công ty đó là nhân viên và khách hàng.</p>
+                            </div>
+                        </div>
+                        <section class="strategy-section">
+                            <div class="container1">
+                              <h5 class="section-title">CHIẾN LƯỢC PHÁT TRIỂN</h5>
+                          
+                              <div class="strategy-item">
+                                <h6>1. Coi trọng đào tạo và phát triển nhân tài</h6>
+                                <p>
+                                  F8 tin rằng sản phẩm tuyệt vời chỉ có thể tạo ra bởi những con người tài năng.
+                                  Công ty muốn tăng trưởng nhanh bền vững phải có những nhân sự xuất sắc có tâm, có tài.
+                                  Vì vậy, F8 không ngừng tìm kiếm và phát triển những cá nhân tài năng cùng xây dựng bộ máy.
+                                  Nếu bạn muốn được làm cùng với những người giỏi giang khác?
+                                  Bạn muốn được chủ động quyết định trong công việc của mình?
+                                  Và bạn muốn được tưởng thưởng xứng đáng?
+                                  Hãy về với F8 😍
+                                </p>
+                              </div>
+                          
+                              <div class="strategy-item with-image">
+                                <div class="image">
+                                  <img src="pictures/anhdongnguoi.png" alt="Sản phẩm F8 thực tế">
+                                </div>
+                                <div class="text">
+                                  <h6>2. Sản phẩm làm ra là phải chất lượng, là phải bán được</h6>
+                                  <p>
+                                    F8 làm ra những sản phẩm phục vụ thị trường lớn, chất lượng và hiệu quả thực sự,
+                                    đáp ứng nhu cầu cấp thiết của học viên. Mỗi khóa học, mỗi bài giảng của F8 không phải được làm ra bởi một người.
+                                    Mà đó là tổng hòa chuyên môn của người dạy, sales, marketing, lập trình viên, đạo diễn hình ảnh và âm thanh…
+                                    Khúc nào cũng phải có benchmarking, từ đó đứng cạnh các sản phẩm của thế giới.
+                                    Tức là làm một cách thông minh và xâu chuỗi nhiều loại hiểu biết khác nhau.
+                                  </p>
+                                </div>
+                              </div>
+                          
+                              <div class="strategy-item with-image">
+                                <div class="image">
+                                  <img src="pictures/anhitnguoi.png" alt="Tập trung vào khách hàng">
+                                </div>
+                                <div class="text">
+                                  <h6>3. Tập trung vào khách hàng</h6>
+                                  <p>
+                                    Khi học lập trình phần đông học viên dễ bị mất định hướng,
+                                    dễ nản khi gặp khó khăn mà không ai giúp đỡ, nhiều khi thấy làm giống hệt video rồi mà không chạy…
+                                    Tại F8, chúng tôi thấu hiểu những khó khăn của các bạn,
+                                    chúng tôi nỗ lực tạo ra giáo trình và hệ thống bài tập, hệ thống hỗ trợ các bạn tối đa trong quá trình học tập.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section class="working-environment">
+                            <div class="container1">
+                              <h5>MÔI TRƯỜNG LÀM VIỆC</h5>
+                              <p>Môi trường làm việc lành mạnh. Không toxic, không gossip, trong công việc thử thách hết mình nhưng ngoài công việc không bè phái ganh đua hay tấn công gì nhau.</p>
+                              <p>Quan điểm làm việc của F8 là dân chủ, sếp có thể sai nhưng tổ chức phải đúng. Sai thì nhận và sửa. Nhân viên thoải mái nói lên chính kiến của mình. Trên dưới lắng nghe và cởi mở với góc nhìn của nhau, quyết tâm vì mục tiêu chung.</p>
+                              <p>Tỷ lệ nghỉ việc tại các bộ phận chuyên môn cao dưới 5%, nhưng đối với F8 đúng người đúng việc sẽ quan trọng hơn. Các bạn được thử thách với công việc mới khi đã làm tốt chuyên môn cũ và công ty luôn sẵn sàng đầu tư cho nhân viên đi học thêm các kỹ năng cần thiết cho công việc. Quan điểm của F8, nhân viên là người bạn đồng hành cùng sự phát triển của công ty, luôn sẵn sàng giúp nhân viên có cuộc sống cân bằng và phát triển chuyên môn tối đa.</p>
+                          
+                              <!-- Form thay thế phần trích dẫn -->
+                              <div class="apply-form">
+                                <h6>ĐĂNG KÝ TUYỂN SINH</h6>
+                                <form>
+                                  <input type="text" placeholder="Họ và tên" required>
+                                  <input type="email" placeholder="Email" required>
+                                  <input type="tel" placeholder="Số điện thoại" required>
+                                  <textarea placeholder="Lý do bạn muốn học tại F8?" rows="4"></textarea>
+                                  <button type="submit">Gửi đăng ký</button>
+                                </form>
+                              </div>
+                            </div>
+                          </section>
+                        <!-- Nút nổi góc dưới bên phải -->
+                        <a href="/FAQ.html" target="_blank" class="floating-label">
+                            <img src="pictures/FAQ.png" alt="Chat icon" />
+                          </a>
+                        </div>    
+            </main>
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="/pictures/f8-logo.svg" alt="logo-f8">
+                            <span class="logo-text">Học Lập Trình Để Đi Làm</span>
+                        </div>
+                        <p><strong>Điện thoại:</strong> <a href="tel:08 1919 8989">08 1919 8989</a></p>
+                        <p><strong>Email:</strong><a href="mailto:  contact@fullstack.edu.vn">contact@fullstack.edu.vn</a></p>
+                        <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>VỀ F8</h4>
+                        <ul>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                        <li><a href="">Điều khoản</a></li>
+                        <li><a href="">Bảo mật</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>SẢN PHẨM</h4>
+                        <ul>
+                        <li><a href="">Game Nester</a></li>
+                        <li><a href="">Game CSS Diner</a></li>
+                        <li><a href="">Game CSS Selectors</a></li>
+                        <li><a href="">Game Froggy</a></li>
+                        <li><a href="">Game Froggy Pro</a></li>
+                        <li><a href="">Game Scoops</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>CÔNG CỤ</h4>
+                        <ul>
+                        <li><a href="">Tạo CV xin việc</a></li>
+                        <li><a href="">Rút gọn liên kết</a></li>
+                        <li><a href="">Clip-path maker</a></li>
+                        <li><a href="">Snippet generator</a></li>
+                        <li><a href="">CSS Grid generator</a></li>
+                        <li><a href="">Cảnh báo sờ tay lên mặt</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer-column">
+                        <h4>CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</h4>
+                        <p><strong>Mã số thuế:</strong> 0109922901</p>
+                        <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
+                        <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình. Chúng tôi tập trung xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập trình viên Việt Nam.</p>
+                    </div>
+                </div>
+                <div class="footer-copy">
+                    <p>© 2018 - 2025 F8. Nền tảng học lập trình hàng đầu Việt Nam.</p>
+                    <div class="footer-social">
+                        <a href="#"><img src="/pictures/youtube-color-svgrepo-com.svg" alt="YouTube"></a>
+                        <a href="#"><img src="/pictures/facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+                        <a href="#"><img src="/pictures/tiktok-svgrepo-com.svg" alt="TikTok"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+    </html>

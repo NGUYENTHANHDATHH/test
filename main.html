@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang chủ</title>
+        <link rel="shortcut icon" href="./pictures/f8-logo.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>  
+        <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js" defer></script>
+        <script src="./js/main.js"></script>
+        <script src="js/blog.js" defer></script>
+    </head>
+    <body>
+        <div class="BG-color"></div>
+        <div class="Popup" id="Popup-sign">
+            <div class="Login-popup">
+                <div class="login-content">
+                <span class="btn-close" id="btn-close">&times;</span>
+                <header>
+                    <img src="./pictures/f8-logo.svg" alt="">
+                    <h2>Đăng nhập vào f8</h2>
+                </header>
+                <main>
+                    <div class="form-toggle">
+                        <button class="toggle-btn active" id="loginToggle">Đăng nhập</button>
+                        <button class="toggle-btn" id="signupToggle">Đăng ký</button>
+                    </div>
+                    <div class="login-option">
+                        <form id="loginForm" class="auth-form active">
+                            <div class="form-group">
+                                <input type="email" id="loginEmail" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="loginPassword" placeholder="Mật khẩu" required>
+                            </div>  
+                            <button type="submit" class="btn-submit">Đăng nhập</button>
+                        </form>
+                        <form id="signupForm" class="auth-form">
+                            <div class="form-group">
+                                <input type="text" id="signupName" placeholder="Họ và tên" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="signupEmail" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="signupPassword" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="signupConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+                            </div>
+                            <button type="submit" class="btn-submit">Đăng ký</button>
+                        </form>
+                        <p style="color: black; font-size: 12px; margin: 10px;">Hoặc đăng nhập bằng</p>
+                        <div id="google-btn"></div>
+                    </div>
+                </main> 
+        </div> 
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <a href="/main.html">
+                        <img src="./pictures/f8-logo.svg" alt="Logo" class="logo">
+                        <p><strong>Học lập trình để đi làm</strong></p>
+                    </a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm...">
+                </div>
+                <div class="account">
+                    <div class="signup">
+                        <button class="btn-signup" id="open-popup-sign">Đăng ký</button>
+                    </div>
+                    <div class="login">
+                        <button class="btn-login" id="open-popup-btn">Đăng nhập</button>
+                    </div>
+                </div>
+            </header>
+            <div class="sidebar">
+                <div class="logo-sidebar">
+                    <div class="homepage">
+                        <a href="/main.html">
+                            <img src="./pictures/home-1-svgrepo-com.svg" alt="HomePage">
+                            <p>Trang chủ</p>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/about.html">
+                            <img src="./pictures/address-card-regular.svg" alt="About">
+                            <p>Giới thiệu</p>
+                        </a>
+                    </div>
+                  
+                    <div class="news">
+                        <a href="/blog.html">
+                            <img src="./pictures/news-svgrepo-com.svg" alt="HomePage">
+                            <p>Bài viết</p>
+                        </a>
+                    </div>
+                    <div class="news">
+                        <a href="/cart.html">
+                            <img src="./pictures/homepage/cart-shopping-solid.svg" alt="HomePage">
+                            <p>Giỏ hàng</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <main>
+                <div class="slider">
+                    <div class="slides">
+                      <div class="slide active">
+                        <h2>Học ReactJS Miễn Phí!</h2>
+                        <p>Khóa học ReactJS từ cơ bản tới nâng cao. Kết quả của
+                            khóa học này là bạn có thể làm hầu hết các dự án thường gặp với ReactJS.</p>
+                        <button>ĐĂNG KÝ NGAY</button>
+                      </div>
+                      <div class="slide">
+                        <h2>F8 trên Facebook</h2>
+                        <p>F8 được nhắc tới ở mọi nơi, ở đâu có cơ hội
+                             việc làm cho nghề IT và có những con người yêu thích lập trình F8 sẽ ở đó.</p>
+                        <button>ĐĂNG KÝ KÊNH</button>
+                      </div>
+                      <div class="slide">
+                        <h2>F8 trên Youtube</h2>
+                        <p>F8 được nhắc tới ở mọi nơi, ở đâu có cơ hội
+                             việc làm cho nghề IT và có những con người yêu thích lập trình F8 sẽ ở đó.</p>
+                        <button>ĐĂNG KÝ KÊNH</button>
+                    </div>
+                    <div class="slide">
+                        <h2>Học HTML, CSS cho người mới</h2>
+                        <p>Thực hành dự án với Figma, hàng trăm
+                             bài tập, hướng dẫn 100% bởi Sơn Đặng, tặng kèm Flashcards, v.v.</p>
+                        <button>ĐĂNG KÝ NGAY</button>
+                      </div>
+                    </div>
+                    <div class="nut">
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <div class="dots"></div>
+                </div>
+            <main>
+                <div class="name-course">
+                    <h2>Khóa học nổi bật</h2>
+                    <a href="/cart.html">Xem giỏ hàng ></a>
+                </div>
+                <div class="course">
+                    <div class="course-item">
+                        <a href="/sanpham/HTML-CSS.html">
+                            <img src="./pictures/homepage/613a1f3685814.png" alt="Course 1">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>Lập trình C++ cơ bản, nâng cao</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/HTML-CSS.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/HTML-CSS.html">                    
+                            <img src="./pictures/homepage/dont touch face.png" alt="Course 2">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>App "Đừng Chạm Tay Lên Mặt"</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/JS.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/HTML-CSS.html">
+                            <img src="./pictures/homepage/html css.png" alt="Course 3">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>HTML CSS từ Zero đến Hero</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/HTML-CSS.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/JS.html">
+                            <img src="./pictures/homepage/js basic.png" alt="Course 4">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>Lập Trình JavaScript Cơ Bản</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/JS.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/JS.html"><img src="./pictures/homepage/js adv.png" alt="Course 5"></a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>Lập Trình JavaScript Nâng Cao</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/JS.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/NhapmonIT.html">
+                            <img src="./pictures/homepage/Kiến thức nền tảng.png" alt="Course 6">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>Kiến Thức Nhập Môn IT</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/NhapmonIT.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/JS.html">
+                            <img src="./pictures/homepage/nodejs.png" alt="Course 7">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>Node và ExpressJS</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/Responsive.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/JS.html">
+                            <img src="./pictures/homepage/react.png" alt="Course 8">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>Xây Dựng Website với ReactJS</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="/sanpham/Responsive.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <a href="/sanpham/Responsive.html">
+                            <img src="./pictures/homepage/responsive.png" alt="Course 9">
+                        </a>
+                        <div class="price">
+                            <div class="name">
+                                <h3>Responsive với Grid System</h3>
+                            </div>
+                            <div id="price">
+                                <p>1.000.000đ</p>
+                            </div>
+                            <div class="enroll">
+                                <button class="heart-btn" id="heartBtn">
+                                    <i class="fa-regular fa-heart" id="heartIcon"></i>
+                                </button>
+                                <a href="#" href="/sanpham/Responsive.html">Học ngay</a>
+                            </div>
+                        </div>
+                    </div>
+            </main>
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="/pictures/f8-logo.svg" alt="logo-f8">
+                            <span class="logo-text">Học Lập Trình Để Đi Làm</span>
+                        </div>
+                        <p><strong>Điện thoại:</strong> <a href="tel:08 1919 8989">08 1919 8989</a></p>
+                        <p><strong>Email:</strong><a href="mailto:  contact@fullstack.edu.vn">contact@fullstack.edu.vn</a></p>
+                        <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>VỀ F8</h4>
+                        <ul>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                        <li><a href="">Điều khoản</a></li>
+                        <li><a href="">Bảo mật</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>SẢN PHẨM</h4>
+                        <ul>
+                        <li><a href="">Game Nester</a></li>
+                        <li><a href="">Game CSS Diner</a></li>
+                        <li><a href="">Game CSS Selectors</a></li>
+                        <li><a href="">Game Froggy</a></li>
+                        <li><a href="">Game Froggy Pro</a></li>
+                        <li><a href="">Game Scoops</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-column">
+                        <h4>CÔNG CỤ</h4>
+                        <ul>
+                        <li><a href="">Tạo CV xin việc</a></li>
+                        <li><a href="">Rút gọn liên kết</a></li>
+                        <li><a href="">Clip-path maker</a></li>
+                        <li><a href="">Snippet generator</a></li>
+                        <li><a href="">CSS Grid generator</a></li>
+                        <li><a href="">Cảnh báo sờ tay lên mặt</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer-column">
+                        <h4>CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</h4>
+                        <p><strong>Mã số thuế:</strong> 0109922901</p>
+                        <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
+                        <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình. Chúng tôi tập trung xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập trình viên Việt Nam.</p>
+                    </div>
+                </div>
+                <div class="footer-copy">
+                    <p>© 2018 - 2025 F8. Nền tảng học lập trình hàng đầu Việt Nam.</p>
+                    <div class="footer-social">
+                        <a href="#"><img src="/pictures/youtube-color-svgrepo-com.svg" alt="YouTube"></a>
+                        <a href="#"><img src="/pictures/facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+                        <a href="#"><img src="/pictures/tiktok-svgrepo-com.svg" alt="TikTok"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="g_id_onload"
+             data-client_id="YOUR_GOOGLE_CLIENT_ID"
+             data-context="signin"
+             data-ux_mode="popup"
+             data-callback="handleCredentialResponse"
+             data-auto_prompt="false">
+        </div>
+
+        <div class="g_id_signin"
+             data-type="standard"
+             data-shape="rectangular"
+             data-theme="outline"
+             data-text="signin_with"
+             data-size="large"
+             data-logo_alignment="left">
+        </div>
+    </body>
+    </html>

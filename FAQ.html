@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Những câu hỏi thường gặp</title>
+    <link rel="shortcut icon" href="./pictures/f8-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <div class="BG-color"></div>
+    <div class="Popup" id="Popup-sign">
+        <div class="Login-popup">
+            <div class="login-content">
+            <span class="btn-close" id="btn-close">&times;</span>
+            <header>
+                <img src="./pictures/f8-logo.svg" alt="">
+                <h2>Đăng nhập vào f8</h2>
+            </header>
+            <main>
+                <div class="form-toggle">
+                    <button class="toggle-btn active" id="loginToggle">Đăng nhập</button>
+                    <button class="toggle-btn" id="signupToggle">Đăng ký</button>
+                </div>
+                <div class="login-option">
+                    <form id="loginForm" class="auth-form active">
+                        <div class="form-group">
+                            <input type="email" id="loginEmail" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="loginPassword" placeholder="Mật khẩu" required>
+                        </div>  
+                        <button type="submit" class="btn-submit">Đăng nhập</button>
+                    </form>
+                    <form id="signupForm" class="auth-form">
+                        <div class="form-group">
+                            <input type="text" id="signupName" placeholder="Họ và tên" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="signupEmail" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signupPassword" placeholder="Mật khẩu" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signupConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Đăng ký</button>
+                    </form>
+                    <p style="color: black; font-size: 12px; margin: 10px;">Hoặc đăng nhập bằng</p>
+                    <div id="google-btn"></div>
+                </div>
+            </main>
+        </div>
+            <div class="login-image">
+                <img src="./pictures/homepage/pexels-olia-danilevich-4974922.jpg" alt="Ảnh đẹp">
+                <div class="quote-text">"Learning to code is learning to create and innovate."</div>
+            </div>
+        </div>   
+    </div> 
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="/main.html">
+                    <img src="./pictures/f8-logo.svg" alt="Logo" class="logo">
+                    <p><strong>Học lập trình để đi làm</strong></p>
+                </a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <div class="account">
+                <div class="signup">
+                    <button class="btn-signup" id="open-popup-sign">Đăng ký</button>
+                </div>
+                <div class="login">
+                    <button class="btn-login" id="open-popup-btn">Đăng nhập</button>
+                </div>
+            </div>
+        </header>
+        <div class="sidebar">
+            <div class="logo-sidebar">
+                <div class="homepage">
+                    <a href="/main.html">
+                        <img src="./pictures/home-1-svgrepo-com.svg" alt="HomePage">
+                        <p>Trang chủ</p>
+                    </a>
+                </div>
+                <div class="">
+                    <a href="/about.html">
+                        <img src="./pictures/address-card-regular.svg" alt="About">
+                        <p>Giới thiệu</p>
+                    </a>
+                </div>
+          
+                <div class="news">
+                    <a href="/blog.html">
+                        <img src="./pictures/news-svgrepo-com.svg" alt="HomePage">
+                        <p>Bài viết</p>
+                    </a>
+                </div>
+                <div class="news">
+                    <a href="./cart.html">
+                        <img src="./pictures/homepage/cart-shopping-solid.svg" alt="HomePage">
+                        <p>Giỏ hàng</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <main>
+            <section class="faq-section">
+                <div class="container1">
+                  <h5>Câu Hỏi Thường Gặp (FAQ)</h5>
+              
+                  <div class="faq-item">
+                    <button class="faq-question">1. Tôi chưa có kiến thức gì về lập trình, có học được không?</button>
+                    <div class="faq-answer">
+                      <p>Hoàn toàn có thể! Khóa học của chúng tôi thiết kế cho người mới bắt đầu, có lộ trình rõ ràng và dễ hiểu. Bạn chỉ cần quyết tâm và chăm chỉ là đủ.</p>
+                    </div>
+                  </div>
+              
+                  <div class="faq-item">
+                    <button class="faq-question">2. Học phí bao nhiêu? Có hỗ trợ trả góp không?</button>
+                    <div class="faq-answer">
+                      <p>Học phí từng khóa học sẽ được niêm yết rõ trên trang đăng ký. Chúng tôi có chính sách hỗ trợ trả góp lãi suất 0% qua các ví điện tử như Momo, ZaloPay, v.v.</p>
+                    </div>
+                  </div>
+              
+                  <div class="faq-item">
+                    <button class="faq-question">3. Học online có hiệu quả không?</button>
+                    <div class="faq-answer">
+                      <p>Rất hiệu quả! Chúng tôi có hệ thống bài giảng chất lượng cao, có mentor hỗ trợ, cộng đồng thảo luận, và bài tập thực hành thực tế giúp bạn học hiệu quả như offline.</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question">4. Có được tiếp cận với giảng viên có chuyên môn không?</button>
+                    <div class="faq-answer">
+                      <p>Đội ngũ giảng viên rất chất lượng và đam mê với việc giảng dạy.</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question">5. Liệu có nhiều cơ sở ở các thành phố lớn như Hà Nội hoặc Tp Hồ Chí Minh không?</button>
+                    <div class="faq-answer">
+                      <p>Hiện tại F8 đã có rất nhiều chi nhánh tại cơ sở các thành phố lớn cũng nhữ các tỉnh thành khác.</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question">6. Sau khi hoàn thành việc học tập chúng tôi có nhận được những chứng nhân nào từ trung tâm không?</button>
+                    <div class="faq-answer">
+                      <p>Sau khi học viên tại F8 hoàn thành các khóa học tại cơ sở sẽ có những chứng chỉ cụ thể cho từng khóa học để làm minh chứng.</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question">7. Lộ trình học kéo dài bao lâu?</button>
+                    <div class="faq-answer">
+                      <p>Thời gian học phụ thuộc vào khóa học bạn chọn. Trung bình, mỗi khóa kéo dài từ 2 đến 6 tháng. Bạn có thể học nhanh hơn nếu dành nhiều thời gian.</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question">8. Lịch học có linh hoạt không?</button>
+                    <div class="faq-answer">
+                      <p>Có! Bạn có thể học bất cứ lúc nào vì khóa học được thiết kế theo hình thức online, chủ động 100% thời gian.</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question">9. Tôi cần chuẩn bị thiết bị gì để học?</button>
+                    <div class="faq-answer">
+                      <p>Bạn chỉ cần một máy tính hoặc laptop có kết nối internet ổn định. Tai nghe và mic là một lợi thế nếu tham gia các buổi tương tác trực tuyến.</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question">10. Nếu tôi bị mất kiến thức căn bản, có cần học lại từ đầu?</button>
+                    <div class="faq-answer">
+                      <p>Không cần lo! Khóa học sẽ hướng dẫn lại từ những kiến thức nền tảng nhất – bạn chỉ cần kiên trì là có thể bắt kịp.</p>
+                    </div>
+                  </div>
+            
+            
+                </div>
+              </section>
+              
+              <script>
+                // Mở/đóng phần trả lời khi click vào câu hỏi
+                document.querySelectorAll('.faq-question').forEach(btn => {
+                  btn.addEventListener('click', () => {
+                    const answer = btn.nextElementSibling;
+                    answer.classList.toggle('show');
+                  });
+                });
+              </script>
+              
+              
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="/pictures/f8-logo.svg" alt="logo-f8">
+                        <span class="logo-text">Học Lập Trình Để Đi Làm</span>
+                    </div>
+                    <p><strong>Điện thoại:</strong> <a href="tel:08 1919 8989">08 1919 8989</a></p>
+                    <p><strong>Email:</strong><a href="mailto:  contact@fullstack.edu.vn">contact@fullstack.edu.vn</a></p>
+                    <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+                </div>
+        
+                <div class="footer-column">
+                    <h4>VỀ F8</h4>
+                    <ul>
+                    <li><a href="">Giới thiệu</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                    <li><a href="">Điều khoản</a></li>
+                    <li><a href="">Bảo mật</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h4>SẢN PHẨM</h4>
+                    <ul>
+                    <li><a href="">Game Nester</a></li>
+                    <li><a href="">Game CSS Diner</a></li>
+                    <li><a href="">Game CSS Selectors</a></li>
+                    <li><a href="">Game Froggy</a></li>
+                    <li><a href="">Game Froggy Pro</a></li>
+                    <li><a href="">Game Scoops</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h4>CÔNG CỤ</h4>
+                    <ul>
+                    <li><a href="">Tạo CV xin việc</a></li>
+                    <li><a href="">Rút gọn liên kết</a></li>
+                    <li><a href="">Clip-path maker</a></li>
+                    <li><a href="">Snippet generator</a></li>
+                    <li><a href="">CSS Grid generator</a></li>
+                    <li><a href="">Cảnh báo sờ tay lên mặt</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h4>CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</h4>
+                    <p><strong>Mã số thuế:</strong> 0109922901</p>
+                    <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
+                    <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình. Chúng tôi tập trung xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập trình viên Việt Nam.</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>© 2018 - 2025 F8. Nền tảng học lập trình hàng đầu Việt Nam.</p>
+                <div class="footer-social">
+                    <a href="#"><img src="/pictures/youtube-color-svgrepo-com.svg" alt="YouTube"></a>
+                    <a href="#"><img src="/pictures/facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+                    <a href="#"><img src="/pictures/tiktok-svgrepo-com.svg" alt="TikTok"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

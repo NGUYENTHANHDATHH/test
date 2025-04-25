@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học sinh tiêu biểu</title>
+    <link rel="shortcut icon" href="./pictures/f8-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/blog.js"></script>
+</head>
+<body>
+    <div class="BG-color"></div>
+    <div class="Popup" id="Popup-sign">
+        <div class="Login-popup">
+            <div class="login-content">
+            <span class="btn-close" id="btn-close">&times;</span>
+            <header>
+                <img src="./pictures/f8-logo.svg" alt="">
+                <h2>Đăng nhập vào f8</h2>   
+            </header>
+            <main>
+                <div class="form-toggle">
+                    <button class="toggle-btn active" id="loginToggle">Đăng nhập</button>
+                    <button class="toggle-btn" id="signupToggle">Đăng ký</button>
+                </div>
+                <div class="login-option">
+                    <form id="loginForm" class="auth-form active">
+                        <div class="form-group">
+                            <input type="email" id="loginEmail" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="loginPassword" placeholder="Mật khẩu" required>
+                        </div>  
+                        <button type="submit" class="btn-submit">Đăng nhập</button>
+                    </form>
+                    <form id="signupForm" class="auth-form">
+                        <div class="form-group">
+                            <input type="text" id="signupName" placeholder="Họ và tên" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="signupEmail" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signupPassword" placeholder="Mật khẩu" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signupConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Đăng ký</button>
+                    </form>
+                    <p style="color: black; font-size: 12px; margin: 10px;">Hoặc đăng nhập bằng</p>
+                    <div id="google-btn"></div>
+                </div>
+            </main>
+        </div>
+            <div class="login-image">
+                <img src="./pictures/homepage/pexels-olia-danilevich-4974922.jpg" alt="Ảnh đẹp">
+                <div class="quote-text">"Learning to code is learning to create and innovate."</div>
+            </div>
+        </div>   
+    </div> 
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a>
+                    <img src="./pictures/f8-logo.svg" alt="Logo" class="logo">
+                    <button class="quaylaitubaiviet" onclick="window.history.back();">◀ Quay Lại</button>
+                    <p><strong></strong></p>
+                    <p><strong>Học lập trình để đi làm</strong></p>
+                </a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+            <div class="account">
+                <div class="signup">
+                    <button class="btn-signup" id="open-popup-sign">Đăng ký</button>
+                </div>
+                <div class="login">
+                    <button class="btn-login" id="open-popup-btn">Đăng nhập</button>
+                </div>
+            </div>
+        </header>
+        <div class="sidebar">
+            <div class="logo-sidebar">
+                <div class="homepage">
+                    <a href="/main.html">
+                        <img src="./pictures/home-1-svgrepo-com.svg" alt="HomePage">
+                        <p>Trang chủ</p>
+                    </a>
+                </div>
+                <div class="">
+                    <a href="/about.html">
+                        <img src="./pictures/address-card-regular.svg" alt="About">
+                        <p>Giới thiệu</p>
+                    </a>
+                </div>
+              
+                <div class="news">
+                    <a href="/blog.html">
+                        <img src="./pictures/news-svgrepo-com.svg" alt="HomePage">
+                        <p>Bài viết</p>
+                    </a>
+                </div>
+                <div class="news">
+                    <a href="./cart.html">
+                        <img src="./pictures/homepage/cart-shopping-solid.svg" alt="HomePage">
+                        <p>Giỏ hàng</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <main>
+            
+        
+            <div class="baiviet-full">
+                
+                <div class="tacgia">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="https://ih1.redbubble.net/image.5362323478.8266/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Ảnh tác giả" style="width: 40px; height: 40px; border-radius: 50%;" />
+                      <div>
+                        <strong>Sơn Đặng<span style="color: blue;">✔️</span></strong>
+                        <p style="font-size: 14px; color: #888;">6 tháng trước · 6 phút đọc</p>
+                      </div>
+                    </div>
+                    <!-- Thêm nút Like và Share bên phải -->
+                    <div class="actions">
+                      <button class="like-button default" onclick="toggleLike(event)">
+                        <i class="fas fa-thumbs-up"></i>
+                      </button>
+                      <div class="Share">
+                        <button class="Sharebutton" onclick="boxclick(event)">&#8943;</button>
+                        <div class="Sharebox">
+                          <a href="#" target="_blank">Chia sẻ lên Facebook</a>
+                          <a href="#" target="_blank">Chia sẻ lên Twitter</a>
+                          <a href="#" target="_blank">Chia sẻ lên Zalo</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                <h1 style="margin-top: 20px;">Hoàng Bảo Trung - Học viên tiêu biểu của F8 tỏa sáng với dự án "AI Powered Learning"</h1>
+              
+                <div class="noidungbaiviet">
+                  <p>Trong thời đại công nghệ số 4.0, việc học không còn bó buộc trong những cuốn sách truyền thống. Giờ đây, trí tuệ nhân tạo (AI) đang dần trở thành một trợ thủ đắc lực, giúp việc học trở nên hiệu quả và thú vị hơn. Một minh chứng rõ ràng cho sự chuyển mình này chính là câu chuyện của Hoàng Bảo Trung – một học viên ưu tú của F8, người đã đạt giải Nhì tại cuộc thi "Grand Final Of Best Web Design 2024" với dự án sáng tạo "AI Powered Learning".</p>
+              
+                  
+              
+                  <div class="anhvachuthich">
+                    <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/11503/66fd03291e58f.jpg" alt="Hoàng Bảo Trung tại bàn học" style="border-radius: 12px; max-width: 100%; height: auto;" />
+                    <p>Bạn Hoàng Bảo Trung – Học viên của F8 đã đoạt giải Nhì cuộc thi "Grand Final Of Best Web Design 2024" với dự án sáng tạo "AI Powered Learning".</p>
+                  </div>
+              
+                  <p>Cuộc thi "Grand Final Of Best Web Design 2024" không chỉ đánh giá cao khả năng về công nghệ thiết kế mà còn yêu cầu kỹ năng lập trình web chuyên sâu. Trung và các thành viên trong nhóm đã gây ấn tượng mạnh mẽ với dự án mang tính đột phá: AI Powered Learning - một nền tảng học tập tích hợp chat và làm bài tập cùng AI. Dự án được hình thành từ chính sự thấu hiểu về nhu cầu học tập hiện đại – nơi mà học sinh, sinh viên không chỉ cần công cụ hỗ trợ học tập mà còn cần sự tương tác liên tục, không giới hạn thời gian.</p>
+              
+                  <p>Không chỉ thành công trong cuộc thi, Trung còn truyền cảm hứng cho cộng đồng học viên F8 khi luôn tích cực chia sẻ kinh nghiệm và hỗ trợ bạn bè trong quá trình học.Khi được hỏi về ý tưởng thực hiện làm dự án Trung có chia sẻ: "Dự án của nhóm mình tên là AI Powered Learning, đây là phần mềm tích hợp chat và làm bài tập cùng AI. Trang web này được tạo ra nhằm mục đích giúp các bạn học sinh và sinh viên có thể làm bài tập cùng AI, được AI chỉ dẫn như một người giáo viên thực thụ và luôn sẵn sàng giúp đỡ các bạn làm bài 24/7. Không chỉ dừng lại ở việc giúp các học sinh và sinh viên, AI Powered Learning còn giúp giáo viên ôn lại kiến thức cũ, tạo nên một môi trường học tập toàn diện và hiệu quả."</p>
+                </div>
+              
+                <div>
+                    <button class="tag" onclick="">#ReactJS</button>
+                  
+                </div>
+                <div class="related-posts">
+                    <h2>Bài đăng cùng tác giả</h2>
+                    <ul>
+                      <li><a href="#">Tổng hợp các sản phẩm của học viên tại F8</a></li>
+                      <li><a href="#">[Phần 1] Tạo dự án ReactJS với Webpack và Babel</a></li>
+                      <li><a href="#">[Vlog] Review tất cả đồ mình sử dụng cho F8</a></li>
+                      <li><a href="#">Tại sao nên thêm rel="noopener" khi sử dụng target="_blank"?</a></li>
+                      <li><a href="#">Áo Polo F8 Đã Về! Trên Tay Áo Polo F8 Của F8</a></li>
+                    </ul>
+                    <div class="underline"></div>
+                    
+                  </div>
+
+
+                  <p class="read-more">
+                    >> <a href="#">Xem tiếp</a> · 2 phút đọc
+                     </p>
+            
+                      <!-- Danh mục bài viết -->
+             <div class="tags-section">
+                     <p>XEM CÁC BÀI VIẾT THEO CHỦ ĐỀ</p><br>
+                      <div class="tags">
+                        <button class="tag" onclick="locTheoChuyenMuc('ReactJS')">ReactJS</button>
+                        <button class="tag" onclick="locTheoChuyenMuc('JavaScript')">JavaScript</button>
+                        <button class="tag" onclick="locTheoChuyenMuc('Front-end')">Front-end</button>
+                        <button class="tag" onclick="hienThiTatCaBaiViet()">Tất cả</button>   
+                      </div><br>
+            </div>
+            <div class="cacbaiviet"> <!-- các bài viết -->
+
+                <div class="tungbaiviet" data-category="ReactJS">
+                    <!-- bài viết 1 -->
+                    <div class="tacgia">
+                      <div class="tenvaavatar">
+                        <img src="https://ih1.redbubble.net/image.5362323478.8266/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt=" "> 
+                        <span>Đặng Sơn</span> 
+                      </div>
+                     
+                      <div> 
+                        <button class="like-button default" onclick="toggleLike(event)">
+                          <i class="fas fa-thumbs-up"></i>
+                        </button>
+                          
+                        <div class="Share">
+                          <button class="Sharebutton" onclick="boxclick(event)">&#8943;</button>
+                          <div class="Sharebox">
+                            <a href="#" target="_blank">Chia sẻ lên Facebook</a>
+                            <a href="#" target="_blank">Chia sẻ lên Twitter</a>
+                            <a href="#" target="_blank">Chia sẻ lên Zalo</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div> <!-- tác giả -->
+                    
+                    <div class="chuvaanh">
+                        <div class="phanchu">
+                            <a href="baiviet1.html"><h2>Hoàng Bảo Trung - Học viên tiêu biểu của F8 tỏa sáng với dự án "AI Powered Learning"</h2></a>
+                            <p>Trong thời đại công nghệ số 4.0, việc học không còn bó buộc trong những cuốn sách truyền thống. Giờ đây, trí tuệ nhân tạo (AI) đang...</p>
+                            <div class="meta">
+                                <!-- <a><button class="tag" onclick="locTheoChuyenMuc('ReactJS')">ReactJS</button></a> -->
+                                <span>6 tháng trước · 6 phút đọc</span>
+                            </div>
+                        </div>
+                        <div class="phananh">
+                            <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/11504/66fd03cd7b3e4.jpg" alt="Ảnh">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tungbaiviet" data-category="JavaScript">
+                    <!-- bài viết 2 -->
+                    <div class="tacgia">
+                      <div class="tenvaavatar">
+                        <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/13286/65fa6676d4644.jpg" alt=" "> 
+                        <span>Trọng Nam Đoàn</span>
+                      </div>  
+                      <div> 
+                        <button class="like-button default" onclick="toggleLike(event)">
+                          <i class="fas fa-thumbs-up"></i></button>
+                        <div class="Share">
+                          <button class="Sharebutton" onclick="boxclick(event)">&#8943;</button>
+                          <div class="Sharebox">
+                            <a href="#" target="_blank">Chia sẻ lên Facebook</a>
+                            <a href="#" target="_blank">Chia sẻ lên Twitter</a>
+                            <a href="#" target="_blank">Chia sẻ lên Zalo</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div> <!-- tác giả -->
+                    <div class="chuvaanh">
+                        <div class="phanchu">
+                            <a href="baiviet2.html"><h2>Tôi đã viết Chrome Extension đầu tiên của mình bằng Github Copilot như thế nào ?</h2></a>
+                            <p>Câu chuyện của tôi là Tôi đang học tiếng Nhật trên một trang web là Dungmori.com, và tôi học từ mới trên trang web Quizlet...</p>
+                            <div class="meta">
+                                <!-- <a><button class="tag" onclick="locTheoChuyenMuc('JavaScript')">JavaScript</button></a> -->
+                                <span>1 năm trước · 4 phút đọc</span>
+                            </div>
+                        </div>
+                        <div class="phananh">
+                            <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/9976/65fa652ce3a64.jpg" alt="Ảnh">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tungbaiviet" data-category="Front-end">
+                    <!-- bài viết 3 -->
+                    <div class="tacgia">
+                      <div class="tenvaavatar">
+                        <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/256991/63b63dc6657a1.jpg" alt="avatar ">    
+                        <span>Trịnh Minh Tuấn</span>
+                      </div> 
+                      <div> 
+                        <button class="like-button default" onclick="toggleLike(event)">
+                          <i class="fas fa-thumbs-up"></i></button>
+                        <div class="Share">
+                          <button class="Sharebutton" onclick="boxclick(event)">&#8943;</button>
+                          <div class="Sharebox">
+                            <a href="#" target="_blank">Chia sẻ lên Facebook</a>
+                            <a href="#" target="_blank">Chia sẻ lên Twitter</a>
+                            <a href="#" target="_blank">Chia sẻ lên Zalo</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div> 
+                    <div class="chuvaanh">
+                        <div class="phanchu">
+                            <a href="baiviet1.html"><h2>Tự học lập trình có khó không? 5 tips để tự học tốt hơn</h2></a>
+                            <p>Lập trình đang dần trở thành một ngành “hot” và là xu thế của nhiều người trẻ hiện nay. Vậy tự học lập trình có khó không? Bài viết này sẽ...</p>
+                            <div class="meta">
+                                <!-- <a><button class="tag" onclick="locTheoChuyenMuc('Front-end')">Front-end</button></a> -->
+                                <span>1 tháng trước · 7 phút đọc </span>
+                            </div>
+                        </div>
+                        <div class="phananh">
+                            <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/6352/63e1f988bfcdf.jpg" alt="Ảnh"> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tungbaiviet" data-category="ReactJS">
+                    <!-- bài viết 4 -->
+                    <div class="tacgia">
+                        <div><img src="" alt=" ">  
+                        <span>Son Dang</span>
+                      </div>
+                      <div> 
+                        <button class="like-button default" onclick="toggleLike(event)">
+                          <i class="fas fa-thumbs-up"></i></button>
+                        <div class="Share">
+                          <button class="Sharebutton" onclick="boxclick(event)">&#8943;</button>
+                          <div class="Sharebox">
+                            <a href="#" target="_blank">Chia sẻ lên Facebook</a>
+                            <a href="#" target="_blank">Chia sẻ lên Twitter</a>
+                            <a href="#" target="_blank">Chia sẻ lên Zalo</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div> <!-- tác giả -->
+                    <div class="chuvaanh">
+                        <div class="phanchu">
+                            <h2>Hoàng Bảo Trung - Học viên tiêu biểu của F8 tỏa sáng với dự án "AI Powered Learning"</h2>
+                            <p>Trong thời đại công nghệ số 4.0, việc học không còn bó buộc trong những cuốn sách truyền thống. Giờ đây, trí tuệ nhân tạo (AI) đang...</p>
+                            <div class="meta">
+                                <!-- <a><button class="tag" onclick="locTheoChuyenMuc('ReactJS')">ReactJS</button></a> -->
+                                <span>6 tháng trước · 6 phút đọc</span>
+                            </div>
+                        </div>
+                        <div class="phananh">
+                            <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/11503/66fd03291e58f.jpg" alt="Ảnh">
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+            </div> <!-- cac bài viết -->
+                  
+              </div>
+           
+          
+ </main>
+          
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="/pictures/f8-logo.svg" alt="logo-f8">
+                        <span class="logo-text">Học Lập Trình Để Đi Làm</span>
+                    </div>
+                    <p><strong>Điện thoại:</strong> <a href="tel:08 1919 8989">08 1919 8989</a></p>
+                    <p><strong>Email:</strong><a href="mailto:  contact@fullstack.edu.vn">contact@fullstack.edu.vn</a></p>
+                    <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+                </div>
+        
+                <div class="footer-column">
+                    <h4>VỀ F8</h4>
+                    <ul>
+                    <li><a href="">Giới thiệu</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                    <li><a href="">Điều khoản</a></li>
+                    <li><a href="">Bảo mật</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h4>SẢN PHẨM</h4>
+                    <ul>
+                    <li><a href="">Game Nester</a></li>
+                    <li><a href="">Game CSS Diner</a></li>
+                    <li><a href="">Game CSS Selectors</a></li>
+                    <li><a href="">Game Froggy</a></li>
+                    <li><a href="">Game Froggy Pro</a></li>
+                    <li><a href="">Game Scoops</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h4>CÔNG CỤ</h4>
+                    <ul>
+                    <li><a href="">Tạo CV xin việc</a></li>
+                    <li><a href="">Rút gọn liên kết</a></li>
+                    <li><a href="">Clip-path maker</a></li>
+                    <li><a href="">Snippet generator</a></li>
+                    <li><a href="">CSS Grid generator</a></li>
+                    <li><a href="">Cảnh báo sờ tay lên mặt</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h4>CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</h4>
+                    <p><strong>Mã số thuế:</strong> 0109922901</p>
+                    <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
+                    <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình. Chúng tôi tập trung xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập trình viên Việt Nam.</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>© 2018 - 2025 F8. Nền tảng học lập trình hàng đầu Việt Nam.</p>
+                <div class="footer-social">
+                    <a href="#"><img src="/pictures/youtube-color-svgrepo-com.svg" alt="YouTube"></a>
+                    <a href="#"><img src="/pictures/facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+                    <a href="#"><img src="/pictures/tiktok-svgrepo-com.svg" alt="TikTok"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
