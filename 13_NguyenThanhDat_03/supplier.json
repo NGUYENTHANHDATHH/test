@@ -1,0 +1,47 @@
+[
+    {
+        "SupplierID": 1,
+        "SupplierName": "ABC Supplies",
+        "AccountName": "abc_supplies",
+        "EmailAddress": "contact@abcsupplies.com",
+        "Password": "password123",
+        "Tel": "123-456-7890",
+        "Location": "New York, USA"
+    },
+    {
+        "SupplierID": 2,
+        "SupplierName": "Global Traders",
+        "AccountName": "global_traders",
+        "EmailAddress": "info@globaltraders.com",
+        "Password": "securepass456",
+        "Tel": "987-654-3210",
+        "Location": "London, UK"
+    },
+    {
+        "SupplierID": 3,
+        "SupplierName": "Tech Solutions",
+        "AccountName": "tech_solutions",
+        "EmailAddress": "support@techsolutions.com",
+        "Password": "tech2025",
+        "Tel": "555-123-4567",
+        "Location": "San Francisco, USA"
+    },
+    {
+        "SupplierID": 4,
+        "SupplierName": "Fresh Foods",
+        "AccountName": "fresh_foods",
+        "EmailAddress": "sales@freshfoods.com",
+        "Password": "fresh123",
+        "Tel": "444-987-6543",
+        "Location": "Sydney, Australia"
+    },
+    {
+        "SupplierID": 5,
+        "SupplierName": "Eco Supplies",
+        "AccountName": "eco_supplies",
+        "EmailAddress": "hello@ecosupplies.com",
+        "Password": "ecoFriendly",
+        "Tel": "333-222-1111",
+        "Location": "Berlin, Germany"
+    }
+]
