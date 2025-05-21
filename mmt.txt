@@ -1,0 +1,1241 @@
+ 1961: Kleinrock– Lý thuyết hàng đợi chứng minh hiệu quả của chuyển mạch gói
+ ❖ 1964: Baran– chuyển mạch gói trong mạng dùng trong quân sự
+ ❖ 1969: Bộ Quốc phòng Mỹ đã xây dựng dự án ARPANET tiền thân của Internet
+ ❖ 1970: Mạng vệ tinh ALOHAnet satellite tại Hawaii
+ ❖ 1972:
+ ➢ ARPAnet công bố rộng rãi
+ ➢ NCP (Network Control Protocol) là giao thức host-host đầu tiên
+ ➢ Ray Tomlinson đã phát minh ra E-mail
+ ➢ ARPAnet có 15 nút
+ 1973: Luận văn tiến sỹ của Metcalfe đề xuất mạng Ethernet
+ ❖ 1974: một số trường đại học của Anh và của Na Uy kết nối vào ARPANET. Vinton 
+Cerf và Bob Kahn tạo ra giao thức TCP/IP
+ ❖ 1974: Xuất hiện thuật ngữ “Internet”
+ ❖ 1976: phòng thí nghiệm của hãng AT&T phát minh ra dịch vụ truyền tệp FTP
+ ❖ Cuối những năm 1970: 
+ Các kiến trúc mạng mới: DECnet, SNA, XNA
+  Chuyển mạch các gói tin chiều dài cố định (tiền thân của ATM)
+  ARPA thành lập ban kiểm soát cấu hình Internet
+ ❖ 1979: ARPAnet có 200 nút
+ 1982: Các giao thức TCP và IP được dùng đối với mạng ARPANET. Sau đó TCP/IP
+ được chọn là giao thức chuẩn.
+ ❖ 1983: ARPANET được tách ra (1 phần tích hợp mạng dữ liệu quốc phòng; 1 phần
+ mở rộng → mạng NSFnet)
+ ❖ 1985: Phát triển mạng không dây
+ ❖ 1986– 1990: thời kỳ bùng nổ lần 1 của Internet với sự xuất hiện của mạng
+ NSFnet.
+ ❖ 1991– 1996: thời kỳ bùng nổ lần 2 của Internet, với sự xuất hiện của World
+ Wide Web (WWW).
+ ❖ Cuối những năm 1990 cho đến những năm 2000:
+  Thương mại hóa Web
+  Instant messaging, chia sẻ file P2P
+  Antoàn bảo mật mạng đặt lên hàng đầu
+  Khoảng 50 triệu host, hơn 100 triệu người sử dụng
+  Đường truyền backbone đạt tốc độ Gbps
+Lớp ứng dụng (Application)
+  Chức năng: Cung cấp giao tiếp giữa chương trình ứng dụng
+ cho người sử dụng với hệ thống mạng
+  Trình bày các đặc tả kỹ thuật để giải quyết vấn đề giao tiếp
+ giữa các chương trình ứng dụng với hệ thống mạng
+Lớp trình diễn (Presentation):
+  Chức năng: Đảm bảo các dạng thức biễu diễn
+ thông tin của các ứng dụng sao cho các hệ thống
+ trên mạng có thể “hiểu” được.
+  Trình bày các đặc tả kỹ thuật các dạng thức biễu
+ diễn thông tin như :
+ ➢ mã hoá, giải mã, nén, các dạng thức file ảnh…. JPEG,
+ ASCII, GIF, MPEG, Encryption
+Lớp phiên (Session):
+  Chức năng: Thiết lập, quản lý, kết thúc các
+ “phiên” (session) giao dịch, trao đổi dữ liệu trên
+ mạng giữa các ứng dụng
+  Trình bày các đặc tả kỹ thuật thực hiện quá trình
+ trên
+Lớp giao vận (Transport)
+  Chức năng: Đảm bảo độ tin cậy cho các gói tin truyền tải
+ trong mạng.
+  Trình bày các đặc tả kỹ thuật thực hiện việc:
+ ➢ Đánh thứ tự và đảm bảo thứ tự truyền các gói tin
+ ➢ Ghép/tách dữ liệu từ các gói tin đến từ một ứng dụng
+ ➢ Chọn lựa giao thức truyền nhận dữ liệu có hay không cơ
+ chế sửa lỗi.
+Lớp mạng (Network)
+  Chức năng: Đảm bảo quá trình chuyển giao các gói tin giữa
+ các hệ thống trên mạng thông qua việc xác định đường
+ dẫn, xử lý gói tin, chuyển giao gói tin đên các hệ thống.
+  Trình bày các đặc điểm kỹ thuật về:
+ ➢ Địa chỉ logic cho các thiết bị mạng
+ ➢ Cơ chế định tuyến
+ ➢ Các giao thức định tuyến
+ ➢ Mạch ảo
+Lớp liên kết dữ liệu (Data link)
+  Chức năng: Đảm bảo khả năng truyền tải dữ liệu trên đường
+ truyền vật lý một cách tin cậy.
+  Đơn vị dữ liệu là các Frame
+  Trình bày các đặc tả kỹ thuật bao gồm:
+ ➢ Dạng thức dữ liệu
+ ➢ Điạ chỉ gửi nhận
+ ➢ Cơ chế truy cập đường truyền
+❖Lớp vật lý (Physical)
+  Chức năng: Chuyển tải các dòng bit không có cấu trúc trên
+ đường truyền vật lý.
+  Đơn vị dữ liệu là các bit
+  Trình bày các đặc tả về điện và vật lý của mạng:
+ ➢ Giao tiếp vật lý
+ ➢ Đặc tính điện của các giao tiếp
+ ➢ Tốc độ truyền dữ liệu
+CT Nyquist(0 nhiễu): C=2w.log2M
+CT Shannon(nhiễu): C=w.log2(1+S/N)
+
+ U/UTP (Unshielded/Unshielded Twisted Pair) còn gọi là UTP
+ ➢ Là loại cáp đồng trong đó hai dây dẫn xoắn với nhau tạo thành một đôi và 
+không có vỏ bọc chống nhiễu.
+ o Loại cáp 4 đôi sử dụng phổ biến trong hệ thống mạng Ethernet. 
+F/UTP (Foil/Unshielded Twisted Pair) còn gọi là FTP
+ ➢ Giống như cáp UTP nhưng có thêm lớp chống nhiễu bằng nhôm bên dưới 
+lớp vỏ nhựa bên ngoài.
+ U/FTP (Shieded Twisted Pair) còn gọi là STP
+ ➢ Các đôi xoắn được phủ bên ngoài một lớp vỏ làm bằng nhôm
+ F/FTP (Foil/Foil Twisted Pair)
+ ➢ Từng đôi được bọc bởi lá nhôm chống nhiễu 
+➢ Có thêm lớp chống nhiễu bằng nhôm bên dưới lớp vỏ nhựa bên ngoài
+ S/FTP (Shielded/Foiled Twisted Pair) còn gọi là S-STP hay PiMF 
+➢ gồm lớp lá nhôm dưới lớp vỏ và lớp lưới bện bọc mỗi đôi chống nhiễu từ bên 
+ngoài.
+ SF/UTP (Shielded Foiled/Unshielded Twisted Pair) còn gọi là S-FTP
+ ➢ Gồm lớp lưới bện và lớp nhôm bọc bên ngoài, dưới lớp vỏ
+ Cat 3 UTP 16 MHz CápEthernet 10BASE-T và100BASE-T4
+ Cat 4 UTP 20 MHz Token Ring 16Mbit/s
+ Cat 5 UTP 100 MHz Cáp Ethernet 100BASE-TX & 1000BASE-T
+ Cat 5e UTP 100 MHz Cáp Ethernet 100BASE-TX & 1000BASE-T
+ Cat 6 STP 250 MHz Cáp Ethernet 10GBASE-T
+ Cat 6a STP 500 MHz Cáp Ethernet10GBASE-T
+ Cat 7 STP 600 MHz Cáp Ethernet 10GBASE-T hoặc POTS/CATV/1000BASE-T qua cáp đơn
+ Cat 7a STP 1000 MHz Cáp Ethernet 10GBASE-T hoặc POTS/CATV/1000BASE-T qua cáp đơn
+ Cat 8/8.1STP 1600-2000 MHz Cáp Ethernet 40GBASE-T hoặc POTS/CATV/1000BASE-T qua cáp đơn
+ Cat 8.2 STP 1600-2000 MHz Cáp Ethernet 40GBASE-T hoặc POTS/CATV/1000BASE-T qua cáp đơn
+
+Cấu tạo cáp đồng trục (Coaxial Cable)
+  Băng thông rộng (1GHz) và chiều dài đường truyền lớn (vài km).
+  Cấu tạo:
+ ➢ Tâm là lớp dây dẫn chính: lõi dẫn tín hiệu bằng dây đồng hoặc dây kim loại mạ đồng.
+ ➢ Ở ngoài là lớp dây dẫn: lớp lưới bện bằng kim loại vừa là dây dẫn vừa có tác dụng nhằm ngăn 
+chặn nhiễu điện từ (EMI) cho lõi dẫn tín hiệu lõi.
+ ➢ Lớp điện môi không dẫn điện giúp cách ly hai lớp dây dẫn.
+ ➢ Vỏ bọc cách điện bên ngoài nhằm bảo vệ các lớp dây dẫn khỏi các tác động của môi trường bên 
+ngoài.
+ ➢ Có thể có một lớp dải băng kim loại tùy chọn, thường làm bằng các lá nhôm hoặc màng mỏng 
+tráng nhôm có độ che phủ là 100% nhằm bảo vệ khỏi nhiễu tần số vô tuyến (RFI)
+Phân loại cáp đồng trục:
+  Theo trở kháng: 
+➢ 50 Ohm dùng cho tín hiệu số
+ ➢ 75 Ohm dung cho tín hiêu analog.
+  Theo kích thước:
+ ➢ RG (Radio Government); RG-8, RG-9 và RG-11 dùng cho mạng loại đường trục.
+ ➢ RG-58: Thường dùng cho mạng Ethernet loại nhỏ.
+ ➢ RG-59: Được dùng cho ứng dụng tivi. 
+ Thường dùng trong mạng dạng Bus, kỹ thuật truyền Baseband hoặc Broadband.
+  Được xem như phương tiện truyền dẫn tốt nhất của cáp đồng. 
+ So sánh với cáp xoắn:
+ ➢ Đối với tần số cao, dòng điện chủ yếu tập trung ở mặt ngoài của dây dẫn (do hiệu ứng 
+bì) → dây xoắn có điện trở lớn nên suy hao nhanh hơn.
+ ➢ Cấu trúc của dây xoắn có bức xạ tần số cao nên suy hao cũng tăng theo.
+
+Cáp quang:
+  Nguyên lý: Truyền sóng anh sáng (tần số cao) trên môi trường thủy tinh hoặc 
+nhựa trong suốt.
+  Băng thông rộng, tốc độ truyền cao (50Tbps). 
+ Chiều dài đường truyền rất lớn. Khả năng chống nhiễu tốt và độ suy hao nhỏ
+ Lõi (hay Core):
+ ➢ là phần trung tâm phản chiếu của sợi quang nơi ánh sáng đi
+ ➢ Được làm bằng sợi thủy tinh hoặc plastic để truyền dẫn ánh sáng.
+  Lớpphản xạ ánh sáng (Cladding):
+ ➢ bao bọc lõi (core), nhằm bảo vệ và phản xạ ánh sáng trở lại vào lõi.
+ ➢ Ánh sáng truyền đi từ đầu này đến đầu kia sợi quang bằng cách phản xạ toàn phần tại mặt ngăn cách giữa core lớp bọc
+ và được định hướng trong core.
+  Lớpphủ (coating):
+ ➢ Là lớp phủ dẻo bên ngoài (hay còn gọi là lớp vỏ nhựa PVC) giúp bảo vệ core và cladding không bị bụi, ẩm, trầy xước,
+ chống lại sự xâm nhập của hơi nước, giảm sự gập gãy uốn cong của sợi cáp quang.
+ ➢ Lớp phủ này được nhuộm các màu khác nhau theo chuẩn màu được quy định trong ngành viễn thông để phân biệt với
+ nhau
+  Thành phần gia cường (Srength member):
+ ➢ Là vật liệu thường được dùng là sợi tơ Aramit, kim loại có dạng sợi, hoặc lớp băng thép mỏng được dập gợn thành sóng
+ hình sin.
+  Lớpvỏ ngoài (Outer Jacket):
+ ➢ Có tác dụng bảo vệ ruột cáp tránh khỏi những ảnh hưởng của tác động bên ngoài như va đập, loài vật gặm nhấm, ẩm
+ ướt,…
+❖Các chế độ truyền sợi quang: Multi mode và Single mode
+  Multi mode: nhiều tia từ nguồn ánh sáng di chuyển bên trong lõi theo nhiều
+ đường khác nhau.
+ ➢ Multimode stepped index (Chỉ số bước): Lõi lớn (100 micron), các tia tạo xung ánh sáng có
+ thể đi theo nhiều đường khác nhau trong lõi: thẳng, zig-zag… tại điểm đến sẽ nhận các chùm tia
+ riêng lẻ, vì vậy xung dễ bị méo dạng.
+ ➢ Multimode graded index (Chỉ số liên tục): Lõi có chỉ số khúc xạ giảm dần từ trong ra ngoài
+ cladding. Các tia gần trục truyền chậm hơn các tia gần cladding. Các tia theo đường cong thay vì
+ zig-zag. Các chùm tia tại điểm hội tụ, vì vậy xung ít bị méo dạng.
+ Single mode: nguồn sáng được tập trung cao trong một góc nhỏ, tia tới sát mặt
+ ngang
+ ➢ Lõi nhỏ (8 micron hay nhỏ hơn), hệ số thay đổi khúc xạ thay đổi từ lõi ra
+ cladding ít hơn multimode.
+ ➢ Các tia truyền theo phương song song trục.
+ ➢ Xung nhận được hội tụ tốt, ít méo dạng.
+Ứng dụng cáp quang:
+  Multi mode: Sử dụng cho truyền tải tín hiệu trong khoảng cách ngắn, bao gồm:
+ ➢ Step index: dùng cho khoảng cách ngắn, phổ biến trong các đèn soi trong
+ ➢ Graded index: thường dùng trong các mạng LAN
+  Single mode:
+ ➢ Dùng cho khoảng cách xa hàng nghìn km
+ ➢ Phổ biến trong các mạng điện thoại, mạng truyền hình cáp.
+ ➢ Đường kính 8um, truyền xa hàng trăm km mà không cần khuếch đại
+Ưu điểm của cáp quang:
+  Suy hao thấp: Đối với cáp quang sử dụng tín hiệu ánh sáng để truyền dữ liệu thì suy hao không thay đổi
+ theo tần số của tín hiệu, khoảng cách truyền lên tới 2000 mét với cáp Multimode.
+  Dảithông rộng: băng tần của sợi quang có thể lên đến hàng THz
+  Trọng lượng nhẹ: Trọng lượng cảu cáp quang nhỏ hơn so với cáp đồng nên cho phép lắp đặt dễ dàng hơn
+  Kích thước nhỏ: Cáp quang có kích thước nhỏ sẽ dễ dàng cho việc thiết kế mạng ở những nơi có không
+ gian hẹp
+  Không bị nhiễu sóng điện từ
+  Antoàn: vì sợi quang là một chât điện môi nên không dẫn điện
+  Bảo mật: Sợi quang không thể bị trích để lấy trộm thông tin bằng các phương tiện thông thường như cáp
+ đồng.
+  Linh hoạt: Các hệ thống thông tin quang đều khả dụng cho hầu hết các dạng thông tin dạng số liệu, thoại
+ và video.
+Nhược điểm của cáp quang:
+  Chuyển đổi Quang– Điện: Trước khi đưa tín hiệu điện vào sợi quang, tín hiệu
+ điện phải được biến đổi thành sóng ánh sáng.
+  Giòn, dễ gãy: Sợi quang sử dụng trong viễn thông được chế tạo từ thủy tinh
+ nên giòn và dễ gẫy.
+  Sửa chữa: Kích thước sợi quang nhỏ nên việc hàn nối gặp nhiều khó khăn,
+ muốn hàn nối cần có các thiết bị chuyện dụng, nhân viên kỹ thuật phải có kỹ
+ năng tốt.
+  An toàn thi công: Tín hiệu ánh sáng sử dụng để truyền trong sợi quang là ánh
+ sáng hồng ngoại, nếu để chiếu trực tiếp vào mắt sẽ gây hại cho mắt.
+VLF (Very Low Frequency): 3-30KHz, truyền sóng bề mặt
+ ❖ LF(Low Frequency): 30KHz-300KHz, truyền sóng bề mặt
+ ❖ MF(Middle Frequency): 300KHz-3MHz, truyền sóng tầng đối lưu
+ ❖ HF (High Frequency): 3MHz-30MHz, truyền sóng tầng điện ly.
+ ❖ VHF 30MH : 30MHz-300MH t z, truyền só khô i à t ng không gian và tầm thẳng.
+ ❖ UHF (Ultra High Frequency): 300MHz-3GHz, truyền sóng không gian và tầm thẳng.
+ ❖ SHF (Supper HF): 3-30GHz, truyền sóng không gian.
+ ❖ EHF (Extremely HF): 30GHz-300GHz, truyền sóng không gian.
+ ❖ THF (Tremendously HF): tần số quá cao, được thiết kế để chỉ ra nó là băng tần kế 
+của EHF
+
+Mã hóa số/số:
+ ❖Mã đơn cực (Unipolar)
+0:0v 1:+v
+  Ưu điểm: đơn giản và chi phí thấp.
+  Nhược điểm: Tồn tại điện áp một chiều (DC) và bài toán đồng bộ.
+
+Mã cực (Polar)
+ Ứng dụng:Lưu trữ dữ liệu trên các vật liệu từ tính
+
+NRZ-L (Non-Return to zero–Level)
+ ➢ Đặc điểm:
+ o Bit ‘0’→ +V (+3V, +5V, +15V..)
+ o Bit ‘1’ →-V (-3V, -5V,- 15V…) 
+➢ Ưu điểm: 
+o Thành phần DC giảm hơn so với mã đơn cực. 
+➢ Nhược điểm:
+ o Bài toán đồng bộ: Khi tín hiệu truyền có giá trị không thay đổi, máy thu
+ không thể xác định được thời gian tồn tại của một bit (Chu kỳ bit).
+ o →giải quyết: dùng thêm một dây dẫn để truyền tín hiệu đồng bộ giúp máy
+ thu biết về chu kỳ bit
+
+NRZ-I: 0:0 đảo 1: đảo cực
+
+RZ (Return to Zero)
+ ➢Đặc điểm: 
+ o Bit ‘0’: Nửa chu kỳ đầu của bit là điện áp-V và nửa chu kỳ sau của
+ bit là điện áp 0V.
+ o Bit ‘1’: Nửa chu kỳ đầu của bit là điện áp +V và nửa chu kỳ sau của
+ bit là điện áp 0V
+Ưu điểm: 
+o Giải quyết vấn đề đồng bộ cho chuỗi bit ‘1’ hoặc chuỗi bit ‘0’ liên tiếp.
+ o Đây là phương pháp hiệu quả nhất. (Một phương pháp mã hóa tín hiệu số 
+tốt phải có dự phòng cho chế độ đồng bộ)
+ ➢Nhược điểm: 
+o Có băng thông rộng hơn (dải tần số lớn). 
+o Có 3 mức điện áp
+
+Mã 2 pha(Biphase): 
+Ưu điểm:
+ o Đồng bộ tốt
+ o Không có thành phần điện một chiều
+ ➢ Nhược điểm:
+ o Hai lần chuyển mức trong một đơn vị tín hiệu
+ o Tốc độ điều chế=2 lần tốc độ dữ liệu
+ ➢ Ứng dụng:
+ o Dùng trong các mạng cục bộ
+
+phân loại
+ ➢ Mã Manchester
+ o Bit ‘0’: Nửa chu kỳ đầu của bit là điện áp +V và nửa chu kỳ còn lại là điện áp–V
+ o Bit ‘1’: Nửa chu kỳ đầu của bit là điện áp-V và nửa chu kỳ còn lại là điện áp +V 
+➢ Differential Manchester 
+o Bit ‘0’: đảo cực điện áp trước đó.
+ o Bit ‘1’: giữ nguyên cực điện áp trước đó.
+ o Luôn luôn có sự thay đổi điện áp tại giữa chu kỳ bit
+
+ ❖Mã hai cực (Bipolar):
+  AMI (Bipolar Alternate Mark Inversion)
+ ➢ Đặc điểm:
+ o Bit ‘0’: 0 Volt.
+ o Bit ‘1’: điện áp-V hoặc +V luân phiên
+Ưu điểm:
+ o AMI làm triệt tiêu thành phần DC của tín hiệu
+ o Đồng bộ đối với chuỗi các giá trị bit “1” liên tiếp.
+ ➢ Nhược điểm:
+ o Dễ mất đồng bộ đối với chuỗi các giá trị bit “0” liên tiếp.
+
+B8ZS (Bipolar 8- Zero Substitution):
+ ➢ Bit ‘1’: điện áp -V hoặc +V luân phiên (Tồn tại 1 chu kỳ bit), đảo cực điện áp 
+trước đó.
+ ➢ Bit ‘0’: đếm số bit ‘0’ liên tiếp:
+ o Nếu không phải là nhóm 8 bit ‘0’ liên tiếp sẽ mã hoá là 0 Volt.
+ o Nếu là 8 bit 0 liên tiếp sẽ mã hoá như sau: +00000000->+000+-0-+  -00000000->-000-+0+-
+
+ HDB3 (High-Density Bipolar):
+ ➢Bit ‘1’: điện áp -V hoặc +V luân phiên (Tồn tại 1 chu kỳ bit), đảo cực 
+điện áp trước đó
+ ➢Bit ‘0’: đếm số bit 0, phụ thuộc vào số bit “1” ở lần thay thế trước:
+ o Nếu không phải là 4 bit ‘0’ liên tiếp sẽ mã hoá là 0 Volt.
+ o Nếu là 4 bit ‘0’ liên tiếp thì sẽ tính tổng số xung (+ hoặc -)
+ • Nếu lẻ: +0000 → +000+ và -0000 →-000
+• Nếu chẵn: +0000 → +-00- và -0000 →-+00+
+
+Mã hóa tt- số:
+PAM: lấy mẫu fs>=2fmax
+PCM: b1:lấy mẫu PAM, B2: LƯỢNG TỬ PAM, B3 MÃ HÓA, B4:MÃ HÓA SỐ-SỐ
+Tốc độ bit: fs.n
+
+Mã hóa số-tt: 
+Điều chế số biên độ ASK (Amplitude Shift Keying) 
+ VD: Cho một tín hiệu số 01010, tốc độ bit là 5 bps, được điều chế bằng phương pháp
+ ASK. Tần số sóng mang fc= 20Hz. Biên độ đối với bit ‘1’ là 5V, biên độ đối với bit ‘0’ 
+là 2V. Pha ban đầu của sóng mang là 1800.
+ ➢ vẽ tín tín hiệu ASK.
+ o ‘0’: vc1(t)=2. sin(2π.20t+1800) V; Tồn tại trong 1 chu kỳ bit
+ o ‘1’: vc2(t)=5 sin(2π.20t+1800) V; Tồn tại trong 1 chu kỳ bit
+ o Chu kỳ bit Tb=1/Rb=1/5 = 200ms
+ o Chu kỳ sóng mang Tc=1/fc=1/20 = 50ms
+ o Vậy Tb= 4 Tc → 1 chu kỳ bit chứa 4 chu kỳ sóng mang
+ ➢ Tín hiệu ASK không phải là tín hiệu điều hoà.Vì có 2 biên độ.
+ ➢ Tốc độ Baud: Nbaud = Rbaud= 5 baud/s 
+FSK (frequency shift keying):
+  Ví dụ: Cho một tín hiệu số 01101, tốc độ bit là 5 bps, được điều chế bằng 
+phương pháp FSK. Biên độ sóng mang là 5V, tần số đối với bit ‘1’ là 20Hz, tần số 
+đối với bit ‘0’ là 10Hz và pha ban đầu của sóng mang là 1800.
+ ➢ Vẽ tín tín hiệu FSK.
+ o ‘0’: vc1(t)=5sin(2π.10t+1800) V; Tồn tại trong 1 chu kỳ bit
+ o ‘1’: vc2(t)=5sin(2π.20t+1800) V; Tồn tại trong 1 chu kỳ bit
+ o Chu kỳ bit Tb=1/ Rb=1/5 = 200ms
+ o Chu kỳ sóng mang bit ‘0’; Tc1=1/ fc1=1/10 = 100ms
+ o Chu kỳ sóng mang bit ‘1’; Tc2=1/ fc2=1/20 = 50ms
+ o Vậy Tb
+ = 2Tc1 
+=4Tc2 
+→1 chu kỳ bit chứa 2 chu kỳ sóng mang fc1 
+và chứa 4 chu kỳ sóng 
+mang fc2
+PSK: Pha 
+QAM (quadrature Amplitude Modulation)
+  Ví dụ: Cho một tín hiệu số 101100001000010011110111, tốc độ bit là 24 bps, 
+tần số 16Hz, được điều chế bằng phương pháp 8-QAM (8 loại đơn vị tín hiệu). 
+Giản đồ pha như hình vẽ.
+ ➢ Vẽ tín tín hiệu 8-QAM.
+ o Chu kỳ bit Tb=1/ Rb=1/24
+ o Chu kỳ sóng mang Tc=1/ fc=1/16
+ o Ta có 3Tb = 2Tc
+ → 3 chu bit sẽ tồn tại 2 chu kỳ sóng mang
+ →tín hiệu số 101100001000010011110111
+
+Mã hóa tt-tt:
+❖Điều biên (AM):
+  Băng thông của tín hiệu AM: 
+BWAM = 2 Fmax= 2 Bwi
+ ➢Với Fmax là tần số cực đại của tin tức.
+ ➢Với BWi = BWm là băng thông của tin tức.
+FM: BW= 10 Bwi
+
+Phát hiện lỗi:
+VRC:Hiệu năng:
+  VRC có thể phát hiện lỗi 1 bit.
+LRC: ❖Hiệu năng:
+  LCR cho phép phát hiện lỗi bệt.
+  Khi hai (số chẵn) bit cùng sai ở các vị trí giống nhau trong một đơn vị dữ
+ liệu thì LRC không phát hiện được
+CRC: ❖Hiệu năng:
+  CRC là phương pháp phát hiện lỗi rất hiệu quả nếu bộ chia được chọn theo các 
+luật vừa nêu do:
+ ➢ CRC có thể phát hiện tất cả các nhiễu bệt ảnh hưởng lên các bit có thứ tự lẻ.
+ ➢ CRC có thể phát hiện các nhiễu bệt có độ dài bé hơn hay bằng bậc của đa thức.
+ ➢ CRC có thể phát hiện với xác suất cao các nhiễu bệt có độ dài lớn hơn bậc của
+ đa thức.
+Checksum:Hiệu năng:
+  Checksum phát hiện được tất cả các lỗi bit lẻ cùng như hầu hết các bit 
+chẵn. 
+ Tuy nhiên, nếu một hay nhiều bit trong phân đoạn bị hỏng và bit tương ứng hay 
+bit có giá trị đảo trong phân đoạn thứ hai cũng bị lỗi, thì khi lấy tổng, không 
+nhận ra thay đổi và máy thu không phát hiện lỗi được. 
+ Nếu bit cuối trong một phân đoạn là 0 và bi đổi thành 1 khi truyền, thì ta không 
+thể phát hiện ra lỗi nếu bit 1 cuối của phân đoạn thứ hai cũng chuyển thành 0.
+
+Sửa lỗi:
+Nếu tổng số các bit trong một đơn vị được truyền đi là m+r, thì r 
+phải có khả năng chỉ ra ít nhất m+r+1 trạng thái khác nhau. 
+➢Một trạng thái là không có lỗi 
+➢m+r trạng thái chỉ thị vị trí của lỗi trong mỗi vị trí m+r.
+  Tức là m+r+1 trạng thái phải được r bit phát hiện ra được; 
+ Vì r bit có chể chỉ được 2r trạng thái khác nhau. 
+→ 2^r≥ m+r+1
+ ➢ r1 (bit 1), 3, 5, 7, 9, 11 ; tổng số bit 1 là một số chẵn
+ ➢ r2 (bit 2), 3, 6, 7, 10, 11 ; tổng số bit 1 là một số chẵn
+ ➢ r4 (bit 4), 5, 6, 7 ; tổng số bit 1 là một số chẵn
+ ➢ r8 (bit 8), 9, 10, 11 ; tổng số bit 1 là một số chẵn 
+bên thu:
+ r1:1, 3, 5, 7, 9, 11
+
+Truyền số liệu:
+YÊU CẦU/CHẤP NHẬN (ENQ/ACK)
+ ❖Cơ chế hoạt động:
+  ENQ(enquiry): mã ASCII 
+0000101; 
+ ACK(acknowledgment): mã 
+ASCII 0000110; 
+ NAK(negative 
+acknowledgment): mã ASCII 
+0010101; 
+ EOT (end of transmission): mã 
+ASCII 0000100;
+
+Điều khiển luồng là tập các thủ tục được dùng để giới hạn lượng dữ liệu 
+mà bên phát có thể gửi đi trước khi nhận được tín hiệu xác nhận ACK. 
+
+Stop/wait: Ưu điểm: 
+ Đơn giản
+ ❖Khuyết điểm: 
+ Tốc độ truyền bị chậm do quá trình dừng-đợi 
+
+ĐIỀU KHIỂN LỖI
+ ❖Là phương pháp phát hiện và truyền lại dữ liệu.
+  ARQ (Automatic Repeat Request): Yêu cầu lặp lại tự động.
+  Sửa lỗi trong lớp kết nối dữ liệu: Nếu phát hiện lỗi khi truyền thì bên thu gửi về 
+tín hiệu không xác nhận (NAK) và frame được gửi lại. Quá trình này được gọi là 
+yêu cầu tự động lặp lại (ARQ)
+
+Stop and Wait ARQ
+Gửi data0-> nhận gửi ACK 1
+Gửi data1-> nhận gửi ACK 0
+SlideWindow ARQ
+go-back-n ARQ: Gửi Data 0,1,2->Nhận gửi ACK 3
+selective-reject: gửi data 0,1,2 -> nhận lỗi frame2 NAK2 -> gửi lại 2
+So sánh giữa phương pháp Go-Back-n và Selective-Reject
+  Mặc dù chỉ truyền lại các frame bị hỏng hay thất lạc nên có vẻ hiệu quả hơn so 
+với việc chuyển lại tất cả các frame bị hỏng, nhưng do cơ chế chọn lọc và lưu trữ 
+mà máy thu phải có, cùng với cơ chế chọn lọc phức tạp nên phương pháp 
+selective-reject có chi phí đắc hơn và ít được dùng. 
+ Tuy có hiệu quả hơn nhưng thực tế thì phương pháp go-back-n được dùng nhiều 
+hơn do dễ thiết lập hơn.
+  →Chú ý là giao thức stop and wait là trường hợp đặc biệt của giao thức cửa sổ 
+trượt trong đó kích thước cửa sổ được chọn là 1. 
+
+LAN:
+THIẾT BỊ CARD MẠNG (NIC)
+ ❖Phân loại:
+  Theo chuẩn mạng
+ ➢ Hữu tuyến : Ethernet, Token bus, Token ring, 100VG-AnyLAN
+ ➢ Vô tuyến : Wi-Fi, WiMAX, WWAN
+  Theo tốc độ truyền (ví dụ Ethernet)
+ ➢ Ethernet: 10 Mbps
+ ➢ Fast Ethernet: 100 Mbps
+ ➢ Gigabit Ethernet: 1.000 Mbps
+ ➢ 10 Gigabit Ethernet: 10.000 Mbps
+  Theo chuẩn khe cắm
+ ➢ ISA, PCI, USB, PCMCIA, Express Card, FireWire 
+➢ Onboard
+Chức năng:
+  Truyền dữ liệu:
+ ➢ Nhận dữ liệu từ máy tính
+ ➢ Tổ chức thành các frame
+ ➢ Chuyển thành tín hiệu đường truyền
+  Nhận dữ liệu:
+ ➢ Nhận tín hiệu đường truyền
+ ➢ Tổ chức thành các frame
+ ➢ Xử lý các frame (kiểm tra địa chỉ Mac, xử lý lỗi, xử lý luồng…)
+ ➢ Chuyển tiếp cho máy tính xử lý
+Card mạng có thể có từ 2 đến 4 đèn LED tuỳ loại.
+ ❖Trạng thái đèn LED trên card mạng
+  ACT: Đèn chớp là đang truyền dữ liệu. Đèn sáng là đang truyền liên tục.
+  LNK: Đèn sáng là có kết nối với cáp và thiết bị mạng (hub, switch, …)
+  TX: Đèn sáng là đang gửi dữ liệu ra đường truyền
+  RX: Đèn sáng là đang nhận dữ liệu từ đường truyền
+
+Truy nhập ngẫu nhiên (Random Access):
+  CSMA
+Là phương pháp đa truy nhập sử dụng sóng mang
+ ❖Được gọi là LBT (Listen Before Talk)Một trạm muốn thực hiện truyền tin nó phải “nghe” xem đường truyền rỗi
+ hay bận
+  Nếu đường truyền rỗi → truyền dữ liệu đi.
+  Nếu đường truyền đang bận (có trạm khác đang truyền dữ liệu) → phải thực
+ hiện 1 trong 3 giải thuật kiên nhẫn (Persistent Algorithms):
+Theo dõi không kiên trì (Non-persistent CSMA): Nếu đường truyền
+ bận, đợi trong một khoảng thời gian ngẫu nhiên rồi tiếp tục nghe
+ lại đường truyền.
+  Theo dõi kiên trì (persistent CSMA): Nếu đường truyền bận, tiếp
+ tục nghe đến khi đường truyền rỗi rồi thì truyền gói tin với xác
+ suất bằng 1.
+  Theo dõi kiên trì với xác suất p (P-persistent CSMA): Nếu đường
+ truyền bận, tiếp tục nghe đến khi đường truyền rỗi rồi thì truyền
+ gói tin với xác suất bằng p.
+
+  CSMA/CD
+❖Phương pháp đa truy nhập sử dụng sóng mang có phát hiện xung đột.
+ ❖Được gọi là LWT (Listen While Talk).
+ ❖Quy tắc CSMA/CD:
+  1. Nếu đường truyền rỗi, truyền khung; nếu không, đến bước 2.
+  2. Nếu đường truyền đang bận, hãy tiếp tục nghe cho đến khi đường truyền rỗi, sau đó 
+truyền ngay lập tức.
+  3. Nếu phát hiện xung đột trong khi truyền, trạm  truyền tín hiệu gây nhiễu ngắn 
+(jamming signal) để đảm bảo rằng tất cả các trạm đều biết rằng đã có xung đột và sau 
+đó ngừng truyền.
+  4. Sau khi truyền tín hiệu gây nhiễu, hãy đợi một khoảng thời gian ngẫu nhiên, được 
+gọi là backoff, sau đó thử truyền lại (lặp lại từ bước 1).
+ ❖CSMA/CD cũng sử dụng một trong 3 giải thuật “kiên trì”
+Ưu điểm:
+  Đơn giản, mềm dẻo, hiệu quả truyền thông tin cao khi lưu lượng thông tin của mạng
+ thấp và có tính đột biến.
+  Việc thêm vào hay dịch chuyển các trạm trên tuyến không ảnh hưởng đến các thủ tục
+ của giao thức.
+  Thời gian chiếm dụng vô ích đường truyền được giảm xuống bằng thời gian dùng để phát
+ hiện một xung đột
+ ❖Nhược điểm:
+  Hiệu suất của tuyến giảm xuống nhanh chóng khi phải tải quá nhiều thông tin.
+
+ ❖Truy nhập có điều khiển (Controlled Access):
+  Token Bus
+  Token Ring
+
+SO SÁNH CSMA/CD VỚI CÁC PHƯƠNG PHÁP THẺ BÀI
+ ❖Độ phức tạp của phương pháp dùng thẻ bài lớn hơn nhiều so 
+với phương pháp truy nhập ngẫu nhiên CSMA/CD, xử lý đơn 
+giản hơn.
+  Trong điều kiện tải nhẹ phương pháp thẻ bài không cao do một trạm có thể đợi khá 
+lâu mới đến lượt (có thẻ bài). 
+ Ngược lại,: trong điều kiện tải nặng, phương pháp dùng thẻ bài hiệu quả hơn so với 
+CSMA/CD.
+ ❖Ưu điểm lớn nhất của phương pháp dùng thẻ bài:
+  Khả năng điều hoà lưu thông trong mạng bằng cách cho phép các trạm truyền số
+ lượng đơn vị dữ liệu khác nhau khi nhận được thẻ bài hoặc bằng cách lập chế độ ưu
+ tiên cấp phát cho các trạm cho trước
+
+Ethernet 
+là công nghệ của mạng LAN cho phép truyền tín hiệu giữa 
+các máy tính với tốc độ 10Mb/s đến 10 Gigabit/s. 
+ Trong các kiểu Ethernet thì thông dụng nhất là cáp xoắn đôi. 
+❖Năm 1980, Xerox, tập đoàn Intel và tập đoàn Digital Equipment đưa 
+ra tiêu chuẩn Ethernet 10 Mbps (Tiêu chuẩn DIX).
+ ❖IEEE (Institute of Electrical and Electronics Engineers, Inc- Viện 
+công nghệ điện và điện tử) đưa ra tiêu chuẩn về Ethernet đầu tiên 
+vào nĕm 1985 với tên gọi IEEE 802.3 Carrier Sense Multiple Access 
+with Collision Detection (CSMA/CD) Access Method and Physical Layer 
+Specifications
+
+IEEE 802.1: High Level Interface → đặc tả kiến trúc mạng
+  IEEE 802.2: Logical Link Control (LLC) 
+ IEEE 802.3: CSMA/CD → đặc tả 1 mạng cục bộ dựa trên mạng Ethernet
+  IEEE 802.4: Token bus
+  IEEE 802.5: Token ring
+  IEEE 802.6: MAN (Metropolitan Area Network)
+  IEEE 802.7: Broadband Technical Advisory Group
+  IEEE 802.8: Fiber Optic Technical Advisory Group
+  IEEE 802.9: Intergrated Data and Voice Network
+  IEEE 802.10: Standard for Interoperable LAN security
+  IEEE 802.11: Wireless LAN
+  IEEE 802.12: 100VG – AnyLAN
+
+❖Quan hệ giữa các chuẩn IEEE và mô hình mạng OSI: 
+ Chia tầng liên kết dữ liệu thành 2 tầng con: 
+➢ Điều khiển liên kết logic (LLC: Logical Link Control) 
+ Tầng con LLC không có kiến trúc đặc thù (hầu hết các mạng LAN dùng chuẩn IEEE)
+ ➢ Điều khiển truy nhập đường truyền (MAC: Medium Access Control)
+  Tầng con MAC chứa một số các modun phân biệt, mỗi modun mang các thông tin 
+chuyên biệt riêng cho từng ứng dụng LAN 
+
+❖Các trường trong cấu trúc khung Ethernet
+  Preamble: chỉ ra sự bắt đầu của một khung truyền.
+ ➢ Gồm1dãy các giá trị bit 1,0 xen kẽ nhau để báo hiệu cho trạm nhận khung đang tới.
+ ➢ Cung cấp một phương tiện để đồng bộ hóa những phần khung nhận của lớp vật lý
+ nhận với một luồng bits vào.
+ ➢ Preamble bao gồm 7 bytes:
+ 10101010- 10101010- 10101010- 10101010- 10101010- 10101010- 10101010
+  Start of Frame Delimiter (SFD):
+ ➢ Là một chuỗi 8 bit (1 byte) 10101011
+ ➢ Chỉ ra sự bắt đầu của chuỗi thông tin với hai bit cuối là 11
+  Destination Address (DA): 6 bytes
+ ➢ Xác nhận trạm sẽ nhận khung. DA chứa địa chỉ vật lý (MAC) của đích sắp đến của gói.
+ ➢ Nếu gói phải đi qua mạng LAN này đến mạng LAN khác để đến đích của nó, trường DA
+ chứa địa chỉ vật lý của router nối mạng LAN hiện hành và mạng LAN kế tiếp. Khi gói
+ đạt đến mạng đích, trường DA chứa địa chỉ vật lý của thiết bị đích.
+  Source Address (SA): 6 bytes 
+➢ Chứa địa chỉ vật lý của thiết bị cuối cùng chuyển tiếp gói. 
+➢ Thiết bị đó có thể là trạm đang gửi hoặc router mới xảy ra nhất để nhận và chuyển
+ tiếp gói. Địa chỉ nguồn thì luôn luôn là địa chỉ đơn và bit phía trái thì luôn là bit 0.
+  Length/type: gồm 2 bytes, nhận một trong hai ý nghĩa
+ ➢ Nếu 1500 (hệ 10) thì trường này là Length cho biết số octet của trường MAC Client 
+Data.
+ ➢ Nếu giá trị ≥1536 (hệ 10) thì trường này là Type cho biết bản chất của giao thức máy
+ khách MAC 
+ MAC Client Data - Đơn vị dữ liệu được cung cấp bởi LLC, kích thước tối đa của
+ trường này là :
+ ➢ 1500octet cho khung cơ bản (basic frame)
+ ➢ 1504octet cho khung được gắn thẻ Q (Q-tagged frame)
+ ➢ 1982octet cho envelope frame.
+  Pad: Octets được thêm vào để đảm bảo khung đủ dài để Client Data hoạt động
+ đúng.
+  Frame Check Sequence (CRC): bao gồm 4 bytes.
+ ➢ Một vùng chứa 32 bits mã kiểm tra lổi và phát hiện sai theo mã CRC-32 và tính trên
+ tất cả các trường (fields) ngoại trừ các trường Preamble, SFD, FCS.
+  Extension: Trường mở rộng được thêm vào, nếu được yêu cầu cho hoạt động
+ bán song công (half-duplex) 1 Gbps.
+ ➢ Trường mở rộng là cần thiết để thực thi thời lượng sự kiện sóng mang tối thiểu trên
+ đường truyền trong chế độ bán song công ở tốc độ hoạt động là 1 Gbps.
+
+Chuẩn 10Mbps Ethernet
+Để phân biệt các chuẩn Ethernet khác nhau, Ủy ban IEEE 
+802.3 sử dụng một cách viết tắt gồm 3 phần:
+ 10BASE5 10BASE2 10BASE-T 10BASE-F 100BASE-TX 100BASE-FX 100BASE-T4
+ Transmission Medium Coaxialcable(50 Ω) ;Coaxialcable(50 Ω); Unshieldedtwistedpair;850-nmopticalfiberpair;
+ Signaling Technique Baseband(Manchester); Baseband(Manchester); Baseband(Manchester); Manchester/on-off;
+ Topology Bus Bus Star Star
+ Maximum Segment Length (m)500 185 100 500
+ Nodes per Segment 100 30 — 33
+ Cable Diameter (mm) 10 5 0.4–0.6 62.5/125 mm
+
+CHUẨN 100MBPS ETHERNET
+ 100BASE-TX 100BASE-FX 100BASE-T4
+ Transmission Medium 2 pair, STP;2 pair, Category 5 UTP; 2 optical fibers; 4 pair, Category 3, 4, or 5 UTP
+ Signaling Technique MLT-3 MLT-3 4B5B, NRZI 8B6T, NRZ
+ Data Rate 100 Mbps 100 Mbps 100 Mbps 100 Mbps
+ Maximum Segment Length 100 m 100 m 100 m 100 m
+ Network Span 200 m 200 m 400 m 200 m
+
+❖Cuối năm 1995, ủy ban IEEE 802.3 đã thành lập nhóm nghiên
+ cứu tốc độ cao nghiên cứu các phương tiện để truyền tải các gói
+ ở định dạng Ethernet với tốc độ Gigabits.
+ ❖Chiến lược cho Gigabit Ethernet giống như chiến lược cho Fast
+ Ethernet (100Mbps), nhưng nó xác định một đặc điểm kỹ thuật
+ truyền và phương tiện mới, Gigabit.
+ ❖Sự ra đời của Gigabit Ethernet đã mở ra một kỷ nguyên mới
+ Ethernet tốc độ cao.
+ ❖Tương thích với 100BASE-T và 10BASE-T.
+ ❖Nhu cầu về Gigabit Ethernet ngày càng tăng
+
+Tầng truy nhập đường truyền (Media Access Layer)
+  Sử dụng cùng giao thức CSMA/CD và định dạng khung MAC như được sử dụng trong
+ phiên bản 10 Mbps và 100 Mbps của IEEE 802.3.
+  Đối với hoạt động của thiết bị trung tâm chia sẻ phương tiện (shared-medium hub),
+ có hai cải tiến đối với CSMA/CD cơ bản:
+ ➢ Carrier extension: Tiện ích mở rộng thêm một bộ ký hiệu đặc biệt vào cuối các khung
+ MAC ngắn để khối khối có dung lượng ít nhất 4096 bit, tăng từ mức tối thiểu 512 bit ở mức
+ 10Mbps và 100Mbps. Điều này là để độ dài khung truyền dài hơn thời gian lan truyền ở mức
+ 1Gbps.
+ ➢ Frame bursting: Tính năng này cho phép nhiều khung hình ngắn được truyền liên tiếp,
+ đến giới hạn mà không từ bỏ quyền kiểm soát đối với CSMA/CD giữa các khung. Frame
+ bursting sẽ tránh được chi phí mở rộng carrier khi một trạm đơn có một số khung nhỏ sẵn
+ sàng gửi.
+
+CHUẨN 10GBPS ETHERNET
+ ❖Đáp ứng nhu cầu:
+  Tăng số lượng kết nối mạng
+  Tăng tốc độ kết nối của từng trạm đầu cuối 
+ Sự gia tăng trong việc triển khai các ứng dụng cần nhiều băng thông, ví dụ: 
+video chất lượng cao.
+  Lưu lượng truy cập lưu trữ web và lưu trữ ứng dụng tăng.
+ ❖Tiềm năng sử dụng của Ethernet 10Gbps: 
+ Các đường xương sống có dung lượng cao hơn giúp giảm tắc nghẽn cho các bộ 
+chuyển mạch nhóm làm việc
+
+Repeater là thiết bị mạng nối kết 2 nhánh mạng
+  nhận tín hiệu ở một nhánh mạng
+  khuyếch đại tín hiệu (không xử lý nội dung)
+  Chuyển tiếp tín hiệu sang nhánh mạng còn lại 
+❖Phân loại:
+  Repeater điện: liên kết với hai đầu đều là cáp điện
+  Repeater điện quang: liên kết với một đầu cáp quang và một đầu là cáp điện
+Luật 5-4-3
+  Chỉ có thể nối tối đa 5 nhánh mạng lại với nhau bằng các Repeater
+  Chỉ có thể sử dụng tối đa 4 Repeater trong 1 mạng
+  Chỉ cho phép tối đa 3 nhánh mạng có nhiều hơn 1 nút (1 nút có thể là 1 
+máy hoặc là 1 Repeater
+
+CẦU NỐI (BRIDGE)
+ ❖Đặc điểm:
+  Ưu điểm:
+ ➢ Cho phép mở rộng cùng một mạng logic với nhiều kiểu chạy cáp khác nhau
+ ➢ Tách một mạng thành nhiều phần nhằm giảm lưu lượng mạng.
+  Nhược điểm:
+ ➢ Chậm hơn repeater do phải xử lý các gói tin
+ ➢ Không có khả năng tìm đường đi tối ưu trong trường hợp có nhiều đường đi.
+ ➢ Đắt tiền hơn repeater
+Lý do sử dụng Bridge:
+  Mở rộng và ghép nối các mạng LAN nhỏ độc lập nhau.
+  Cho phép mở rộng mạng mà không phụ thuộc luật 5-4-3
+  Ghép nối các mạng trên 1 vùng địa lý lớn (vd: nhiều toà nhà cách biệt nhau).
+  Phân chia 1 mạng lớn thành nhiều mạng nhỏ hơn để giảm lưu lượng và giảm 
+xung đột trên mạng.
+  Kích thước mạng vượt quá qui định cho phép (chiều dài cáp, số lượng Node) cần 
+chia ra nhiều phân đoạn mạng.
+  Tăng độ tin cậy trên mạng.
+  Tăng độ an toàn trên mạng
+
+BỘ CHUYỂN MẠCH (SWITCH)
+ ❖Các chế độ chuyển mạch: 
+ Store and Forward Mode: Switch đọc toàn bộ nội dung 1 frame dữ liệu, kiểm tra lỗi 
+rồi mới truyền ra port đích. 
+➢Ưu điểm: Truyền dữ liệu tin cậy hơn, truyền được giữa các port khác tốc độ và 
+khác chuẩn. 
+➢Nhược điểm: Tốc độ xử lý chậm, thời gian trễ lớn.
+  Cut-through mode: Chỉ đọc địa chỉ MAC đích và chuyển frame dữ liệu ra port đích. 
+➢Ưu điểm: Tốc độ xử lý nhanh, thời gian trễ nhỏ. 
+➢Nhược điểm: không kiểm soát lỗi và lưu lượng, chỉ sử dụng cho Ethernet cùng tốc 
+độ các port.
+  Fragment-free
+ 81
+ ➢Đọc 1 phần gói tin 
+Switch mức cao:
+  Switch chuẩn làm việc trong tầng 2 (mô hình OSI) tương tự như cầu nối
+ Bridge. Chuyển mạch dựa trên địa chỉ MAC.
+  Switch Layer 3:
+ ➢ Cho phép phân chia VLAN và định tuyến giữa các VLAN, không cần 1 Router
+ để kết nối các VLAN. Chuyển mạch dựa trên địa chỉ mạng.
+  Switch Layer 4:
+ ➢ Thiết bị chuyển mạch dựa trên địa chỉ dịch vụ (port).
+  Switch Layer 7:
+ ➢ Thiết bị chuyển mạch dựa trên loại ứng dụng.
+ ➢ Ví dụ content switching, load balancing switch.
+
+BỘ ĐỊNH TUYẾN (ROUTER)
+ ❖Hoạt động ở tầng mạng (tầng 3 mô hình OSI)
+ ❖Kết nối nhiều mạng với nhau
+  nhiều loại mạng : LAN, MAN, WAN
+  các mạng có tốc độ tuyền khác nhau
+  các mạng có giao thức khác nhau
+ ❖Quản lý lưu lượng truyền giữa các mạng dựa vào địa chỉ IP
+Chức năng chính: Tìm đường đi cho các gói tin trên môi trường
+ liên mạng (định tuyến) và chuyển tiếp các gói tin.
+  Định tuyến tĩnh (static routing):
+ ➢ Do người quản trị mạng khai báo sẵn trong router và không thay đổi trong
+ quá trình sử dụng. Nếu trạng thái mạng thay đổi phải khai báo lại.
+  Định tuyến động (dynamic routing):
+ ➢ Các router trên mạng tự trao đổi thông tin để xây dựng bảng định tuyến.
+ Trong quá trình vận hành nếu trạng thái mạng thay đổi sẽ tự động cập nhật
+ bảng định tuyến theo trạng thái mới.
+ ➢ Hai giải thuật định tuyến động thông dụng nhất hiện nay: Distance vector và
+ Link state
+
+
+Cách xác định collision domains, broadcast domains:
+  Hub, Repeater:
+ ➢ Không phân chia Collision domain và Broadcast domain. 
+➢ Tất cả các Port của Hub thuộc cùng một Collision domain, cùng một Broadcast Domain.
+  Switch, Bridge:
+ ➢ Chia Collision domain: Mỗi interface (port) của Switch là một collision domain.
+ ➢ Không chia broadcast domain (chung một broadcast domain)
+  Router:
+ ➢ Phân chia Collision: Mỗi interface (port) trên router là một collision domain 
+ ➢ phân chia Broadcast: Mỗi interface (port) trên router là một broadcast domain 
+
+❖Tạo VLAN: Trên 1 Swith có thể tạo tối đa 4096 VLAN (từ 0 → 4095)
+
+CÁC CHUẨN CỦA WLAN 
+❖IEEE 802.11b
+  Speed: 1Mbps – 11Mbps
+  Frequency Band: 2,4 Ghz ISM Band(Insdustrial, Scientific, Medical Band) 
+❖IEEE 802.11b Plus (IEEE 802.11b+)
+  Speed: 1Mbps – 22Mbps
+  Frequency Band : 2,4 Ghz ISM Band(Insdustrial, Scientific, Medical Band)
+  Improved from IEEE 802.11 b
+❖IEEE 802.11a
+  Speed: 1Mbps – 54Mbps
+  Frequency Band : 5GHz or More
+  Not compatible with 802.11b and 802.11b Plus
+❖IEEE 802.11g
+  Speed: 1Mbps – 54Mbps
+  Frequency Band : 2,4 Ghz ISM Band(Insdustrial, Scientific, Medical Band)
+  Compatible with 802.11b, 802.11b+ 
+❖IEEE 802.11n
+  Speed: 54Mbps – 300Mbps
+  Frequency Band : 2,4 Ghz ISM Band(Insdustrial Scientific Medical Band)
+  Compatible with 802.11b,b+ and 802.11g
+  MiMo (Multi-Input_Multi-Output) 
+ KỸ THUẬT TRUYỀN TÍN HIỆU TRONG WLAN 
+❖DSSS- Direct Sequence Spread Spectrum (Kỹ thuật trải 
+phổ tuần tự trực tiếp)
+  DSSS là kỹ thuật cho phép tín hiệu truyền đi được trải trên nhiều tần số hoạt 
+động đồng thời nhằm giảm nhiễu, mất mát dữ liệu
+  Tín hiệu được trải trên 7 hoặc 11 tần
+  Băng tần hoạt động của DSSS là 900Mhz (902-928Mhz) và 2.4Ghz (2.4
+2.483Ghz)
+❖WLAN Media Access Control:
+  CSMA/CA - Carrier Sense Mutiple/Collision Avoidance (Kỹ thuật đa truy cập
+ song mang, tránh đụng độ)
+RTS/CTS - Request to send/Clear to send
+CÁC THIẾT BỊ TRONG WLAN 
+❖Wireless Access Point
+  Các điểm truy cập không dây AP (Access Point) tạo ra các vùng phủ sóng, nối 
+các nút di động tới các cơ sở hạ tầng LAN có dây.
+  AP nhận, lưu vào bộ nhớ đệm, và truyền dữ liệu giữa mạng WLAN và cơ sở hạ
+ tầng mạng nối dây.
+Nguyên tắc
+  Nhiều sóng mang vô tuyến tồn tại trong cùng không gian tại
+ cùng một thời điểm mà không nhiễu với nhau nếu chúng được
+ truyền trên các tần số vô tuyến khác nhau.
+  Để nhận dữ liệu, máy thu vô tuyến bắt sóng (hoặc chọn) một tần
+ số vô tuyến xác định trong khi loại bỏ tất cả các tín hiệu vô
+ tuyến khác trên các tần số khác
+Wireless LAN PCI Card:
+  Người dùng đầu cuối truy cập mạng WLAN thông qua các card giao tiếp mạng 
+WLAN. 
+ Các card này cung cấp một giao diện giữa hệ điều hành mạng (NOS-Network 
+Operating System) và sóng vô tuyến (qua một anten).
+CÁC MÔ HÌNH WLAN 
+❖Mô hình Ad-Hoc:
+  Còn gọi là dạng Peer-to-Peer, mô hình này các máy tính kết nối trực tiếp với 
+nhau, số máy tối đa theo lý thuyết là 9. 
+ Thực tế rất ít khi sử dụng vì tốc độ tương đối chậm.
+  Yêu cầu thiết bị :
+ ➢ Máy vi tính (PC hay Laptop)
+ ➢ Card wireless
+❖Mô hình cơ sở BSSs (Basic Service Sets)
+  Là mô hình thông dụng hiện nay, nó bao gồm 1 Access Point đóng vai trò 
+thu/phát tín hiệu, về nguyên tắc nó đóng vai trò tương tự như Hub trên 
+mạng LAN truyền thống. 
+ Access Point là điểm tâm trung nhận các tín hiệu sóng, đồng thời chuyển 
+phát các tín hiệu sóng với các máy cần nhận.
+  Yêu cầu thiết bị:
+ ➢ Máy tính (PC hay Laptop).
+ ➢ Access Point và Card Wireless.
+
+
+KÊNH QUAY SỐ (DIAL-UP) 
+❖Modem và đường điện thoại quay số dùng tín hiệu tương tự cung cấp 
+kết nối chuyển mạch, dung lượng thấp
+ →phù hợp cho nhu cầu truyền dữ liệu tốc độ thấp, giá thành rẻ.
+❖Điện thoại truyền thống sử dụng cáp đồng kết nối từ máy điện thoại 
+của thuê bao đến tổng đài mạng điện thoại chuyển mạch công 
+cộng PSTN (Public Switched Telephone Network). 
+❖Tín hiệu truyền đi trên đường truyền là tín hiệu tương tự biến đổi liên 
+tục để truyền tiếng nói. 
+ Modem tại đầu phát thực hiện điều chế tín nhị phân sang tính hiệu tương tự 
+rồi mới đưa tín hiệu xuống đường truyền. 
+ Modem tại đầu thu thực hiện giải điều chế tín hiệu tương tự thành tín hiệu nhị 
+phân như ban đầu
+Các thành phần trong hệ thống PSTN
+  Điện thoại Analog (Analog 
+telephone): 
+➢ Thiết bị “truyền thống” được 
+sử dụng để kết nối đến hệ 
+thống PSTN. 
+➢ Là thiết bị chuyển đổi từ tín 
+hiệu tương tự sang tín hiệu số 
+để truyền đi trên đường dây 
+cáp đồng hai lõi (Tip-Ring)
+Tín hiệu đầu-cuối (Local loop): 
+➢ Đường dây dẫn liên kết giữa nhà cung cấp 
+dịch vụ trạm (PSTN) tới người dùng cuối.
+  Mạch chuyển CO (Central Office
+ Switch): 
+➢ Cung cấp các dịch vụ từ nhà cung cấp tới 
+người dùng: đảm bảo tín hiệu cuộc gọi, 
+chuyển hướng cuộc gọi,…
+Đường trung kế (Trunk): 
+➢ Là đường dây trung gian giữa 
+nhà cung cấp dịch vụ trạm 
+PSTN đến các CO Switch.
+  Chuyển mạch nội bộ (Private 
+Switch): 
+➢ Dùng cho các doanh nghiệp
+❖Ưu điểm:
+  Thực hiện đơn giản ở mọi nơi, chi phí thấp. 
+❖Nhược điểm:
+  Tốc độ thấp → Việc truyền thoại và video không tốt
+  Thời gian thực hiện kết nối lâu, có thời gian trễ và nghẽn mạch
+Các thiết bị cơ bản trong mạng ISDN bao gồm:
+  Terminal equipment type 1 (TE1): 
+➢ Các thiết bị đầu cuối mang tính năng ISDN (điện thoại số ISDN, digital fax…).
+  Terminal equipment type 2 (TE2): 
+➢ Các thiết bị đầu cuối không mang tính năng ISDN. 
+➢ Các thiết bị này để có thể liên kết được với ISDN cần phải có thêm các bộ phối ghép đầu
+ cuối Terminal Adapter (TA).
+  Network Termination 1 (NT1): 
+➢ Thực hiện các chức năng thuộc tầng Physical trong mô hình OSI (các chức năng về điện, 
+giao tiếp giữa ISDN và người sử dụng, chức năng kiểm soát chất lượng đường truyền…).
+  Network Termination 2 (NT2):
+ ➢ Các thiết bị có khả năng đáp ứng các chức năng liên quan đến tầng mạng của mô hình OSI 
+(các tổng đài riêng PBX-Private Branch Exchange)
+Các kênh trong ISDN:
+  Trong ISDN, đường truyền thông tin giữa người sử dụng và mạng gọi là 1 kênh. 
+ Kênh chỉ truyền các tín hiệu số. 
+ Bao gồm 3 loại kênh D, kênh B và kênh H khác nhau về chức năng và tốc độ.
+ ➢ Kênh D (Delta): Dùng để truyền các báo hiệu và dữ liệu; hoạt động ở tốc độ 16Kbps 
+hoặc 64Kbps.
+ ➢ Kênh B (Bearer): Dùng để truyền tín hiệu tiếng nói, âm thanh, số liệu và hình ảnh; 
+hoạt động ở tốc độ 64Kbps.
+ ➢ Kênh H: Cung cấp các dịch vụ tốc độ cao và ghép các luồng thông tin. Có 4 loại kênh 
+H (H0, H10, H11, H12) với tốc độ lần lượt là 384Kbps, 1.472Kbps, 1.536Kbps, 
+1.920Kbps
+Dựa vào các kênh truyền, ISDN bao gồm 2 loại dịch vụ: BRI và PRI
+  ISDN Basic Rate Interface (BRI):
+ ➢ gồm 2 kênh B kết hợp với một kênh D (16Kbps).
+ ➢ BRI có tốc độ là 144Kbps. 
+➢ BRI dành cho các thuê bao nhỏ để cung cấp các dịch vụ truy cập mạng.
+ ➢ VD: 3 loại dữ liệu khác nhau được chuyển đổi sang các định dạng ISDN và sau đó được 
+kết nối với ISDN thông qua NT1.NT1 kiểm soát electrical và physical termination của 
+ISDN tại cơ sở của người dùng.
+Primary Rate Interface (PRI):
+ ➢ 23B (hoặc 30B)+D
+ ➢ PRI dùng cho thuê bao có dung lượng lớn như tổng đài PBAX hoặc các mạng cục bộ 
+LAN.
+ ➢ VD: Trong một cài đặt PRI điển hình, có một thiết bị bổ sung: Network Termination 2
+ (NT2,) là một bộ ghép kênh của các dữ liệu khác nhau. NT1 sau đó được kết nối với 
+mạng ISDN.
+ĐƯỜNG TRUYỀN THUÊ RIÊNG (LEASED LINE) 
+❖Khi cần phải có một kết nối dành 
+riêng cố định → đường truyền thuê
+ riêng với dung lượng có thể lên tới 2,5 
+Gbps
+ ❖ISP cho các chi nhánh của các doanh 
+nghiệp thuê đường truyền điểm điểm.
+  →Doanh nghiệp đã được cung cấp 1 đường
+ lớp 1 (đường đấu nối vật lý) → khi đó
+ doanh nghiệp chỉ cấu hình trên đường này
+ từ layer 2 trở lên.
+Các giao thức layer 2 chạy trên đường 
+leaded Line → có 2 giao thức Data Link 
+Protocol phổ biến nhất:
+  HDLC: (High-level Data Link Control)
+ ➢ Mặc định các cổng Serial của Router Cisco 
+chạy giao thức HDLC
+  PPP (Point-to-Point Protocol)
+ ➢ Khuyến nghị nên sử dụng giao thức này vì
+ cung cung cấp nhiều tiện ích và mạnh hơn
+ HDLC như hỗ trợ cơ chế quản lý kết nối
+ layer2, cơ chế xác thực layer 2 cung cấp
+ phương tiện kết nối với layer 3 hiệu quả hơn
+X.25 là một giao thức lớp Mạng và các thuê bao được cung cấp một 
+địa chỉ mạng.
+ ❖Khi có yêu cầu từ một tập hợp các địa chỉ, mạch ảo SVC (Switched 
+Virtual Circuit) sẽ được thiết lập, mỗi SVC được phân biệt bằng một 
+địa chỉ số kênh. 
+❖Các gói dữ liệu được dán nhãn theo chỉ số kênh này, dựa vào đó các 
+gói dữ liệu được truyền đến đúng địa chỉ mạng đích. 
+❖Trên một kết nối vật lý có thể thiết lập nhiều kênh truyền.
+❖Ưu điểm:
+  X.25 có chi phí thấp và hiệu quả vì chi phí cước được tính theo lưu lượng dữ liệu
+ chứ không tính theo thời gian kết nối và khoảng cách của kết nối. 
+ Dữ liệu được truyền đi với bất kỳ tốc độ nào lên tới mức độ tối đa của đường 
+truyền. 
+❖Nhược điểm:
+  X.25 thường có dung lượng thấp, tối đa là 48 Kb/giây. 
+ Thời gian truyền gói dữ liệu cũng bị trễ do đặc trưng của mạng chia sẻ.
+ ❖Công nghệ X.25 từ lâu đã không còn được sử dụng rộng rãi.
+ ❖Frame Relay đã thay thế cho X.25
+FRAME RELAY 
+❖Do nhu cầu băng thông ngày càng cao và yêu cầu thời gian chuyển 
+mạch gói nhanh hơn, nhà cung cấp dịch vụ đã giới thiệu Frame Relay
+ ❖Frame Relay cũng hoạt động như X.25 nhưng có tốc độ cao hơn, lên 
+đến 4 Mbps hoặc hơn nữa.
+ ❖Frame Relay có một số đặc điểm khác với X.25. 
+ Điểm khác biệt quan trọng nhất là: Frame Relay là giao thức đơn giản hơn, hoạt 
+động ở lớp liên kết dữ liệu thay vì ở lớp Mạng
+Công nghệ Frame Relay thường 
+chuyển các frame từ nguồn đến 
+đích trên những đường dẫn kết 
+nối ảo. 
+❖Các đường đi ảo này có thể là:
+  Các mạch ảo thường trực 
+(permanent virtual circuits 
+PVCs) hoặc 
+ Các mạch ảo chuyển mạch 
+(switched virtual circuits 
+SVCs)
+ATM (ASYCHRONOUS TRANSFER MODE) 
+❖Các nhà cung cấp dịch vụ đã nhìn thấy nhu cầu cần phải có công 
+nghệ cung cấp mạng chia sẻ cố định với thời gian trễ thấp, ít 
+nghẽn mạch và băng thông cao. 
+❖→Giải pháp chính là ATM với tốc độ 155 Mb/giây
+❖ATM là một công nghệ có khả năng truyền thoại, video và dữ liệu 
+thông qua mạng riêng và mạng công cộng. 
+❖ATM được xây dựng dựa trên cấu trúc tế bào (cell) chứ không dựa 
+trên cấu trúc frame. 
+ Gói dữ liệu được truyền đi trên mạng ATM không được gọi là frame mà gọi là tế bào (cell). 
+ Mỗi tế bào ATM luôn có chiều dài cố định là 53 byte. 
+ Tế bào ATM 53 byte này chứa 5 byte phần ATM header, tiếp theo sau là 48 byte của phần dữ 
+liệu. 
+ Tất cả các tế bào ATM đều có kích thước nhỏ, cố định như nhau. Do đó, không có các gói dữ 
+liệu khác lơn hơn trên đường truyền, mọi tế bào đều không phải chờ lâu. Thời gian truyền của 
+mỗi gói là như nhau. Do đó, các gói đến đích cách nhau đều đặn, không có gói nào đến quá 
+chậm so với gói
+ trước. Cơ chế này rất phù hợp cho truyền thoại và video vì những tín hiệu này vốn rất nhạy 
+cảm với vấn đề thời gian trễ
+So với các frame lớn hơn của Frame Relay và X.25 thì tế bào 
+ATM 53 byte không được hiệu quả bằng. 
+ Khi có một packet lớn của lớp Mạng cần phải phân đoạn nhỏ hơn thì cữ mỗi 48 byte 
+phải có 5 byte cho phần ATM header. 
+ Công việc ráp các phân đoạn lại thành packet ban đầu ở ATM switch đầu thu sẽ phức 
+tạp hơn. 
+ Việc đóng gói làm cho đường truyền ATM phải tốn nhiều hơn 20% băng thông so với 
+Frame Relay để truyền cùng một lượng dữ liệu lớp Mạng.
+ ❖ATM cung cấp cả kết nối PVC và SVC mặc dù PVC được sử dụng 
+nhiều hơn trong WAN. 
+ Cũng như các công nghệ chia sẻ khác, ATM cho phép thiết lập kết nối ảo trên một 
+kết nối vật lí.
+❖DSL là một công nghệ truyền băng rộng sử dụng đường truyền hai 
+dây xoắn của hệ thống điện thoại để truyền dữ liệu với băng thông 
+lớn đến thuê bao dùng dịch vụ. 
+❖Kỹ thuật truyền băng rộng ghép nhiều dải tần số khác nhau trên 
+cùng một đường truyền vật lý để truyền dữ liệu xDSL bao gồm các 
+công nghệ DSL:
+  Asymmetric DSL (ADSL)
+  Symmetric DSL (SDSL)
+  High Bit Rate DSL (HDSL)
+  ISDN DSL (IDSL)
+  Consumer DSL (CDSL), cũng được gọi là DSL-lite hay G.lite
+Các ISP có thế cung cấp cho khách hàng dịch vụ mạng tốc độ cao 
+trên đường dây thoại cáp đồng. 
+❖Cho phép đường dây này thực hiện song song đồng thời chức năng 
+của một kết nối điện thoại và một kết nối mạng thường trực cố định. 
+ Nhiều kết nối của thuê bao DSL được ghép kênh vào một đường kết nối có dung 
+lượng cao tại trung tâm cung cấp dịch vụ thông qua thiết bị ghép kênh truy cập 
+DSL (DSLAM – DSL Access Multiplexer). 
+ Nhiều kết nối DSL của thuê bao được DSLAM tích hợp vào một kết nối T3/DS3 
+duy nhất. 
+Có 2 loại công nghệ DSL cơ bản là:
+  ADSL (Asymmetric DSL – DSL bất đối xứng)
+ ➢ Dịch vụ bất đối xứng cung cấp kênh tải dữ liệu (download) lớn hơn kênh 
+truyền dữ liệu (upload).
+  SDSL (Symmetric DSL – DSL đối xứng). 
+➢ Dịch vụ đối xứng cung cấp cả hai kênh truyền này có dung lượng như 
+nhau.
+ ❖Không phải tất cả các công nghệ DSL đều cho phép sử dụng 
+đường dây điện thoại.
+  Ví dụ SDSL không cung cấp dịch vụ điện thoại trên cùng một đường 
+truyền → phải có riêng một đường truyền cho SDSL. 
+
+
+
+GIAO THỨC TCP VÀ UDP
+ ❖5 chức năng của tầng giao vận:
+  Session multiplexing (ghép phiên kết nối)
+  Segmenttation (phân đoạn)
+  Flow control (điều khiển luồng)
+ ➢ Khi server gửi dữ liệu liên tục cho client có khả năng client không đủ tài nguyên để xử 
+lý → mất mát dữ liệu trong suốt quá trình truyền thông.
+ ➢ Client sẽ gửi tín hiệu báo server giảm hoặc dừng hẳn quá trình truyền dữ liệu để Client 
+kịp xử lý dữ liệu.
+  Connection-oriented:
+ ➢ Hai bên thực hiện quá trình bắt tay 3 bước để đảm bảo 2 thiết bị sẵn sàng tài nguyên 
+(RAM, Bộ nhớ,…) để phục vụ quá trình gửi nhận dữ liệu
+  Reliability (độ tin cậy)
+Cấu trúc gói tin TCP (TCP Segment):
+  Source Port (16 bit)
+ ➢ số hiệu cổng nguồn.
+  Destination Port (16 bit)
+ ➢ số hiệu cổng đích.
+  Sequence Number (32 bit)
+ ➢ số thứ tự cho segment trước khi gửi.
+  Acknowlegment Number (32 bit)
+ ➢ Phục vụ quá trình báo nhận thành công
+  Offset (4 bit)
+ ➢ Độdài Header gói tin TCP
+  Reserved (6 bit) 
+21
+ ➢ Lấp đầy bằng 0 để dành cho tương lai.
+ Flags: Các bit cờ điều khiển, nếu được thiết lập bằng 1 nghĩa là:
+ ➢ CWR: cửa sổ tắc nghẽn giảm
+ ➢ ECE: ECN-ECHO; các bit CWR và ECE, được xác định trong RFC 3168, được sử dụng cho chức 
+năng thông báo tắc nghẽn 
+➢ URG: Vùng con trỏ khẩn có hiệu lực.
+ ➢ ACK:Vùng báo nhận (ACK number) có hiệu lực
+ ➢ PSH: Chức năng PUSH.
+ ➢ RST: Khởi động lại (reset) liên kết.
+ ➢ SYN: Đồng bộ các số liệu tuần tự (sequence number)
+ ➢ FIN: Không còn dữ liệu từ trạm nguồn .
+Window (16bits)
+ ➢ Số lượng các Byte dữ liệu trong vùng cửa sổ
+ bên phát.
+  Checksum (16bits)
+ ➢ Mã kiểm soát lỗi (theo phương pháp CRC).
+  Urgent Pointer (16 bits)
+ ➢ Số thứ tự của Byte dữ liệu khẩn, khi URG được thiết lập.
+  Option (độ dài thay đổi)
+ ➢ Khai báo độ dài tối đa của TCP Data trong một Segment.
+  Padding (độ dài thay đổi)
+ ➢ Phần chèn thêm vào Header.
+21: FTP
+23: TELNET
+80: HTTP
+53: DNS
+69: TFTP
+161: SNMP
+
+IP:
+CẤU TRÚC GÓI TIN IP DATAGRAM
+ ❖Version (4 bit):
+  Phiên bản IPv4 hay IPv6
+  Giá trị biểu diễn ở dạng thập phân
+ (4 hoặc 6)
+ ❖IHL–Internet Header Length
+ (4 bit):
+  Chiều dài Header
+  chiều dài nhỏ nhất của một gói IP Header là 20 Bytes
+ TypeofService(8bit):đểđặc tảthamsố
+ vềyêucầudịchvụQoS(QualityofService)
+ ➢Precedence (3 bit): quyền ưu tiên gửi
+ datagram.
+ ➢Delay(1 bit): chỉ độ trễ yêu cầu.0: độ trễ 
+bình thường;1: độ trễ thấp
+ ➢Throughput(1 bit): chỉ số thông lượng yêu 
+cầu.0: thông lượng bình thường;1: thông 
+lượng cao
+ ➢Reliability(1 bit): chỉ độ tin cậy yêu cầu.0: 
+độ tin cậy bình thường;1: độ tin cậy cao
+ ➢Reserved (2 bit): chưadùngđến.
+ Total length (16 bit): kích cỡ toàn bộ gói IP 
+Datagram (Header và Data) tính theo Byte. 
+➢ Kích thước nhỏ nhất của trường này là 20 Bytes 
+và lớn nhất có thể là 65.535 Bytes. 
+➢ Dựa vào trường này và trường Header Length 
+ta tính được vị trí bắt đầu của dữ liệu trong IP 
+Datagram.
+  Indentification (16 bit): Trường định danh, 
+cùng với Source address, Destination 
+address để định danh duy nhất cho mỗi 
+Datagram được gửi đi bởi 1 trạm. 
+➢ Thường phần định danh (Indentification) được 
+tăng thêm 1 khi 1 Datagram được gửi đi.
+ Flags (3 bit): Các cờ, sử dụng khi 
+phân đoạn các Datagram.
+ ➢ Reserved: chưa sử dụng, giá trị 
+luôn là 0.
+ ➢ DF (Don't Fragment) 
+ DF = 1: Gói tin bị phân đoạn, có 
+nhiều hơn 1 đoạn
+  DF = 0: Gói tin ko bị phân đoạn.
+ ➢ MF(More Fragments):
+  MF = 0: đoạn cuối cùng
+  MF = 1: chưa là đoạn cuối cùng, còn 
+đoạn khác phía sau nữa.
+ Fragment Offset (13 bit): 
+khoảng cách tương đối của gói 
+tin IP trong gói tin bị phân mảnh.
+ ➢ Tất cả các mảnh của một 
+datagram, trừ mảnh cuối cùng 
+phải có chiều dài là bội số của 8 
+bytes - đơn vị cơ sở của mảnh.
+ ➢ 13 bit → số mảnh lớn nhất của 
+một datagram là 8192
+ TTL -Time to Live (8 bit): thời 
+gian tồn tại của Datagram để 
+tránh tình trạng Datagram bị lặp 
+(Loop) trên mạng. 
+➢ TTL thường có giá trị 32 hoặc 64 
+và giá trị sẽ được giảm đi 1 đơn vị 
+khi dữ liệu đi qua mỗi Router. 
+➢ Khi TTL=0 → Datagram sẽ bị hủy 
+bỏ và sẽ không báo lại cho trạm 
+gửi.
+ Protocol (8 bit): Chỉ ra giao thức 
+nào sẽ được sử dụng để truyền dữ 
+liệu IP ở các tầng trên.
+  Header Checksum (16 bit): Kiểm 
+soát lỗi cho vùng IP header.
+  Source Address (32 bit): Địa chỉ IP 
+trạm nguồn
+  Destination Address (32 bit): Địa 
+chỉ IP trạm đích
+ Padding (độ dài thay đổi): Cấu trúc 
+của gói IP quy định option phải là bội 
+số của 32 bit nên nếu option không đủ 
+số bit, các bit padding sẽ được thêm 
+vào để đạt được yêu cầu này.
+  Data (độ dài thay đổi): vùng dữ liệu có 
+độ dài là bội của 8 bit
+
+PrivateIP: 10.x.x.x; 172.16.0.0-172.31.255.255;192.168.x.x
+Loopback: 127.x.x.x
+MultiCast: 224.x.x.x
+LinkLocal: 169.254.0.0
+
+Classful: A(1-127) B(128-191) C(192-223) D(224-239) E(240-254)
+
+Công ty XYZ có:
+
+Một địa chỉ IP cấp phát: 200.120.5.0/24 (tức là có 256 địa chỉ IP, từ 200.120.5.0 đến 200.120.5.255)
+
+4 chi nhánh cần chia địa chỉ IP, mỗi chi nhánh cần số lượng máy (host) khác nhau
+
+3 kết nối WAN giữa Hà Nội và các chi nhánh khác
+
+✅ Bước 1: Xác định số host mỗi mạng cần
+Chi nhánh (mạng)	Số host thực tế	Cần bao nhiêu IP (tối thiểu 2^n ≥ số host + 2)
+TP.HCM (B)	50	64 địa chỉ → cần subnet /26 (2^6 = 64)
+Hà Nội (A)	40	64 địa chỉ → subnet /26
+Đà Nẵng (D)	30	32 địa chỉ → subnet /27 (2^5 = 32)
+Nghệ An (C)	20	32 địa chỉ → subnet /27
+3 WAN links	2 host mỗi link	4 địa chỉ → subnet /30 (2^2 = 4)
+
+✅ Bước 2: Chia địa chỉ IP theo thứ tự từ mạng cần nhiều IP đến ít IP
+Ta bắt đầu từ dải gốc: 200.120.5.0/24 (tức là từ 200.120.5.0 đến 200.120.5.255)
+
+📦 Mạng B (TP.HCM) – 50 host → /26 (64 địa chỉ)
+Dải: 200.120.5.0 – 200.120.5.63
+
+📦 Mạng A (Hà Nội) – 40 host → /26
+Dải: 200.120.5.64 – 200.120.5.127
+
+📦 Mạng D (Đà Nẵng) – 30 host → /27 (32 địa chỉ)
+Dải: 200.120.5.128 – 200.120.5.159
+
+📦 Mạng C (Nghệ An) – 20 host → /27
+Dải: 200.120.5.160 – 200.120.5.191
+
+🌐 WAN A–B → 2 host → /30 (4 địa chỉ)
+Dải: 200.120.5.192 – 200.120.5.195
+
+🌐 WAN A–C → 2 host → /30
+Dải: 200.120.5.196 – 200.120.5.199
+
+🌐 WAN A–D → 2 host → /30
+Dải: 200.120.5.200 – 200.120.5.203
+
+✅ Bước 3: Tổng kết các phần đã chia
+Mạng	Dải địa chỉ IP	Subnet mask	Số host khả dụng
+TP.HCM (B)	200.120.5.0 – 200.120.5.63	255.255.255.192 (/26)	62
+Hà Nội (A)	200.120.5.64 – 127	255.255.255.192 (/26)	62
+Đà Nẵng (D)	200.120.5.128 – 159	255.255.255.224 (/27)	30
+Nghệ An (C)	200.120.5.160 – 191	255.255.255.224 (/27)	30
+WAN A–B	200.120.5.192 – 195	255.255.255.252 (/30)	2
+WAN A–C	200.120.5.196 – 199	255.255.255.252 (/30)	2
+WAN A–D	200.120.5.200 – 203	255.255.255.252 (/30)	2
+
+👉 Còn dư: IP từ 200.120.5.204 – 200.120.5.255 có thể dùng để mở rộng sau này.
+
+PHÂN GIẢI TÊN MIỀN
+ Quá trình phân giải grigiri.gbrmpa.gov.au trên mạng Internet
+  Client sẽ gửi yêu cầu cần phân giải địa chỉ IP của máy tính có tên 
+girigiri.gbrmpa.gov.au đến name server cục bộ. 
+ Khi nhận yêu cầu từ Resolver, Name Server cục bộ sẽ phân tích tên này và xét xem 
+tên miền này có do mình quản lý hay không.
+  Nếu tên miền do Server cục bộ quản lý, nó sẽ trả lời địa chỉ IP của tên máy 
+đó ngay cho Resolver. 
+ Ngược lại, server cục bộ sẽ truy vấn đến một Root Name Server gần nhất mà 
+nó biết được. 
+ Root Name Server sẽ trả lời địa chỉ IP của Name Server quản lý miền au. 
+ Máy chủ name server cục bộ lại hỏi tiếp name server quản lý miền au và 
+được tham chiếu đến máy chủ quản lý miền gov.au. 
+ Máy chủ quản lý gov.au chỉ dẫn máy name server cục bộ tham chiếu đến 
+máy chủ quản lý miền gbrmpa.gov.au. 
+ Cuối cùng máy name server cục bộ truy vấn máy chủ quản lý miền 
+gbrmpa.gov.au và nhận được câu trả lời
