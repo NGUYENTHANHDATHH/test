@@ -1,0 +1,36 @@
+
+
+button {
+font-size: 30px;
+background-color: #a8dadc;
+
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f1faee;
+}
+h1,h2{
+    color: #1d3557;
+}
+span{
+    color: #457b9d;
+}
+button#signup{
+    background-color: #1d3557 ;
+    color: #f1faee;
+
+}
+span.tag{
+    background-color: #e63946 ;
+    color: #f1faee;
+}
+span a{
+    color: wheat;
+}
+h2+button{
+    color: magenta;
+    font-size: 20px;
+}
+input[type="password"]{
+    color: red;
+}
