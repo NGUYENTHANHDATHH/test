@@ -1,0 +1,242 @@
+CAU1:
+The multiplicity between Person and Beverage indicates how many beverages a person can have and how many people can have the same beverage.
+For example, if the multiplicity is Person * — * Beverage, it means a person can drink many beverages, and a beverage can be consumed by many persons.
+CAU2:
+The relationship between Beverage, Tea, and Coffee is an inheritance (generalization) relationship.
+Beverage is the superclass, and Tea and Coffee are subclasses.
+This means Tea and Coffee inherit the common attributes and methods of Beverage,
+while they can also have their own specific features.
+cAU3:
+Algorithm deleteNode(x)
+# x is the seat number (or pointer) of the student who leaves
+
+1. if x is NULL then
+       print("No such student.")
+       return
+
+2. leftNode ← x.llink
+3. rightNode ← x.rlink
+
+4. leftNode.rlink ← rightNode
+5. rightNode.llink ← leftNode
+
+6. returnNode(x)   # discard the handbook of student x
+
+7. print("Student", x.data, "has left. Circle updated.")
+End Algorithm
+CAU4:
+Algorithm insertNode(position, name)
+# position : seat number of the student to the LEFT of the new student
+# name     : name (data) of the new student
+
+1. newNode ← getNode()           # give handbook to new student
+2. newNode.data ← name
+
+3. leftNode ← position
+4. rightNode ← leftNode.rlink    # student currently on the right of position
+
+5. newNode.llink ← leftNode
+6. newNode.rlink ← rightNode
+
+7. leftNode.rlink ← newNode
+8. rightNode.llink ← newNode
+
+9. print("Inserted new student", name, "between", leftNode.data, "and", rightNode.data)
+End Algorithm
+CAU5:
+he Mandatory Access Control (MAC) model should be used by organizations researching high-tech space technologies.
+In MAC, access permissions are centrally controlled and based on security classifications assigned to both users and data.
+Users cannot modify access rights on their own, ensuring strict confidentiality, integrity, and protection of highly sensitive information — which is essential for aerospace and defense research environments.
+CAU6:
+The Discretionary Access Control (DAC) model is suitable for organizations that prioritize work efficiency over security and frequently change their system or authorization structure.
+In DAC, data owners control access permissions, allowing quick adjustments to user rights.
+It offers high flexibility and ease of management, making it ideal for dynamic organizations, though it provides weaker security compared to MAC.
+CAU7:
+TCP network server program is being executed where the IP address is 210.183.8.56, and it is waiting at port # 9090, to provide services. Enter the source code required to execute the TCP network server program and Network Socket communication in ⓐ. (10 Points)
+import java.io.*;
+import java.net.*;
+
+public class TCPServer {
+    public static void main(String[] args) {
+        ServerSocket serverSocket = null;
+        Socket socket = null;
+        BufferedWriter writer = null;
+
+        try {
+            // ① Create a ServerSocket bound to port 9090
+            serverSocket = new ServerSocket(9090, 1, InetAddress.getByName("210.183.8.56"));
+            System.out.println("Server is waiting for client connection...");
+
+            // ② Wait for a client to connect
+            socket = serverSocket.accept();
+            System.out.println("Client connected: " + socket.getInetAddress());
+
+            // ③ Create an output stream to send a message to the client
+            writer = new BufferedWriter(
+                        new OutputStreamWriter(socket.getOutputStream()));
+
+            // ④ Send a message
+            writer.write("Welcome to the TCP Server at 210.183.8.56:9090\n");
+            writer.flush();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+            try {
+                if (writer != null) writer.close();
+                if (socket != null) socket.close();
+                if (serverSocket != null) serverSocket.close();
+            } catch (IOException e) {
+                // ignore
+            }
+        }
+    }
+}
+CAU8:
+ You may want to execute a Timeout command if the message on the server side is not sent for 60 seconds when reading a message on the TCP network server through the network socket. Enter the source code required to perform this task in ⓑ. (20 Points)
+import java.io.*;
+import java.net.*;
+
+public class TCPServerTimeout {
+    public static void main(String[] args) {
+        ServerSocket serverSocket = null;
+        Socket socket = null;
+        BufferedReader reader = null;
+
+        try {
+            // ① Create a ServerSocket on port 9090
+            serverSocket = new ServerSocket(9090);
+            System.out.println("Server waiting for client connection...");
+
+            // ② Accept client connection
+            socket = serverSocket.accept();
+            System.out.println("Client connected: " + socket.getInetAddress());
+
+            // ③ Set 60-second read timeout on socket
+            socket.setSoTimeout(1000 * 60);
+
+            // ④ Create input stream to read client message
+            reader = new BufferedReader(
+                        new InputStreamReader(socket.getInputStream()));
+
+            // ⑤ Try to read message
+            String message = reader.readLine();
+            System.out.println("Received: " + message);
+
+        } catch (SocketTimeoutException e) {
+            // ⑥ Handle timeout condition
+            System.out.println("Timeout: No message received within 60 seconds.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+            try {
+                if (reader != null) reader.close();
+                if (socket != null) socket.close();
+                if (serverSocket != null) serverSocket.close();
+            } catch (IOException e) { /* ignore */ }
+        }
+    }
+}
+CAU9:
+3. Enter the source code required to release used network socket recourses in ⓒ. (20 Points)
+finally {
+    try {
+        if (reader != null) reader.close();     // Close input stream
+        if (socket != null) socket.close();     // Close client socket
+        if (serverSocket != null) serverSocket.close(); // Close server socket (if server program)
+        System.out.println("All network resources have been released.");
+    } catch (IOException e) {
+        // ignore
+    }
+}
+CAU10:
+Communication flows step by step — from top to bottom or bottom to top.
+
+👤 Member’s Viewpoint:
+
+Members communicate only with their immediate superior or subordinate.
+
+Information speed is slow — it must pass through every level.
+
+Risk of distortion increases as messages move through intermediaries.
+
+Decision-making is centralized at the top (A), and lower members (E) have little influence.
+
+Efficient for hierarchical control but poor for creativity or feedback.
+
+A is the central hub connected directly to B, C, D, and E.
+Others communicate only through A.
+
+👤 Member’s Viewpoint:
+
+Centralized communication: All messages go through the leader (A).
+
+A receives and distributes all information — very high control and coordination.
+
+Other members (B–E) are dependent on A and have limited interaction with each other.
+
+Efficient for simple or routine tasks where quick decisions are needed.
+
+However, members feel isolated, and A may be overloaded with information.
+All members (A, B, C, D, E) are directly connected to one another.
+
+👤 Member’s Viewpoint:
+
+Every member can communicate freely and equally with everyone else.
+
+High participation, satisfaction, and creativity.
+
+Fast feedback and collaborative problem-solving.
+CAU11:
+The current backup policy of the customer management system has several problems:
+
+Inadequate Backup Frequency: Backups are performed irregularly, risking data loss when recent updates are not captured.
+
+Improper Backup Storage: Backup data is stored on the same server as the live system, making both vulnerable to hardware or disaster failures.
+
+Lack of Verification and Recovery Testing: Backups are not tested for integrity or restorability, so recovery may fail when needed.
+These issues make the system unreliable in case of data loss. The company should implement regular automated backups, off-site storage, and periodic recovery testing to ensure data safety and business continuity.
+
+CAU12:
+Backup Type	Purpose	Frequency	Storage Duration
+Full (Total) Backup	Creates a complete copy of the database for baseline recovery	Once per week (e.g., Sunday 2:00 AM)	Keep 4–6 weeks
+Differential Backup	Backs up only data changed since the last full backup	Daily (e.g., Mon–Sat 2:00 AM)	Keep 2–3 weeks
+Archive Log Backup	Captures all transaction logs to restore data to any point in time	Every 5–15 minutes	Keep 7–30 days
+
+CAU13:
+SELECT 
+    R.RoomNo,
+    R.RoomChoice,
+    SUM(R.RoomRate * Reg.StayDays) AS TotalRate
+FROM 
+    Room R
+JOIN 
+    Registration Reg ON R.RoomNo = Reg.RoomNo
+WHERE 
+    Reg.CheckInDate BETWEEN '2014-07-01' AND '2014-07-31'
+GROUP BY 
+    R.RoomNo, R.RoomChoice
+HAVING 
+    SUM(R.RoomRate * Reg.StayDays) > 3000000
+ORDER BY 
+    TotalRate DESC;
+CAU14:
+Selected Architecture Pattern: MVC (Model–View–Controller) Pattern
+
+The MVC Pattern is selected for Company L’s next-generation system because it clearly separates user interface (View), business logic (Controller), and data processing (Model).
+This separation minimizes unnecessary interactions among layers, improves reusability, and allows functional disassembly and centralized management, all of which align perfectly with the given architecture requirements.
+
+2. Process Flow Explanation
+Overall Structure
+
+Model – Manages business data and logic. Communicates with databases through repositories or data access layers.
+
+View – Displays information to the user and sends user inputs to the Controller.
+
+Controller – Acts as the coordinator. It receives user requests, invokes the proper business logic from the Model, and selects a View for the response.
+
+CAU15:
+Provide a transaction request interval to apply to the performance test conducted to verify the ‘Functional requirement’ in the [Example] with its estimation equation, then briefly explain the relationship between TPS(Transaction Per Second) and response time. (30 points)
