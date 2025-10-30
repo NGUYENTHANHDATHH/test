@@ -240,3 +240,557 @@ Controller – Acts as the coordinator. It receives user requests, invokes the p
 
 CAU15:
 Provide a transaction request interval to apply to the performance test conducted to verify the ‘Functional requirement’ in the [Example] with its estimation equation, then briefly explain the relationship between TPS(Transaction Per Second) and response time. (30 points)
+
+/*
+ * Java_Intro_Complete.java
+ * Tập hợp ví dụ cho các kiến thức nhập môn Java (cơ bản -> trung cấp sơ khai)
+ * - biế́n và kiểu dữ liệu
+ * - toán tử
+ * - luồng điều khiển
+ * - hàm (method)
+ * - OOP: lớp, đối tượng, kế thừa, đa hình, interface, trừu tượng
+ * - collection: List, Set, Map, iteration
+ * - exception
+ * - file I/O (text)
+ * - thread (Runnable & Thread)
+ * - lambda & stream cơ bản
+ * 
+ * Lưu ý: để chạy từng phần, gọi các phương thức demo tương ứng trong main.
+ * Chạy: javac Java_Intro_Complete.java && java Java_Intro_Complete
+ */
+
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.stream.*;
+
+public class Java_Intro_Complete {
+
+    public static void main(String[] args) {
+        System.out.println("--- Java Intro Demo ---\n");
+
+        Basics.demo();
+        ControlFlow.demo();
+        MethodsDemo.demo();
+        OOPDemo.demo();
+        CollectionsDemo.demo();
+        ExceptionsDemo.demo();
+        FileIODemo.demo();
+        ThreadDemo.demo();
+        LambdaStreamDemo.demo();
+
+        System.out.println("\n--- End of Demo ---");
+    }
+}
+
+// ===================== Basics =====================
+class Basics {
+    static void demo() {
+        System.out.println("[Basics]");
+
+        // primitive types
+        int a = 10;
+        double b = 3.14;
+        boolean flag = true;
+        char c = 'A';
+
+        // reference type
+        String s = "Hello, Java";
+
+        System.out.printf("int: %d, double: %.2f, boolean: %b, char: %c, String: %s\n",
+                a, b, flag, c, s);
+
+        // automatic boxing/unboxing
+        Integer boxed = a; // boxing
+        int unboxed = boxed; // unboxing
+
+        System.out.println("boxed int + unboxed: " + (boxed + unboxed));
+
+        // Arrays
+        int[] arr = {1, 2, 3};
+        System.out.println("arr[0] = " + arr[0]);
+
+        // var (local variable type inference, Java 10+)
+        var inferred = "inferred String";
+        System.out.println("inferred: " + inferred);
+
+        System.out.println();
+    }
+}
+
+// ===================== Control Flow =====================
+class ControlFlow {
+    static void demo() {
+        System.out.println("[Control Flow]");
+
+        int x = 7;
+        if (x % 2 == 0) {
+            System.out.println(x + " is even");
+        } else {
+            System.out.println(x + " is odd");
+        }
+
+        // switch
+        switch (x) {
+            case 1 -> System.out.println("one");
+            case 2 -> System.out.println("two");
+            default -> System.out.println("other");
+        }
+
+        // loop
+        for (int i = 0; i < 3; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        int j = 0;
+        while (j < 3) {
+            System.out.print(j + " ");
+            j++;
+        }
+        System.out.println();
+
+        // enhanced for
+        for (int v : new int[]{10, 20, 30}) {
+            System.out.print(v + " ");
+        }
+        System.out.println("\n");
+    }
+}
+
+// ===================== Methods =====================
+class MethodsDemo {
+    static void demo() {
+        System.out.println("[Methods]");
+        System.out.println("sum(3,4) = " + sum(3, 4));
+
+        // varargs
+        System.out.println("avg(2,4,6) = " + avg(2, 4, 6));
+
+        // recursion
+        System.out.println("factorial(5) = " + factorial(5));
+        System.out.println();
+    }
+
+    static int sum(int a, int b) {
+        return a + b;
+    }
+
+    static double avg(int... nums) {
+        return Arrays.stream(nums).average().orElse(Double.NaN);
+    }
+
+    static long factorial(int n) {
+        if (n <= 1) return 1;
+        return n * factorial(n - 1);
+    }
+}
+
+// ===================== OOP =====================
+class OOPDemo {
+    static void demo() {
+        System.out.println("[OOP]");
+
+        Person p = new Person("An", 25);
+        p.sayHello();
+
+        Employee e = new Employee("Binh", 30, "DEV");
+        e.sayHello();
+        System.out.println("role: " + e.getRole());
+
+        // polymorphism
+        Person poly = new Employee("Chi", 28, "QA");
+        poly.sayHello(); // uses Employee's override
+
+        // interface
+        Animal dog = new Dog("Lucky");
+        dog.speak();
+
+        System.out.println();
+    }
+}
+
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void sayHello() {
+        System.out.println("Hello, I'm " + name + ", age " + age);
+    }
+}
+
+class Employee extends Person {
+    private String role;
+
+    public Employee(String name, int age, String role) {
+        super(name, age);
+        this.role = role;
+    }
+
+    @Override
+    public void sayHello() {
+        System.out.println("Hi, I'm an employee. " + "Role=" + role);
+    }
+
+    public String getRole() {
+        return role;
+    }
+}
+
+interface Animal {
+    void speak();
+}
+
+class Dog implements Animal {
+    private String name;
+
+    Dog(String name) { this.name = name; }
+
+    public void speak() { System.out.println(name + " says: Woof!"); }
+}
+
+// ===================== Collections =====================
+class CollectionsDemo {
+    static void demo() {
+        System.out.println("[Collections]");
+
+        // List
+        List<String> list = new ArrayList<>();
+        list.add("one");
+        list.add("two");
+        list.forEach(System.out::println);
+
+        // Set
+        Set<Integer> set = new HashSet<>(Arrays.asList(1, 2, 2, 3));
+        System.out.println("set size: " + set.size());
+
+        // Map
+        Map<String, Integer> map = new HashMap<>();
+        map.put("a", 1);
+        map.put("b", 2);
+        map.forEach((k, v) -> System.out.println(k + "->" + v));
+
+        // iteration
+        for (String s : list) System.out.print(s + " ");
+        System.out.println();
+
+        System.out.println();
+    }
+}
+
+// ===================== Exceptions =====================
+class ExceptionsDemo {
+    static void demo() {
+        System.out.println("[Exceptions]");
+        try {
+            mayThrow(true);
+        } catch (IllegalArgumentException e) {
+            System.out.println("caught: " + e.getMessage());
+        } finally {
+            System.out.println("finally always runs");
+        }
+
+        // custom exception
+        try {
+            checkAge(15);
+        } catch (UnderageException e) {
+            System.out.println("custom exception: " + e.getMessage());
+        }
+
+        System.out.println();
+    }
+
+    static void mayThrow(boolean t) {
+        if (t) throw new IllegalArgumentException("bad arg");
+    }
+
+    static void checkAge(int age) throws UnderageException {
+        if (age < 18) throw new UnderageException("Must be 18+");
+    }
+}
+
+class UnderageException extends Exception {
+    public UnderageException(String msg) { super(msg); }
+}
+
+// ===================== File I/O =====================
+class FileIODemo {
+    static void demo() {
+        System.out.println("[File I/O]");
+        String filename = "sample.txt";
+
+        // write
+        try (PrintWriter out = new PrintWriter(new FileWriter(filename))) {
+            out.println("Hello file");
+            out.println(123);
+        } catch (IOException e) {
+            System.out.println("write error: " + e.getMessage());
+        }
+
+        // read
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println("read: " + line);
+            }
+        } catch (IOException e) {
+            System.out.println("read error: " + e.getMessage());
+        }
+
+        // cleanup (optional)
+        new File(filename).delete();
+
+        System.out.println();
+    }
+}
+
+// ===================== Threads =====================
+class ThreadDemo {
+    static void demo() {
+        System.out.println("[Threads]");
+
+        // Runnable
+        Runnable r = () -> {
+            try { Thread.sleep(200); } catch (InterruptedException ignored) {}
+            System.out.println("Hello from runnable thread");
+        };
+        Thread t = new Thread(r);
+        t.start();
+
+        // ExecutorService
+        ExecutorService ex = Executors.newFixedThreadPool(2);
+        Future<Integer> f = ex.submit(() -> {
+            Thread.sleep(100);
+            return 42;
+        });
+        try {
+            System.out.println("future result: " + f.get());
+        } catch (Exception e) {
+            System.out.println("future error: " + e.getMessage());
+        }
+        ex.shutdown();
+
+        // join
+        try { t.join(); } catch (InterruptedException ignored) {}
+
+        System.out.println();
+    }
+}
+
+// ===================== Lambda & Stream =====================
+class LambdaStreamDemo {
+    static void demo() {
+        System.out.println("[Lambda & Stream]");
+
+        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);
+
+        // lambda: filter even and sum
+        int sumEven = nums.stream().filter(n -> n % 2 == 0).mapToInt(Integer::intValue).sum();
+        System.out.println("sumEven = " + sumEven);
+
+        // map
+        List<String> mapped = nums.stream().map(n -> "n=" + n).collect(Collectors.toList());
+        System.out.println(mapped);
+
+        // optional
+        Optional<Integer> opt = nums.stream().filter(n -> n > 10).findFirst();
+        System.out.println("optional present: " + opt.isPresent());
+
+        System.out.println();
+    }
+}
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <fstream>
+#include <stdexcept>
+using namespace std;
+
+// ====================== 1. STRUCTURE ======================
+void demoStructure() {
+    cout << "[1. Structure]\n";
+    cout << "Hello, C++!" << endl << endl;
+}
+
+// ====================== 2. VARIABLES ======================
+void demoVariables() {
+    cout << "[2. Variables]\n";
+    int age = 20; double pi = 3.14; bool ok = true; char ch = 'A';
+    string name = "An";
+    const double G = 9.8;
+    auto inferred = 123.45;
+    cout << "age=" << age << ", pi=" << pi << ", name=" << name << endl << endl;
+}
+
+// ====================== 3. OPERATORS ======================
+void demoOperators() {
+    cout << "[3. Operators]\n";
+    int a = 5, b = 2;
+    cout << "a+b=" << a + b << ", a*b=" << a * b << endl;
+    cout << "a==b? " << (a == b) << endl << endl;
+}
+
+// ====================== 4. CONTROL FLOW ======================
+void demoControl() {
+    cout << "[4. Control Flow]\n";
+    int x = 3;
+    if (x % 2 == 0) cout << "Even"; else cout << "Odd";
+    cout << endl;
+    switch (x) {
+        case 1: cout << "One"; break;
+        case 3: cout << "Three"; break;
+        default: cout << "Other"; break;
+    }
+    cout << endl;
+    for (int i = 0; i < 3; i++) cout << i << ' ';
+    cout << endl << endl;
+}
+
+// ====================== 5. FUNCTIONS ======================
+int add(int a, int b = 10) { return a + b; }
+int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }
+void demoFunctions() {
+    cout << "[5. Functions]\n";
+    cout << "add(5)=" << add(5) << ", add(5,2)=" << add(5,2) << endl;
+    cout << "factorial(5)=" << factorial(5) << endl << endl;
+}
+
+// ====================== 6. ARRAYS & POINTERS ======================
+void demoArrayPointer() {
+    cout << "[6. Arrays & Pointers]\n";
+    int arr[3] = {1,2,3};
+    int* p = arr;
+    for (int i = 0; i < 3; i++) cout << *(p+i) << ' ';
+    cout << endl;
+    int n = 3;
+    int* dyn = new int[n]{4,5,6};
+    for (int i = 0; i < n; i++) cout << dyn[i] << ' ';
+    delete[] dyn;
+    cout << endl << endl;
+}
+
+// ====================== 7. STRUCT & ENUM ======================
+struct Student { string name; int age; };
+enum Color { RED, GREEN, BLUE };
+void demoStructEnum() {
+    cout << "[7. Struct & Enum]\n";
+    Student s = {"Binh", 21};
+    Color c = RED;
+    cout << s.name << ", age=" << s.age << ", color=" << c << endl << endl;
+}
+
+// ====================== 8. OOP ======================
+class Person {
+protected:
+    string name;
+public:
+    Person(string n): name(n) {}
+    virtual void greet() { cout << "Hi, I'm " << name << endl; }
+};
+
+class StudentOOP : public Person {
+    int id;
+public:
+    StudentOOP(string n, int i): Person(n), id(i) {}
+    void greet() override { cout << "Hello, student " << name << " (ID=" << id << ")\n"; }
+};
+
+void demoOOP() {
+    cout << "[8. OOP]\n";
+    Person p("An"); p.greet();
+    StudentOOP s("Binh", 123); s.greet();
+    Person* ptr = &s; ptr->greet();
+    cout << endl;
+}
+
+// ====================== 9. FRIEND & OPERATOR ======================
+class Point {
+    int x, y;
+public:
+    Point(int x=0, int y=0): x(x), y(y) {}
+    friend Point operator+(const Point&a, const Point&b) {
+        return Point(a.x+b.x, a.y+b.y);
+    }
+    friend ostream& operator<<(ostream& os, const Point&p) {
+        return os << '(' << p.x << ',' << p.y << ')';
+    }
+};
+
+void demoFriendOp() {
+    cout << "[9. Friend & Operator]\n";
+    Point p1(1,2), p2(3,4);
+    cout << p1 + p2 << endl << endl;
+}
+
+// ====================== 10. TEMPLATE ======================
+template<typename T>
+T maxVal(T a, T b) { return a > b ? a : b; }
+void demoTemplate() {
+    cout << "[10. Template]\n";
+    cout << maxVal(3,7) << ", " << maxVal(2.5,1.8) << endl << endl;
+}
+
+// ====================== 11. STL ======================
+void demoSTL() {
+    cout << "[11. STL]\n";
+    vector<int> v = {3,1,4};
+    sort(v.begin(), v.end());
+    for (int x:v) cout << x << ' ';
+    cout << endl;
+
+    map<string,int> m = {{"a",1},{"b",2}};
+    for (auto [k,vv]:m) cout << k << ' ' << vv << ' ';
+    cout << endl;
+
+    set<int> s = {1,2,2,3};
+    cout << "set size=" << s.size() << endl << endl;
+}
+
+// ====================== 12. EXCEPTION & FILE ======================
+void demoExceptionFile() {
+    cout << "[12. Exception & File]\n";
+    try {
+        ofstream out("data.txt");
+        out << "Hello file" << endl;
+        out.close();
+
+        ifstream in("data.txt");
+        if (!in) throw runtime_error("File not found");
+        string line; getline(in, line);
+        cout << "Read: " << line << endl;
+        in.close();
+        remove("data.txt");
+    } catch (exception &e) {
+        cout << e.what() << endl;
+    }
+    cout << endl;
+}
+
+int main() {
+    cout << "===== C++ Intro Complete Demo =====\n\n";
+    demoStructure();
+    demoVariables();
+    demoOperators();
+    demoControl();
+    demoFunctions();
+    demoArrayPointer();
+    demoStructEnum();
+    demoOOP();
+    demoFriendOp();
+    demoTemplate();
+    demoSTL();
+    demoExceptionFile();
+    cout << "===== End of Demo =====\n";
+    return 0;
+}
+
