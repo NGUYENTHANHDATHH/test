@@ -1,0 +1,91 @@
+Vào khoảng năm 1930: Người nghĩ ra TTNT là Alan Turing 
+ Năm 1956: J.Mc Carthy, M. Minsky, A. Newell, Shannon. 
+Simon,… đưa ra khái niêm “trí tuệ nhân tạo” 
+ Năm 1960: Tại Đại học MIT (Massachussets Institure of 
+Technology) ra đời ngôn ngữ lập trình LISP (ngôn ngữ đầu tiên 
+dùng cho TTNT) 
+ Năm 1961: Thuật ngữ “trí tuệ nhân tạo” lần đầu tiên được dùng 
+tại đại học MIT. Thập kỷ 1960 là thời kỳ lạc quan của TTNT: Các 
+chương trình trò chơi, chứng minh tự động, tính tích phân bất 
+định, điều khiển robot,… 
+ Đầu những năm 1970 (từ 1970 -> 1971): TTNT bế tắc do hạn 
+chế về bộ nhớ và tốc độ tính toán của máy tính 
+ Từ năm 1972 -> 1980: TTNT tiếp tục phát triển như: ra đời vấn 
+đề xử lý ngôn ngữ tự nhiên, biểu diễn tri thức và giải quyết vấn 
+đề; ngôn ngữ lập trình LISP, Prolog, các hệ chuyên gia,… 
+ Những năm 1980: TTNT được ứng dụng trong các thiết bị dân 
+dụng: máy giặt, máy ảnh,....; ra đời hệ thống nhận dạng, xử lý 
+ảnh, xử lý tiếng nói,… 
+ Từ năm 1990 đến nay: TTNT tập trung nghiên cứu về: cơ chế 
+suy diễn, TTNT phân tạo, các mô hình tác tử,...
+
+Định nghĩa 1: Theo Alan Turing: Trí tuệ là những gì có 
+thể được đánh giá thông qua các trắc nghiệm thông 
+minh 
+ Định nghĩa 2: Theo từ điển Webster: Trí tuệ là sự phản 
+ứng 1 cách thích hợp trước những tình huống mới thông 
+qua việc hiệu chỉnh hành vi 1 cách thích đáng 
+ Định nghĩa 3: Theo các nhà tâm lý học: Trí tuệ con người 
+được tiến hành thông qua 4 thao tác cơ bản: 
+• Thao tác 1: Xác định đích cần đạt tới 
+• Thao tác 2: Xác định các sự kiện, các luật, các quy tắc luật có 
+liên quan đến đích 
+• Thao tác 3: Thao tác thu gọn: XĐ các yếu tố làm giảm không gian 
+tìm kiếm (KGTT) 
+• Thao tác 4: Sử dụng 1 cơ chế suy diễn để ta nhận được đích từ 
+các dữ kiện đã cho 
+
+Các khả năng của TTNT 
+• Khả năng học 
+• Khả năng trừu tượng hoá, tổng quát hoá và suy diễn 
+• Khả năng mô phỏng hành vi của con người 
+• Khả năng tự giải thích hành vi 
+• Khả năng thích nghi với tình huống mới trong đó có khả 
+năng thu nạp tri thức và dữ liệu 
+• Khả năng xử lý các biểu diễn hình thức như các ký  hiệu 
+tượng trưng, danh sách 
+• Khả năng sử dụng các tri thức heuristic (mẹo, kinh nghiệm) 
+• Khả năng xử lý các thông tin không đầy đủ, không chính 
+xác
+
+ Trí tuệ nhân tạo (AI - Artificial Intelligence): Là một 
+ngành của khoa học máy tính liên quan đến việc 
+tự động hóa các hành vi thông minh 
+• TTNT: Phải được đặt trên những nguyên lý, lý 
+thuyết vững chắc, có khả năng ứng dụng được  
+ Những nguyên lý này bao gồm:  
+• Các cấu trúc dữ liệu để biểu diễn tri thức 
+• Các thuật toán để áp dụng cho những tri thức đó 
+• Các ngôn ngữ và kỹ thuật lập trình để cài đặt
+
+CHƯƠNG 2:
+Khi thiết kế một tác tử, cần phải xem xét 4 yếu tố:  
+ Performance measure: hàm đo hiệu năng  
+ Enviroment: môi trường  
+ Actuator: bộ kích hoạt  
+ Sensor: cảm biến  
+ Gọi là PEAS 
+
+ĐẶC ĐIỂM CỦA MÔI TRƯỜNG 
+ Tính quan sát được: Đầy đủ - Bộ phận 
+ Tính xác định được: Trạng thái tiếp theo của môi trường 
+có thể hoàn toàn xác định được dựa trên trạng thái hiện 
+tại và hành động thực hiện bởi tác tử hay không? 
+ Tính động: Môi trường là tĩnh hay thay đổi trong khi tác 
+tử hoạt động? 
+ Tính liên tục hay rời rạc: Các cảm nhận hoặc hành vi có 
+được phân biệt một cách rõ ràng không? 
+ Là Đơn tác tử hay đa tác tử: Trong môi trường, có một 
+hay nhiều tác tử cùng hoạt động?
+Phân loại: 
+Phản xạ đơn giản: chỉ phản ứng → “hành động ngay”.
+
+Phản xạ có trạng thái: nhớ quá khứ → “ra quyết định thông minh hơn”.
+
+Hướng mục đích: biết đích đến → “lập kế hoạch hành động”.
+
+Hướng lợi ích: chọn hành động tốt nhất → “tối ưu hóa kết quả”.
+
+Học được: tự cải thiện → “ngày càng thông minh hơn”.
+
+CHƯƠNG 3:
