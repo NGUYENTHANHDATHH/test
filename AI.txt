@@ -89,3 +89,284 @@ Hướng lợi ích: chọn hành động tốt nhất → “tối ưu hóa k�
 Học được: tự cải thiện → “ngày càng thông minh hơn”.
 
 CHƯƠNG 3:
+Cách GQVĐ của con người 
+ Khái niệm: GQVĐ là quá trình riêng của xử lý thông tin, đó là 
+cách xuất phát từ 1 tình huống ban đầu nào đó để đi tới đích mong 
+muốn. Tuy nhiên, các phản xạ tức thời, các thao tác đơn thuần thì 
+không được coi là GQVĐ 
+ Bốn chiến lược GQVĐ của con người 
+
+ Chiến lược 1: Ước lược vấn đề xem xét độ phức tạp. 
+ Nếu vấn đề đơn giản thì chỉ cần huy động một nửa tư duy 
+máy móc hoặc tìm cách giải quyết tiền định 
+ Nếu vấn đề phức tạp thì tìm hiểu nội dung, mã hóa bài toán, 
+rồi biểu diễn bài toán => Tìm ra các phương pháp suy diễn 
+phù hợp 
+Ví dụ: Bài toán sắp xếp. 
+
+ Chiến lược 2: Nới lỏng 1 vài ràng buộc. 
+GQVĐ phải có ràng buộc (điều kiện).
+ Chiến lược 3: Chia bài toán lớn phức tạp thành các bài toán con. 
+Với các bài toán phức tạp thì ta tìm cách chia thành các bài toán 
+con nhỏ hơn, ít phức tạp hơn cho đến khi nhận được bài toán sơ 
+cấp (giải được trực tiếp) => Được không gian bài toán (KGBT) 
+=> Sau khi đã có KGBT thì sẽ sử dụng phương pháp CẮT - TỈA 
+để loại bớt các nhánh mà không có khả năng đưa ra kết quả 
+nhằm đẩy nhanh quá trình tìm kiếm 
+Ví dụ: Bài toán tính tích phân bất định. 
+ Chiến lược 4: Tìm cách chuyển các thông tin bên ngoài thành 
+các ký hiệu làm cho bài toán dễ hiểu và dễ giải hơn. 
+Ví dụ: Bài toán sắp xếp.
+
+ Định nghĩa: là quá trình xuất phát từ dạng ban đầu và 
+tìm kiếm trong KGBT dãy các phép toán hay các hành 
+động cho phép để đạt được đích mong muốn 
+ Phân loại 
+ Vấn đề phát biểu chỉnh -> thỏa mãn các điều kiện: 
+ Đích được đặt ra 
+ Biết trạng thái ban đầu 
+ Xác định được các thao tác 
+ Có thể nhận biết được 1 lời giải bài toán (đoán hoặc giải) 
+ Vấn đề phát biểu không chỉnh -> thỏa mãn các điều kiện: 
+ Đích đặt ra không tường minh 
+ KGBT rời rạc 
+ KGBT vô hạn 
+ Các thao tác không được chỉ ra 
+ Không ràng buộc về mặt thời gian
+
+GQVĐ là trường hợp riêng của xử lý thông tin, đó 
+là 1 quá trình hành động tư duy gồm 4 thao tác 
+ Thao tác 1: Xác định đích 
+ Thao tác 2: Xác định các sự kiện và các luật có liên quan đến đích 
+ Thao tác 3: Rút gọn để GQVĐ đỡ phức tạp hơn 
+ Thao tác 4: Sử dụng các cơ chế suy diễn phù hợp để đạt được 
+đích mong muốn 
+ GQVĐ là truyền thống 
+ Chương trình = CTDL + GT (truyền thống) 
+ Chương trình = Tri thức + Suy diễn (TTNT) 
+ GQVĐ là các chiến lược điều khiển, tìm kiếm 
+ Xử lý cạnh tranh 
+ Kỹ thuật heuristic: Quay lui, hàm đánh giá
+
+ Tìm dạng biểu diễn thích hợp của các trạng thái 
+ Xác định: Trạng thái ban đầu, tập các toán tử, tập T các 
+trạng thái kết thúc 
+ Giả sử u là một trạng thái nào đó và R là một toán tử biến 
+đổi u thành v => Trạng thái v được gọi là trạng thái kề u 
+(hoặc v được sinh ra từ u bởi toán tử R) và quá trình áp 
+dụng các toán tử để sinh ra các trạng thái kề u gọi là phát 
+triển trạng thái u 
+Như vậy, khi biểu diễn một vấn đề thông qua các trạng thái 
+và các toán tử thì việc tìm lời giải của vấn đề được quy về 
+việc tìm đường đi từ trạng thái ban đầu tới một trạng thái kết 
+thúc nào đó
+
+Phân loại chiến lược tìm kiếm 
+ Tìm kiếm mù 
+ Không có sự hướng dẫn nào cho việc tìm kiếm 
+ Phát triển các trạng thái ban đầu cho tới khi gặp một trạng 
+thái đích nào đó  
+ Có 2 kỹ thuật: Tìm kiếm theo chiều rộng và tìm kiếm theo 
+chiều sâu 
+ Tìm kiếm heuristic (kinh nghiệm, mẹo) 
+ Sử dụng tri thức đánh giá về các trạng thái để hướng dẫn 
+việc tìm kiếm 
+ Trong quá trình phát triển các trạng thái, ta chọn trạng thái 
+được đánh giá là tốt nhất để phát triển trong số các trạng 
+thái chờ phát triển -> Gọi là các phương pháp tìm kiếm 
+heuristic
+Cây tìm kiếm  
+ Thể hiện quá trình tìm kiếm 
+ Cây tìm kiếm là cây mà các đỉnh được gắn bởi các trạng thái của 
+KGTT: Gốc của cây tìm kiếm là trạng thái ban đầu, nếu một đỉnh ứng 
+với trạng thái u thì các đỉnh con của nó ứng với các trạng thái v kề u -> Mỗi chiến lược tìm kiếm có 1 cây tìm kiếm tương
+
+Tìm kiếm trên đồ thị VÀ/HOẶC 
+ Thuật toán (tiếp…) 
+Function Solvable(u); 
+Begin 
+ 1. if u là đỉnh kết thúc then 
+  {Solvable  true; stop}; 
+ 2. if u không là đỉnh kết thúc và không có đỉnh kề then 
+  {Solvable(u)  false; stop}; 
+ 3. for mỗi toán tử R áp dụng được tại u do 
+  {Ok  true; 
+  for mỗi v kề u theo R do 
+   if Solvable(v) = false then 
+    {Ok  false; exit}; 
+   if Ok then 
+    {Solvable(u)  true; 
+    Operator(u)  R; stop}} 
+ 4. Solvable(u)  false; 
+End;
+
+ Tìm kiếm tốt nhất - đầu tiên 
+ Ý tưởng: Tìm kiếm tốt nhất đầu tiên = Tìm kiếm theo bề rộng + Hàm đánh 
+giá. Ở mỗi bước, ta chọn đỉnh để phát triển là đỉnh tốt nhất được xác định 
+bởi hàm đánh giá (đỉnh có giá trị hàm đánh giá là nhỏ nhất), đỉnh này có 
+thể ở mức hiện tại hoặc ở các mức trên 
+ Thuật toán: Sử dụng danh sách L để lưu trữ các trạng thái chờ phát triển, 
+danh sách được sắp xếp theo thứ tự tăng dần của hàm đánh giá sao cho 
+trạng thái có giá trị hàm đánh giá nhỏ nhất ở đầu danh sách 
+Procedure Best_First_Search; 
+Begin 
+1. Khởi tạo danh sách L chỉ chứa trạng thái ban đầu; 
+2. loop do 
+2.1 if L rỗng then 
+{thông báo thất bại; stop}; 
+2.2 Loại trạng thái u ở đầu danh sách L; 
+2.3 if u là trạng thái kết thúc then 
+{thông báo thành công; stop} 
+2.4 for mỗi trạng thái v kề u do 
+Xen v vào danh sách L sao cho L được sắp theo thứ tự tăng 
+dần của hàm đánh giá; 
+end; 
+
+Tìm kiếm leo đồi 
+ Ý tưởng: Tìm kiếm leo đồi = Tìm kiếm theo chiều sâu + Hàm đánh giá. Ở mỗi 
+bước khi phát triển 1 đỉnh u thì bước tiếp theo, ta chọn trong số các đỉnh con của u, 
+đỉnh có nhiều hứa hẹn nhất để phát triển, đỉnh này được xác định bởi hàm đánh giá 
+ Thuật toán: Sử dụng danh sách L như ở trên, sử dụng danh sách L1 để lưu giữ 
+tạm thời các trạng thái kề trạng thái u khi phát triển u. Danh sách L1 được sắp xếp 
+theo thứ tự tăng dần của hàm đánh giá, rồi được chuyển vào danh sách L sao trạng 
+thái tốt nhất kề u đứng ở danh sách L 
+Procedure Hill_Climbing_Search; 
+Begin 
+1. Khởi tạo danh sách L chỉ chứa trạng thái ban đầu; 
+2. loop do 
+2.1 if L rỗng then 
+{thông báo thất bại; stop}; 
+2.2 Loại trạng thái u ở đầu danh sách L; 
+2.3 if u là trạng thái kết thúc then 
+{thông báo thành công; stop}; 
+2.4 for mỗi trạng thái v kề u do đặt v vào L1; 
+2.5 Sắp xếp L1 theo thứ tự tăng dần của hàm đánh giá; 
+2.6 Chuyển danh sách L1 vào đầu danh sách L; 
+end;
+
+ Đường đi ngắn nhất và hàm đánh giá 
+ Đặt vấn đề: Giả sử “giá” phải trả để đưa trạng thái a tới trạng thái b (bởi 
+một toán tử nào đó) là 1 số k(a,b) >= 0 -> gọi là độ dài cung (a,b) hoặc 
+giá trị của cung (a,b) trong đồ thị KGTT. Như vậy, không gian tìm kiếm là 
+tất cả các đường đi từ trạng thái ban đầu tới trạng thái kết thúc, hàm 
+mục tiêu là độ dài của đường đi => Tìm đường đi ngắn nhất từ trạng thái 
+ban đầu tới trạng thái đích? 
+ Hàm đánh giá đường đi ngắn nhất qua u: Giả sử u là 1 
+trạng thái đạt tới (có đường đi từ trạng thái ban đầu u0 tới u) => Ta 
+xác định 2 hàm đánh giá: 
+
+ 
+ g(u) là đánh giá độ dài đường đi ngắn nhất từ u0 tới u (đường đi từ 
+u0 tới u không phải là trạng thái đích được gọi là đường đi một 
+phần, đường đi đầy đủ là đường đi từ u0 tới trạng thái đích) 
+h(u) là đánh giá độ dài đường đi ngắn nhất từ u tới trạng thái đích 
+=> h(u) gọi là chấp nhận được nếu với mọi u sao cho h(u) <= độ 
+dài đường đi ngắn nhất thực tế từ u tới trạng thái đích. 
+ Hàm đánh giá đường đi ngắn nhất qua u: f(u) = g(u) + h(u) 
+87 
+ Thuật toán A* 
+ Ý tưởng: Thuật toán A* = Kỹ thuật tìm kiếm tốt nhất đầu tiên + hàm đánh giá 
+f(u). Ở mỗi bước chọn đỉnh để phát triển là đỉnh tốt nhất được xác định bởi hàm 
+đánh giá f(u) (đỉnh có hàm đánh giá nhỏ nhất), đỉnh này có thể ở mức hiện tại hoặc 
+ở các mức trên 
+ Thuật toán: Sử dụng danh sách L như trong tìm kiếm tốt nhất đầu tiên 
+ Procedure A*; 
+Begin 
+1. Khởi tạo danh sách L chỉ chứa trạng thái ban đầu; 
+2. loop do 
+2.1 if L rỗng then 
+{thông báo thất bại; stop}; 
+2.2 Loại trạng thái u ở đầu danh sách L; 
+2.3 if u là trạng thái đích then 
+{thông báo thành công; stop} 
+2.4 for mỗi trạng thái v kề u do 
+{g(v) := g(u) + k(u,v); 
+f(v) := g(v) + h(v); 
+Đặt v vào danh sách L;} 
+2.5 Sắp xếp L theo thứ tự tăng dần của hàm f sao cho 
+trạng thái có giá trị của hàm f nhỏ nhất ở đầu danh sách; 
+End;
+
+CHƯƠNG 5:
+
+ Các phương pháp biểu diễn 
+ Biểu diễn bằng logíc hình thức 
+ Biểu diễn bằng hệ sản xuất 
+ Biểu diễn bằng mạng ngữ nghĩa 
+ Biểu diễn bằng khung tri thức (Frame) 
+ Biểu diễn bằng bộ 3 tham số O - A – V (Object – Attribute - Value)
+
+ Phân biệt tri thức và dữ liệu 
+ Dữ liệu: Là các đại lượng mang tính định lượng 
+ Tri thức: Là các đại lượng mang tính định tính. Có thể hiểu tri thức là sự tiến hóa từ dữ 
+liệu, thể hiện: 
+Dữ liệu định lượng (bit, số, mảng,…)  Ký hiệu tượng trưng (xâu, danh sách,…)  Dữ liệu 
+phù hợp (hướng đối tượng, đa danh sách,…)  Tri thức (các phương pháp biểu diễn) 
+Tương ứng: 
+ Chương trình = CTDL + Giải thuật 
+ Chương trình heuristic = Ký hiệu tượng trưng + Giải thuật heuristic 
+ Hệ dựa trên tri thức = Tri thức + Suy diễn 
+ Phân loại tri thức 
+ Tri thức định lượng: Tri thức mang đặc trưng định tính nhưng liên quan đến các kỹ 
+thuật tính toán, phụ thuộc vào chất lượng của hàm được đánh giá. Hàm đánh giá là cơ 
+sở để chọn chiến lược điều khiển: xử lý cạnh tranh và chọn hướng định tính phù hợp 
+ Tri thức định tính 
+ Tri thức thủ tục: Đó là phương pháp cấu trúc tri thức, ghép nối và suy diễn các tri 
+thức mới từ các tri thức đã có. VD: If…..Then… 
+ Tri thức mô tả: Là những thông tin về 1 sự kiện, hiện tượng hay 1 quá trình mà 
+không đưa ra cấu trúc bên trong, phương pháp sử dụng bên trong. Tri thức mô tả 
+không phụ thuộc vào không gian và thời gian 
+ Tri thức điều khiển: Là tri thức điều khiển quá trình xử lý tri thức, nó phối hợp với tri 
+thức thủ tục và tri thức mô tả để thông qua nó điều khiển sự cạnh tranh 
+
+Suy diễn tiến (lập luận tiến - forward chaining hoặc forward reasoning) 
+ Thuật toán 
+ Giải thích một số biến, hàm, thủ tục sử dụng: Gọi T là tập các sự kiện tại thời 
+điểm đang xét (khởi tạo tập T = F: tập sự kiện đúng ban đầu); xét các luật ri có 
+dạng: p1  p2  .... pn  q và pj T với mọi j, nghĩa là nếu left(ri)  T thì T:= T+ 
+right(ri). Quá trình lặp lại cho đến khi G  T hoặc không có luật nào sinh ra thêm 
+sự kiện mới 
+ Thủ tục suy diễn tiến 
+ 
+ 
+Procedure SUY_DIEN_TIEN; 
+Begin 
+ T:= F; 
+ S:= loc(R, T);     {Tìm tập luật S: S gồm các luật lấy từ tập luật R có dạng: 
+              p1  p2  .... pn  q mà có pjT} 
+ While G  T and S <>  do 
+  Begin 
+   r := get(S); {Lấy luật r trong S} 
+   T:= T + right(r); {Thêm VP của r vào T} 
+   R:= R \ {r}; {Loại luật r khỏi tập luật R} 
+   S:= loc(R,T); {Tính lại tập S thỏa mãn tập R và T mới} 
+  End; 
+ If G  T then write (“thành công”) 
+ Else write (“không thành công”); 
+End; 
+
+ Suy diễn lùi (lập luận lùi - backward chaining hoặc backward reasoning) 
+ Thuật toán 
+ Giải thích một số biến, hàm, thủ tục sử dụng: Gọi T là tập các sự kiện cần 
+chứng minh tại thời điểm đang xét (khởi tạo T= G, G là từng kết luận của tập). 
+S(p) = {ri  R | right(ri) = p} (là tập các luật trong R sao cho vế phải chứa p) 
+ Thủ tục suy diễn lùi 
+ 
+ 
+Procedure SUY_DIEN_LUI(luat); 
+Begin 
+ T:= {G}; //Khởi tạo bằng từng kết luận cần chứng minh của tập KẾT LUẬN 
+ If  T F then write (‘g được chứng minh!‘) 
+ Else 
+  Begin 
+   p := get(T); 
+   If  S(p) = {} then write (‘g không chứng minh được!‘) 
+   Else 
+   For ri  S(p) do 
+    Begin 
+          T:= T \ right(ri); 
+          T:= T + left(ri); 
+          For luat T \ F do SUY_DIEN_LUI(luat); 
+    End; 
+  End; 
+End;
