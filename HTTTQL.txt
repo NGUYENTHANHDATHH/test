@@ -884,3 +884,783 @@ MẸO LÀM BÀI TRẮC NGHIỆM:
 ========================================================================
 
 
+PHẦN C: CÁC HỆ THÓNG THÔNG TIN DUÓÌ GÓC Độ 
+QUẢN LÝ VÀ RA QUYÉT ĐỊNH
+Chương 7 
+HỆ THÓNG XỬ LÝ GIAO DỊCH
+
+1. Tổng quan về Hệ thống Xử lý Giao dịch (HTXLGD)
+• Vị trí và Khái niệm: HTXLGD (TPS) là hệ thống xử lý các dữ liệu phát sinh từ các giao dịch mà tổ chức thực hiện với khách hàng, nhà cung cấp, người cho vay hoặc nhân viên nội bộ. Nó được xem là hệ thống cơ sở của tất cả các HTTT khác.
+• 4 Đặc trưng cơ bản:
+    ◦ Xử lý nhanh và hiệu quả một khối lượng lớn dữ liệu đầu vào và đầu ra.
+    ◦ Thực hiện hiệu chỉnh chính xác dữ liệu nhằm đảm bảo dữ liệu lưu giữ là chính xác và có tính cập nhật nhất.
+    ◦ Luôn tiềm ẩn nhiều vấn đề liên quan đến an toàn hệ thống.
+    ◦ Rủi ro xảy ra đối với những hệ thống này có thể ảnh hưởng nghiêm trọng đến hoạt động của tổ chức.
+• 6 Hoạt động Xử lý Giao dịch:
+    ◦ Thu thập dữ liệu: Có thể thủ công (dùng bàn phím) hoặc tự động (máy quét, hệ thống POS).
+    ◦ Kiểm tra dữ liệu: Xác định tính hợp lệ và đầy đủ của dữ liệu.
+    ◦ Hiệu chỉnh dữ liệu: Sửa các lỗi nhập sai.
+    ◦ Xử lý dữ liệu: Thực hiện tính toán và xử lý khác liên quan đến giao dịch.
+    ◦ Lưu trữ dữ liệu: Cập nhật các giao dịch mới vào Cơ sở dữ liệu (CSDL).
+    ◦ Tạo báo cáo/tài liệu nghiệp vụ: Tạo các bảng kê hay báo cáo ở dạng sao cứng hoặc sao mềm.
+• Các Chế độ Xử lý Giao dịch: 
+    ◦ Xử lý theo lô (Batch Processing): Giao dịch được xử lý theo "bó" trong ngày, có độ trễ về thời gian trước khi tệp chính được cập nhật. Chi phí thấp hơn.
+    ◦ Xử lý theo thời gian thực (Real-time Processing/Trực tuyến): Giao dịch được xử lý ngay lập tức, dữ liệu luôn phản ánh tình trạng hiện thời và mang tính cập nhật nhất. Chi phí cao hơn.
+    ◦ Nhập dữ liệu theo thời gian thực nhưng xử lý trễ: Một dạng dung hòa giữa hai hình thức trên
+• Mục tiêu của HTXLGD: Các mục tiêu bao gồm:
+    ◦ Xử lý dữ liệu liên quan đến các giao dịch có tính chu kỳ.
+    ◦ Duy trì sự chính xác cao cho dữ liệu được xử lý.
+    ◦ Đảm bảo tính toàn vẹn của dữ liệu và thông tin.
+    ◦ Đảm bảo cung cấp kịp thời các tài liệu và báo cáo.
+    ◦ Tăng hiệu quả lao động.
+    ◦ Tạo ra các hình thức dịch vụ gia tăng giá trị.
+    ◦ Giúp xây dựng và duy trì sự tín nhiệm của khách hàng.
+2. Các Ứng dụng Xử lý Giao dịch Điển hình
+• Hệ thống Xử lý Đơn hàng (Order Processing System): Bao gồm các chức năng nghiệp vụ cơ bản như kiểm tra tình trạng tín dụng khách hàng, in vận đơn, và kết xuất các báo cáo bán hàng.
+• Hệ thống Xử lý Giao dịch Mua hàng (Purchasing Transaction Processing System): Hỗ trợ quá trình mua sắm từ việc xử lý giao dịch mua hàng, nhận hàng đến quản lý công nợ phải trả.
+3. Vấn đề Kiểm soát và Quản lý HTXLGD
+Phần này nhấn mạnh tầm quan trọng của việc kiểm soát HTXLGD vì chúng là "xương sống" của các HTTT trong tổ chức.
+• Kiểm soát và Quản lý: Việc kiểm soát nhằm đảm bảo sự hoạt động hoàn hảo, liên tục của HTXLGD, bảo toàn vốn và hỗ trợ các hoạt động khác.
+• Dự phòng và Phục hồi: Các tổ chức cần thiết lập bộ quy định về các thủ tục dự phòng cho trường hợp khẩn cấp (khi HTXLGD bị ngưng trệ) và lập kế hoạch khôi phục hệ thống sau thảm họa, sự cố.
+
+CHƯƠNG 8: HỆ THỐNG TTQL
+1. Tổng quan về Hệ thống Thông tin Quản lý (HTTTQL)
+• Khái niệm và Vị trí: HTTTQL là hệ thống tích hợp các yếu tố con người, các thủ tục, các CSDL 
+và các thiết bị được sử dụng để cung cấp những thông tin có ích cho các nhà 
+quàn lý và ra quyết định.
+• HTTTQL được xem là hệ thống thông tin hỗ trợ các nhà quản lý ở mức trung gian (chiến thuật) trong quá trình ra quyết định.
+• Mối quan hệ với HTXLGD (TPS): HTTTQL lấy dữ liệu từ các Hệ thống Xử lý Giao dịch (HTXLGD), vốn là hệ thống nền tảng cơ sở của tất cả các HTTT khác.
+2. Các Hệ thống Thông tin Quản lý Chuyên chức năng
+• HTTTQL là một hệ thống tích hợp các hệ thống thông tin chuyên chức năng  Các loại hình HTTTQL chuyên chức năng bao gồm:
+    ◦ Hệ thống thông tin quản lý tài chính.
+    ◦ Hệ thống thông tin quản lý sản xuất.
+    ◦ Hệ thống thông tin quản lý Marketing.
+    ◦ Hệ thống thông tin quản lý nhân lực.
+• Việc tích hợp các hệ thống này thông qua giải pháp chia sẻ Cơ sở dữ liệu (CSDL) dùng chung giúp dữ liệu an toàn, chính xác hơn, và tăng hiệu quả hoạt động của tổ chức.
+3. Đầu vào (Input) và Xử lý (Processing)
+• Đầu vào: Nguồn dữ liệu chủ yếu đối với HTTTQL là các hệ thống xử lý giao dịch nội bộ.
+• Ngoài ra, HTTTQL cũng sử dụng dữ liệu từ các nguồn bên ngoài tổ chức, như dữ liệu về khách hàng, nhà cung cấp, đối thủ cạnh tranh và cổ đông.
+• Xử lý: HTTTQL xử lý các dữ liệu này thành thông tin có giá trị sử dụng hơn cho các nhà quản lý, thường ở dạng các báo cáo chuẩn theo mẫu định trước.
+4. Các loại Báo cáo Đầu ra (Output)
+Đầu ra của HTTTQL là một hệ thống các báo cáo được phân phối tới các nhà quản lý. Các loại báo cáo này là trọng tâm của bài thi:
+• Báo cáo định kỳ: Được lập theo chu kỳ đều đặn (ngày, tuần, tháng).
+• Báo cáo chỉ số thống kê: Là một dạng báo cáo định kỳ đặc biệt, tóm tắt các hoạt động cơ bản của ngày hôm trước và thường sẵn sàng vào đầu ngày làm việc.
+• Báo cáo theo yêu cầu: Được lập để cung cấp thông tin xác định theo yêu cầu đột xuất của nhà quản lý.
+• Báo cáo ngoại lệ: Được kết xuất tự động khi tình huống bất thường xảy ra. Các nhà quản lý thường đặt ra giới hạn cảnh báo (điểm kích hoạt) cho báo cáo ngoại lệ.
+• Báo cáo siêu liên kết: Cung cấp khả năng truy xuất đến các dữ liệu chi tiết nhằm lý giải cho một tình huống bất thường (sử dụng cơ chế quản trị ngược - Drill Down Management).
+• Các báo cáo thường có tính so sánh (so sánh hiện tại với dự báo, với lịch sử, hoặc với đối thủ).
+5. Hệ thống Thông tin Hỗ trợ Lãnh đạo (ESS)
+   - Tên gọi khác: EIS (Executive Information System).
+   - Bản chất: HTTT quản lý được CHUYÊN BIỆT HÓA cho CẤP LÃNH ĐẠO.
+   - Cung cấp: Thông tin CHIẾN LƯỢC.
+   - Mục tiêu: Truy cập TỨC THỜI và DỄ DÀNG đến THÔNG TIN CHỌN LỌC về các YẾU TỐ THEN CHỐT (Key Success Factors) phục vụ mục tiêu chiến lược.
+   - Nguồn thông tin: PHẦN LỚN từ nguồn PHI MÁY TÍNH (họp, điện thoại, xã hội, báo cáo thủ công).
+
+Đặc điểm kỹ thuật:
+   - Giao diện: DỄ SỬ DỤNG, tăng cường ĐỒ HỌA (Graphical Interface).
+   - Kỹ thuật cốt lõi: QUẢN TRỊ NGƯỢC (Drill Down Management).
+     + Chức năng Drill Down: Giúp lãnh đạo nhanh chóng tìm ra ĐIỂM BẤT THƯỜNG và LÝ GIẢI NGUYÊN NHÂN (bằng cách truy xuất ngược về dữ liệu chi tiết).
+   - Phạm vi dữ liệu: CSDL NỘI BỘ và CSDL BÊN NGOÀI.
+6. CÁC HỆ THỐNG THÔNG TIN ĐẶC THÙ KHÁC
+ Cổng thông tin doanh nghiệp (EIP - Enterprise Information Portal):
+   - Bản chất: Giao diện WEB dùng để TÍCH HỢP các HTTT (MIS, DSS) và công nghệ khác.
+   - Phạm vi truy cập: Toàn bộ người dùng INTRANET và một số giới hạn người dùng EXTRANET.
+   - Giá trị: Cung cấp thông tin CHUYÊN BIỆT và CÓ TÍNH CHỌN LỌC (giảm thời gian tìm kiếm).
+   - Vị trí: Có thể coi EIP là một HTTT trợ giúp ra quyết định ĐƯỢC CHUYÊN BIỆT HÓA (theo nhu cầu cá nhân/nhóm).
+
+Hệ thống Quản lý Tri thức (KMS - Knowledge Management Systems):
+   - Bản chất: Ứng dụng CNTT hỗ trợ các hoạt động: THU THẬP, LƯU TRỮ, PHÂN PHỐI và ỨNG DỤNG TRI THỨC/KINH NGHIỆM.
+   - Mục tiêu: Tích hợp tri thức vào TỔ CHỨC DOANH NGHIỆP, tạo ra TRI THỨC MỚI.
+   - Tri thức: Bao gồm tài liệu CÓ và KHÔNG CÓ CẤU TRÚC.
+   - Liên kết: Liên kết doanh nghiệp với CÁC NGUỒN TRI THỨC BÊN NGOÀI.
+   - Dữ liệu sử dụng: Từ EIP, công cụ tìm kiếm, SCM, ERP, CRM.
+
+
+CHƯƠNG 9: HỆ THÓNG HỎ TRỢ RA QƯYÉT ĐỊNH
+1. Các cấp quản lý và cấu trúc quyết định:
+   - Cấp Chiến lược (Strategic):
+     + Mục tiêu: Xác định MỤC ĐÍCH, CHIẾN LƯỢC, CHÍNH SÁCH tổng thể.
+     + Quyết định: PHI CẤU TRÚC (Unstructured).
+     + Nhu cầu thông tin: TỔNG HỢP, DỰ BÁO CAO, quy mô RỘNG, BẤT THƯỜNG.
+     + Vai trò cá nhân: TRỰC GIÁC và SÁNG TẠO RẤT LỚN.
+   - Cấp Chiến thuật (Tactical):
+     + Mục tiêu: Triển khai các KẾ HOẠCH TRUNG/NGẮN HẠN, phân phối nguồn lực.
+     + Quyết định: NỬA CẤU TRÚC (Semi-Structured).
+     + Nhu cầu thông tin: KHÔNG HOÀN TOÀN XÁC ĐỊNH TRƯỚC.
+   - Cấp Tác nghiệp (Operational):
+     + Mục tiêu: Điều hành HÀNG NGÀY, thực hiện các nhiệm vụ cụ thể.
+     + Quyết định: CÓ CẤU TRÚC (Structured).
+     + Nhu cầu thông tin: CHI TIẾT, CHU KỲ, LỊCH SỬ, XÁC ĐỊNH TRƯỚC, quy mô NHỎ.
+     + Vai trò cá nhân: RẤT HẠN CHẾ.
+
+2. Phân loại quyết định theo cấu trúc:
+   - Quyết định CÓ CẤU TRÚC: Có QUY TRÌNH RÕ RÀNG, thông số CÓ THỂ XÁC ĐỊNH TRƯỚC. (Thường ở mức Tác nghiệp).
+   - Quyết định PHI CẤU TRÚC: KHÔNG có QUY TRÌNH rõ ràng, thông tin KHÔNG THỂ XÁC ĐỊNH TRƯỚC thường xuyên. (Thường ở mức Chiến lược).
+   - Quyết định NỬA CẤU TRÚC: Có thể xác định trước một phần quy trình nhưng KHÔNG ĐỦ để đưa ra quyết định cuối cùng. (Thường ở mức Chiến thuật).
+
+------------------------------------------------------------------------------------
+II. HỆ THỐNG THÔNG TIN HỖ TRỢ RA QUYẾT ĐỊNH (DSS - DECISION SUPPORT SYSTEM)
+------------------------------------------------------------------------------------
+1. Khái niệm DSS (Hệ trợ giúp quyết định):
+   - Mục tiêu: Trợ giúp các nhà quản lý trước các quyết định NỬA CẤU TRÚC và PHI CẤU TRÚC.
+   - Đặc trưng: Hệ thống DỰA TRÊN MÁY TÍNH, MỀM DẺO, TƯƠNG HỖ, THÍCH NGHI.
+   - Thành phần cốt lõi: Kết hợp DỮ LIỆU với CÁC MÔ HÌNH VÀ CÔNG CỤ PHÂN TÍCH.
+   - Khác MIS: DSS dựa vào CƠ SỞ CÁC MÔ HÌNH (DSS Model) bên cạnh CSDL (DSS DataBase).
+2. Đặc trưng cơ bản của DSS:
+   - Khả năng vượt trội so với MIS (trọng tâm MIS: Báo cáo, DSS: PHÂN TÍCH TÌNH HUỐNG).
+   - Cho phép người ra quyết định KẾT HỢP SỰ HIỂU BIẾT cá nhân vào phân tích.
+   - Sử dụng rộng rãi CƠ SỞ DỮ LIỆU.
+   - Kết hợp các mô hình TOÁN HỌC, THỐNG KÊ, VẬN TRÙ HỌC.
+   - Hỗ trợ phân tích "WHAT-IF" (Nếu-Thì): Đặt ra tình huống giả định và quan sát kết quả.
+   - Cung cấp giao diện SỬ DỤNG TỐT.
+   - Trợ giúp hiệu quả các bài toán NỬA CẤU TRÚC ở TẤT CẢ CÁC MỨC ĐỘ.
+Nguồn tài nguyên: phàn cứng, phầm mềm, dữ liệu, mô hình, con người
+3. Các hệ thống con của DSS (Sub-systems):
+   - Phân hệ Quản trị Dữ liệu (Data Management Sub-System):
+     + Nguồn: Dữ liệu HIỆN THỜI hoặc TRƯỚC ĐÂY từ các nhóm/ứng dụng, CSDL bên ngoài.
+   - Phân hệ Quản lý Mô hình (Model Management Sub-System):
+     + Chứa: Các mô hình (thống kê, tối ưu, dự báo, mô phỏng) biểu diễn MỐI QUAN HỆ TRỪU TƯỢNG giữa các thành phần/thông số.
+     + Ví dụ mô hình: Quy hoạch tuyến tính, Hồi quy, Phân tích Độ nhạy (Sensitivity Analysis).
+   - Phân hệ Quản lý Hội thoại (Dialogue Management Sub-System):
+     + Vai trò: Cửa ngõ để người sử dụng GIAO TIẾP VỚI DSS.
+     + Chức năng: Cung cấp MENUS, ICONS, trợ giúp người dùng.
+
+4. Phân loại DSS:
+   - DSS Hướng Mô hình (Model Driven DSS): Hệ thống ĐƠN LẺ, độc lập, sử dụng phân tích What-if và các dạng phân tích khác. (Phát triển những năm 1970-1980).
+   - DSS Hướng Dữ liệu (Data Driven DSS): Hệ thống được chấp nhận để PHÂN TÍCH và RÚT THÔNG TIN CÓ ÍCH từ các CSDL LỚN (thường là KHO DỮ LIỆU - Data Warehouse).
+
+5. Ví dụ về DSS:
+   - Hệ Quản lý Sản xuất (Manufacturing Management System): Sử dụng mô hình TỐI ƯU (Quy hoạch tuyến tính), DỰ BÁO, sơ đồ MẠNG PERT.
+   - Hệ thống Thông tin Địa lý (GIS - Geographic Information System): Dạng đặc biệt của DSS, tích hợp ĐỒ HỌA MÁY TÍNH và CSDL ĐỊA LÝ. (Ví dụ: chọn vị trí cửa hàng, tối ưu đường vận chuyển).
+
+====================================================================================
+Mức quản lý hỗ trợ:
+    TPS: Tác nghiệp (Điều hành hàng ngày)
+    MIS: Chiến thuật (Quản lý cấp trung)
+    DSS: Chiến thuật và Chiến lược
+    ESS: Chiến lược (Lãnh đạo cấp cao)
+Tính chất của quyết định:
+    TPS: Có cấu trúc cao (Xác định trước, thường xuyên)
+    MIS: Chủ yếu có cấu trúc / Nửa cấu trúc
+    DSS: Nửa cấu trúc và phi cấu trúc (không thường xuyên, đặc biệt)
+    ESS: Phi cấu trúc cao (không dự kiến trước)
+Mục tiêu chính:
+    TPS: Xử lý dữ liệu phát sinh từ các giao dịch chu kỳ; duy trì sự chính xác của dữ liệu.
+    MIS: Cung cấp báo cáo tóm lược về các lĩnh vực chức năng; hỗ trợ kiểm soát và lập kế hoạch chiến thuật.
+    DSS: Cung cấp kỹ thuật và mô hình phân tích để giải quyết vấn đề đặc biệt; hỗ trợ trực tiếp ra quyết định.
+    ESS: Cung cấp truy cập tức thời đến thông tin chiến lược; hỗ trợ quyết định mang tính dự báo.
+Đầu vào:
+    TPS: Dữ liệu giao dịch nội bộ (bán hàng, mua hàng, lương...); dữ liệu bên ngoài.
+    MIS: Chủ yếu từ TPS và dữ liệu bên ngoài.
+    DSS: CSDL chuyên biệt (Data Warehouse); dữ liệu từ TPS, MIS và nguồn ngoài.
+    ESS: Dữ liệu tổng hợp từ TPS, MIS và các nguồn bên ngoài.
+Xử lý:
+    TPS: Thu thập, kiểm tra, hiệu chỉnh, lưu trữ và xử lý dữ liệu.
+    MIS: Tích hợp và tóm tắt dữ liệu từ TPS thành báo cáo chuẩn.
+    DSS: Dùng mô hình phân tích, mô phỏng để phân tích dữ liệu.
+    ESS: Giao diện đồ họa mạnh; phân tích hiện trạng và xu hướng các yếu tố then chốt.
+Đầu ra:
+    TPS: Hóa đơn, bảng kê, chi tiết giao dịch.
+    MIS: Báo cáo định kỳ, báo cáo thống kê, báo cáo ngoại lệ, báo cáo theo yêu cầu.
+    DSS: Bảng trả lời linh hoạt, phân tích tương tác, hỗ trợ tùy biến phong cách ra quyết định.
+    ESS: Báo cáo tổng hợp, khái quát; biểu đồ; hỗ trợ quản trị ngược (Drill Down).
+Người sử dụng chính:
+    TPS: Nhân viên vận hành, đốc công, thủ kho.
+    MIS: Cán bộ quản lý cấp trung.
+    DSS: Nhà quản lý hoặc cán bộ chuyên môn.
+    ESS: Cán bộ lãnh đạo cấp cao.
+
+
+PHẦN D:CÁC HỆ THÓNG THÔNG TIN ÚNG DỤNG 
+TRONG KINH DOANH
+Chương 10 
+HỆ THÓNG THÔNG TIN TÀI CHÍNH
+1. Khái quát về Hệ thống Thông tin Tài chính (HTTT Tài chính)
+1.1. Chức năng cơ bản
+- Tích hợp tất cà các thông tin tài chính và thông tin tác nghiệp từ 
+nhiều nguồn khác nhau vào một HTTT quản lý duy nhất;
+- Cung cấp khả năng truy xuất dữ liệu cho nhiều nhóm người sử 
+dụng thuộc các lĩnh vực khác nhau: Lĩnh vực tài chính cũng như lĩnh vực 
+phi tài chính;
+- Cung cấp dữ liệu một cách kịp thời phục vụ các nhu cầu phân tích 
+tài chính;
+- Phân tích dữ liệu theo nhiều tiêu thức khác nhau: Theo thời gian, 
+theo vùng địa lí, theo sàn phẩm, theo khách hàng...
+- KM năng phân tích kiểu What -If để dự báo dòng tiền tương lai;
+- Phân tích các hoạt động tài chính trong quá khứ và tương lai;
+- Theo dõi và kiểm soát việc sử dụng quỳ của doanh nghiệp.
+1.2. Đầu vào và Đầu ra
+• Đầu vào: Các nguồn dữ liệu chủ yếu bao gồm:
+    ◦ Kế hoạch chiến lược và chính sách kinh doanh (bao gồm các mục tiêu tài chính cụ thể).
+    ◦ Hệ thống Xử lý Giao dịch (HTXLGD), cung cấp các dữ liệu chi tiết về chi phí lương, tồn kho, doanh thu, thanh toán (như các phân hệ lương, hàng tồn kho, công nợ phải thu/phải trả, sổ cái),.
+    ◦ Các nguồn dữ liệu từ bên ngoài (như thông tin về đối thủ cạnh tranh, luật thuế, chỉ số kinh tế cơ bản như lạm phát và chỉ số giá tiêu dùng),.
+• Đầu ra: Chủ yếu là các báo cáo và thống kê tài chính.
+1.3. Các Phân hệ Cơ bản
+HTTT Tài chính có thể bao gồm các phân hệ cốt lõi: Phân hệ dự báo tài chính, Phân hệ quyết toán thu nhập và chi phí, Phân hệ kiểm toán, và Phân hệ sử dụng và quản lý quỹ.
+PHÂN HỆ DỰ BÁO TÀI CHÍNH
+------------------------------------------------------------------------
+- Chức năng: Đưa ra DỰ BÁO về sự tăng trưởng trong TƯƠNG LAI của sản phẩm hoặc doanh nghiệp.
+- Cơ sở: Dựa trên dữ kiện hoạt động nghiệp vụ TRƯỚC ĐÓ (ví dụ: dữ kiện bán hàng) và sử dụng công cụ PHÂN TÍCH DỮ LIỆU.
+- Kết quả: Dự báo DOANH THU và CHI PHÍ, làm cơ sở tính LỢI NHUẬN THUẦN.
+- Vai trò: Giúp nhà quản lý TÀI CHÍNH tránh các vấn đề về DÒNG TIỀN (Cash Flow) bằng cách dự báo nhu cầu dòng tiền.
+- Nguồn dữ liệu quan trọng: Hệ thống DỰ BÁO MARKETING.
+
+PHÂN HỆ QUYẾT TOÁN THU NHẬP VÀ CHI PHÍ
+------------------------------------------------------------------------
+- Chức năng: LƯU TRỮ và THEO DÕI dữ liệu về LỢI NHUẬN và CHI PHÍ cho tổ chức.
+- Nguồn dữ liệu: Dữ liệu nội bộ CHỦ YẾU được thu thập bởi HỆ THỐNG XỬ LÝ GIAO DỊCH (TPS).
+- Công việc: TỔNG HỢP và BÁO CÁO dữ liệu về lợi nhuận, thu nhập, chi phí.
+
+PHÂN HỆ KIỂM TOÁN (AUDIT)
+------------------------------------------------------------------------
+- Định nghĩa Kiểm toán: Quá trình PHÂN TÍCH các điều kiện tài chính và xác định TÍNH XÁC THỰC, ĐÁNG TIN CẬY của các báo cáo tài chính (Bảng Cân đối kế toán, Bảng kết quả HĐKD).
+- Vai trò: Hết sức quan trọng do BÁO CÁO TÀI CHÍNH được nhiều ĐỐI TƯỢNG BÊN NGOÀI (nhà đầu tư, ngân hàng, đối thủ) sử dụng.
+- Mục đích khác: Phát hiện GIAN LẬN hoặc các vấn đề tài chính khác.
+- Các loại hình kiểm toán:
+    - KIỂM TOÁN NỘI BỘ: Do kiểm toán viên CỦA TỔ CHỨC thực hiện.
+    - KIỂM TOÁN ĐỘC LẬP: Do KIỂM TOÁN VIÊN BÊN NGOÀI (Công ty kiểm toán) thực hiện.
+
+PHÂN HỆ SỬ DỤNG VÀ QUẢN LÝ QUỸ (FUND USAGE AND MANAGEMENT)
+----------------------------------------------------------------------------------------
+- Chức năng: Hỗ trợ quản lý và sử dụng QUỸ/TIỀN MẶT để TRÁNH NGUY CƠ PHÁ SẢN hoặc MẤT LỢI NHUẬN.
+- Vai trò: Giúp phát hiện các vấn đề liên quan đến DÒNG TIỀN (Cash Flow) và nâng cao lợi nhuận.
+- Mục đích sử dụng Quỹ:
+    - CHI NỘI BỘ (Phát triển sản xuất): Mua sắm trang thiết bị, Marketing, Nghiên cứu và Phát triển (R&D), nguyên vật liệu.
+    - CHI ĐẦU TƯ TÀI CHÍNH: Tiền gửi ngân hàng, Trái phiếu, Ngoại tệ.
+
+========================================================================
+2. Phân loại HTTT Tài chính theo Mức Quản lý
+Chiến lược:
+    HTTT phân tích tình hình tài chính
+    HTTT dự báo tài chính dài hạn
+Chiến thuật:
+    HTTT ngân quỹ
+    HTTT quản lý vốn bằng tiền
+    HTTT dự toán vốn
+    HTTT quản lý đầu tư
+Tác nghiệp:
+    Hệ thống sổ cái
+    Hệ thống tài sản cố định (TSCĐ)
+    Hệ thống xử lý lệnh bán hàng
+    Hệ thống theo dõi công nợ phải thu
+    Hệ thống theo dõi công nợ phải trả
+    Hệ thống xử lý đơn hàng
+    Hệ thống theo dõi hàng tồn kho
+    Hệ thống xử lý lương
+2.1. Phân hệ Thông tin Tài chính Tác nghiệp (Operational)
+Các hệ thống này thường được tự động hóa đầu tiên và tập trung vào xử lý giao dịch. Chúng cung cấp dữ liệu quan trọng cho các nhà quản lý tài chính.
+• Hệ thống Sổ cái (General Ledger): Tích hợp dữ liệu từ các phân hệ kế toán khác và lập báo cáo tổng hợp.
+• Phân hệ Kế toán Vốn bằng tiền: Theo dõi số dư tức thời tiền mặt, tiền gửi, thu chi theo khách hàng/hợp đồng.
+• Phân hệ Kế toán Hàng tồn kho: Theo dõi nghiệp vụ nhập/xuất kho, tồn kho tức thời và tính giá vật tư tồn kho.
+• Phân hệ Kế toán Tài sản cố định (TSCĐ): Theo dõi nguyên giá, giá trị khấu hao, giá trị còn lại, và tính phân bổ khấu hao.
+• Phân hệ Kế toán Chi phí Giá thành: Tính giá thành cho công trình xây lắp hoặc sản phẩm.
+2.2. Phân hệ Thông tin Tài chính Chiến thuật (Tactical)
+Các hệ thống này tập trung vào phân chia các nguồn lực và hỗ trợ ra quyết định ở mức trung gian.
+• Hệ thống Thông tin Ngân sách: Cho phép theo dõi số thu/chi thực hiện và so sánh với kế hoạch (biến động ngân sách),.
+• Hệ thống Quản lý Vốn bằng tiền: Hỗ trợ xác định lượng tiền vốn cần thiết cho vốn lưu động và đầu tư TSCĐ, dựa trên dự báo dòng tiền.
+• Hệ thống Dự toán Vốn: Hỗ trợ đánh giá các dự án đầu tư tiềm năng, bao gồm việc tính toán Giá trị hiện tại ròng (NPV) và Tỉ lệ hoàn vốn nội bộ (IRR),.
+• Hệ thống Quản trị Đầu tư: Theo dõi các khoản đầu tư của doanh nghiệp cho cổ phiếu, trái phiếu.
+2.3. Phân hệ Thông tin Tài chính Chiến lược (Strategic)
+Các hệ thống này lấy mục tiêu của doanh nghiệp làm trọng tâm và liên quan đến việc đặt ra mục tiêu và phương hướng hoạt động dài hạn.
+• Hệ thống Phân tích Tình hình Tài chính Doanh nghiệp: Phân tích các báo cáo tài chính bằng cách sử dụng các chỉ tiêu và tỷ lệ (như Tỷ lệ hiện hành, Chu kỳ thu hồi trung bình),.
+• Hệ thống Dự báo Dài hạn: Dự báo về các yếu tố kinh tế, xã hội ảnh hưởng đến doanh nghiệp trong tương lai, giúp hoạch định chiến lược,.
+3. Phần mềm Quản lý Tài chính
+HTTT Tài chính sử dụng cả phần mềm ứng dụng chung và chuyên biệt.
+• Phần mềm Ứng dụng Chung:
+    ◦ Phần mềm bảng tính điện tử (như MS-Office) là công cụ đa năng và toàn diện. Nó cho phép các nhà quản lý tài chính mô phỏng nhiều tình huống (câu hỏi dạng "What-If") để tối ưu quá trình phân bổ ngân sách và dự toán dòng tiền,.  Phân mem "Cashflow Sensitivity Analysis - Business Planning 
+Software for Lotus Symphony” cung cap khá năng tính lợi tức dầu tư và 
+các Templates phục vụ các phân tích kiểu "IVhal 
+nhàm xác định hiệu 
+quả của việc thay đổi giá cả và các yếu tố khác cùa thị trường. Nó cũng bao 
+gồm các biểu dồ để bicu diễn kết quả ở dạng đồ họa.
+ Phần mềm “Budget Express” cung cấp các Templates dùng dc kiểm 
+soái mục ticu và hợp nhất nhiều bàng tính.
+ Phan mem “ Forecast! for 1-2-3” cho phép sừ dụng rất dễ dàng các 
+templates dành cho các phân tích kicu chuỗi thời gian và phân tích hồi quy.
+• Phần mềm Ứng dụng Chuyên biệt:  IFPS (Interactive Financial Planning 
+System) (ví dụ: phần mềm chỉ hỗ trợ dự toán vốn hoặc quản lý dòng tiền).
+Managing Your Money (MYM) 
+cùa Andrew TobiaS
+
+
+CHƯƠNG 11 HỆ THÓNG THÔNG TIN MARKETING
+
+1. Khái quát chung về Hệ thống Thông tin Marketing
+• Mục tiêu chính của chức năng Marketing là thỏa mãn nhu cầu và ý muốn của khách hàng.
+• HTTT Marketing cần phải lập kế hoạch bán hoặc khuyến mãi hàng hóa hoặc phát triển sản phẩm dựa trên các báo cáo tổng hợp bán hàng.
+• HTTT Marketing sử dụng các nguồn dữ liệu đầu vào đa dạng, bao gồm:
+    ◦ Dữ liệu từ Hệ thống xử lý giao dịch (chứa thông tin về bán hàng, khách hàng, và bộ phận kinh doanh).
+    ◦ Dữ liệu về các đối thủ bên ngoài (như sản phẩm/dịch vụ mới, chiến lược giá cả, điểm mạnh/yếu).
+    ◦ Thông tin từ hệ thống nghiên cứu thị trường (về hành vi và sở thích người tiêu dùng)
+2. Phân loại Hệ thống Thông tin Marketing theo Mức quản lý
+TÁC NGHIỆP (OPERATIONAL MKIS) (11.2.1)
+------------------------------------------------------------------------------------
+- Mục tiêu: Hỗ trợ hoạt động BÁN HÀNG HÓA và DỊCH VỤ hàng ngày.
+- Đặc điểm thông tin: Dữ liệu CHI TIẾT (chủ yếu là nguồn nội bộ).
+Hệ thống thông tin Bán hàng (Sales Information Systems):
+   - HTTT Khách hàng tương lai: Xác định, khoanh vùng, LƯU TRỮ thông tin khách hàng TIỀM NĂNG. Đầu ra là DANH MỤC khách hàng (theo địa điểm, sản phẩm, doanh thu).
+   - HTTT Liên hệ khách hàng: Cung cấp thông tin về SỞ THÍCH, LỊCH SỬ MUA HÀNG (giúp xác định khách hàng sắp hết hàng, cần mua bổ sung).
+   - HTTT Hỏi đáp/Khiếu nại: Ghi nhận, xử lý, LƯU TRỮ KHIẾU NẠI/THẮC MẮC (phục vụ phân tích CƠ HỘI SẢN PHẨM MỚI, cải tiến dịch vụ).
+   - HTTT Tài liệu: Cung cấp TÀI LIỆU dùng ngay cho nhân viên Marketing (Cải tiến chất lượng tài liệu, nâng cao doanh thu).
+   - HTTT Bán hàng qua điện thoại (Telemarketing): Tăng NĂNG SUẤT bán hàng, GIẢM CHI PHÍ/THỜI GIAN đi lại.
+   - HTTT Quảng cáo gửi thư trực tiếp (Direct Mail): Gửi SÁCH NHỎ/CATALOG sản phẩm trực tiếp (danh sách khách hàng có thể mua lại).
+
+Hệ thống thông tin Phân phối (Distribution Systems):
+   - Chức năng: THEO DÕI HÀNG HÓA VÀ DỊCH VỤ trong hệ thống phân phối (quan trọng để xác định SAI SÓT, giảm THỜI GIAN PHÂN PHỐI).
+
+Các HTTT Kế toán Tài chính Tác nghiệp hỗ trợ (Nguồn dữ liệu):
+   - HTTT Xử lý Đơn đặt hàng (Order Processing): Cung cấp DỮ LIỆU BAN ĐẦU (đặt hàng theo thời kỳ, người bán, sản phẩm, địa điểm). Dữ liệu từ HT POS (Point-of-Sale) là đầu vào.
+   - HTTT Hàng tồn kho (Inventory): Cung cấp thông tin về MỨC TỒN KHO, xuất-nhập-tồn, hư hỏng (giúp nhân viên bán hàng KIỂM TRA TỒN KHO trước khi bán, điều chỉnh phương thức bán).
+   - HTTT Tín dụng: Cung cấp thông tin về TÍN DỤNG TỐI ĐA cho phép đối với một khách hàng (thường tích hợp với phân hệ xử lý đơn hàng).
+
+CHIẾN THUẬT (TACTICAL MKIS) (11.2.2)
+------------------------------------------------------------------------------------
+- Đặc điểm thông tin: TỔNG HỢP (không chi tiết), báo cáo ĐẶC BIỆT/NGOÀI DỰ TÍNH, so sánh. Bao gồm nguồn DỮ LIỆU BÊN TRONG và BÊN NGOÀI.
+Hệ thống thông tin Quản lý bán hàng (Sales Management Systems):
+   - Chức năng: Hỗ trợ các quyết định chiến thuật (SẮP XẾP ĐIỂM KINH DOANH, phân bổ bộ phận bán hàng, THƯỞNG cho nhân viên).
+   - Cơ sở: Dữ liệu LỊCH SỬ về kết quả kinh doanh (theo nhân viên, địa điểm, sản phẩm, thị trường) để LẬP BÁO CÁO PHÂN TÍCH và ĐÁNH GIÁ HIỆU QUẢ.
+
+Hệ thống thông tin Xúc tiến bán hàng (Sales Promotion Systems):
+   - Chức năng: Hỗ trợ quyết định về CHIẾN THUẬT QUẢNG CÁO và KHUYẾN MÃI (sử dụng phương tiện/hình thức nào).
+   - Cơ sở: Dữ liệu từ HT Xử lý đơn hàng (xác định sản phẩm BÁN CHẠY/BÁN CHẬM), LỊCH SỬ THỊ TRƯỜNG, hiệu quả các nỗ lực trước đó (để LẤP KHOẢNG TRỐNG giữa thực tế và kế hoạch).
+
+Hệ thống thông tin Giá thành sản phẩm (Product Costing/Pricing Systems):
+   - Chức năng: Hỗ trợ ĐỊNH GIÁ cho sản phẩm/dịch vụ (ảnh hưởng đến DOANH SỐ và LÃI).
+   - Yếu tố ảnh hưởng: Nhu cầu dự báo, LỢI NHUẬN BIÊN, CHI PHÍ SẢN XUẤT, giá của SẢN PHẨM CẠNH TRANH.
+   - Chiến thuật giá:
+     - Giá cộng lãi vào chi phí (Cost-plus pricing).
+     - Giá cầu (Giá trị khách hàng chấp nhận).
+     - Giá bám chắc thị trường (Đặt giá thấp để TĂNG THỊ PHẦN).
+     - Giá hớt ngọn (Skimming): Đặt giá CAO cho sản phẩm MỚI/CẢI TIẾN để thu lợi nhuận tối đa.
+
+HTTT Trợ giúp Ra quyết định Kênh phân phối (Distribution Channel DSS):
+   - Chức năng: Hỗ trợ quyết định về CÁCH THỨC PHÂN PHỐI (TỰ BÁN hay DỰA VÀO TRUNG GIAN).
+   - Thông tin cung cấp: CHI PHÍ sử dụng các kênh, MỨC ĐỘ TIN CẬY, sự bão hòa của thị trường mục tiêu.
+
+CHIẾN LƯỢC (STRATEGIC MKIS) (11.2.3)
+------------------------------------------------------------------------------------
+- Mục tiêu: Phát triển KẾ HOẠCH MARKETING CHUNG.
+- Hoạt động chiến lược: PHÂN ĐOẠN THỊ TRƯỜNG, LỰA CHỌN THỊ TRƯỜNG MỤC TIÊU, LÊN KẾ HOẠCH SẢN PHẨM.
+
+Hệ thống thông tin Dự báo bán hàng (Sales Forecasting Systems):
+   - Chức năng: Dự báo bán hàng cho NGÀNH CÔNG NGHIỆP, DOANH NGHIỆP, LOẠI SẢN PHẨM.
+   - Cơ sở: Dữ liệu LỊCH SỬ + GIẢ ĐỊNH (đối thủ, chính phủ, cầu người tiêu dùng, thời tiết...).
+   - Vai trò: DỰ BÁO BÁN HÀNG NĂM TIẾP THEO là cơ sở ra quyết định CHIẾN THUẬT cho nhiều chức năng khác (Sản xuất, Tài chính, R&D).
+   - Hệ quả sai số: SAI SỐ dự báo ảnh hưởng đến HẦU HẾT các mặt hoạt động.
+
+Hệ thống thông tin Lập kế hoạch và Phát triển sản phẩm:
+   - Mục tiêu: Cung cấp thông tin về SỰ ƯA CHUỘNG CỦA KHÁCH HÀNG (qua Nghiên cứu thị trường) cho việc phát triển SẢN PHẨM MỚI.
+   - Đầu ra quan trọng: BỘ CÁC ĐẶC TẢ CỦA SẢN PHẨM.
+
+CHIẾN THUẬT VÀ CHIẾN LƯỢC (11.2.4)
+------------------------------------------------------------------------------------
+1. Hệ thống thông tin Nghiên cứu Thương mại/Thị trường (Market Research):
+   - Định nghĩa: Xác định CÓ HỆ THỐNG các tài liệu, thu thập, phân tích và báo cáo kết quả.
+   - Đầu vào: Chủ yếu nguồn BÊN NGOÀI (Khách hàng, cơ cấu dân số, công nghiệp, kinh tế).
+   - Phương pháp phân tích: THỐNG KÊ (tính trung bình, tìm tương quan, chuỗi thời gian, thử giả định).
+
+2. Hệ thống thông tin Theo dõi Đối thủ Cạnh tranh:
+   - Mục tiêu: THEO KỊP các đối thủ chủ yếu để đảm bảo Tiếp thị Hỗn hợp (Marketing Mix) CÓ HIỆU QUẢ.
+   - Thông tin thu thập: GIÁ CẢ, SẢN PHẨM, QUẢNG CÁO, KHUYẾN MÃI của đối thủ.
+   - Nguồn thông tin: Báo/Tạp chí thương mại, Cơ sở dữ liệu TRỰC TUYẾN, thông tin KHÔNG CHÍNH THỨC (từ nhân viên bán hàng).
+
+PHẦN MỀM QUẢN LÝ MARKETING 11.3
+Phần mềm Marketing được chia thành 2 nhóm: PHẦN MỀM ĐA NĂNG (chung) và PHẦN MỀM CHUYÊN BIỆT.
+PHẦN MỀM ỨNG DỤNG CHUNG QUẢN LÝ MARKETING (11.3.1)
+------------------------------------------------------------------------
+- Mục đích: Ứng dụng các công cụ tin học cơ bản để xử lý dữ liệu Marketing.
+- Nguồn dữ liệu chính: Cơ sở dữ liệu HTTT TÀI CHÍNH (lệnh bán hàng, hóa đơn, tồn kho).
+
+Phần mềm Truy vấn và Sinh báo cáo (Query and Report Generator):
+   - Chức năng: Cho phép người dùng ĐỌC DỮ LIỆU và phát triển BÁO CÁO RIÊNG (tùy chỉnh).
+   - Cơ chế: Đặt hàng loạt CÂU HỎI về CSDL kế toán, xác định TRƯỜNG DỮ LIỆU cần hiển thị (cột), và các PHÉP TOÁN SỐ HỌC (tổng, trung bình).
+
+Phần mềm Đồ họa và Hệ thống Đa phương tiện (Graphics & Multimedia):
+   - Chức năng Đồ họa: Biểu diễn dữ liệu dạng ĐƯỜNG, CỘT, PIE (giúp nhận ra XU HƯỚNG và QUAN HỆ nhanh hơn).
+   - Chức năng Đa phương tiện: Chuẩn bị TRÌNH DIỄN (biểu đồ, hình ảnh, văn bản) cho khách hàng/hội nghị, hoặc HUẤN LUYỆN nhân viên bán hàng.
+
+Phần mềm Thống kê (Statistical Software):
+   - Chức năng: Xử lý dữ liệu thu thập (từ kế toán, CSDL trực tuyến, phỏng vấn).
+   - Ứng dụng: Tìm ra MỐI TƯƠNG QUAN giữa dữ liệu khách hàng và bán hàng (xác định đặc điểm khách hàng liên quan đến việc mua sản phẩm).
+
+Phần mềm Quản trị Tệp và CSDL (File & Database Management):
+   - Chức năng: Lưu trữ và quản lý các CSDL hữu ích ngoài CSDL kế toán (ví dụ: Tệp khách hàng, Tệp dự báo bán hàng).
+
+Phần mềm Xử lý Văn bản và Chế bản điện tử:
+   - Xử lý Văn bản (Word Processing): Cải tiến tài liệu viết, chuẩn bị PHIẾU ĐIỀU TRA, báo cáo nghiên cứu. Cần có khả năng ĐỌC KẾT QUẢ từ phần mềm thống kê/đồ họa để chèn vào báo cáo.
+   - Chế bản điện tử (Desktop Publishing): Chuẩn bị SÁCH BỎ TÚI, TỜ RƠI, RAO VẶT đơn giản.
+
+Phần mềm Bảng tính điện tử (Spreadsheet):
+   - Chức năng: Sử dụng trong TẤT CẢ các công việc quản lý.
+   - Ứng dụng: Chuẩn bị DỰ TOÁN NGÂN SÁCH, MÔ PHỎNG ngân sách, phát triển DÒNG TIỀN, phân tích bán hàng. Dữ liệu có thể nhập từ BÀN PHÍM hoặc GỌI TỪ CSDL.
+
+Phần mềm Điện thoại và Thư điện tử (Voice Mail & E-mail):
+   - Thư Điện thoại (Voice Mail): Cho phép nhân viên bán hàng NGHE/NHẬN CÚ ĐIỆN THOẠI từ bất cứ đâu (giúp LIÊN LẠC với khách hàng/quản lý khi di chuyển).
+   - Thư Điện tử (E-Mail): Gửi thư/thông báo (ví dụ: bảng giá mới) nhanh chóng, dùng THIẾT BỊ ĐẦU CUỐI và MODEM.
+
+PHẦN MỀM ỨNG DỤNG CHUYÊN BIỆT QUẢN LÝ MARKETING (11.3.2)
+------------------------------------------------------------------------
+- Mục đích: Hỗ trợ CÁC HOẠT ĐỘNG MARKETING ĐẶC BIỆT.
+- 5 Phạm trù chính: Trợ giúp nhân viên bán hàng, quản lý nhân viên bán hàng, quản lý bán hàng qua điện thoại, hỗ trợ khách hàng, dịch vụ tích hợp.
+
+Phần mềm Trợ giúp Nhân viên Bán hàng:
+   - Chức năng: Cung cấp TÀI LIỆU, TỆP, LỊCH.
+   - Tính năng nổi bật: Tạo THƯ GỬI KHÁCH HÀNG hàng loạt (trộn mẫu thư), mô-đun LỊCH (quản lý cuộc họp), mô-đun TỆP "NHẮC" (đảm bảo thực hiện lời hứa/cuộc gọi).
+
+Phần mềm Quản lý Bán hàng (Sales Management Software):
+   - Chức năng: Xác định NĂNG SUẤT lực lượng bán hàng, triển vọng kinh doanh tại ĐIỂM BÁN HÀNG, mức độ thành công của SẢN PHẨM.
+   - Ứng dụng: Tìm ra ĐIỂM KINH DOANH YẾU KÉM, xác định XU THẾ MUA HÀNG (hỗ trợ kiểm tra, tổ chức).
+   - Nguồn dữ liệu: HTTT Tài chính hoặc CSDL cập nhật bởi nhân viên bán hàng.
+
+Phần mềm Marketing qua Điện thoại (Telemarketing Software):
+   - Chức năng: Hỗ trợ MÁY TÍNH trong việc xác định khách hàng và GỌI CHO HỌ từ danh bạ/tệp khách hàng điện tử.
+   - Vai trò: Tăng DOANH THU BÁN HÀNG, GIẢM CHI PHÍ, TĂNG THỊ PHẦN.
+
+Phần mềm Trợ giúp Khách hàng (Customer Support Software):
+   - Chức năng: Cung cấp thông tin LỊCH SỬ MUA HÀNG của khách hàng (thanh toán, sản phẩm đã mua).
+   - Vai trò: Giúp nhân viên bán hàng XEM XÉT DỮ LIỆU trước khi gọi thương mại, PHÂN TÍCH XU THẾ mua hàng (cải tiến dịch vụ khách hàng).
+
+Phần mềm Marketing Tích hợp (Integrated Marketing Software):
+   - Chức năng: KẾT HỢP các chương trình hỗ trợ bán hàng/quản lý bán hàng/hỗ trợ khách hàng.
+   - Đặc điểm: Tích hợp mỗi chương trình với CƠ SỞ DỮ LIỆU KẾ TOÁN TÀI CHÍNH của doanh nghiệp. Hữu ích cho Nhà nghiên cứu/lập kế hoạch Marketing.
+
+---
+III. CƠ SỞ DỮ LIỆU MARKETING TRỰC TUYẾN (ONLINE MARKETING DATABASES) (11.3.3)
+----------------------------------------------------------------------------------------
+- Mục đích: Thu thập DỮ LIỆU HIỆN THỜI về NHÂN KHẨU HỌC, KINH TẾ, TÀI CHÍNH, xu thế, dự báo về khách hàng/đối thủ.
+- Truy cập: Sử dụng MODEM và PHẦN MỀM VIỄN THÔNG để nối với các CSDL trực tuyến đặc biệt.
+- Giá trị: Phần mềm của nhà cung cấp CSDL cho phép phân tích khối lượng lớn dữ liệu về XU THẾ và DỰ BÁO.
+
+========================================================================
+
+
+CHƯƠNG 12: HỆ THÓNG THÔNG TIN SẢN XUẤT KINH DOANH
+1. Khái quát chung về HTTT Sản xuất Kinh doanh
+• Mục tiêu chính: Cung cấp những sản phẩm và dịch vụ với chất lượng cao nhất và chi phí thấp nhất có thể.
+• Vai trò: HTTT Sản xuất Kinh doanh cung cấp công cụ để lên kế hoạch, tổ chức, điều hành, theo dõi, kiểm tra và thực hiện các chức năng quản lý đối với các hệ thống sản xuất. Hệ thống này kiểm soát gần như toàn bộ các giai đoạn của quá trình biến đổi nguyên vật liệu thành thành phẩm.
+• Dữ liệu đầu vào: HTTT Sản xuất sử dụng thông tin có tính định hướng từ kế hoạch chiến lược và các chính sách kinh doanh của tổ chức (ví dụ: mục tiêu về chất lượng, sản phẩm, và các ràng buộc khác).
+• Các nguồn dữ liệu đầu vào khác bao gồm:
+    ◦ Thông tin từ các Hệ thống xử lý giao dịch (như thông tin tồn kho, nhân sự, đơn hàng).
+    ◦ Các nguồn thông tin bên ngoài như cơ sở dữ liệu trực tuyến của Chính phủ, các cơ sở dữ liệu khoa học và công nghiệp (hỗ trợ các quyết định chiến lược).
+2. Phân loại HTTT Sản xuất Kinh doanh theo Mức quản lý
+HTTT Sản xuất (Manufacturing/Production IS) hỗ trợ ra quyết định TÁC NGHIỆP và CHIẾN THUẬT.
+TÁC NGHIỆP (OPERATIONAL PIS) (12.2.1)
+----------------------------------------------------------------------------------------
+- Mục tiêu: Thu thập và báo cáo thông tin về TÌNH HÌNH HOẠT ĐỘNG SẢN XUẤT hàng ngày.
+- Đặc điểm: Đa phần là phân hệ của HT Kế toán Tài chính (Mua hàng, Tồn kho, Lương, v.v.).
+
+Hệ thống thông tin Mua hàng:
+   - Chức năng: Duy trì dữ liệu về quá trình cung cấp NGUYÊN VẬT LIỆU và HÀNG HÓA MUA VÀO (Tệp đơn hàng, Bảng giá) làm cơ sở LỰA CHỌN NHÀ CUNG CẤP.
+
+Hệ thống thông tin Nhận hàng:
+   - Chức năng: KIỂM NHẬN chính xác số lượng và chất lượng hàng giao nhận.
+   - Đầu ra: Báo cáo nhận hàng (Ngày, NCC, Mã/Mô tả hàng, Số lượng đặt/thực giao, Tình trạng hư hỏng).
+
+Hệ thống thông tin Kiểm tra Chất lượng:
+   - Chức năng: Cung cấp thông tin về tình trạng sản phẩm (NVL -> SP dở dang -> Thành phẩm). Đảm bảo NVL đạt CHUẨN MỰC yêu cầu.
+   - Ứng dụng: Xác định ĐẶC ĐIỂM THỰC TẾ cho sản phẩm mới, xác định NCC giao hàng chất lượng THẤP, xác định YẾU ĐIỂM của máy móc/con người.
+
+Hệ thống thông tin Giao hàng:
+   - Chức năng: Hỗ trợ và kiểm soát quá trình DỰ TRỮ và GIAO HÀNG (Nhập kho/Xuất cho khách hàng).
+   - Đầu ra: Cung cấp thông tin cho HT Hàng dự trữ và HT Công nợ phải thu.
+
+Hệ thống thông tin Kế toán Chi phí Giá thành:
+   - Chức năng: Thu thập và báo cáo thông tin về 3 NGUỒN LỰC chính dùng cho sản xuất: NHÂN LỰC, NGUYÊN VẬT LIỆU, MÁY MÓC/THIẾT BỊ.
+   - HTTT Lương: Thu thập thông tin về CHI PHÍ NHÂN CÔNG và PHÂN BỔ THỜI GIAN lao động (trực tiếp/gián tiếp).
+   - HTTT Quản trị Nguyên vật liệu: Thông tin về MỨC DỰ TRỮ, xuất cho sản xuất, hóa đơn NVL (BOM - Bill Of Material).
+   - Mục đích chung: KIỂM SOÁT CHI PHÍ sản xuất và PHÂN BỔ các nguồn lực.
+
+CHIẾN THUẬT (TACTICAL PIS) (12.2.2)
+----------------------------------------------------------------------------------------
+- Mục tiêu: Điều khiển và KIỂM SOÁT quá trình sản xuất, phân chia các nguồn lực hiện có để đạt mục tiêu chiến lược.
+
+1. HTTT Quản trị và Kiểm soát Hàng dự trữ (Inventory Control):
+   - Chức năng: Quản trị và kiểm soát NVL, SP dở dang, Thành phẩm (giúp TIẾT KIỆM đáng kể, tránh ngưng sản xuất/mất cơ hội kinh doanh).
+   - Công cụ chính:
+     - **EOQ (Economic Order Quantity)**: Xác định LƯỢNG ĐẶT HÀNG KINH TẾ (tổng chi phí dự trữ hàng là THẤP NHẤT) 
+            Đầu vào :- Nhu cầu hàng năm về các loại hàng dự trữ, Chi phí đặt hàng 1 đơn hàng, Chi phí tồn TB/dự trữ
+            ĐẦU RA: Lượng đặt hàng tối ưu, số lượng đơn hàng yc, khoảng cách giữa 2 lần đặt, tổng chi phí dự trữ
+     - **RL (Reorder Level)**: Xác định MỨC TỒN KHO AN TOÀN (Lượng hàng cần có sẵn cho đến khi hàng mới đặt về) 
+         Đầu vào: Nhu cầu hàng năm về các loại hàng dự trữ,Số ngày sản xuất trong năm,Thời gian vận chuyển một đơn hàng
+        ĐẦU RA: Mức đặt hàng lại hay mức tồn kho an toàn
+2. HT Hoạch định Nhu cầu Nguyên vật liệu (MRP - Material Requirement Planning):
+   - Chức năng: Xác định chính xác MỨC HÀNG DỰ TRỮ cần cho kế hoạch sản xuất, THỜI GIAN CẦN THIẾT nhận hàng, tính toán LƯỢNG ĐẶT HÀNG tối ưu (EOQ) và THỜI ĐIỂM đặt mua.
+    - Đầu vào: Đơn đặt hàng,Kế hoạch SX,Dự báo bán hàng,Tệp hoá đơn NVL,Tệp hàng dữ trữ   
+    - Đầu ra: Liệt kê nhu cầu và thời gian cụ thể cho mỗi loại NVL,Lệnh phát đơn hàng bổ sung,Lệnh sản xuất gia công,Báo cáo bất thường
+
+3. HTTT Sản xuất Không dự trữ (JIT - Just-In-Time):
+   - Chức năng: Loại trừ LÃNG PHÍ (máy móc, không gian, thời gian, vật tư).
+   - Phương châm: Hoạt động chỉ xảy ra **ĐÚNG VÀO LÚC CẦN THIẾT** (Phối hợp chặt chẽ với NCC qua mạng truyền dữ liệu).
+
+4. HTTT Hoạch định Năng lực Sản xuất (Capacity Planning):
+   - Mục tiêu: Đảm bảo NHÂN LỰC, MÁY MÓC, PHƯƠNG TIỆN SẢN XUẤT có đủ **ĐÚNG LÚC** để thỏa mãn nhu cầu.
+   - Kỹ thuật:
+     - Hoạch định Năng lực Sơ bộ: Ước tính nhu cầu năng lực (giờ công lao động, giờ khấu hao máy) dựa trên lịch trình sản xuất tổng hợp (Xác định năng lực hiện có ĐỦ hay QUÁ ÍT/QUÁ NHIỀU).
+     - Hoạch định Nhu cầu Năng lực Chi tiết: Ước tính chi tiết hơn (dựa trên thông tin về nhân lực, hóa đơn NVL, tình trạng hàng tồn).
+
+5. HTTT Điều độ Sản xuất (Production Scheduling):
+   - Chức năng: Lập DANH MỤC CÔNG VIỆC theo thứ tự, ghi rõ AI LÀM, THỜI GIAN thực hiện (phân chia sử dụng thiết bị sản xuất đặc thù).
+   - Công cụ:
+     - **Sơ đồ Gantt**: Biểu thị THỜI GIAN (ngang) và CÔNG VIỆC (dọc), dùng cho công việc ĐƠN GIẢN, giúp xác định TIẾN ĐỘ.
+     - **Sơ đồ Pert (Program Evaluation and Review Technique)**: Kỹ thuật điều độ cho DỰ ÁN LỚN, PHỨC TẠP (giống biểu đồ dòng chảy, chỉ rõ THỨ TỰ, thời gian, chi phí).
+
+6. HTTT Phát triển và Thiết kế Sản phẩm (Product Design and Development):
+   - Chức năng: Sử dụng thông tin ĐẶC TẢ SẢN PHẨM (từ khảo sát khách hàng/nghiên cứu thị trường) và HT máy tính để thiết kế SP mới.
+   - Mục tiêu: Thiết kế SP ĐÁP ỨNG NHU CẦU KHÁCH HÀNG với CHI PHÍ ÍT NHẤT (tạo lợi thế cạnh tranh).
+
+CHIẾN LƯỢC (STRATEGIC BUSINESS IS) (12.2.3)
+----------------------------------------------------------------------------------------
+- Đặc điểm: Cung cấp thông tin cho các quyết định CÓ TÍNH RÀNG BUỘC VỐN và NGUỒN LỰC DÀI HẠN (Định vị, Nâng cấp, Xây dựng doanh nghiệp mới, Lựa chọn công nghệ).
+
+HTTT Lập kế hoạch và Định vị Doanh nghiệp (Facility Location Planning):
+   - Cơ sở thông tin:
+     - Nguồn BÊN NGOÀI KHÁCH QUAN (Đo đếm được): Tính sẵn có/chi phí nhân công, phương tiện/chi phí vận chuyển, giá đất, cơ sở hạ tầng.
+     - Nguồn BÊN NGOÀI CHỦ QUAN (Định tính): Thái độ cộng đồng, chất lượng dịch vụ/giáo dục.
+     - Nguồn BÊN TRONG: HTTT Nhân lực, Kế toán, Sản xuất.
+
+HTTT Đánh giá và Lập kế hoạch Công nghệ (Technology Assessment and Planning):
+   - Chức năng: Xác định CÔNG NGHỆ MỚI và ĐÁNH GIÁ LỢI THẾ CHIẾN LƯỢC của chúng.
+   - Nguồn thông tin: CSDL trên CD-Rom, thư viện, CSDL trực tuyến (Chính phủ, nhóm nghiên cứu).
+
+HT Xác định Quy trình Thiết kế Sản phẩm và Công nghệ:
+   - Mục tiêu: Quyết định quy trình sản xuất (Tự sản xuất/Lắp ráp hay Mua sẵn phụ kiện).
+   - Cơ sở thông tin: Kỹ năng/kinh nghiệm lao động, điều kiện tài chính (Bên trong); Kỹ năng nguồn nhân lực, cấu trúc cạnh tranh, sự phát triển công nghệ tương lai (Bên ngoài).
+
+HT Thiết kế Triển khai Doanh nghiệp:
+   - Yêu cầu: Thông tin về DOANH NGHIỆP TƯƠNG LAI (số liệu thiết kế, công nghệ, nhân công, bố trí sản xuất, hệ thống giao thông/nước/năng lượng).
+3. Phần mềm Quản lý Sản xuất Kinh doanh
+Phần mềm được chia thành hai nhóm: ứng dụng chung và ứng dụng chuyên biệt.
+• Phần mềm Ứng dụng Chung:
+    ◦ Phần mềm Cơ sở Dữ liệu: Hỗ trợ truy nhập các dữ liệu kế toán và sản xuất (ví dụ: hóa đơn, báo cáo nhận/giao hàng).
+    ◦ Phần mềm Bảng tính: Được sử dụng để lập ngân sách, đánh giá các quyết định đầu tư bằng cách tính toán Giá trị hiện tại thuần (NPV) và Tỷ suất hoàn vốn nội bộ (IRR).
+    ◦ Phần mềm Quản lý Dự án: Thường được sử dụng để tạo và mô phỏng các sơ đồ Gantt và Pert.
+    ◦ Phần mềm Thống kê: Được sử dụng trong kiểm tra chất lượng nguyên vật liệu và thành phẩm.
+• Phần mềm Ứng dụng Chuyên biệt:
+    ◦ Phần mềm Kiểm tra Chất lượng: Thường là các phần mềm thống kê chuyên dùng (ví dụ: biểu đồ Pareto).
+    ◦ Phần mềm Thiết kế với sự hỗ trợ của Máy tính (CAD - Computer-Aided Design): Cho phép các kỹ sư thực hiện những mô phỏng đối với sản phẩm. Mục tiêu là đưa ra những sản phẩm tốt hơn với chi phí thấp hơn, mang lại ưu thế cạnh tranh cho doanh nghiệp.
+    Phần mềm lựa chọn nguyên vậl liệu MSP (Material - Selection - 
+Software)
+    Phần mềm hoạch định nhu cầu nguyên vật liệu MRP (Material 
+Requirement Planning)
+
+
+CHƯƠNG 13:  HỆ THÓNG THÔNG TIN NGUÒN NHÂN LỤC
+Dữ liệu đầu vào và Đầu ra:
+    ◦ Đầu vào: Bao gồm Kế hoạch chiến lược và chính sách kinh doanh (với các mục tiêu và chiến lược về nhân lực); dữ liệu từ Hệ thống xử lý giao dịch (như hệ thống xử lý lương, hệ thống xử lý đơn hàng); và các nguồn dữ liệu từ bên ngoài (ví dụ: mức lương trả cho nhân công ở cơ quan khác, dữ liệu thống kê về nhân lực, quy định của Chính phủ).
+    ◦ Đầu ra: Bao gồm các báo cáo quản lý như báo cáo kế hoạch nguồn nhân lực, báo cáo tổng hợp về kỹ năng công việc, và báo cáo khảo sát về lương.
+
+--------------------------------------------------------------------------------
+II.Phân loại HTTT Nguồn Nhân lực theo Mức quản lý
+HTTT QLNNL được phân thành ba mức: Tác nghiệp, Chiến thuật và Chiến lược.
+1. Mức Tác nghiệp (Phân hệ 13.2.1)
+Các phân hệ ở mức này cung cấp dữ liệu hỗ trợ cho các quyết định nhân sự có tính thủ tục và lặp lại:
+• Phân hệ Quản lý Lương: Thu thập và báo cáo dữ liệu về người lao động, hệ số lương, nhóm thu nhập và thâm niên nghề nghiệp.
+• Phân hệ Quản lý Vị trí Công việc: Xác định từng vị trí lao động trong tổ chức, phạm trù nghề nghiệp và nhân sự đang đảm đương. Hữu ích cho việc phát hiện ra các vấn đề liên quan đến nguồn nhân lực và ra quyết định tuyển người.
+• Phân hệ Quản lý Người Lao động: Duy trì tệp nhân sự (về giới tính, học vấn, kinh nghiệm) và danh mục các kỹ năng (về kinh nghiệm làm việc, sở thích). Danh mục kỹ năng giúp quyết định đề bạt, đào tạo hay thuyên chuyển.
+• Phân hệ Đánh giá Tình hình Thực hiện Công việc: So sánh tình hình thực hiện công việc với yêu cầu đề ra (đánh giá biểu hiện).
+• Phân hệ Báo cáo cấp trên: Lên các báo cáo theo yêu cầu của luật định và quy định của Chính phủ (ví dụ: luật quản lý sức khỏe và an toàn nghề nghiệp).
+2. Mức Chiến thuật (Phân hệ 13.2.2)
+Hỗ trợ các quyết định liên quan đến phân chia các nguồn nhân lực:
+• HTTT Phân tích và Thiết kế Công việc: Mô tả các công việc cần thiết và năng lực, phẩm chất cần có của người lao động để thực hiện công việc đó. Nó giúp tăng tính mềm dẻo của việc triển khai nguồn nhân lực, ví dụ như gộp một số chức danh công việc có đặc điểm chung.
+• HTTT Tuyển dụng Nguồn Nhân lực: Đảm bảo cung cấp cho tổ chức những nhân lực có đào tạo, có khả năng đảm đương các vị trí còn trống và tuân thủ luật lao động.
+HTTT lương thường và báo hiếm, trợ cấp
+HTTT đào tạo và phái triển nguồn nhân lực 
+3. Mức Chiến lược (Phân hệ 13.2.3)
+Liên quan đến mục tiêu dài hạn của doanh nghiệp:
+• Kế hoạch hóa Nguồn Nhân lực: Quá trình đảm bảo tổ chức có đủ về số lượng và chất lượng người lao động phù hợp với yêu cầu công việc, vào đúng lúc để đạt được mục tiêu chiến lược. Hoạt động này liên quan đến dự báo cung và cầu về nguồn nhân lực.
+
+--------------------------------------------------------------------------------
+III. Phần mềm Quản trị Nguồn Nhân lực
+Phần mềm hỗ trợ quản trị nhân lực được chia làm hai loại: Phần mềm đa năng (ứng dụng chung) và phần mềm chuyên dụng.
+1. Phần mềm Ứng dụng Chung (13.3.1)
+• Phần mềm Quản trị Cơ sở Dữ liệu (DBMS): Chủ đạo và hữu ích, giúp lập các tệp dữ liệu mô tả công việc, vị trí làm việc, năng lực nhân viên. Với DBMS, quản trị viên có thể tiến hành các phân tích kiểu "What-If" cho mục tiêu lập kế hoạch chiến lược.
+• Cơ sở dữ liệu trực tuyến: Cung cấp thông tin về xu hướng kinh tế, thống kê lao động, mức lương của các đối thủ cạnh tranh, và các quy định của Chính phủ.
+• Phần mềm Bảng tính (Spreadsheet): Được sử dụng để lập ngân sách, tính toán các biểu mẫu thống kê (ví dụ: số lượng và tỷ lệ lao động theo nhóm tuổi khác nhau), và dự báo chi phí (ví dụ: chi phí bảo hiểm sức khỏe trong tương lai).
+• Phần mềm Thống kê: Dùng để phân tích mối tương quan giữa các nhóm ngành công việc với các loại tai nạn và bệnh tật.
+2. Phần mềm Ứng dụng Chuyên biệt (13.3.2)
+• Phần mềm Quản trị Nhân lực Thông minh (Integrated HRMS): Tích hợp tất cả các tệp quản trị nhân lực để cung cấp báo cáo từ một hay tất cả các tệp đó.
+• Phần mềm Đào tạo Trực tuyến: Ứng dụng sử dụng đa phương tiện để đào tạo nhân viên (quản lý, bán hàng, tin học).
+
+
+CHƯƠNG 14: CÁC HTTT TÍCH HỌP 
+TRONG KINH DOANH
+I. Hệ thống Quản trị Quan hệ Khách hàng (CRMS)
+1. KHÁI NIỆM & HỆ THỐNG CRM (14.1.1 & 14.1.2)
+------------------------------------------------------------------------
+- Khách hàng/Quan hệ khách hàng: Là **TÀI SẢN QUÝ GIÁ NHẤT** của tổ chức (do quyền lực người mua ngày càng tăng).
+- Mục tiêu CRM:
+   Cung cấp cho tổ chức/nhân viên **THÔNG TIN ĐẦY ĐỦ VỀ MỖI KHÁCH HÀNG** (trong mọi mối quan hệ, mọi kênh).
+   Cung cấp cho khách hàng **THÔNG TIN ĐẦY ĐỦ VỀ DOANH NGHIỆP**.
+- Vai trò CNTT: Tạo ra **HỆ THỐNG LIÊN LĨNH VỰC**, tích hợp và tự động hóa các tiến trình **HƯỚNG KHÁCH HÀNG** (Bán hàng, Marketing, Dịch vụ).
+- Kiến trúc CRM: Dựa trên **PHẦN MỀM DỰA TRÊN WEB** và **CƠ SỞ DỮ LIỆU KHÁCH HÀNG CHUNG** (chia sẻ trên phạm vi toàn tổ chức qua Internet, Intranet).
+- Ứng dụng thành phần cơ bản: **BÁN HÀNG**, **MARKETING**, **DỊCH VỤ VÀ HỖ TRỢ KHÁCH HÀNG**, và các chương trình khuyến mãi.
+- Kênh giao tiếp: **Fax, E-mail, Điện thoại, Web**.
+
+---
+2. CÁC ỨNG DỤNG THÀNH PHẦN CỦA CRM
+------------------------------------------------------------------------
+Bán hàng (Sales):
+   - Công cụ: Hỗ trợ và quản trị hoạt động bán hàng, tối ưu hóa **CROSS-SELLING** (bán chéo) và **UP-SELLING** (bán tăng cường).
+   - Lợi ích: Truy cập **THỜI GIAN THỰC** thông tin khách hàng (tình trạng tài khoản, lịch sử mua hàng) để lên lịch tiếp xúc. CRM có thể **CẢNH BÁO** về dịch vụ chưa thực hiện hoặc vấn đề thanh toán.
+Marketing và đáp ứng yêu cầu đơn hàng:
+   - Chức năng Marketing: Tự động hóa công việc (tăng chất lượng chiến dịch có **TIÊU ĐIỂM**, lập lịch/theo dõi thư Marketing trực tiếp).
+   - Phân tích: Thu thập và quản lý dữ liệu trả lời, phân tích **GIÁ TRỊ KHÁCH HÀNG** và **GIÁ TRỊ KINH DOANH** của chiến dịch.
+   - Đáp ứng: Nhanh chóng lập lịch tiếp xúc bán hàng và cung cấp **THÔNG TIN PHÙ HỢP**.
+Dịch vụ và Hỗ trợ Khách hàng (Service and Customer Support):
+   - Công cụ: **CALL CENTER** (chuyển hướng cuộc gọi dựa trên khả năng giải quyết yêu cầu), **HELP DESK** (cung cấp dữ liệu dịch vụ và đề xuất giải pháp).
+   - **Dịch vụ Tự phục vụ dựa trên Web (Web-based self-service)**: Cho phép khách hàng truy cập thông tin hỗ trợ cá nhân (Ví dụ: theo dõi bưu kiện của UPS).
+Duy trì Khách hàng và Chương trình Tôn vinh:
+   - Chiến lược: Nâng cao và tối ưu hóa **LÒNG TRUNG THÀNH** của khách hàng là mục tiêu cơ bản (vì chi phí cho khách hàng mới **TỐN KÉM HƠN** khách hàng hiện có).
+   - Công cụ: **Phần mềm Phân tích CRM** (Data Mining, Marketing Analysis) và **CSDL CRM** (chứa Tổng kho dữ liệu/Data Mart) giúp xác định **KHÁCH HÀNG TIỀM NĂNG/TRUNG THÀNH NHẤT**.
+
+3. BA GIAI ĐOẠN CỦA VÒNG ĐỜI CRM (14.1.3)
+------------------------------------------------------------------------
+gđ1. Giai đoạn **Khai thác khách hàng mới (Acquisition)**:
+   - Hoạt động: Quản trị quan hệ, bao quát hoạt động bán hàng, Marketing trực tiếp, xử lý đơn hàng.
+gđ2. Giai đoạn **Nâng cao chất lượng dịch vụ khách hàng (Enhancement)**:
+   - Hoạt động: Hỗ trợ dịch vụ cốt lõi (cho nhân viên và đối tác) dựa trên Web, thực hiện **CROSS-SELL/UP-SELL**.
+   - Giá trị khách hàng: Giao dịch **ONE-STOP** (một điểm dừng) với giá hấp dẫn.
+gđ3. Giai đoạn **Duy trì khách hàng (Retention)**:
+   - Hoạt động: Sử dụng Phần mềm Phân tích/CSDL để phát hiện **KHÁCH HÀNG TIỀM NĂNG VÀ TRUNG THÀNH**. Mở rộng kinh doanh qua **TIẾP THỊ CÓ MỤC TIÊU** và **TIẾP THỊ QUAN HỆ**.
+   - Giá trị khách hàng: Mối quan hệ **CÁ NHÂN HÓA** và được tôn vinh.
+
+4. LỢI ÍCH VÀ THỬ THÁCH (14.1.4)
+------------------------------------------------------------------------
+- Lợi ích:
+    - Xác định và **NHẮM TỚI KHÁCH HÀNG TỐT NHẤT** (mang lại lợi nhuận cao nhất).
+    - **TÙY CHỈNH/CÁ NHÂN HÓA** sản phẩm/dịch vụ dựa trên thói quen mua hàng theo **THỜI GIAN THỰC**.
+    - Áp dụng kinh nghiệm chăm sóc khách hàng chất lượng cao cho **MỌI ĐIỂM GIAO DỊCH**.
+
+- Thử thách/Thất bại CRM (>50%):
+    - Thiếu **HIỂU BIẾT VÀ CHUẨN BỊ** về các tiến trình mới.
+    - Kỳ vọng vào CNTT mà **KHÔNG THAY ĐỔI TIẾN TRÌNH NGHIỆP VỤ** và chương trình quản trị.
+    - Triển khai **THIẾU SỰ THAM GIA** của các đối tượng hưởng lợi.
+
+5.. CÁC LOẠI HÌNH HỆ THỐNG CRM (14.1.5)
+------------------------------------------------------------------------
+
+1. CRM mức **Tác nghiệp (Operational CRM)**:
+   - Chức năng: Tự động hóa bán hàng, Trung tâm dịch vụ khách hàng. Hỗ trợ **TƯƠNG TÁC KHÁCH HÀNG** qua nhiều kênh (điện thoại, email, chat, di động), **ĐỒNG BỘ HÓA** các tương tác.
+
+2. CRM **Phân tích (Analytical CRM)**:
+   - Chức năng: **TRÍCH RÚT THÔNG TIN SÂU** về khách hàng từ Tổng kho dữ liệu/CSDL bằng **DATA MINING**.
+   - Ứng dụng: Phân tích, **DỰ BÁO**, tạo ra giá trị khách hàng, cung cấp sản phẩm **TÙY BIẾN** theo nhu cầu.
+
+3. CRM **Phối hợp (Collaborative CRM)**:
+   - Chức năng: Tạo điều kiện **PHỐI HỢP DỄ DÀNG** giữa Khách hàng, Nhà cung cấp và Đối tác (nâng cao hiệu quả chuỗi cung cấp).
+   - Ví dụ: Dịch vụ **TỰ PHỤC VỤ** của khách hàng, HT **Quản trị Đối tác** (Partner Relationship Management - PRM).
+
+4. CRM thông qua **Cổng thông tin Điện tử (Portal-based CRM)**:
+   - Chức năng: Cung cấp công cụ và thông tin khách hàng, thực hiện phương châm **LẤY KHÁCH HÀNG LÀM TRUNG TÂM**, tăng cường khả năng **ĐÁP ỨNG NHANH** nhu cầu.
+
+========================================================================
+II. Hệ thống Quản trị Tích hợp Doanh nghiệp (ERP)
+1. KHÁI NIỆM HỆ THỐNG ERP (14.2.1)
+------------------------------------------------------------------------
+- Khái niệm: ERP (Enterprise Resources Planning) là bộ **MÔ ĐUN PHẦN MỀM TÍCH HỢP** và một **CƠ SỞ DỮ LIỆU TẬP TRUNG** (DUY NHẤT).
+- Mục tiêu: Cho phép **CHIA SẺ DỮ LIỆU** và **PHỐI HỢP** các tiến trình nghiệp vụ cơ bản **TRÊN PHẠM VI TOÀN TỔ CHỨC**.
+- Vai trò: Giải quyết vấn đề **DỮ LIỆU BỊ PHÂN TÁN** (trong các hệ thống rời rạc trước đây), giúp thông tin **THÔNG SUỐT** giữa các lĩnh vực chức năng (sản xuất, kế toán, nhân lực, v.v.).
+- Các Lĩnh vực được quản lý đồng bộ:
+    - **Tài chính - Kế toán**: Sổ cái, công nợ phải thu/phải trả, TSCĐ, chi phí giá thành.
+    - **Quản trị Nhân lực**: Quản lý hành chính, tiền lương, hoạch định phát triển NNL.
+    - **Kinh doanh - Sản xuất**: Lập kế hoạch NVL (MRP), lập kế hoạch sản xuất.
+    - **Bán hàng - Marketing**: Phân tích bán hàng, lập kế hoạch bán hàng.
+- Quy trình triển khai (Giải pháp 2 cách):
+    1. **Tùy biến** một số mô đun ERP (lớn quá sẽ giảm **NĂNG LỰC HOẠT ĐỘNG** và **KHẢ NĂNG TÍCH HỢP**).
+    2. **Thay đổi cách thức hoạt động** của tiến trình kinh doanh doanh nghiệp để tương thích với ERP (Tối đa hóa lợi ích ERP).
+- Cơ cấu chi phí triển khai (Chi phí lớn nhất):
+    - **Tái kiến trúc (43%)** (Phát triển tiến trình nghiệp vụ mới và chuẩn bị tâm thế người sử dụng).
+    - **Chuyển đổi dữ liệu (15%)** (từ hệ thống cũ lên ERP mới).
+    - Phần cứng (12%) và Phần mềm (15%) chiếm tỷ lệ nhỏ.
+2. LỢI ÍCH VÀ THỬ THÁCH CỦA ERP (14.2.2)
+------------------------------------------------------------------------
+### 1. Lợi ích (Giá trị Kinh doanh Lớn)
+* **Thống nhất và Chuẩn tắc hóa**: Mở rộng khả năng **TÍCH HỢP** vượt qua khoảng cách địa lý và ranh giới chức năng (ví dụ: Nestlé SA chuẩn hóa tiến trình tại 500 chi nhánh).
+* **Hiệu quả Tiến trình Nghiệp vụ**: Đáp ứng và phản hồi **HIỆU QUẢ HƠN** đối với yêu cầu khách hàng (bằng cách tích hợp các tiến trình rời rạc).
+* **Tối ưu hóa Sản xuất/Tồn kho**: **Dự báo hiệu quả hơn** về SP mới, chỉ sản xuất SP khách hàng cần, **giảm thiểu thời gian lưu kho** NVL và thành phẩm.
+* **Nâng cao Hiệu quả Ra quyết định**: Cung cấp **THÔNG TIN PHẢN ÁNH HOẠT ĐỘNG TOÀN DOANH NGHIỆP** (từ một dữ liệu tích hợp, duy nhất).
+### 2. Thử thách và Lý do thất bại
+* Thiếu **SỰ CAM KẾT VÀ ỦNG HỘ** của lãnh đạo.
+* Định nghĩa yêu cầu chức năng **KHÔNG PHÙ HỢP**.
+* Lựa chọn gói sản phẩm **KHÔNG HIỆU QUẢ/KHÔNG PHÙ HỢP**.
+* **Phản ứng của người sử dụng** trước những thay đổi tiến trình cần thiết (**Tái kiến trúc**).
+* Kỳ vọng **QUÁ MỨC** vào lợi ích/Đánh giá **THẤP CHI PHÍ**.
+* Hạn chế **TÙY BIẾN** (có thể mất lợi ích mang tính cạnh tranh nếu tái thiết kế QTN Vụ theo ERP).
+3. XU THẾ PHÁT TRIỂN HỆ THỐNG ERP (14.2.3)
+------------------------------------------------------------------------
+
+**Hệ thống ERP linh hoạt (Flexible ERP)**:
+    * Đặc điểm: Cải tiến từ các gói phần mềm kém linh hoạt của những năm 1990 sang **KIẾN TRÚC MỞ, LINH HOẠT, QUY CHUẨN** hơn.
+    * Lợi ích: Dễ dàng **TÍCH HỢP** với phần mềm khác và thực hiện **THAY ĐỔI NHỎ** để phù hợp với QTN Vụ của đơn vị.
+
+**Hệ thống ERP dựa trên Web (Web-enabling ERP software)**:
+    * Đặc điểm: Sử dụng công nghệ **INTERNET** để tích hợp **GIAO DIỆN WEB** và tính năng **MẠNG HÓA**.
+    * Lợi ích: **DỄ SỬ DỤNG HƠN**, dễ tích hợp hơn vào các ứng dụng nội bộ/hệ thống của đối tác.
+
+**Hệ thống ERP liên công ty (Interenterprise ERP)**:
+    * Đặc điểm: **KẾT NỐI INTERNET** cho phép phát triển các tính năng **LIÊN KẾT DẠNG WEB** giữa các hệ thống cốt lõi (kho, sản xuất) với **KHÁCH HÀNG, NHÀ CUNG CẤP, NHÀ PHÂN PHỐI** (liên doanh nghiệp).
+    * Xu thế: Chuyển đổi sang tích hợp ERP nội bộ với các ứng dụng **QUẢN LÝ CHUỖI CUNG ỨNG (SCM)** hướng ngoại.
+
+**Bộ phần mềm Kinh doanh điện tử (E-business Suite)**:
+    * Đặc điểm: Các công ty cung cấp ERP phát triển **BỘ PHẦN MỀM DỰA TRÊN WEB** tích hợp nhiều chức năng kinh doanh (ERP, CRM, SCM, TMĐT, Hỗ trợ ra quyết định, Cổng thông tin doanh nghiệp).
+    * Ví dụ: **Oracle's E-Business Suite**.
+
+--------------------------------------------------------------------------------
+III. Hệ thống Quản trị Chuỗi Cung cấp (SCMS)
+1. KHÁI NIỆM & HỆ THỐNG SCM (14.3.1 & 14.3.2)
+------------------------------------------------------------------------
+- Khái niệm: SCM (Supply Chain Management) là **HỆ THỐNG MẠNG KINH DOANH** giúp tổ chức cung cấp sản phẩm **ĐÚNG LOẠI, ĐÚNG NƠI, ĐÚNG THỜI ĐIỂM, ĐÚNG SỐ LƯỢNG, GIÁ CHẤP NHẬN ĐƯỢC**.
+- Mục tiêu: Quản trị hiệu quả quá trình cung ứng bằng cách **DỰ BÁO NHU CẦU**, **KIỂM SOÁT TỒN KHO**, cải tiến **MẠNG LƯỚI QUAN HỆ KINH DOANH** (Khách hàng, NCC, Nhà phân phối).
+- Hệ thống SCMS: Bộ **MÔ ĐUN PHẦN MỀM TẬP TRUNG** vào **PHỐI HỢP** các tiến trình quản trị quan hệ với nhà cung cấp.
+- Chức năng: Hỗ trợ lập kế hoạch, mua sắm yếu tố đầu vào, sản xuất và cung ứng. **TỰ ĐỘNG HÓA DÒNG THÔNG TIN** giữa các đối tác kinh doanh.
+- Mục đích chính yếu: Các bên nhận được **ĐÚNG SỐ LƯỢNG SP, CHI PHÍ THẤP NHẤT, THỜI GIAN NHANH NHẤT**.
+- Công nghệ nền tảng: **Intranet, Extranet, Phần mềm SCM chuyên dụng**.
+
+### Công cụ hỗ trợ SCM
+* **Công nghệ Nhận dạng Tần số Vô tuyến (RFID - Radio Frequency Identification)**: Công cụ rất mạnh trong SCM. 
+    * Cơ chế: **Tag** (chip chứa dữ liệu có mã nhận diện + anten) truyền dữ liệu bằng **Sóng Radio** đến **Thiết bị Đọc RFID**. Thiết bị đọc chuyển dữ liệu về **Hệ thống máy tính** để xử lý.
+* **Trao đổi Dữ liệu Điện tử (EDI - Electronic Data Interchange)**: Ứng dụng CNTT sớm nhất trong SCM.
+    * Chức năng: Cho phép đối tác thương mại trao đổi **GIAO DỊCH NGHIỆP VỤ** (đơn đặt hàng, hóa đơn, vận đơn) qua đường **ĐIỆN TỬ** (Internet/mạng khác).
+    * Vai trò: Tự động hóa tiến trình cung ứng (Thương mại điện tử B2B). Tự động theo dõi tồn kho, khởi sinh đơn hàng/hóa đơn.
+2. VAI TRÒ VÀ CHỨC NĂNG CỐT LÕI CỦA SCM (14.3.3)
+------------------------------------------------------------------------
+
+| Chức năng Lõi SCM | Lợi ích/Hỗ trợ của Ứng dụng mySAP SCM |
+| :--- | :--- |
+| **Lập kế hoạch** | 
+| **Thiết kế chuỗi cung ứng** | Tối ưu hóa Mạng lưới NCC, nhà máy, trung tâm phân phối. |
+| **Lập KH cung/cầu phối hợp** | Hỗ trợ lập kế hoạch, dự báo, **BỔ SUNG HÀNG** theo phương thức phối hợp, **Quản lý Tồn kho kiểu Vendor-Managed** (VMI)., **Dự báo chính xác CẦU** của khách hàng (chia sẻ dự báo giữa các thực thể). |
+| **Quản trị Nguyên vật liệu** | Chia sẻ thông tin **CHÍNH XÁC** về tồn kho/đơn hàng. Đảm bảo NVL **SẴN SÀNG** đúng chỗ, đúng lúc. |
+| **Sản xuất phối hợp** | **Tối ưu hóa kế hoạch và lịch trình** trong tập các ràng buộc (nguồn lực, NVL). |
+| **Đáp ứng đơn hàng phối hợp** | **Cam kết thời gian** cung ứng. Đáp ứng đơn hàng **ĐÚNG HẠN** từ tất cả kênh. Lập kế hoạch vận chuyển. |
+| **Quản trị chuỗi sự kiện cung ứng** | **Kiểm soát từng giai đoạn** (từ báo giá đến nhận hàng). **Cảnh báo** khi có vấn đề. |
+| **Quản trị năng lực chuỗi cung cấp**| Báo cáo các chỉ tiêu cơ bản (tỷ lệ đáp ứng, thời gian đáp ứng, hiệu quả khai thác nguồn lực). |
+
+3. LỢI ÍCH VÀ THỬ THÁCH (14.3.4)
+------------------------------------------------------------------------
+* **Lợi ích**:
+    * Xử lý đơn hàng **NHANH HƠN, CHÍNH XÁC HƠN**.
+    * **Giảm mức lưu kho**.
+    * Chi phí giao dịch và chi phí nguyên vật liệu **THẤP HƠN**.
+    * Tạo được **QUAN HỆ CHIẾN LƯỢC** với NCC.
+    * Giúp tổ chức **PHẢN ỨNG NHANH HƠN** với nhu cầu thị trường.
+* **Thử thách/Nguyên nhân thất bại**:
+    * Thiếu kiến thức, công cụ, hướng dẫn lập **KẾ HOẠCH CẦU CHUYÊN NGHIỆP** (**Dự báo không chính xác** là nguyên nhân chính yếu).
+    * **Phối hợp thiếu nhịp nhàng** giữa các bộ phận nội bộ (Marketing, Sản xuất, Tồn kho) và giữa tổ chức với các đối tác (NCC, Nhà phân phối).
+    * Kỳ vọng đạt được **phản ứng nhanh chóng, cung ứng phối hợp, và chi phí thấp nhất** là một thử thách lớn.
+
+4. CÁC XU THẾ PHÁT TRIỂN SCM (14.3.5)
+------------------------------------------------------------------------
+
+1.  **Giai đoạn I (Cải tiến Tiến trình Nội bộ/Bên ngoài)**:
+    * Tập trung cải tiến tiến trình cung ứng nội bộ và mối quan hệ với NCC/Khách hàng.
+    * Sử dụng **Trang Web TMĐT** (của tổ chức và đối tác) để truy cập **Danh mục Điện tử** và hỗ trợ **Giao dịch Trực tuyến**.
+
+2.  **Giai đoạn II (Mở rộng Mạng lưới Đối tác Web)**:
+    * Hoàn thành các ứng dụng SCM nội bộ/bên ngoài bằng **Phần mềm SCM** qua **Intranet/Extranet** liên kết đối tác.
+    * Tập trung **MỞ RỘNG MẠNG LƯỚI ĐỐI TÁC** dựa trên Web để nâng cao **HIỆU QUẢ VÀ HIỆU SUẤT TÁC NGHIỆP**.
+
+3.  **Giai đoạn III (Tối ưu hóa và Tích hợp)**:
+    * Phát triển và triển khai **Ứng dụng SCM Hiện đại** (sử dụng phần mềm SCM hiện đại, liên kết qua Extranet và TMĐT).
+    * Phát triển các ứng dụng **Bán hàng và Dịch vụ Phối hợp** (tích hợp với **CRM** và **PRM - Quản trị Đối tác**).
+    * Nhằm mục đích **TỐI ƯU HÓA** quá trình SCM để đạt được mục tiêu **Giá trị Khách hàng** và **Giá trị Kinh doanh**.
