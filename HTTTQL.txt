@@ -1664,3 +1664,147 @@ III. Hệ thống Quản trị Chuỗi Cung cấp (SCMS)
     * Phát triển và triển khai **Ứng dụng SCM Hiện đại** (sử dụng phần mềm SCM hiện đại, liên kết qua Extranet và TMĐT).
     * Phát triển các ứng dụng **Bán hàng và Dịch vụ Phối hợp** (tích hợp với **CRM** và **PRM - Quản trị Đối tác**).
     * Nhằm mục đích **TỐI ƯU HÓA** quá trình SCM để đạt được mục tiêu **Giá trị Khách hàng** và **Giá trị Kinh doanh**.
+
+
+CHƯƠNG 15: HT TMDT
+I. KHÁI NIỆM THƯƠNG MẠI ĐIỆN TỬ (E-COMMERCE) (15.1)
+------------------------------------------------------------------------
+- Định nghĩa ngắn gọn: **Trao đổi trực tuyến** hàng hoá, dịch vụ và tiền giữa các khách hàng, giữa các hãng trong một hãng, giữa các hãng với khách hàng của họ.
+- Thuật ngữ tương đương: Thương mại trực tuyến, Thương mại điều khiển học (Cybertrade), Kinh doanh điện tử (**E-Business**), Thương mại không giấy tờ (Paperless commerce).
+- Phạm vi hoạt động: Sử dụng **Internet, Intranet, Extranet** và các mạng khác để hỗ trợ **từng bước** của quá trình thương mại (mua, bán, phân phối, dịch vụ, thanh toán, hợp tác phát triển sản phẩm).
+
+### Quy trình Thương mại Điện tử (5 Công đoạn) 
+1.  **Thông tin**: Thiết lập **quan hệ trao đổi** giữa hai bên (cung cấp thông tin công ty và sản phẩm).
+2.  **Đặt hàng**: Người mua gửi **đơn đặt hàng** đến nhà cung cấp.
+3.  **Thanh toán**: Người mua làm thủ tục **thanh toán** (Vấn đề này còn gặp khó khăn ở Việt Nam).
+4.  **Hoàn thành việc trao đổi (Giao hàng)**: Giao hàng qua mạng (nếu là **NỘI DUNG SỐ HÓA** - phần mềm, nhạc) hoặc bằng con đường truyền thống (nếu là **VẬT THỂ**).
+5.  **Chăm sóc sau bán hàng**: Cung cấp **dịch vụ hậu mãi** (trợ giúp khách hàng liên tục).
+
+---
+II. HẠ TẦNG KỸ THUẬT VÀ HOẠT ĐỘNG CỦA TMĐT (15.2 & 15.3)
+------------------------------------------------------------------------
+
+### 1. Hạ tầng Kỹ thuật (5 Loại hình)
+1.  **Điện thoại**: Số lượng và chất lượng dịch vụ, địa bàn phủ sóng.
+2.  **Tivi**: Truyền hình và chất lượng các đài truyền hình.
+3.  **Thiết bị thanh toán điện tử**: Các loại hình thanh toán, hệ thống kết nối, năng lực thanh toán.
+4.  **Mạng cục bộ và mạng nội bộ doanh nghiệp** (LAN và Intranet).
+5.  **Internet và Website**: Số lượng Website, chất lượng dịch vụ và **tốc độ đường truyền công cộng**.
+
+### 2. Hoạt động Thương mại Điện tử (Điển hình)
+* **Tiếp xúc và liên hệ** (Electronic contacts).
+* **Thanh toán điện tử** (Electronic Payment).
+* **Trao đổi dữ liệu điện tử** (EDI - Electronic Data Interchange).
+* **Truyền dung liệu** (Content Data Transfer).
+* **Cửa hàng ảo** (Virtual Shop).
+
+### 3. Các Mô hình Giao dịch TMĐT (Theo thực thể giao dịch)
+* **B2C (Business To Customer)**: Doanh nghiệp ↔ Người tiêu dùng.
+* **B2B (Business To Business)**: Doanh nghiệp ↔ Doanh nghiệp.
+* **B2G (Business To Government)**: Doanh nghiệp ↔ Cơ quan nhà nước.
+* **C2G (Customer To Government)**: Người tiêu dùng ↔ Cơ quan nhà nước.
+* **G2G (Government To Government)**: Cơ quan nhà nước ↔ Cơ quan nhà nước.
+
+### 4. Phương thức TMĐT (Theo kỹ thuật mạng sử dụng)
+* **Mạng Internet**: Thương mại điện tử giữa **doanh nghiệp với khách hàng** (chủ yếu là B2C).
+* **Mạng Intranet**: Giao dịch điện tử **nội bộ tổ chức doanh nghiệp**.
+* **Mạng Extranet**: Thương mại điện tử **giữa các tổ chức doanh nghiệp với nhau** (chủ yếu là B2B).
+
+---
+III. LỢI ÍCH VÀ THỬ THÁCH CỦA TMĐT (15.4 & 15.5)
+------------------------------------------------------------------------
+
+### 1. Lợi ích của Thương mại Điện tử (5 Lợi ích chính)
+* **Dư dật thông tin thương mại** (Information Abundance).
+* **Giá thành sản xuất thấp** (Lower Production Cost).
+* **Thời gian và chi phí giao dịch thấp** (Lower Transaction Time and Cost) (đặc biệt đối với **hàng hóa số hóa**).
+* **Doanh thu cao** (High Revenue).
+* **Thắt chặt quan hệ đối tác** (Strengthening Partnership).
+* *Lợi thế khác*: Giao dịch trực tiếp, **bỏ qua trung gian**, Web Sites mở **24/24 giờ**, tạo kênh tiếp thị và phân phối mới.
+
+### 2. Các Yếu tố Đảm bảo Thành công của TMĐT
+* **Sự lựa chọn về giá trị hàng hóa**: Mặt hàng hấp dẫn, **giá cả cạnh tranh**, đảm bảo hài lòng trong và sau bán hàng.
+* **Năng lực phục vụ và dịch vụ**: Trang Web thiết kế cho phép truy cập, mua hàng và thanh toán **nhanh chóng và dễ dàng**.
+* **Hình thức và cảm nhận**: Trang Web bán hàng phải **hấp dẫn** với các danh mục hàng hóa đa phương tiện.
+* **Quảng cáo và khuyến mãi**: Sử dụng hình thức quảng cáo **hướng mục tiêu**, khuyến mãi bằng thư điện tử.
+* **Khả năng cá nhân hóa** trong tiếp thị và bán hàng: Tiếp cận **cá nhân hóa** dựa trên **lịch sử mua hàng** (khuyến khích khách hàng trung thành).
+* **Các mối quan hệ cộng đồng**: Tạo ra **cộng đồng ảo** (Diễn đàn) để tăng sự gắn kết và lòng trung thành.
+* **Sự an toàn và tin cậy**: Đảm bảo **an toàn thông tin** (thẻ tín dụng), đáp ứng đơn hàng **đúng hạn** và **đúng yêu cầu**.
+
+### 3. Thử thách và Vấn đề Quản lý
+* **Mô hình chưa qua kiểm chứng**: Phần lớn các mô hình kinh doanh trên Internet đều **mới mẻ** và chưa qua thử nghiệm (lợi ích lớn nhất thường ở mức **Intranet** để giảm chi phí nội bộ).
+* **Thay đổi cần thiết đối với tiến trình nghiệp vụ**: TMĐT đòi hỏi **đồng bộ hóa** giữa các bộ phận và **mối quan hệ chặt chẽ** với khách hàng/đối tác.
+* **Tranh chấp giữa các kênh phân phối**: Sử dụng Web có thể dẫn đến tranh chấp với **kênh phân phối truyền thống** (đặc biệt với SP ít mang tính số hóa). Cần lập kế hoạch cẩn trọng, không phủ nhận hoặc thay thế hoàn toàn kênh truyền thống.
+* **Rào cản công nghệ**: Cần mở rộng hệ thống kết nối viễn thông, máy trạm tốc độ cao, thiết bị cần **băng thông rộng** (thiếu thốn về đường điện thoại/phần cứng/phần mềm làm việc khai thác lợi thế không khả thi).
+* **Những câu hỏi ngỏ liên quan đến pháp lí**: **Luật thương mại điện tử** chưa hoàn thiện (vấn đề tính pháp lí hợp đồng điện tử, chữ ký điện tử, luật sao chép). Vấn đề **luật pháp quốc gia nào được áp dụng** khi giao dịch quốc tế.
+
+CHƯƠNG 16: HỆ THÒNG THÔNG TIN TỤ ĐỘNG HÓA VĂN PHÒNG
+I. GIỚI THIỆU CHUNG VỀ HTTT VĂN PHÒNG (16.1)
+------------------------------------------------------------------------
+- Khái niệm: HTTT văn phòng liên quan đến **CÁC MỨC CỦA TỔ CHỨC**. Ứng dụng công nghệ để tạo ra **VĂN BẢN/TÀI LIỆU**, **LẬP LỊCH TRÌNH ĐIỆN TỬ**, và **TRUYỀN THÔNG TIN** (E-mail, thư thoại, Fax, hội nghị điện tử).
+- Hoạt động đặc trưng: Truyền thông tin, lập lịch, chuẩn bị tài liệu, phân tích/trộn dữ liệu, **PHỐI HỢP HOẠT ĐỘNG THEO NHÓM**, trợ giúp **RA QUYẾT ĐỊNH**.
+- Kiến trúc cơ bản: **Đầu vào** (Tài liệu, Lịch trình, Dữ liệu) → **Hệ thống Chương trình** (Lưu trữ, Trộn, Tính toán, Truyền) → **Cơ sở dữ liệu Văn phòng** → **Đầu ra** (Thông báo, Báo cáo, Lịch trình).
+
+### Bản chất Công việc Văn phòng (3 Chức năng chính)
+1.  **Hỗ trợ Quản trị**: Lập lịch, duy trì lịch hẹn, xử lý thư tín, sắp xếp công tác/cuộc họp (Hỗ trợ nhà quản trị tập trung vào việc **RA QUYẾT ĐỊNH**).
+2.  **Xử lý Tài liệu (Xử lý Văn bản)**: Tạo, lưu giữ, sửa chữa, phân phối và sao chụp **VĂN BẢN, TỪ NGỮ** (khác với Xử lý Dữ liệu).
+3.  **Xử lý Dữ liệu**: Tạo, xử lý và duy trì các **bản ghi dữ liệu tài chính** (hoạt động tác nghiệp).
+
+### Chu trình Xử lý Tài liệu (Phức tạp hơn Xử lý Dữ liệu) 
+
+1.  **Nhập tài liệu**: Bằng **BÀN PHÍM, MÁY QUÉT, OCR**, đọc từ đĩa, Fax, nhận biết giọng nói.
+2.  **Xử lý tài liệu**: Hiệu chỉnh, trộn, định dạng lại, phóng to/thu nhỏ.
+3.  **Lưu trữ tài liệu**: Lưu ở dạng sử dụng được sau này (Đĩa, băng, **COM** - Computer Output Microfilm).
+4.  **Đưa tài liệu ra**: Tạo ra tài liệu ở dạng dùng được (Máy in, Fax, COM, tổng hợp giọng nói, sao chép điện tử).
+5.  **Nhân bản tài liệu**: Tạo ra nhiều phiên bản (**Photocopy, in trên máy tính**).
+6.  **Phân phối tài liệu**: Gửi qua bưu điện, **truyền tệp qua mạng viễn thông** (E-mail, Fax).
+
+### Quan niệm về Văn phòng
+* **Văn phòng như một Chức năng**: Văn phòng có thể là **BẤT CỨ ĐÂU** (ở nhà, trên tàu...). Quan tâm đến **CÔNG CỤ VÀ THÔNG TIN CẦN THIẾT** để tiến hành công việc.
+* **Văn phòng trên mạng (Telecommuting/Remote)**: Nhân viên văn phòng làm việc **TẠI NHÀ** và kết nối với văn phòng qua mạng.
+* **Văn phòng như một Hệ thống Tích hợp**: Tìm kiếm khả năng **TỰ ĐỘNG HÓA VÀ TÍCH HỢP** càng nhiều chức năng văn phòng càng tốt, dựa trên **CÔNG NGHỆ TRUYỀN THÔNG** (LAN, WAN). Bước không tự động hóa sẽ là **MẮT XÍCH YẾU**.
+
+### Phương pháp Tổ chức Văn phòng
+* **Tập trung hóa**: Ưu điểm: Mua thiết bị **cỡ lớn, nhanh** (kinh tế quy mô), **Chuyên môn hóa** nhân viên, **Chuẩn hóa** thiết bị. Nhược điểm: Chi phí truyền thông/vận chuyển tăng, tăng thời gian chờ đợi.
+* **Phi tập trung**: Ưu điểm: Tập trung ngay vào công việc của quản trị viên, **đảm bảo tính liên tục**, ít chi phí truyền/giao nhận.
+* **Theo chức năng**: Kết hợp ưu điểm tập trung và phi tập trung (Chuyên môn hóa nhân viên nhưng làm việc cho một bộ phận chức năng nhất định).
+* **Theo nhóm làm việc**: Cấu trúc phòng ban/ủy ban hoặc nhóm tạm thời (Có nhu cầu **chia sẻ tệp, lịch làm việc**).
+
+---
+II. CÁC CÔNG NGHỆ VĂN PHÒNG (16.2)
+------------------------------------------------------------------------
+
+### 1. Hệ thống Xử lý Văn bản (Word Processing)
+- Gồm: **Phần mềm soạn thảo văn bản** + **Máy tính** + **Các vấn đề liên quan đến nhập, lưu trữ, nhân bản, phân phối tài liệu**.
+- Tính năng mạnh (hiện đại): Ghi chú, lập dàn bài, vẽ, đồ họa, **TRỘN THƯ TÍN** (Mail Merge).
+- **Quy trình trộn thư tín** : Truy vấn dữ liệu từ **CSDL** → Chọn **MẪU THƯ** được soạn bằng phần mềm soạn thảo → **Trộn dữ liệu** vào mẫu thư → Tạo ra **HÀNG LOẠT THƯ** giống nhau về mẫu, khác nhau về dữ liệu cá nhân.
+- **Chế bản điện tử (Desktop Publishing - DTP)**: Kết hợp **phần mềm cao cấp** + **Máy in chất lượng cao** (Laser) + **Màn hình độ phân giải cao** + **Máy quét quang học**.
+- **Tính năng WYSIWYG** (What-You-See-Is-What-You-Get): Những gì người dùng thấy trên màn hình sẽ là những cái được in ra (không cần in thử để kiểm tra).
+
+### 2. Hệ thống Sao chụp (Reprographics)
+- Khái niệm: Quá trình tạo ra **NHIỀU BẢN SAO** của một tài liệu.
+- Thiết bị ưu việt: **Máy sao chụp thông minh** (điều khiển bằng máy tính, có khả năng truyền thông, có thể lưu giữ và chuyển giao tài liệu điện tử).
+
+### 3. Hệ thống Xử lý Ảnh và Đồ họa
+- **Hệ thống Số hóa Hình ảnh**: Chuyển đổi ảnh, sơ đồ thành chuỗi **ĐIỂM** (Pixels) và lưu trữ dưới dạng từ tính (**KHÔNG HIỂU NÓ QUÉT GÌ**).
+    - **Máy quét** là một dạng số hóa hình ảnh, dùng để chèn hình ảnh vào tài liệu (chế bản điện tử).
+- **Fax (Fascimile)**: Thiết bị quét quang học, biến văn bản/hình ảnh trên giấy thành **XUNG ĐIỆN** để truyền qua **ĐƯỜNG ĐIỆN THOẠI** (hoặc mạng khác). Fax cung cấp tài liệu như **HÌNH ẢNH** (chuỗi các chấm), **KHÔNG THỂ XỬ LÝ** bằng bộ xử lý văn bản.
+    - **Máy Fax Số hóa** có khả năng **NÉN TÀI LIỆU** (tốc độ nhanh hơn nhiều, truyền 1 trang trong 20 giây).
+- **Hệ thống Nhận dạng Ký tự Quang học (OCR - Optical Character Recognition)**: Thiết bị và phần mềm **KHÔNG CHỈ QUÉT MÀ CÒN "HIỂU"** những gì nó quét. Chuyển đổi văn bản/dữ liệu trên giấy thành **THÔNG TIN SỐ** (ký tự và số) để có thể xử lý bằng bộ xử lý văn bản/dữ liệu.
+
+### 4. Các Hệ thống Truyền thông
+- **Thiết bị Văn phòng Đa năng**: Tích hợp nhiều công nghệ (Fax, Sao chép, In).
+- **Hệ thống Thư Điện tử (E-mail)**: Truyền thư tín, thông báo **KHÔNG CẦN THƯ GIẤY**. Ưu điểm: **TRUYỀN NGAY LẬP TỨC**, tránh tình huống **MÁY BẬN/KHÔNG CÓ MẶT** khi gọi điện thoại. Yêu cầu: **Mạng máy tính**, dung lượng đĩa, phần mềm quản trị thư.
+- **Hệ thống Thư Điện thoại (Voice Mail)** : Rất giống E-mail, nhưng thông báo ở dạng **ÂM THANH**. Sử dụng phần mềm chạy trên thiết bị **PBX** (Private Branch Exchange - Hệ thống máy tính chức năng chuyển mạch tín hiệu điện thoại).
+    - **PBX**: Cung cấp nhiều chức năng (Thư điện thoại, nhập dữ liệu bằng bàn phím điện thoại, **Gateway** cho thiết bị Terminal/Máy vi tính liên lạc với máy chủ).
+- **Hội thảo Điện tử (Electronic Conferencing)**: Tiến hành hội nghị **KHÔNG CẦN ĐI LẠI** (Tiết kiệm thời gian, công sức).
+    - **Cầu Điện thoại (Audio)**: Giao tiếp qua điện thoại giữa 3 người trở lên ở ít nhất 2 địa điểm.
+    - **Cầu Truyền hình (Video)**: Gặp nhau trực diện qua cáp truyền hình (Kết hợp **ÂM THANH và HÌNH ẢNH vô tuyến** hai chiều).
+    - **Cầu Máy tính (Computer)**: Trao đổi tài liệu/văn bản dưới dạng **BẢN VIẾT** (gõ vào bàn phím) được đưa vào máy tính ở các địa điểm khác nhau (Tương tự E-mail nhưng **NHIỀU THÀNH VIÊN** trao đổi với nhau).
+- **Vi Đồ họa (Micrographics)**: Thu nhỏ văn bản giấy tờ thành khuôn nhỏ và lưu trên **FILM**. Dùng để **GIẢM KHÔNG GIAN LƯU TRỮ** cho lượng lớn giấy tờ có tỷ lệ tìm kiếm thấp.
+
+### 5. Tích hợp Công nghệ (Văn phòng Tương lai)
+- **Xu hướng**: Hướng tới **VĂN PHÒNG KHÔNG GIẤY TỜ** (Tài liệu được xử lý, lưu giữ, phân phối **HOÀN TOÀN Ở DẠNG ĐIỆN TỬ**).
+- Công nghệ hỗ trợ: **LAN, WAN, PBX** để liên kết máy sao chụp thông minh, máy quét, fax, bộ xử lý văn bản, máy in.
+- **Tiền đề quan trọng**: Xây dựng **LAN/WAN** như một yếu tố thông thường của mỗi văn phòng.
+
