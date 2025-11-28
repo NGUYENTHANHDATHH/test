@@ -1,0 +1,402 @@
+AAIMS: American Analytical Information Management Systems
+ALU: Arithmetic and Logic Unit
+ASP: Application Service Provider
+ATM: Auto Teller Machine
+
+B2B: Business To Business
+B2C: Business To Customer
+B2G: Business To Government
+BI: Business Intelligence
+BIS: Business Intelligence Systems
+BOM: Bill Of Material
+
+C2G: Customer To Government
+CAD: Computer Aided Design
+CAM: Computer Aided Manufacturing
+CASE: Computer Aided Software Engineering
+CBIS: Computer Based Information Systems
+CD: Compact Disk
+CDROM: Compact Disk Read Only Memory
+CEO: Chief Executive Officer
+CIO: Chief Information Officer
+CISO: Chief Information Security Officer
+COM: Computer Output Microfilm
+COTS: Commercial Off The Shelf
+CPU: Central Processing Unit
+CRMS: Customer Relationship Management Systems
+CSFs: Critical Success Factors
+CU: Control Unit
+
+DASD: Direct Access Storage Device
+DB: Database
+DBA: Database Administrator
+DDL: Data Definition Language
+DM: Data Mining
+DSS: Decision Support Systems
+DVD: Digital Video Disk
+DW: Data Warehouses
+
+EAI: Enterprise Application Integration
+ECS: Enterprise Collaboration Systems
+EDI: Electronic Data Interchange
+EIP: Enterprise Information Portal
+EIS: Executive Support System
+EOQ: Economic Order Quantity
+ERD: Entity Relationship Diagram
+ERM: Electronic Record Management
+ERP: Enterprise Resources Planning
+ES: Expert Systems
+
+FA: Factory Automation
+FTP: File Transfer Protocol
+
+G2G: Government To Government
+GIS: Geographic Information Systems
+GS: Groupware System
+GSS: Group Support Systems
+GUI: Graphical User Interface
+
+HTML: Hypertext Markup Language
+
+IFPS: Interactive Financial Planning System
+IIS: Integrated Information Systems
+IRR: Internal Rate of Return
+
+JAR: Joint Application Requirements
+JIT: Just In Time
+
+KMS: Knowledge Management Systems
+
+LAN: Local Area Network
+
+MFLOPS: Million Floating Operations Per Second
+MICR: Magnetic Ink Character Recognition
+MIS: Management Information Systems
+MODEM: Modulation Demodulation
+MRP: Material Requirement Planning
+MSP: Material Selection Software
+MSS: Managerial Support Systems
+MYM: Managing Your Money
+
+NOS: Network Operating System
+NPV: Net Present Value
+
+OAS: Office Automation Systems
+OCR: Optical Character Recognition
+OLAP: Online Analytical Processing
+OOAD: Object Oriented Analysis and Design
+OODB: Object Oriented Database
+
+PBX: Private Branch Exchange
+PC: Personal Computer
+PCS: Process Control Systems
+PERT: Program Evaluation and Review Technique
+POS: Point Of Sale
+PP: Payback Period
+PRMS: Partner Relationship Management Systems
+
+RAD: Rapid Application Development
+RFID: Radio Frequency Identification
+RL: Reorder Level
+ROM: Read Only Memory
+
+SAAS: Software as a Service
+SCLC: System Development Life Cycle
+SCMS: Supply Chain Management Systems
+SIS: Strategic Information Systems
+SLA: Service Level Agreement
+SQL: Structured Query Language
+STEP: Strategies for Technology Enablement through People
+SWOT: Strength Weakness Opportunities Threats
+
+TCPIP: Transmission Control Protocol Internet Protocol
+TPS: Transaction Processing Systems
+
+UPC: Universal Product Code
+UPS: United Parcel Service
+VAN: Value Added Networks
+
+VPN: Virtual Private Network
+
+WAN: Wide Area Network
+WWW: World Wide Web
+WYSIWYG: What You See Is What You Get
+
+XML: Extensible Markup Language
+
+PHẦN A: NHỬNG KHÁI NIỆM CƠ SỞ VÈ 
+HỆ THÓNG THÔNG TIN
+
+tri thức kinh doanh (Business Intclligcncc) - đó là nhũng tri thức và hiểu biết 
+về các khách hàng, đối thù cạnh tranh, đối tác kinh doanh, môi trường cạnh 
+tranh và về bản thân hoạt động cùa doanh nghiệp. Tri thức kinh doanh giúp 
+doanh nghiệp đưa ra những quyết định hiệu quả, quan trọng và thường mang 
+tầm chiến lược. Nó cho phcp doanh nghiệp trích rút ra được ý nghĩa đích 
+thực của thông tin nhằm thực hiện các bước đi mang tính sáng tạo và mạnh 
+mẽ, nhàm tạo ra ưu thế cạnh tranh
+
+Đặc trưng của thông tin có giá trị: 
+    ◦ Tính chính xác (không chứa lỗi).
+    ◦ Tính đầy đủ (chứa mọi dữ kiện quan trọng).
+    ◦ Tính kinh tế (giá trị mang lại cao hơn chi phí tạo ra).
+    ◦ Tính mềm dẻo (sử dụng cho nhiều mục đích khác nhau).
+    ◦ Tính tin cậy.
+    ◦ Tính phù hợp (đến đúng đối tượng nhận tin và mang lại giá trị sử dụng).
+    ◦ Tính đơn giản.
+    ◦ Tính kịp thời (đến đúng thời điểm cần thiết).
+    ◦ Tính kiểm tra được (cho phép kiểm định để chắc chắn chính xác).
+    ◦ Tính dễ khai thác.
+    ◦ Tính an toàn (được bảo vệ trước người không có thẩm quyền).
+
+ Giá trị của thông tin được thể hiện ở chỗ: Thông tin đó giúp các nhà 
+quàn lý đạt được mục tiêu của tổ chức như thế nào. Giá trị của thông tin có 
+thể đo được thông qua thời gian cần để ra một quyết định hoặc thông qua lợi 
+nhuận tăng thêm cho tổ chức
+
+Hệ thống (System) là một tập hợp các thành phần có quan hộ tương 
+tác với nhau, cùng phối hợp hoạt động để đạt được một mục tiêu chung, 
+thông qua việc thu nhận các yếu tố đầu vào và tạo ra các kết quả đầu ra 
+trong một quá trình chuyền đổi có tổ chức.
+Hệ thống(gồm đầu vào, đầu ra, ranh giới, môi trường, tiến trình gia tăng giá trị, kho dữ liệu và giao diện)
+
+ Tổ chức (Organization) là một hệ thống hình thức, bao gồm yếu tố 
+con người và các nguồn lực khác, được thiết lập nhàm thực hiện một tập các 
+mục tiêu. Mục tiêu cơ bàn cùa tổ chức lợi nhuận là tối da hóa lợi nhuận 
+bàng cách tăng doanh thu và giàm chi phí, trong khi các tổ chức phi lợi 
+nhuận không lấy lợi nhuận làm mục tiêu cơ bản.
+Tổ chức dưới góc độ quản lý được chia thành hai phân hệ: 
+ Phân hệ tác nghiệp (Operational Subsystem) bao gồm các hoạt dộng tác nghiệp thực hiện biến đổi các yếu tố 
+đầu vào thành sàn phẩm dầu ra của tổ chức (hàng hóa và dịch vụ). Neu một 
+trong các chức năng đó dừng hoạt động thì cả hộ thống sẽ bị ngưng trệ. 
+Phân hệ quản lý (Management Subsystem) có chức năng kiềm soát và 
+điều khiển hoạt động cùa tổ chức
+
+ Phân hệ quản lý lại được cấu thành từ hai phân hệ:
+ • Phân hệ thông tin: Thực hiện chức năng thu thập tất cả các thông tin 
+liên quan đến tổ chức và các hoạt động cùa nó nham cung cấp một bức tranh 
+tức thời về tổ chức thông qua hệ thong báo cáo. Bức tranh càng trung thực 
+bao nhiêu, hệ thống quàn lý ra quyết định càng chính xác bay nhiêu. Phân 
+hệ thông tin bao gồm hệ thống các máy tính và các phần mềm ứng dụng.
+ • Phân hệ ra quyết định'. Thực hiện chức năng ra quyết định dối với 
+phân hệ tác nghiệp, dựa trên cơ sở những thông tin do hệ thống thông tin 
+cung cấp. Hệ thống ra quyết định là hộ thống của nhà quản lý.
+
+chuỗi giá trị (Value Chain) dược hiểu là một chuỗi các hoạt động liên quan đến cung 
+cấp, dự trữ, sàn xuất, lưu kho thành phẩm, tiêu thụ, tiếp thị và bán hàng và 
+dịch vụ khách hàng.
+
+5 loại hình tổ chức quản lý thường gặp.
+- Cấu trúc giản đơn (Simple Structure)
+ Chủ của tổ chức thâu tóm hầu hết quyền lực và trách nhiệm về chiến 
+lược và chiến thuật, cấu trúc giản đơn có rất ít cán bộ trợ giúp và sự phân 
+cấp quản lý hầu như không có. Công việc không chuyên biệt hóa và cũng 
+ít thay đôi. Ví dụ về cấu trúc tổ chức đơn giản là một cửa hàng ăn, trong 
+đó chồng là chù, vợ quản lý dự trữ kho, mua bán và kố toán và các nhân 
+viên nhà hàng là những người làm công ko chuyên môn hoá. Phần lớn
+các tò chức đều trải qua giai đoạn cấu trúc giàn đơn trong thời kỳ đầu mới 
+thànt lập.
+- Cấu trúc hành chính (Machine Bureaucracy)
+ Dặc trưng cùa cấu trúc này là sự xác định rõ ràng uy quyền, quyền lực 
+tập trung trong việc ra quyết dịnh và liên lạc chính thức trên toàn tồ chức. 
+Trong hệ thống tác nghiệp là các quy trình thù tục quy chuẩn, các quy tắc và 
+luật lệ chặt chẽ. Các hãng bưu điện, hãng bảo hiểm, công ty thép, hàng
+ không... là những ví dụ về cấu trúc quan chế máy móc.
+- Cấu trúc quan chế chuyên môn (Professional Bureaucracy)
+ Tổ chức theo cấu trúc này thuê các nhà chuyên môn và cho họ quyền 
+kiềm soát công việc cùa mình. Lao động chuyên môn của từng người khá 
+độc lìp với lao động của các dồng nghiệp. Chảng hạn các trường đại học, 
+bệnh viện đa khoa, các hãng ke toán tổng hợp...
+- Cấu trúc phân quyền (Divisionized Form)
+ Một tổ chức phân quyền được cấu thành từ nhiều thực thể hầu như tự 
+trị. Giăng hạn như một tồng công ty có nhiều công ty con, một trường đại 
+học cuốc gia bao gồm nhiều trường đại học.
+- Cấu trúc nhóm dự án (Adhocracy)
+ Tổ chức có cấu trúc nhóm dự án phối hợp các nhóm chuyên gia vào 
+nhữnỊ dự án nhò dựa trên ycu cầu cùa thị trường. Các hãng tư vấn, hãng 
+côngnghệ kỹ thuật cao là nhũng ví dụ về tổ chức với cấu trúc nhóm dự án.
+
+Tổ chức được cấu thành từ ba mức quản lý: Chiến lược, Chiến thuật, và Tác nghiệp
+
+Thông tin quản lý (Managerial Information) là thông tin mà có ít nhất một cán bộ 
+quàn lý cần hoặc có ý muốn dùng vào việc ra quyết định quản lý cùa minh.
+
+3 loại
+- Quyết định chiến luọc (Strategic Decision): Là những quyết định 
+xác định mục ticu và những quyết định xây dụng nguồn lực cho tổ chức.
+- Quyết định chiến thuật (Tactical DccisionJ: Là những quyết dịnh 
+cụ the hóa mục tiêu thành nhiệm vụ, những quyết định kiểm soát và khai 
+thác tối ưu nguồn lực.
+
+- Quyết định tác nghiệp (Operational DccisionJ: Là những quyết 
+định nhằm thực thi nhiệm vụ.
+
+ĐẶC TRƯNG THÔNG TIN – THEO CẤP QUYẾT ĐỊNH
+Tác nghiệp:
+Tần suất: Đều đặn, lặp lại
+Tính độc lập của kết quả: Dự kiến trước được
+Thời điểm: Quá khứ và hiện tại
+Mức chi tiết: Rất chi tiết
+Nguồn: Trong tổ chức
+Tính cấu trúc: Cấu trúc cao
+Độ chính xác: Rất chính xác
+Cán bộ sử dụng: Giám sát hoạt động tác nghiệp
+Chiến thuật:
+Tần suất: Phần lớn thường kỳ, đều đặn
+Tính độc lập của kết quả: Dự đoán sơ bộ, có thông tin bất ngờ
+Thời điểm: Hiện tại và tương lai
+Mức chi tiết: Tổng hợp, thống kê
+Nguồn: Trong và ngoài tổ chức
+Tính cấu trúc: Chủ yếu có cấu trúc, một số phi cấu trúc
+Độ chính xác: Một số dữ liệu có tính chủ quan
+Cán bộ sử dụng: Cán bộ quản lý trung gian
+Chiến lược:
+Tần suất: Sau một kỳ dài, trường hợp đặc biệt
+Tính độc lập của kết quả: Chủ yếu không dự kiến trước được
+Thời điểm: Dự đoán cho tương lai là chính
+Mức chi tiết: Tổng hợp, khái quát
+Nguồn: Ngoài tổ chức là chủ yếu
+Tính cấu trúc: Phi cấu trúc cao
+Độ chính xác: Mang nhiều tính chủ quan
+Cán bộ sử dụng: Cán bộ quản lý cấp cao
+
+Các đầu mối thông tin đối với một tổ chức doanh nghiệp bao gồm: 
+Nhà nước và cơ quan cấp trên, Khách hàng, Doanh nghiệp cạnh tranh, Doanh nghiệp có liên quan, Doanh nghiệp sẽ cạnh tranh
+
+ Hệ thống thông tin (Information System) là một hệ thống bao gồm 
+các yếu tố có quan hệ với nhau cùng làm nhiệm vụ thu thập, xừ lý, lưu trữ 
+và phân phối dữ liệu và thông tin và cung cấp một cơ chế phản hồi để đạt 
+được một mục tiêu định trước
+
+Các yếu tố cấu thành một HTTT bao gồm: Con người, Thủ tục, Dữ liệu, Phần cứng, Phần mềm
+
+hệ thống thông tin dựa trcn máy tính (CBIS - Computer 
+Based Information System) là một hệ thống tích hợp các yếu tố phần cứng.
+phần mềm, cơ sở dữ liệu, viễn thông, con nguời và các thù tục cùng làm 
+nhiệm vụ thu thập, xử lý, lưu trữ và biến đổi dừ liệu thành thông tin.
+
+LỊCH SỬ PTR: 
+50 - 60 cùa thế kỷ trước, vai trò của HTTT 
+chì dừng ờ mức xừ lý dữ liệu điện tử: Xử lý giao dịch, lưu trữ và các ứng 
+dụng kế toán
+60 - 70. sự xuất hiện cùa HTTT quản lý có khả năng cung 
+cấp các báo cáo quản lý chuẩn mực, định kỳ hỗ trợ quá trình ra quyết định 
+70 thì những thông tin do HTTT quản lý cung 
+cấp đã không đáp ứng được nhiều nhu cầu ra quyết định cùa công việc quàn 
+lý trước những vấn đề đặc thù trong thực tế kinh doanh và loại hình HTTT hỗ 
+trợ ra quyết định dã ra đời. 
+80, nhiều loại hình HTTT mới đã ra đời với những 
+vai trò mới so với những loại hình HTTT trước đó:
+  Thứ nhất, máy tính cá nhân cùng với sụ phát triển 
+nhanh chóng của khả năng xử lý của máy vi tính, các gói phần mềm ứng 
+dụng /à các mạng viễn thông. 
+   Thứ hai là sự ra đời cùa hệ thống thông tin hỗ trợ lãnh đạo, giúp các 
+nhà lênh đạo có dược những thông tin cần thiết theo đúng dạng, vào dũng 
+thời điểm mà họ cần một cách dễ dàng.
+   Thứ ba, đó là sự ra đời của hệ chuyên gia đóng vai trò như một nhà tư 
+vấn cho người sử dụng bằng cách cung cấp những thông tin tư vấn chuycn 
+môn trong một lĩnh vực hẹp.
+80-90 là HTTT chiến lược, có khả năng giúp các tổ chức đạt được ưu thế cạnh tranh 
+của mình trong xu thế toàn cầu hoá
+90 mạng Internet, intranet, extranet và các mạng toàn cầu khác
+
+ Tiêu chuẩn đánh giá chất lượng HTTT: Một HTTT được đánh giá là có chất lượng cao nếu đáp ứng được các tiêu chuẩn sau:
+    ◦ Tính đầy đủ về chức năng.
+    ◦ Tính thân thiện, dễ dùng.
+    ◦ Tính an toàn và bền vững.
+    ◦ Tính thích nghi và mềm dẻo.
+    ◦ Tính dễ bảo trì.
+    ◦ Khả năng hoạt động (Thời gian trả lời, khả năng lưu trữ, tốc độ xử lý/truyền thông)
+
+Các mô hình biểu diễn HTTT:  3 mô hình chính
+    ◦ Mô hình logic: Kết quả của góc nhìn quản lý. Là mô hình ổn định nhất. "Cái gì?" và "Đe làm gì?".
+    ◦ Mô hình vật lý ngoài: Kết quả của góc nhìn sử dụng. Chú ý tới khía cạnh nhìn thấy được 
+    (như vật mang dữ liệu, hình thức đầu vào/đầu ra, địa điểm thực hiện xử lý).  Cái gì ở đâu? 
+Khi nào?
+    ◦ Mô hình vật lý trong: Kết quả của góc nhìn kỹ thuật (thông tin liên quan đến loại trang thiết bị, dung lượng kho lưu trữ, cấu trúc chương trình). Biến đổi nhất
+
+Phân loại hệ thổng thông tin theo phạm vi hoạt động
+a. Nhóm các HTTT hỗ trợ hoạt động nội bộ tổ chức (Intraorganizational Systems)
+Hệ thống thông tin hỗ trợ hoạt động tác nghiệp
+  Hệ thống xử lý giao dịch (TPS - Transaction Processing Systems)
+  Hệ thống quản trị tích hợp doanh nghiệp (ERP - Enterprise Resources Planning Systems)
+  Hệ thống kho dữ liệu (DW - Data Warehouses)
+  Hệ thống tự động hóa văn phòng (OAS - Office Automation Systems)
+  Hệ thống hỗ trợ nhóm công tác (GS - Groupware Systems)
+  Hệ thống tự động hóa sản xuất (FA - Factory Automation)
+  Hệ thống quản lý chuỗi cung cấp (SCMS - Supply Chain Management Systems)
+Hệ thống thông tin hỗ trợ hoạt động quản lý
+  Hệ thống trợ giúp ra quyết định (DSS - Decision Support Systems)
+  Hệ thống khai phá dữ liệu (DM - Data Mining)
+  Hệ thống hỗ trợ nhóm làm việc (GSS - Group Support Systems)
+  HTTT địa lý (GIS - Geographic Information Systems)
+  HTTT phục vụ lãnh đạo (ESS - Executive Support Systems)
+  Hệ thống tri thức kinh doanh (BIS - Business Intelligence Systems)
+  HTTT quản lý tri thức (KMS - Knowledge Management Systems)
+  Hệ chuyên gia (ES - Expert Systems)
+b. Nhóm các HTTT phối hợp hoạt động giữa các tổ chức (Interorganizational Systems)
+Đây là các HTTT liên kết tổ chức với các tổ chức khác, ví dụ hệ thống thông tin liên kết doanh nghiệp với khách hàng và nhà cung cấp.
+  Hệ thống trao đổi dữ liệu điện tử (EDI - Electronic Data Interchange)
+  Hệ thống thương mại điện tử (EC - E-Commerce)
+  Hệ thống JIT (Just-In-Time Systems)
+
+Phân loại hệ thống thông tin theo lĩnh vực hoạt động
+a. Nhóm các HTTT hỗ trợ hoạt động tác nghiệp (Operations Support Systems)
+Các HTTT loại này tập trung vào việc xử lý các dữ liệu phát sinh trong hoạt động nghiệp vụ, 
+cung cấp nhiều sản phẩm thông tin khác nhau, tuy nhiên chưa phải là những thông tin chuyên biệt có thể sử dụng ngay cho các nhà quản lý.
+  Hệ thống xử lý giao dịch (TPS - Transaction Processing Systems): Xử lý các giao dịch nghiệp vụ.
+  Hệ thống kiểm soát các tiến trình (PCS - Process Control Systems): Kiểm soát các tiến trình nghiệp vụ.
+  Hệ thống hỗ trợ cộng tác trong tổ chức (ECS - Enterprise Collaboration Systems): Hỗ trợ cộng tác làm việc theo nhóm.
+b. Nhóm các HTTT hỗ trợ quản lý (MSS - Management Support Systems)
+Đây là các HTTT có khả năng cung cấp thông tin để hỗ trợ quá trình ra quyết định quản lý.
+  HTTT quản lý (MIS - Management Information Systems): Cung cấp các báo cáo chuẩn mực, định kỳ cho các nhà quản lý.
+  Hệ thống trợ giúp ra quyết định (DSS - Decision Support Systems): Hỗ trợ quá trình ra quyết định thông qua giao diện đối thoại.
+  Hệ thống trợ giúp lãnh đạo (ESS - Executive Support Systems): Cung cấp thông tin đúng dạng cho cán bộ lãnh đạo.
+
+Phân loại hệ thong thông tin theo mục đích và đái tượng phục vụ
+ES – Expert Systems: tri thức, suy luận, lĩnh vực hẹp, chẩn đoán
+KMS – Knowledge Management Systems: tạo – tổ chức – phân phối tri thức
+SIS – Strategic Information Systems: chiến lược, lợi thế cạnh tranh
+BIS – Business Information Systems: hỗ trợ tác nghiệp + quản lý theo chức năng
+IIS – Integrated Information Systems: tích hợp nhiều vai trò, hỗ trợ nhiều cấp quản lý
+
+Phân loại HTTT theo lĩnh vực chức năng:
+Hệ thống thông tin bán hàng & Marketing: sản phẩm – phân phối – định giá – khuyến mại – dự báo bán hàng
+Hệ thống thông tin tài chính & kế toán: tài chính – kiểm soát – kiểm toán – nguồn lực tiền tệ
+Hệ thống thông tin kinh doanh & tác nghiệp: quản lý hoạt động – kiểm soát quy trình – nguồn lực tác nghiệp
+Hệ thống thông tin quản trị nhân lực: nhân sự – quản lý hồ sơ – chấm công – lương thưởng – đánh giá
+
+VAI TRÒ CỦA HỆ THỐNG THÔNG TIN (HTTT)
+
+1. Ba vai trò chính của HTTT
+- Hỗ trợ tác nghiệp: xử lý giao dịch, tự động hoá công việc.
+- Hỗ trợ quản lý: báo cáo, kiểm soát, ra quyết định.
+- Hỗ trợ cạnh tranh: tạo lợi thế, đổi mới sản phẩm/dịch vụ.
+
+2. HTTT gia tăng giá trị (Value Added)
+2.1. Gia tăng cho quá trình nghiệp vụ
+- Giảm chi phí nhân công.
+- Tăng tốc độ xử lý.
+- Tăng hiệu quả phối hợp.
+- Giảm lỗi quy trình.
+→ Ví dụ: xử lý đơn hàng, kiểm tra tồn kho, thanh toán.
+
+2.2. Gia tăng cho sản phẩm
+- Thêm tính năng mới.
+- Cải tiến cách cung cấp dịch vụ.
+→ Ví dụ: đặt vé online, ATM, thương mại điện tử.
+
+2.3. Gia tăng cho chất lượng sản phẩm
+- JIT (Just-in-time) → giảm tồn kho, tăng chất lượng quy trình.
+- Phản hồi + cải tiến sản phẩm.
+- Tự động thông báo thay đổi bằng email/thư điện tử.
+
+3. Vai trò chiến lược của HTTT trong cạnh tranh
+- Quyết định hiệu quả & khả năng tồn tại của tổ chức.
+- Tạo ưu thế cạnh tranh bằng liên kết dữ liệu với đối tác (quan hệ thông tin bạn hàng).
+- Đòi hỏi thay đổi: mục tiêu chiến lược, quy trình nghiệp vụ, mối quan hệ khách hàng–nhà cung cấp, kiến trúc thông tin.
+
+4. Câu hỏi chiến lược cần xác định trước khi triển khai HTTT
+- Ngành đang dùng HTTT thế nào? Ai dẫn đầu? Xu hướng?
+- Cơ hội chiến lược từ công nghệ mới nằm ở đâu?
+- Kế hoạch kinh doanh có khớp với chiến lược CNTT không?
+- Tổ chức có đủ năng lực công nghệ & vốn không?
