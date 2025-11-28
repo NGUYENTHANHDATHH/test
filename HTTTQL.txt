@@ -400,3 +400,487 @@ VAI TRÒ CỦA HỆ THỐNG THÔNG TIN (HTTT)
 - Cơ hội chiến lược từ công nghệ mới nằm ở đâu?
 - Kế hoạch kinh doanh có khớp với chiến lược CNTT không?
 - Tổ chức có đủ năng lực công nghệ & vốn không?
+
+HIỆU QUẢ KINH TẾ CỦA HTTT 
+
+1. LỢI ÍCH KINH TẾ
+- Hữu hình: đo bằng tiền.
+- Vô hình: uy tín, hình ảnh, chất lượng quyết định.
+
+2. GIÁ TRỊ THÔNG TIN
+- Không đo bằng “giá thành tạo ra”.
+- Giá trị = lợi ích do thay đổi quyết định nhờ thông tin.
+- Công thức: Value(A) = KQ(phương án sau khi có A) – KQ(phương án trước khi có A).
+
+3. TÍNH GIÁ TRỊ HTTT (theo rủi ro & cơ hội)
+ Al, A2,..., An là thiệt hại của các rủi ro
+ Pl, P2,..., Pn là xác suất xảy ra cùa các rủi ro 
+RI, R2,..., Rn là tỷ lệ giảm bớt rủi ro nhờ có hệ thống thông tin 
+Ci, Pi và Ri là lợi ích khi tận dụng được cơ hội, xác suất xảy ra 
+cơ hội i và tỷ lệ tận dụng cơ hội cùa hệ thống thông tin.
+- Lợi ích tránh rủi ro:  
+  PR = Σ (Ai × Pi × Ri)  
+- Lợi ích tận dụng cơ hội:  
+  CR = Σ (Ci × Pi × Ri)  
+- Lợi ích năm: PR - CR.
+
+4. PHƯƠNG PHÁP CHUYÊN GIA
+- Lợi ích trực tiếp: 5–20% kết quả hoạt động.
+- Lợi ích gián tiếp: Pg(i) = a × Pt(i) × m  
+  + a = 0.3–0.5  
+  + m = chất lượng HTTT theo chuyên gia (1 / 0.5 / 0).
+ a là tỷ lệ % của Pg(i) đối với Pt(i). Theo kinh nghiệm của nhiều tổ 
+chức thì a nằm trong khoảng 0,3 đến 0,5.- m là hệ số chất lượng của hệ thống thông tin theo sự đánh giá cùa 
+các chuyên gia. m = 1 nếu có trên 90% số chuyên gia đánh giá cao hệ thống 
+thông tin, m = 0,5 nếu có từ 50% - 90% số chuyên giá đánh giá tốt về hệ 
+thống thông tin và m = 0 nếu có dưới 50% số chuyên gia cho rằng hệ thống 
+thông tin tốt.
+
+5. CHI PHÍ HTTT
+5.1. Chi phí cố định (CPCĐ)
+- Phân tích thiết kế  
+- Xây dựng  
+- Máy móc  
+- Cài đặt  
+- Trang bị phục vụ  
+- Chi phí khác  
+→ CPCĐ = tổng các khoản.
+
+5.2. Chi phí biến động (CPBĐ)
+- Nhân lực  
+- Đầu vào, văn phòng phẩm  
+- Điện, truyền thông  
+- Bảo trì–sửa chữa  
+- Khác  
+→ CPBĐ(i) = tổng các khoản theo năm.
+
+6. ĐÁNH GIÁ HIỆU QUẢ KINH TẾ
+- Tổng chi phí: TCP = CPCĐ(1+ lãi suất)^n + Tổng(CPBĐ(i)(l + Lãi suất)^(n-i))
+- Tổng thu nhập/lợi ích: TTN = Tổng(TN(i) (1 + Lãi suất))
+→ HTTT hiệu quả khi: TTN > TCP
+
+7. PHƯƠNG PHÁP ĐÁNH GIÁ
+7.1. Điểm cân bằng chi phí (Break-even)
+- So sánh chi phí hệ cũ vs hệ mới.
+- Điểm cân bằng càng sớm → càng hiệu quả.
+
+7.2. Phân tích tiền dư (Net Cash Analysis)
+- Tiền dư = Lợi ích tích lũy – Chi phí tích lũy.
+- Dự án tốt khi tổng tiền dư dương.
+
+7.3. Phương pháp kinh nghiệm
+- Đánh giá theo mức tiền người dùng “sẵn sàng trả”.
+
+7.4. Phương pháp so sánh
+- So với hệ thống mẫu (B).
+- Dễ xác định “A tốt hơn hay kém hơn B”.
+
+
+
+PHẦN B
+ CÁC THÀNH PHẦN CÔNG NGHỆ CỦA 
+HỆ THỐNG THÔNG TIN
+PHẦN CỨNG MÁY TÍNH
+
+1. Khái niệm phần cứng:
+- Computer hardware: thiết bị vật lý, hữu hình
+- VD: CPU, máy in, ổ đĩa
+- Cấu trúc logic cơ bản: Input, Output, Memory, ALU, CU, External memory
+- CPU = ALU + CU
+
+2. Bộ vào (Input devices):
+- Bàn phím, POS, ATM
+- POS: quét mã vạch (Bar Code Reader)
+- ATM: giao dịch ngân hàng (rút tiền, chuyển tiền, kiểm tra sổ dư)
+- MICR: Magnetic Ink Character Recognition, đọc séc
+- OCR: Optical Character Recognition, nhận dạng ký tự từ tài liệu
+- Ổ đĩa: đĩa mềm, CD, DVD
+
+3. Bộ ra (Output devices):
+- Màn hình, máy in, vi phim máy tính (COM)
+- Máy in: Serial Printer, Line Printer, Page Printer
+- COM: giảm giấy, lưu trữ, tăng chất lượng hình ảnh
+
+4. Bộ nhớ (Memory):
+- Primary Storage / Bộ nhớ chính
+- Chia thành các ô, mỗi ô 1 byte hoặc 1 word
+- Dữ liệu đọc vào xóa nội dung cũ; đọc ra không thay đổi
+- Liên kết với bộ vào, bộ ra, bộ làm tính và bộ nhớ ngoài
+
+5. Bộ làm tính (ALU):
+- Arithmetic/Logical Unit
+- Thực hiện: cộng, trừ, nhân, chia, logic
+- Dữ liệu từ bộ nhớ chính, kết quả lưu lại vào bộ nhớ chính
+
+6. Bộ điều khiển (CU - Control Unit):
+- Điều khiển tốc độ và dung lượng các thành phần
+- Hoạt động dựa trên chương trình (list of instructions)
+
+7. Các tệp tin (Files):
+- Lưu dữ liệu lâu dài ngoài bộ nhớ chính
+- Thiết bị lưu trữ: băng từ, ổ đĩa từ, flash drive, CD, DVD
+- Truy cập: tuần tự (sequential) & trực tiếp (direct access)
+- Truy cập tuần tự: theo lô, chậm, kinh tế cho khối lượng lớn
+- Truy cập trực tiếp: truy cập nhanh, dùng trong online, web, xử lý trực tiếp
+
+8. Các loại hệ thống máy tính:
+- Máy vi tính (Microcomputer / PC): $200-$4000, 50-1000 MFLOPS, Desktop/Notebook/Handheld/Tablet
+- Máy cỡ vừa (Midrange): $4000-$1 triệu, 100-10000 MFLOPS, server client/server, web
+- Máy lớn (Mainframe): $500.000-$20 triệu, 400-10000 MFLOPS, tổ chức lớn, server, DW
+- Siêu máy tính (Supercomputer): $1 triệu-$100 triệu, >10000 MFLOPS, nghiên cứu khoa học, phòng thí nghiệm
+
+9. Tiêu chí đánh giá phần cứng khi mua sắm:
+- Năng lực: tốc độ, dung lượng, khả năng xử lý
+- Chi phí: mua, vận hành, bảo hành
+- Tính tin cậy: rủi ro, kiểm soát lỗi
+- Tính tương thích: với phần cứng và phần mềm khác
+- Công nghệ: kinh nghiệm, mức độ thử nghiệm
+- Thân thiện: an toàn, tiện lợi, dễ sử dụng
+- Kết nối: LAN, WAN, nhiều công nghệ, băng thông
+- Quy mô: đáp ứng số lượng người dùng, giao dịch, truy vấn
+- Phần mềm: sẵn có hệ thống, ứng dụng
+- Hỗ trợ: dịch vụ bảo trì, duy trì
+
+Chương 4 
+PHẦN MÈM MÁY TÍNH ĐIỆN TỬ
+I. KHÁI NIỆM & VAI TRÒ (4.1)
+------------------------------------------------------------------------
+1. Khái niệm:
+   - Phần mềm máy tính: Chương trình vận hành, điều khiển máy tính và thiết bị.
+   
+2. Góc độ quản lý:
+   - Điều kiện tiên quyết: Phần cứng cần phần mềm để hoạt động.
+   - Chi phí: Chi phí phần mềm > Chi phí phần cứng (và tỷ lệ này ngày càng tăng).
+   - Tương tác: Người dùng chủ yếu làm việc với phần mềm tăng năng suất (Office, Web).
+
+3. Phân loại cơ bản:
+   - Phần mềm ứng dụng (Application Software): "Phần nổi tảng băng". Thực hiện công việc trực tiếp cho người dùng.
+   - Phần mềm hệ thống (System Software): "Phần chìm tảng băng". Quản lý, hỗ trợ phần cứng và chạy phần mềm ứng dụng.
+
+II. PHẦN MỀM ỨNG DỤNG (4.2)
+------------------------------------------------------------------------
+1. Phân loại theo mục đích:
+   - Ứng dụng chung (General-Purpose): Nâng cao năng suất cá nhân (Word, Excel, Browser).
+   - Ứng dụng chuyên biệt (Application-Specific): Hỗ trợ quy trình kinh doanh cụ thể (Nhân sự, Kế toán, ERP).
+
+2. Phân loại theo cách phát triển:
+   - Phần mềm thương phẩm (COTS - Commercial Off-the-shelf):
+     + Mua sẵn, bán đại trà.
+     + Không được tùy biến mã nguồn.
+     + Bản quyền/Sở hữu thuộc về Nhà cung cấp.
+   - Phần mềm đơn chiếc (Custom Software):
+     + Thiết kế riêng theo nhu cầu đặc thù.
+     + Tài sản của tổ chức sử dụng.
+     + Tổ chức sử dụng giữ quyền kiểm soát mã nguồn.
+
+3. Bộ phần mềm (Suites) & Gói tích hợp:
+Micrrosoft Office (Word, Excel, PowerPoint, 
+Access, Outlook) Lotus SmartSuite (WordPro, 1-2-3, Freelance, Approach, 
+Organizer), 
+Corel WordPerfect Office (WordPerfect, Quatro Pro, 
+Pressentation, Paradox, Corel Central) hay Sun’s StarOffice (StarWriter, 
+StarCalc, Starlmpress, StarBase, StarSchedule).
+   - Software Suites (VD: MS Office):
+     + Ưu điểm: Chi phí rẻ hơn mua lẻ, giao diện chung, chia sẻ dữ liệu dễ.
+     + Nhược điểm: Nhiều tính năng thừa, tốn bộ nhớ.
+   - Integrated Packages (Gói tích hợp - VD: MS Works):
+     + Ít bộ nhớ hơn, rẻ hơn Suites, ít tính năng hơn.
+
+4. Các loại phần mềm ứng dụng cụ thể (Keywords):
+   - Trình duyệt Web: Duyệt tài nguyên WWW, HTML.
+   - Thư điện tử (Email): Nhanh hơn, rẻ hơn thư truyền thống.
+   - Xử lý văn bản (Word): Soạn thảo, chế bản điện tử (Desktop Publishing), PDF, HTML.
+        Adobe 
+        Page Maker và QuarkXPress là những ví dụ điển hình của phần mềm chế 
+        bản điện từ
+   - Bảng tính (Spreadsheet - Excel):
+     + Phân tích "What-If" (Nếu-Thì).
+     + Scenarios Manager (Phân tích độ nhạy với >2 biến).
+     + Tính toán, vẽ biểu đồ.
+   - Trình chiếu (PowerPoint): Đồ họa, đa phương tiện (multimedia). MS-PowerPoint, Lotus Free Lance 
+hay Corel Presentations
+   - Quản lý thông tin cá nhân (PIM - Outlook): Lịch, danh bạ, công việc.Lotus Organizer và MS- 
+Outlook
+   - Phần mềm nhóm (Groupware - Lotus Notes, SharePoint): Hỗ trợ cộng tác, làm việc nhóm ảo (Virtual Teams).  Lotus 
+Notes, Novell GroupWise, hay Microsoft Exchange
+
+5. Giải pháp phần mềm & ASP:
+   - ASP (Application Service Providers): Nhà cung cấp dịch vụ ứng dụng.
+     + Thuê phần mềm qua Internet.
+     + Ưu điểm: Chi phí đầu tư thấp, triển khai nhanh, không lo bảo trì.
+   - Bản quyền (License): Mua phần mềm = Mua QUYỀN SỬ DỤNG, không phải quyền sở hữu.
+
+III. PHẦN MỀM HỆ THỐNG (4.3)
+------------------------------------------------------------------------
+1. Chức năng: Quản lý nguồn lực hệ thống, làm giao diện giữa phần cứng và ứng dụng.
+
+2. Hệ điều hành (Operating System - OS):
+   - Là phần mềm hệ thống quan trọng nhất.
+   - 5 chức năng cơ bản: 
+     1. Giao diện người dùng.
+     2. Quản trị phần cứng.
+     3. Quản trị tác vụ.
+     4. Quản trị tệp.
+     5. Dịch vụ hỗ trợ/Tiện ích.
+
+3. Phần mềm trung gian (Middleware):
+   - Giúp các ứng dụng/hệ thống khác nhau trao đổi dữ liệu (VD: Máy chủ ứng dụng, Web Server).  máy chủ ứng 
+dụng như BEA’sWebLogic và IBM’sWebSphere giúp chạy các ứng dụng kinh 
+doanh và thương mại điện từ dựa trên Web nhanh hơn và hiệu quà hơn trên các 
+máy tính sừ dụng hộ điều hanhWindows, UNIX và các hệ điều hành khác.
+
+4. Ngôn ngữ lập trình (Các thế hệ):
+   - Thế hệ 1 (Ngôn ngữ máy): Mã nhị phân (0,1), phụ thuộc phần cứng, khó viết.
+   - Thế hệ 2 (Assembler): Dùng ký hiệu/từ gợi nhớ, cần trình dịch Assembler.
+   - Thế hệ 3 (Bậc cao - High Level): Procedural (Thủ tục). VD: BASIC, COBOL, C. Độc lập máy tính, dễ học hơn.
+   - Thế hệ 4 (4GL): Non-procedural (Phi thủ tục). Chỉ định "Cái gì" (What) thay vì "Làm thế nào" (How). VD: SQL.
+   - Thế hệ 5 (Hướng đối tượng - OOP): 
+     + Đối tượng (Object) = Dữ liệu + Hành động.
+     + VD: Java, C++, Visual Basic.
+     + Tái sử dụng mã nguồn tốt.
+
+5. Ngôn ngữ & Dịch vụ Web:
+   - HTML: Tạo siêu văn bản, hiển thị nội dung (Hypertext Markup).
+   - XML: Mô tả dữ liệu/nội dung (eXtensible Markup), hỗ trợ trao đổi dữ liệu B2B.
+   - Java: Hướng đối tượng, độc lập nền tảng (chạy mọi nơi), dùng cho Applets/J2EE.
+   - Web Services: Các module phần mềm kết nối ứng dụng qua Web.
+
+ CÁC YẾU TỐ CÀN ĐÁNH GIÁ KHI MUA SẤM PHÀN MÈM
+
+ Khá năng hoạt động cùa phần mềm: Thể hiện ở mức độ đáp ứng về 
+mặt yêu cầu chức năng và yêu cầu thông tin của phần mềm, khả năng bào trì 
+nhằm đáp ứng các yêu cầu mới đặt ra cho hệ thống
+ Tính hiệu quà: Thể hiện ở chỗ phần mềm có được phát triền tốt để sừ 
+dụng CPU và bộ nhớ một cách hiệu quả không.
+ Tính linh hoạt: Phần mềm có khả năng xử lý các hoạt động nghiệp vụ 
+một cách dễ dàng mà không cần có sự thay đồi lớn đối với các tiến trình 
+nghiệp vụ hay không.
+ Khà năng kết nối: Phần mềm có khả năng truy cập mạng Internet hay 
+các mạng tương tự Internet khác cùa tổ chức như mạng Intranet hay extranet 
+không.
+Sự đầy đù và tính chuân mực cùa lài liệu hướng dẫn sử dụng: Thể 
+hiện ờ sự đầy đủ và tính hiệu quả của tài liệu hướng dẫn sừ dụng phần mềm 
+(dễ hiểu theo ngôn ngữ của người sử dụng, tiện tra cứu và sử dụng ...)
+ Tính lương thích với môi trường công nghệ hiện tại: Thể hiện ở khả 
+năng tương thích của phần mềm với các phần mềm và hạ tầng phần cứng 
+hiện có
+
+========================================================================
+TÀI LIỆU ÔN TẬP TRẮC NGHIỆM: CẤU TRÚC & PHÁT TRIỂN CƠ SỞ DỮ LIỆU
+(Tóm tắt từ mục 5.3 đến 5.7)
+========================================================================
+
+I. CÁC CẤU TRÚC CƠ SỞ DỮ LIỆU (5.3)
+------------------------------------------------------------------------
+1. Cấu trúc Phân cấp (Hierarchical):
+   - Keyword: Hình cây (Tree), Bản ghi gốc (Root), Quan hệ 1-Nhiều (1-Many).
+   - Đặc điểm: Một bản ghi con chỉ có 1 bản ghi cha.
+
+2. Cấu trúc Mạng (Network):
+   - Keyword: Quan hệ Nhiều-Nhiều (Many-Many).
+   - Đặc điểm: Phức tạp, một con có thể có nhiều cha (VD: 1 đơn hàng có nhiều hàng hóa, 1 hàng hóa trong nhiều đơn hàng).
+
+3. Cấu trúc Quan hệ (Relational):
+   - Keyword: Phổ biến nhất, Bảng 2 chiều (Tables), Dòng (Bản ghi/Records), Cột (Trường/Fields).
+   - Đặc điểm: Truy xuất dữ liệu đột xuất dễ dàng (không cần định nghĩa trước quan hệ), linh hoạt hơn Phân cấp/Mạng nhưng xử lý giao dịch lớn chậm hơn.
+
+4. Cấu trúc Đa chiều (Multidimensional):
+   - Keyword: Khối lục diện (Cubes), OLAP (Online Analytical Processing).
+   - Đặc điểm: Biến thể của quan hệ, mỗi mặt khối là một chiều (khách hàng, thời gian, vùng...), hỗ trợ phân tích trực quan.
+
+5. Cấu trúc Hướng đối tượng (Object-Oriented):
+   - Keyword: Đóng gói (Encapsulation - Dữ liệu + Phép xử lý), Kế thừa (Inheritance), Đa phương tiện.
+   - Đặc điểm: Xử lý dữ liệu phức tạp (ảnh, video, đồ họa) tốt hơn cấu trúc quan hệ. Ứng dụng nhiều trong Web/CAD.
+
+II. PHÁT TRIỂN CƠ SỞ DỮ LIỆU (5.4)
+------------------------------------------------------------------------
+1. Công cụ & Khái niệm:
+   - DDL (Data Definition Language): Ngôn ngữ định nghĩa dữ liệu dùng để tạo/sửa cấu trúc CSDL.
+   - Từ điển dữ liệu (Data Dictionary): Chứa "Dữ liệu đặc tả" (Metadata - Dữ liệu về dữ liệu).
+
+2. Quy trình phát triển (Các giai đoạn):
+   - Bước 1: Lập kế hoạch.
+   - Bước 2: Phân tích yêu cầu.
+   - Bước 3: Thiết kế mức ý niệm (Conceptual Design):
+     + Sử dụng sơ đồ ERD (Entity-Relationship Diagram).
+     + Thành phần ERD: Thực thể (Entities), Thuộc tính (Attributes), Mối quan hệ (Relationships). 
+   - Bước 4: Thiết kế logic: Chuyển ERD thành các Bảng/Quan hệ (Tables).
+   - Bước 5: Thiết kế vật lý: Cấu trúc lưu trữ thực tế.
+
+III. CHUẨN HÓA DỮ LIỆU (5.5) - *Phần quan trọng*
+------------------------------------------------------------------------
+*Mục đích:* Giảm trùng lắp, tăng hiệu quả, đảm bảo tính bền vững. 
+
+1. Chuẩn hóa mức 1 (1NF):
+   - Yêu cầu: Giá trị đơn trị (Atomic), không có nhóm lặp lại.
+   - Hành động: Tách các giá trị lặp.
+
+2. Chuẩn hóa mức 2 (2NF):
+   - Yêu cầu: Đã đạt 1NF + Không phụ thuộc bộ phận vào khóa (Partial Dependency).
+   - Hành động: Tách các thuộc tính chỉ phụ thuộc vào một phần của khóa chính (thường xảy ra với khóa kép).
+
+3. Chuẩn hóa mức 3 (3NF):
+   - Yêu cầu: Đã đạt 2NF + Không phụ thuộc bắc cầu (Transitive Dependency).
+   - Hành động: Tách thuộc tính phụ thuộc vào một thuộc tính không phải là khóa (A -> B -> C).
+
+IV. CÁC LOẠI HÌNH CSDL (5.6)
+------------------------------------------------------------------------
+1. CSDL Tác nghiệp (Operational/Transactional):
+   - Lưu trữ dữ liệu chi tiết, hiện thời, hỗ trợ giao dịch hàng ngày (Daily Ops).
+
+2. CSDL Phân tán (Distributed):
+   - Phân tán thành phần (Partitioned): Chia nhỏ CSDL, để rải rác nhiều nơi.
+   - Phân tán sao lặp (Duplicate/Replicated): Copy nguyên bản CSDL để ở nhiều nơi (nhược điểm: khó đồng bộ).
+
+3. CSDL Siêu phương tiện (Hypermedia):
+   - Các trang Web liên kết nhau.
+   - Quản lý tệp đa phương tiện, dùng HTML/XML.
+
+V. KỸ THUẬT HIỆN ĐẠI (5.7)
+------------------------------------------------------------------------
+1. Client/Server:
+   - Server: Chứa CSDL (Máy mạnh).
+   - Client: Chứa chương trình ứng dụng (PC người dùng).
+
+2. Kho dữ liệu (Data Warehouse): 
+   - Keyword: Hỗ trợ ra quyết định (KHÔNG hỗ trợ giao dịch/tác nghiệp), Dữ liệu lịch sử + hiện thời, Dữ liệu tích hợp từ nhiều nguồn.
+   - Quy mô: Terabytes.
+
+3. Data Marts (Kho dữ liệu chuyên biệt):
+   - Tập con của Data Warehouse.
+   - Phục vụ 1 phòng ban/lĩnh vực cụ thể.
+   - Chi phí thấp hơn Warehouse.
+
+4. Khai phá dữ liệu (Data Mining):
+   - Keyword: Trích rút tri thức, Tìm kiếm xu thế (Patterns), OLAP.
+   - Ứng dụng: Phân tích giỏ thị trường, bán chéo (cross-sell), phát hiện khách hàng rời bỏ.
+
+========================================================================
+MẸO LÀM BÀI TRẮC NGHIỆM:
+- Thấy "Cây" -> Chọn Phân cấp.
+- Thấy "Bảng 2 chiều" -> Chọn Quan hệ.
+- Thấy "Đa phương tiện/Kế thừa" -> Chọn Hướng đối tượng.
+- Thấy "Tách nhóm lặp" -> 1NF.
+- Thấy "Tách phụ thuộc bộ phận/Khóa kép" -> 2NF.
+- Thấy "Tách phụ thuộc bắc cầu" -> 3NF.
+- Data Warehouse dùng để "Ra quyết định", CSDL Tác nghiệp dùng để "Giao dịch hàng ngày".
+========================================================================
+
+I. KHÁI NIỆM & CÁC YẾU TỐ CẤU THÀNH (6.1)
+------------------------------------------------------------------------
+1. Khái niệm Viễn thông:
+   - Bản chất: Truyền thông tin bằng điện từ giữa các điểm xa nhau.
+   - Xu hướng: Chuyển từ truyền thoại (voice) sang truyền dữ liệu số (digital data).
+         Hệ thống viễn thông (Telecommunication System) là tập hợp các
+         yếu tô phần cứng và phần mềm tương thích, phối hợp với nhau để truyền 
+        thông tin từ điểm này đến điểm khác. 
+Các yếu tố cấu thành hệ thống viễn thông bao gồm:
+- Các máy tính đe xử lý thòng tin
+- Các thiết bị đầu cuối hay các thiết bị vào/ra để gửi/nhận dữ liệu
+- Các kênh truyền thông để truyền dữ liệu hoặc âm thanh giữa các 
+        thiết bị nhận/gửi trong một hệ thống mạng. 
+- Các bộ xử lý truyền thông như Modem, bộ tập trung (Concentrator), 
+        bộ phân kênh (Multiplex), bộ kiểm soát truyền thông (Controller) và bộ tiền 
+        xử lý (Front- End Proccesor) với chức năng hỗ trợ truyền và nhận thông tin.
+- Phần mềm truyền thông (Telecommunications Software) có nhiệm 
+        vụ kiêm soát các hoạt động vào/ra và quản lý các chức năng khác cùa mạng 
+        truyền thông.
+2. Các yếu tố phần cứng (Keywords định nghĩa):
+   - Modem: Chuyển đổi tín hiệu Số (Digital - máy tính) <-> Tương tự (Analog - đường điện thoại). 
+   - Máy chủ (Host Computer): Máy tính lớn/mini, xử lý chính, chứa CSDL, điều hành mạng.
+   - Bộ tiền xử lý (Front-End Processor): Xử lý tác vụ vào/ra trước khi dữ liệu đến máy chủ (giảm tải cho máy chủ).
+   - Thiết bị đầu cuối (Terminal): Thiết bị vào/ra, không có trí tuệ/bộ nhớ (Dumb terminal). PC có thể đóng vai trò là đầu cuối thông minh.
+   - Bộ tập trung (Concentrator): Thu thập & lưu trữ tạm thời thông báo, đủ mới gửi đi (Store and Forward).
+   - Bộ phân kênh (Multiplexer): Cho phép 1 kênh truyền tốc độ cao tải đồng thời dữ liệu từ nhiều nguồn (Chia sẻ đường truyền).
+   - Bộ kiểm soát (Controller): Giám sát luồng thông tin giữa CPU và thiết bị ngoại vi.
+ Các chức năng cơ bản của hệ thống viễn thông
+ - Truyền thông tin
+- Thiết lập các giao diện giữa người nhận và người gửi
+- Chuyển các thông báo theo đường truyền hiệu quà nhất
+- Thực hiện các thao tác xử lý thông tin cơ bản để đảm bảo ràng các 
+thông báo đúng loại đến đúng người nhận
+- Thực hiện các thao tác hiệu chinh dữ liệu, ví dụ kiểm tra những lỗi 
+truyền thông và tái tạo lại khuôn dạng cho dữ liệu
+- Chuyển đổi các thông báo từ một tốc độ (ví dụ tốc độ của máy tính) 
+sang một tốc độ khác (ví dụ tốc độ cùa đường truyền) hay chuyển đôi dữ 
+liệu từ khuôn dạng này sang khuôn dạng khác
+3. Tín hiệu & Kênh truyền:
+   - Tín hiệu Tương tự (Analog): Sóng liên tục, dùng cho thoại (Voice).
+   - Tín hiệu Số (Digital): Sóng rời rạc (0, 1), dùng cho dữ liệu máy tính.
+   - Giao thức (Protocol): Bộ quy tắc/thủ tục để các thiết bị trong mạng "nói chuyện" được với nhau.
+
+II. CÁC LOẠI MẠNG TRUYỀN THÔNG (6.2)
+------------------------------------------------------------------------
+1. Phân loại theo quyền sở hữu & Dịch vụ:
+   - Mạng ngang hàng (Peer-to-Peer): Quy mô nhỏ (<25 máy), chia sẻ thiết bị/truyền thông, không có máy chủ chuyên dụng.
+   - Client/Server: Có máy chủ mạnh cung cấp dịch vụ, máy khách (Client) yêu cầu dịch vụ.
+
+2. Cấu hình mạng (Topologies) - *Rất hay thi trắc nghiệm*: 
+   - Mạng đường trục (Bus): 
+     + Cấu hình: 1 đường cáp chính.
+     + Nhược điểm: Lỗi 1 điểm -> Hai bên điểm lỗi không liên lạc được (dễ tắc nghẽn).
+   - Mạng vòng (Ring): 
+     + Cấu hình: Khép kín, dây chạy qua tất cả thiết bị.
+     + Ưu điểm: Lỗi 1 nút vẫn có thể truyền thông (trong một số cơ chế token), ít bị ảnh hưởng hơn Bus.
+   - Mạng hình sao (Star): 
+     + Cấu hình: Thiết bị trung tâm (Hub/Switch) nối tỏa ra các máy.
+     + Ưu điểm: Dễ cài đặt, dễ tìm lỗi, 1 máy hỏng không ảnh hưởng toàn mạng.
+     + Nhược điểm: Thiết bị trung tâm hỏng -> Toàn mạng liệt.
+   - Mạng hình cây (Tree): Phân cấp.
+   - Mạng hỗn hợp (Mesh): Kết nối chằng chịt (VD: Internet).
+
+3. Phân loại theo phạm vi:
+   - LAN (Mạng cục bộ): Phạm vi hẹp (tòa nhà), tốc độ cao, chia sẻ tài nguyên phần cứng/mềm.
+   - WAN (Mạng diện rộng): Phạm vi lớn (quốc gia/toàn cầu), kết nối nhiều LAN.
+   - Internet: Mạng của các mạng, dùng TCP/IP.
+
+4. Các loại mạng đặc biệt:
+   - Mạng công cộng (Public): Chia sẻ chung, trả tiền theo thời gian, chỉ có truyền thông tin, chậm, kém bảo mật.
+   - Mạng riêng (Private): Thuê bao riêng, trả phí tháng,luôn ss, tốc độ cao, bảo mật cao.
+   - Mạng gia tăng giá trị (VAN): Bán công cộng, bên thứ 3 cung cấp, khách hàng trả phí dữ liệu + thuê bao, được hỗ trợ xử lý lỗi/giao thức.
+   - Mạng riêng ảo (VPN): 
+     + Dùng hạ tầng công cộng (Internet) nhưng có mã hóa.
+     + Bảo mật như mạng riêng, chi phí rẻ hơn mạng riêng.
+Đặc điểm của việc sử dụng mạng riêng ảo là:
+- Phải trả phí thuê bao hàng tháng và chi phí sử dụng trong tháng
+- sẵn sàng cho người sử dụng nhưng không có đường truyền riêng 
+dành cho tổ chức
+- Có thêm dịch vụ mã hóa dữ liệu đảm bảo tính bảo mật
+- Truyên thông tin với tốc độ cao hon so với tốc độ của mạng công cộng
+- Độ an toàn và tính riêng tư cao hon mạng công 
+
+III. INTERNET & CÁC LỢI ÍCH (6.3)
+------------------------------------------------------------------------
+1. Công nghệ Internet:
+   - Giao thức chuẩn: TCP/IP.
+   - Mô hình: Client/Server.
+   - URL: Địa chỉ nguồn thống nhất.
+
+2. Dịch vụ Internet (Keywords cũ & mới):
+   - FTP: Truyền tệp.
+   - Telnet: Truy cập từ xa.
+   - Gophers/Archie/Veronica/WAIS: Các công cụ tìm kiếm sơ khai (trước khi Google phổ biến).
+   - WWW (World Wide Web): Dựa trên HTML, HTTP, Hypermedia.
+
+3. Intranet & Extranet:
+   - Intranet: Mạng nội bộ, dùng công nghệ Internet (Web, Browser, TCP/IP), được bảo vệ bởi Tường lửa (Firewall).
+   - Extranet: Mạng Intranet mở rộng cho người ngoài (khách hàng, đối tác) được cấp quyền truy cập hạn chế.
+
+4. Lợi ích kinh doanh của Internet:
+   - Kết nối toàn cầu (Global Connectivity).
+   - Giảm chi phí truyền thông (Email rẻ hơn Fax/Phone).
+   - Giảm chi phí giao dịch (Transaction Cost): VD: Đơn hàng điện tử rẻ hơn đơn hàng giấy.
+   - Tăng tốc độ truyền bá tri thức.
+
+========================================================================
+MẸO LÀM BÀI TRẮC NGHIỆM:
+- Thấy "Chuyển đổi Số sang Tương tự" -> Chọn MODEM.
+- Thấy "Chia sẻ đường truyền tốc độ cao" -> Chọn BỘ PHÂN KÊNH (Multiplexer).
+- Thấy "Lưu trữ tạm thời rồi gửi" -> Chọn BỘ TẬP TRUNG (Concentrator).
+- Thấy "Thiết bị trung tâm hỏng thì mạng hỏng" -> Chọn MẠNG HÌNH SAO (Star).
+- Thấy "Mã hóa trên đường truyền công cộng" -> Chọn VPN.
+- Thấy "Mạng nội bộ dùng công nghệ Web" -> Chọn INTRANET.
+- Extranet = Intranet + Đối tác/Khách hàng (có quyền truy cập).
+========================================================================
+
+
