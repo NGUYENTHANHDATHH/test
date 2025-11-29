@@ -2184,3 +2184,113 @@ AN TOÀN HỆ THỐNG THÔNG TIN VÀ CÁC KHÍA CẠNH ĐẠO ĐỨC XẢ HỘI
   + Tích cực: Giảm đơn điệu, tăng thú vị.
   + Tiêu cực: Nhập liệu nhàm chán, áp lực khi bị máy tính giám sát (Computer monitoring).
 - Giám sát bằng máy tính: Gây căng thẳng (stress), xâm phạm quyền riêng tư, giảm phẩm giá người lao động.
+
+VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+Ý nghĩa
+Tìm giá trị theo cột (Vertical lookup).
+Tìm lookup_value ở cột đầu tiên của bảng.
+Trả về kết quả ở cột thứ col_index_num.
+
+HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])
+Ý nghĩa
+Tìm giá trị theo hàng (Horizontal lookup).
+Tìm lookup_value ở hàng đầu tiên của bảng.
+Trả về giá trị ở hàng thứ row_index_num.
+
+FV(rate, nper, pmt, [pv], [type])
+rate: lãi suất mỗi kỳ
+nper: tổng số kỳ
+pmt: số tiền trả/nhận mỗi kỳ (thường dấu âm)
+fv: giá trị tương lai muốn đạt đến (ngầm định = 0)
+type:
+0 = trả cuối kỳ
+1 = trả đầu kỳ
+Ý nghĩa nhanh:
+FV = giá trị tương lai nhận được sau một thời gian.
+Nếu tiền bỏ ra → nhập âm → FV thường dương.
+Nếu tiền nhận vào → nhập dương → FV thường âm (quy ước dòng tiền vào/ra).
+
+PV(rate, nper, pmt, [fv], [type])
+rate: lãi suất mỗi kỳ
+nper: tổng số kỳ
+pmt: số tiền gửi/trả mỗi kỳ
+pv: giá trị hiện tại (ví dụ gửi ban đầu)
+type: trả đầu kỳ hay cuối kỳ
+Ý nghĩa nhanh:
+PV = giá trị hiện tại của một chuỗi tiền tương lai.
+Tiền trả ra → âm.
+Tiền nhận vào → dương.
+
+RATE(nper, pmt, pv, [fv], [type], [guess])
+Ý nghĩa nhanh:
+RATE = lãi suất tương ứng với một khoản vay/gửi.
+pv và pmt phải trái dấu.
+
+PMT trong Excel được dùng để tính số tiền phải trả định kỳ (thường là hàng tháng, quý, năm) cho một khoản vay hoặc đầu tư có lãi suất cố định, với các khoản thanh toán bằng nhau.
+=PMT(rate, nper, pv, [fv], [type])
+rate: Lãi suất mỗi kỳ (ví dụ: 12%/12 cho lãi suất tháng).
+nper: Tổng số kỳ thanh toán (ví dụ: 5 năm × 12 tháng = 60 kỳ).
+pv: Giá trị hiện tại (khoản vay hoặc đầu tư ban đầu).
+[fv] (tùy chọn): Giá trị tương lai sau kỳ cuối cùng (mặc định = 0).
+[type] (tùy chọn): Thời điểm trả tiền:
+0 hoặc bỏ trống = trả cuối kỳ (mặc định).
+1 = trả đầu kỳ.
+
+FVSCHEDULE(principal, schedule)
+Ý nghĩa
+Tính giá trị tương lai (FV) của một khoản vốn ban đầu khi lãi suất thay đổi theo từng kỳ.
+principal: số tiền ban đầu.
+schedule: danh sách các lãi suất theo từng kỳ (mảng lãi suất).
+
+SYD(cost, salvage, life, period)
+Ý nghĩa
+Tính khấu hao nhanh theo phương pháp tổng số các năm sử dụng (SYD).
+cost: nguyên giá tài sản
+salvage: giá trị còn lại cuối đời (giá trị thu hồi)
+life: tổng số năm sử dụng
+period: năm cần tính khấu hao (1 → life)
+
+SLN(cost, salvage, life)
+Ý nghĩa
+Tính khấu hao theo phương pháp đường thẳng (mỗi năm khấu hao bằng nhau).
+cost: nguyên giá tài sản
+salvage: giá trị còn lại cuối đời
+life: số năm sử dụng
+
+DB(cost, salvage, life, period, [month])
+Ý nghĩa
+Tính khấu hao theo phương pháp số dư giảm dần cố định, tức là:
+Các năm đầu khấu hao nhiều.
+Các năm sau khấu hao ít dần.
+Tham số
+cost: nguyên giá tài sản
+salvage: giá trị còn lại cuối đời
+life: số năm sử dụng
+period: năm cần tính khấu hao (1 → life)
+month (tùy chọn): số tháng sử dụng trong năm đầu (1–12). Mặc định = 12.
+
+IRR là tốc độ sinh lời thực tế của dự án.
+=IRR(values, [guess])
+Tham số:
+values = dãy dòng tiền theo thời gian
+tiền ra = âm
+tiền vào = dương
+guess = lãi suất dự đoán ban đầu (Excel thường tự chọn 10%)
+
+1. Quản trị CSDL bằng Excel
+Sắp xếp dữ liệu: Sort theo 1 hoặc nhiều tiêu chuẩn.
+Lọc dữ liệu tự động: Autofilter / Advanced Filter.
+Tổng hợp dữ liệu: Subtotals.
+Tổng hợp dữ liệu nâng cao: Pivot Table.
+Tích hợp dữ liệu: Consolidate.
+2. Quản trị CSDL bằng Access
+Thiết kế CSDL nghiệp vụ đơn giản.
+Triển khai CSDL trên máy tính.
+Quản trị CSDL: tạo truy vấn dữ liệu (Query), form nhập liệu, create basic report.
+Dạng 3 (phần sau): Phân tích và mô hình hoá dữ liệu hỗ trợ ra quyết định
+Phân tích dữ liệu bằng công cụ: Data Analysis.
+Phân tích kịch bản: What-if.
+Giải bài toán tối ưu bằng: Solver.
+Tìm kiếm mục tiêu: Goal Seek.
+Trích xuất giá trị từ danh sách CSDL: DGET.
+Hồi quy tuyến tính: Regression.
