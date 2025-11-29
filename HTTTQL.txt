@@ -1808,3 +1808,379 @@ II. CÁC CÔNG NGHỆ VĂN PHÒNG (16.2)
 - Công nghệ hỗ trợ: **LAN, WAN, PBX** để liên kết máy sao chụp thông minh, máy quét, fax, bộ xử lý văn bản, máy in.
 - **Tiền đề quan trọng**: Xây dựng **LAN/WAN** như một yếu tố thông thường của mỗi văn phòng.
 
+
+PHẦN E:  PHÁT TRIẺN CÁC HỆ THÓNG THÔNG TIN 
+TRONG TÓ CHỨC
+CHƯƠNG 17
+QUY TRÌNH TRIỂN KHAI CÁC ỨNG DỤNG CÔNG NGHỆ THÔNG TIN TRONG TỔ CHỨC
+
+1. QUY TRÌNH TRIỂN KHAI (5 BƯỚC CƠ BẢN)
+- Bước 1: Xác định, lựa chọn và lập kế hoạch (Cần đồng bộ với kế hoạch kinh doanh, phân tích chi phí - lợi ích).
+- Bước 2: Thiết lập kiến trúc CNTT (IT Architecture) - Kế hoạch về nguồn lực thông tin, phần cứng, phần mềm, dữ liệu.
+- Bước 3: Lựa chọn giải pháp triển khai (Mua, thuê, tự phát triển, hoặc kết hợp).
+- Bước 4: Thử nghiệm, cài đặt, tích hợp (Unit test, Integration test, Usability test, Acceptance test).
+- Bước 5: Khai thác, bảo trì và cải tiến.
+
+2. CÁC GIẢI PHÁP TRIỂN KHAI (ƯU & NHƯỢC ĐIỂM)
+
+A. Mua ứng dụng thương phẩm (Off-the-shelf)
+- Đặc điểm: Mua trọn gói, có thể tùy biến hoặc không.
+- Quy trình mua: Xác định yêu cầu -> Yêu cầu đặt hàng -> Đánh giá gói thầu -> Lựa chọn.
+- Ưu điểm: Có sẵn, triển khai nhanh, được dùng thử (trialware), chi phí hợp lý, nhà cung cấp cập nhật thường xuyên.
+- Nhược điểm: Khó đáp ứng 100% yêu cầu đặc thù, phụ thuộc nhà cung cấp, khó tích hợp nếu khác hệ thống.
+
+B. Thuê ứng dụng (Lease/Outsourcing)
+- Các hình thức: Thuê nhà cung cấp phát triển, ASP (Application Service Provider), SaaS (Software as a Service).
+- Ưu điểm: Tiết kiệm chi phí đầu tư ban đầu, tận dụng chuyên môn bên ngoài, triển khai nhanh, tập trung vào nghiệp vụ cốt lõi.
+- Nhược điểm: Giảm quyền kiểm soát, rủi ro bảo mật/rò rỉ thông tin, phụ thuộc đối tác, khó tích hợp (với SaaS).
+- SaaS: Trả phí thuê bao, không cần cài đặt phức tạp, chạy trên web.
+
+C. Tự phát triển ứng dụng (In-house/Insourcing)
+- Các phương án: Xây dựng từ đầu, dựa trên cấu phần có sẵn, tích hợp ứng dụng (EAI).
+- Ưu điểm: Đáp ứng hoàn hảo yêu cầu đặc thù, phù hợp chiến lược riêng, kiểm soát dữ liệu tuyệt đối.
+- Nhược điểm: Tốn kém chi phí và thời gian, cần đội ngũ IT mạnh, rủi ro kỹ thuật cao.
+
+D. Người sử dụng phát triển (End-user computing)
+- Đặc điểm: Non-IT users dùng công cụ (Excel, Access, 4GL) để tự làm.
+- Ưu điểm: Đáp ứng nhanh nhu cầu cá nhân, giảm tải cho bộ phận IT.
+- Nhược điểm/Rủi ro: Thiếu tính chuyên nghiệp, không tuân thủ chuẩn, thiếu tài liệu (documentation), rủi ro an ninh, mất tính liên tục khi nhân sự nghỉ việc.
+
+3. LỰA CHỌN GIẢI PHÁP & MUA SẮM
+- Tiêu chí lựa chọn: Chức năng, tính thân thiện, chi phí (TCO), khả năng tích hợp, dịch vụ bảo trì, nhà cung cấp uy tín.
+- Quy trình chọn nhà cung cấp: 6 bước (từ xác định tiêu chí đến ký SLA).
+- SLA (Service-Level Agreement): Thỏa thuận cam kết mức độ dịch vụ.
+
+4. TÍCH HỢP HỆ THỐNG
+- Tích hợp CSDL: Kết nối dữ liệu (ví dụ: Đơn hàng kết nối Kho).
+- Tích hợp ứng dụng doanh nghiệp (EAI): Kết nối ERP, CRM, SCM...
+- Tích hợp đối tác: EDI, XML, Extranet, Web Services.
+
+5. TÁI THIẾT KẾ QUY TRÌNH NGHIỆP VỤ (BPR)
+Tiến trình nghiệp vụ (business process) được hiểu là một bộ các hoạt động có 
+chức năng biến đầu vào thành dầu ra
+Những yếu tố mang tính 
+động lực đổi với việc tái thiết kế các tiến trình nghiệp vụ:
+- Sự gia tăng cùa các phần mềm thương phẩm
+- Sự cần thiết cùa việc cấu trúc lại các tiến trình nghiệp vụ hoặc loại 
+hò các tiến trình lạc hậu trước khi tin học hóa
+- Nhu cầu lích hợp thông tin
+- Nhu cầu rút ngan thời gian thực hiện tiến trình
+- Nhu câu tùy biến các quy trinh nghiệp vụ
+- Nhu câu nâng cao hiệu quá chuỗi cung cấp
+- Nhu cầu nâng cao chất lượng dịch vụ khách hàng và quàn trị quan hệ 
+khách hàng
+- Nhu câu tham gia thương mại điện tử
+- Tiến hành mua sam điện tử
+- Thực hiện Marketing trực tuyến trực tiếp
+- Chuyền đổi sang mô hình kinh doanh điện từ.
+Tái thiết kế tiến trìnli ngliiệp vụ (business process redesign) là một 
+phương pháp mà tô chức vận dụng đê thay đối một cách căn bàn các tiến 
+trình nghiệp vụ nhằm đạt được những cải thiện đáng kể về hiệu quả hoạt 
+dộng nghiệp vụ trong tồ chức
+6. QUẢN TRỊ DỰ ÁN CNTT (QUAN TRỌNG)
+
+A. Yếu tố thành công (5 yếu tố)
+- Sự ủng hộ của lãnh đạo (QUAN TRỌNG NHẤT).
+- Sự tham gia của người sử dụng (User involvement).
+- Yêu cầu rõ ràng.
+- Kế hoạch khả thi.
+- Kỳ vọng thực tế.
+
+B. 5 nguyên nhân thất bại
+- Thiếu sự hồ trợ từ phía lãnh dạo
+- Người sừ dụng không tham gia hoặc không phát huy hết vai trò 
+trong quá trình phát triển HTTT
+- Ycu cầu và đặc tả hộ thống không được mô tả rõ ràng từ đầu
+- Có sự thay dồi của yêu cầu và đặc tả hệ thống trong quá trình triển 
+khai hệ thống
+- Thiếu đồng bộ về công nghệ dùng cho triển khai hộ thống.
+
+C. Rủi ro dự án
+- Quy mô: Càng lớn càng rủi ro.
+- Cấu trúc: Càng ít cấu trúc (unstructured) càng rủi ro.
+- Kinh nghiệm công nghệ: Càng thiếu kinh nghiệm càng rủi ro.
+
+D. Công cụ quản lý
+- PERT, Gantt: Dùng cho dự án có cấu trúc cao, ít rủi ro.
+- Tích hợp người dùng: Dùng cho dự án ít cấu trúc, yêu cầu không rõ ràng.
+- Tích hợp kỹ thuật nội bộ: Dùng cho dự án công nghệ phức tạp.
+
+E. Sự phản kháng của người dùng
+- Nguyên nhân: Sợ thay đổi, sợ mất quyền lực, giao diện khó dùng.
+- Giải pháp: Đào tạo, giao tiếp, lôi cuốn tham gia vào quá trình thiết kế.
+
+
+CHƯƠNG 18
+TỔNG QUAN VỀ PHÁT TRIỂN HỆ THỐNG THÔNG TIN (HTTT)
+
+1. PHÁT TRIỂN HTTT VÀ ĐỔI MỚI TỔ CHỨC
+* Nguyên tắc: Phát triển HTTT = Đổi mới tổ chức (không chỉ là phần cứng/phần mềm).
+* Yếu tố con người: Quyết định thành công về mặt tổ chức (dù kỹ thuật thành công).
+* Kế hoạch HTTT: Phải nhất quán và hỗ trợ kế hoạch kinh doanh tổng thể.
+
+1.1. Các phương pháp xác định yêu cầu thông tin
+A. Phân tích tổng thể (Enterprise Analysis)
+   - Đặc điểm: Khảo sát toàn bộ tổ chức (top-down).
+   - Nhược điểm: Tạo ra quá nhiều dữ liệu, tốn kém, thường chỉ tự động hóa cái cũ.
+B. Phân tích chiến lược (Strategic Analysis / CSFs)
+   - CSFs (Critical Success Factors): Các yếu tố đảm bảo thành công.
+   - Đặc điểm: Tập trung vào số ít mục tiêu mấu chốt, ít dữ liệu hơn.
+   - Phù hợp: HTTT trợ giúp ra quyết định (DSS), HTTT lãnh đạo.
+
+1.2. 4 Mức độ ứng dụng CNTT (từ thấp đến cao, rủi ro tăng dần, lợi ích tăng dần)
+   1. Tự động hóa (Automation): Hỗ trợ công việc hiệu quả hơn (VD: Tính lương).
+   2. Hợp lý hóa thủ tục (Rationalization): Loại bỏ "nút thắt", làm thủ tục hiệu quả hơn.
+   3. Tái thiết kế quy trình (Business Process Redesign): Đơn giản hóa, thiết kế lại dòng công việc.
+   4. Đổi mới toàn diện (Paradigm Shift): Thay đổi bản chất kinh doanh (VD: Kho hàng ảo).
+
+2. CHU KỲ VÒNG ĐỜI PHÁT TRIỂN HỆ THỐNG (SDLC) - 5 GIAI ĐOẠN
+* Đặc điểm: Có cấu trúc, bước này nối tiếp bước kia, phù hợp hệ thống lớn/giao dịch.
+
+Giai đoạn 1: Xác định, lựa chọn và lập kế hoạch
+   - Tính khả thi: Kinh tế (chi phí/lợi ích), Kỹ thuật, Tác nghiệp, Thời gian, Pháp lý, Chính trị.
+   - Lợi ích/Chi phí: Hữu hình (đo được bằng tiền) và Vô hình (không đo được bằng tiền, VD: uy tín, sự hài lòng).
+
+Giai đoạn 2: Phân tích hệ thống
+   - Mục tiêu: Hiểu hệ thống hiện tại, xác định yêu cầu hệ thống mới.
+   - Hoạt động: Thu thập yêu cầu (Phỏng vấn, quan sát...) -> Mô hình hóa.
+
+Giai đoạn 3: Thiết kế hệ thống
+   - Biểu mẫu (Forms): Để nhập liệu (Input).
+   - Báo cáo (Reports): Tài liệu "tĩnh" để xem/tra cứu (Output).
+   - Giao diện/Hộp thoại: Công cụ giao tiếp người - máy.
+   - Thiết kế CSDL: Mức ý niệm -> Logic -> Vật lý.
+
+Giai đoạn 4: Triển khai hệ thống (Implementation)
+   - Lập trình & Thử nghiệm:
+     + Thử nghiệm phát triển: Do lập trình viên làm (Unit test).
+     + Thử nghiệm Alpha: Chuyên gia kiểm thử làm (Test khả năng khôi phục/lỗi/an toàn).
+     + Thử nghiệm Beta: Người sử dụng làm (Môi trường thực tế).
+   - Chuyển đổi hệ thống (4 cách):
+     1. Trực tiếp: Cắt cũ dùng mới ngay. Ưu: Rẻ, nhanh. Nhược: Rủi ro cao nhất.
+     2. Song song: Chạy cả hai cùng lúc. Ưu: An toàn. Nhược: Tốn kém nhất, phân tán sự chú ý.
+     3. Theo pha (Giai đoạn): Chuyển từng module. Ưu: Giảm rủi ro. Nhược: Tốn thời gian, cần cầu nối dữ liệu.
+     4. Thí điểm: Chuyển đổi tại một bộ phận trước.
+   - Tài liệu:
+     + Tài liệu hệ thống: Cho quản trị viên/bảo trì (quan trọng nhất để sửa đổi).
+     + Tài liệu hướng dẫn sử dụng: Cho người dùng cuối.
+
+Giai đoạn 5: Bảo trì hệ thống
+   - Chi phí: Lớn nhất trong vòng đời (chiếm 70-80%).
+   - Các loại bảo trì:
+     1. Hiệu chỉnh (Corrective): Sửa lỗi (khẩn cấp, không thêm chức năng).
+     2. Thích nghi (Adaptive): Thay đổi theo môi trường/công nghệ.
+     3. Hoàn thiện (Perfective): Cải tiến, thêm cơ hội mới.
+     4. Phòng ngừa (Preventive): Đón đầu vấn đề.
+
+3. CÁC PHƯƠNG PHÁP HIỆN ĐẠI (THAY THẾ HOẶC BỔ SUNG SDLC)
+
+3.1. Phương pháp thu thập yêu cầu
+   - JAD (Joint Application Design): Họp chung người dùng + phân tích viên cùng lúc.
+     + Ưu: Nhanh, đồng thuận cao, giảm mâu thuẫn.
+     + Nhược: Khó tập hợp đủ người, nguy cơ ỷ lại.
+
+3.2. Phương pháp xây dựng hệ thống
+   A. Bản mẫu (Prototyping)
+     - Quy trình: Thử và sai (Trial and error). Làm nhanh bản mẫu -> Người dùng xem -> Sửa.
+     - Phù hợp: Yêu cầu khó xác định, DSS, EIS.
+     - Ưu: Người dùng tham gia chặt chẽ.
+     - Nhược: Có thể bỏ qua phân tích kỹ, tài liệu thiếu, không hợp hệ thống lớn (transaction).
+   
+   B. Phát triển ứng dụng nhanh (RAD)
+     - Đặc điểm: 4 giai đoạn, kết hợp Prototyping + JAD + CASE.
+     - Ưu: Rất nhanh, giảm chi phí.
+     - Nhược: Chức năng hạn chế, chất lượng có thể không cao bằng SDLC.
+
+   C. Hướng đối tượng (OOAD)
+     - Đặc điểm: Đối tượng = Dữ liệu + Thao tác xử lý.
+     - Ưu điểm: Tái sử dụng (reusability), dễ bảo trì.
+
+4. CÔNG CỤ TỰ ĐỘNG HÓA
+   - CASE (Computer-Aided Software Engineering): Tự động hóa quy trình phát triển, sinh mã, sinh tài liệu.
+   - Lập trình trực quan (Visual Programming): Kéo thả giao diện, sinh mã tự động.
+   - Ngôn ngữ thế hệ thứ 4 (4GL): Câu lệnh giống tiếng Anh, người dùng tự làm được.
+
+BẢNG SO SÁNH NHANH (KEYWORD TRẮC NGHIỆM)
+- SDLC: Cấu trúc cao, tuần tự, hệ thống lớn, bảo trì tốn kém.
+- Prototyping: Thử và sai, làm mịn, yêu cầu không rõ ràng.
+- JAD: Họp nhóm, giảm xung đột, tiết kiệm thời gian xác định yêu cầu.
+- Chuyển đổi Trực tiếp: Rủi ro cao, chi phí thấp.
+- Chuyển đổi Song song: Rủi ro thấp, chi phí cao.
+- Bảo trì Hiệu chỉnh: Sửa lỗi.
+- Bảo trì Hoàn thiện: Nâng cấp/Cải tiến.
+
+
+
+PHẦN F 
+QUẢN TRỊ CÁC NGUÒN Lực 
+VÀ VÁN ĐÈ AN TOÀN HỆ THÓNG THÔNG TIN
+CHƯƠNG 19
+QUẢN TRỊ CÁC NGUỒN LỰC HỆ THỐNG THÔNG TIN TRONG TỔ CHỨC
+
+1. TỔNG QUAN VỀ QUẢN TRỊ NGUỒN LỰC THÔNG TIN
+* Vai trò của CNTT: Chuyển từ trợ giúp (bị động) sang tham gia chiến lược/tạo lợi thế cạnh tranh (chủ động).
+* 3 Khái niệm cơ bản:
+  - Thông tin (Information): Dữ liệu đã xử lý, có ý nghĩa.
+  - Nguồn lực (Resources): Tái sử dụng được (Nhân lực, Tài chính, Vật liệu, Thông tin).
+  - Quản trị (Management): Lập kế hoạch, ra quyết định, tổ chức, dẫn dắt, kiểm soát.
+* Mục tiêu quản trị: Xác định trùng lặp, tiết kiệm chi phí, hỗ trợ ra quyết định.
+* 3 Cấp quản trị nguồn lực thông tin:
+  1. Hội đồng điều hành (Lãnh đạo cao cấp): Chiến lược dài hạn.
+  2. Quản lý cấp trung: Giám sát dự án.
+  3. Người sử dụng cuối (End user): Quản lý thiết bị/nhóm làm việc.
+* 5 Yếu tố cấu thành tổ chức (Kinh tế-Xã hội-Kỹ thuật): Con người, Nhiệm vụ, Công nghệ, Cấu trúc, Văn hóa.
+* 5 Khối quản trị nguồn lực thông tin: Chiến lược, Tác nghiệp, Nguồn lực, Công nghệ, Phân tán.
+
+2. LẬP KẾ HOẠCH VÀ MUA SẮM
+* Yếu tố lập kế hoạch: Sứ mệnh (Mission), Tầm nhìn (Vision), Chiến lược, SWOT, CSFs (Yếu tố thành công - thường 5 đến 7 yếu tố).
+* 5 Phương pháp lập kế hoạch (theo mức độ tích hợp tăng dần):
+  1. Không có kế hoạch (No Planning).
+  2. Đơn độc (Standalone).
+  3. Phản ứng (Reactive).
+  4. Có sự liên kết (Linked Planning): Kế hoạch kinh doanh giao diện với kế hoạch HTTT.
+  5. Tích hợp (Integrated Planning): Tích hợp hoàn toàn, không tách biệt.
+* Mua sắm nguồn lực:
+  - Phần cứng: Lưu ý đặc tả kỹ thuật, bảo trì, tương thích.
+  - Phần mềm: Mua sẵn, mã nguồn mở, hoặc thuê ngoài (tư vấn). Lưu ý: Khấu hao vô hình cao, không có khấu hao vật lý.
+  - Dữ liệu: Là hàng hóa nội dung.
+
+3. QUẢN TRỊ NGUỒN NHÂN LỰC HTTT
+* 5 Chức năng quản trị doanh nghiệp: Tài chính, Nhân lực, Vận hành, Marketing, Hệ thống thông tin (HTTT).
+* Mô hình năng lực lãnh đạo (STEP):
+  - S (Staff): Quan hệ xã hội/nhân sự.
+  - P (Process): Chuyên môn/Quy trình kinh doanh.
+  - T (Technology/IT): Năng lực CNTT.
+* Các chức danh quan trọng:
+Giám đốc Thông tin (CIO) / Giám đốc CNTT: Lập kế hoạch chiến lược, sử dụng HTTT trên toàn tổ chức.
+Giám đốc HTTT (IS Director): Quản lý HTTT toàn tổ chức, quản lý vận hành hàng ngày.
+Quản trị Tài khoản (Account Executive): Quản trị mức tác nghiệp hàng ngày HTTT trong các bộ phận chuyên biệt.
+Quản lý Trung tâm Thông tin: Quản lý dịch vụ thông tin trên mạng, huấn luyện, tư vấn.
+Quản lý Phát triển (Development Manager): Quản trị, điều phối tất cả các dự án HTTT mới.
+Quản trị Dự án (Project Manager): Quản trị dự án HTTT cụ thể.
+Quản trị Bảo trì (Maintenance Manager): Quản trị, điều phối mọi dự án bảo trì HTTT.
+Quản trị Hệ thống (Systems Manager): Quản trị một HTTT cụ thể đang hoạt động.
+Quản trị Kế hoạch HTTT (IS Planning Manager): Phát triển kiến trúc mạng, phần cứng, phần mềm, lập kế hoạch phát triển/thay đổi hệ thống.
+Quản trị Vận hành (Operations Manager): Theo dõi, kiểm soát hoạt động tác nghiệp hàng ngày (trung tâm dữ liệu/máy tính).
+Quản trị Lập trình (Programming Manager): Điều phối công việc lập trình ứng dụng.
+Quản trị Lập trình Hệ thống: Điều phối bảo hành toàn bộ hệ thống phần mềm (HĐH, tiện ích, ngôn ngữ, công cụ...).
+Quản trị Công nghệ Mới: Dự báo xu hướng, đánh giá, thử nghiệm công nghệ mới.
+Quản trị Viễn thông (Telecommunications Manager): Điều phối, quản lý mạng dữ liệu và tiếng nói.
+Quản trị Mạng (Network Manager): Quản trị công việc liên quan tới mạng toàn tổ chức.
+Quản trị Cơ sở Dữ liệu (Database Administrator): Quản trị cơ sở dữ liệu và sử dụng hệ quản trị CSDL.
+Quản trị An ninh Máy tính (Security Manager): Quản trị sử dụng hợp pháp và đạo đức các HTTT, an ninh.
+Quản trị Bảo đảm Chất lượng (QA Manager): Giám sát, phát triển chuẩn và thủ tục để đảm bảo HTTT hoạt động chính xác, chất lượng.
+Quản trị Trang Web (WebMaster): Quản trị Website hay cổng thông tin.
+Phân tích viên (System Analyst): Phân tích và thiết kế hệ thống, soạn thảo/bảo vệ dự án.
+Lập trình viên (Programmer): Lập trình phần mềm ứng dụng, thử nghiệm, bảo trì phần mềm.
+Chuyên gia Viễn thông: Làm việc liên quan tới viễn thông (lắp đặt, đánh giá NCC, theo dõi tốc độ/sẵn sàng dịch vụ, thanh toán).
+Nhân viên Cơ sở Dữ liệu: Theo dõi hoạt động CSDL hàng ngày, vận hành/thao tác lưu trữ và khôi phục dữ liệu.
+Thao tác viên Hệ thống (System Operator): Vận hành hoạt động HTTT, thử nghiệm hệ thống.
+Kỹ thuật viên (Technician): Lắp đặt phần cứng mạng/máy tính, bảo dưỡng, cài đặt phần mềm, theo dõi hệ thống điện, chỉnh sửa thiết bị đầu ra.
+Nhân viên Phân phát Đầu ra: Tổ chức, thực hiện phân phát sản phẩm đầu ra của HTTT.
+Chuyên viên Huấn luyện (Trainner): Thực hiện đào tạo, bồi dưỡng, huấn luyện quản trị/khai thác HTTT.
+Chuyên viên Đồ họa (Graphics Specialist): Thiết kế sản phẩm đồ họa phục vụ hệ thống, giao diện, sản phẩm đầu ra.
+* Người sử dụng cuối (End User): Lao động "cổ cồn trắng", nhân viên văn phòng (dùng nhiều nhất). Phải tham gia vào quá trình phân tích thiết kế.
+
+4. ĐẦU TƯ CHO CNTT
+* Đánh giá hiệu quả: Phân tích Chi phí/Lợi ích (CBA).
+  - Xu hướng mới: Phân tích Giá trị (Value) và Chi phí (Cost) theo nghĩa rộng (không chỉ bằng tiền).
+* Giá trị đầu tư CNTT: ROI, đạt chiến lược, lợi thế cạnh tranh, thông tin quản lý, hạ tầng.
+* Chi phí đầu tư: yếu tố phần cứng, phần mềm, CSDL, truyền thông2.đào tạo, bảo hiểm3.thay đổi quy trình KD, thay đổi tổ chức4. Chi phí rủi ro5. Chi phí sử dụngkhông gian, điện nước… 
+* Khấu hao: Thiết bị CNTT có tỷ lệ hao mòn vô hình rất cao (Định luật Moore: 18 tháng công suất tăng gấp đôi/công nghệ thay đổi).
+* 3 Cấp dự án đầu tư:
+  1. Cấp chức năng (Cá nhân/End-user): PC, Office, Internet.
+  2. Cấp đơn vị/Liên đơn vị: LAN/Intranet, CRM, HRM (Tác động quy trình chức năng).
+  3. Cấp toàn doanh nghiệp: ERP, Hạ tầng CNTT, Chính sách.
+* 3 Hạ tầng cơ bản của hệ thống KT-XH: Vật chất, Năng lượng, Thông tin.
+* 6 Mức độ năng lực nhận thức (Bloom): Biết -> Hiểu -> Ứng dụng -> Phân tích -> Tổng hợp -> Đánh giá (Cao nhất).
+
+5. QUẢN TRỊ TRI THỨC (KM)
+* Phân biệt khái niệm:
+  - Dữ liệu (Data): Sự kiện thô, khách quan (VD: 34 độ C).
+  - Thông tin (Information): Dữ liệu có mối quan hệ/ngữ cảnh (VD: A mua nhiều hơn B).
+  - Tri thức (Knowledge): Chuyên môn, kỹ năng, kinh nghiệm, mô hình tình huống trong não.
+  - Thông minh (Intelligence): Nguyên tắc suy luận, tìm giải pháp tối ưu.
+* Chu trình quản trị tri thức (4 bước):
+  Tạo ra -> Lưu trữ -> Chia sẻ -> Ứng dụng.
+* Mục tiêu: Biến kinh nghiệm cá nhân thành tri thức tổ chức.
+
+6. TÁI THIẾT QUY TRÌNH KINH DOANH (BPR)
+* BPR (Business Process Reengineering): Thay đổi tận gốc rễ, triệt để.
+* Mục tiêu: Cải thiện lớn về chi phí, chất lượng, tốc độ, dịch vụ.
+* 5 Đặc trưng:
+  - Thay đổi tận gốc (Radical change).
+  - Liên chức năng (Cross-functional).
+  - Vai trò của CNTT: Yếu tố sống còn (Critical Enabler).
+  - Yếu tố số 1: CNTT và sự thay đổi tổ chức.
+- Sự thay đổi của tổ chức cũng là yếu tố số 1 cho sự tái thiết
+
+
+CHƯƠNG 20
+AN TOÀN HỆ THỐNG THÔNG TIN VÀ CÁC KHÍA CẠNH ĐẠO ĐỨC XẢ HỘI
+
+1. VẤN ĐỀ AN TOÀN HỆ THỐNG THÔNG TIN (HTTT)
+- Đặc điểm: HTTT là tài nguyên quan trọng, dễ bị tấn công. Kết nối mạng càng lớn, rủi ro càng cao.
+- Nguy cơ nội bộ: Nhân viên (hiện tại hoặc cũ) là thủ phạm chủ yếu trong các vụ lộ bí mật, đánh cắp dữ liệu (do có quyền truy cập hợp lệ).
+- Xu hướng tấn công: Tinh vi, tự động hóa cao, tốc độ phát hiện lỗ hổng nhanh, tấn công vào hạ tầng.
+
+2. CÁC LOẠI TỘI PHẠM VÀ NGUY CƠ
+- Phân loại nguy cơ:
+  + Không chủ định: Lỗi con người (nhập liệu, thiết kế), thiên tai (hỏa hoạn, lũ lụt).
+  + Có chủ định: Đánh cắp, phá hoại, virus.
+- Tội phạm điện tử (E-Crimes): Sử dụng máy tính làm công cụ phạm tội.
+- Tội phạm Internet (Cybercrimes): Sử dụng mạng/Internet tấn công HTTT.
+- Phân biệt Hacker và Cracker:
+  + Hacker (Mũ trắng): Tìm điểm yếu để khắc phục/cảnh báo.
+  + Cracker (Mũ đen): Xâm nhập để phá hoại, trục lợi bất hợp pháp.
+- Social Engineering: Tạo quan hệ với nhân viên để lấy cắp thông tin nhạy cảm.
+- Hình thức tấn công chính:
+  + Tấn công dữ liệu: Nhập sai, xóa, sửa dữ liệu.
+  + Tấn công chương trình: Virus, Trojan Horse, thay đổi mã lệnh.
+
+3. CÔNG NGHỆ VÀ CHIẾN LƯỢC AN TOÀN
+- Công nghệ bảo mật cơ bản: Tường lửa (Firewall), Proxy, Mã hóa (Encryption), VPN, Chữ ký số, Lọc nội dung.
+- Quản trị rủi ro thông tin (3 bước):
+  1. Xác định tài sản và giá trị thông tin.
+  2. Xác định mức độ nhạy cảm (thời gian chịu đựng khi hệ thống ngừng).
+  3. Xây dựng thủ tục an toàn (tài chính, nhân lực).
+- 3 Chiến lược xử lý rủi ro:
+  1. Chấp nhận rủi ro (Accept): Không làm gì, chịu thiệt hại nếu xảy ra.
+  2. Giảm nhẹ rủi ro (Mitigate): Dùng biện pháp bảo vệ để hạn chế tác động.
+  3. Chuyển giao rủi ro (Transfer): Mua bảo hiểm rủi ro.
+
+4. CÁC MỨC KIỂM SOÁT HỆ THỐNG
+- Kiểm soát tổng thể (General Controls): Áp dụng cho toàn bộ tổ chức/mọi ứng dụng.
+  + Bao gồm: Kiểm soát triển khai, phần mềm, phần cứng, an toàn dữ liệu, hành chính.
+  + Kiểm soát hành chính: Phân chia trách nhiệm, ban hành văn bản, giám sát.
+- Kiểm soát ứng dụng (Application Controls): Áp dụng cho một ứng dụng cụ thể.
+  + Kiểm soát đầu vào (Input): Quan trọng nhất, kiểm tra tính chính xác/đầy đủ khi nhập liệu.
+  + Kiểm soát xử lý (Processing): Đảm bảo cập nhật chính xác.
+  + Kiểm soát đầu ra (Output): Đảm bảo kết quả đến đúng người.
+
+5. CHÍNH SÁCH VÀ KẾ HOẠCH
+- Chính sách an toàn thông tin (Security Policy): Văn bản quy định những gì được phép/không được phép. Cần sự tham gia của đại diện các nhóm và hỗ trợ của lãnh đạo.
+- Kế hoạch duy trì hoạt động liên tục (BCP - Business Continuity Planning):
+  + Mục đích: Đảm bảo hoạt động khi có thảm họa/sự cố lớn.
+  + Mức độ ưu tiên khôi phục: Cao nhất (12 giờ) -> Thấp (30 ngày).
+  + Hoạt động: Sao lưu dữ liệu, thiết kế không gian làm việc thay thế, diễn tập.
+- Quản trị dữ liệu điện tử (ERM): Quản lý tài liệu điện tử, đảm bảo tính xác thực và toàn vẹn.
+
+6. ĐẠO ĐỨC VÀ XÃ HỘI (MÔ HÌNH PAPA)
+- 4 Nguyên tắc đạo đức triển khai công nghệ:
+  1. Sự cân đối (Lợi ích > Tổn hại).
+  2. Sự ưng thuận (Người dùng hiểu và chấp nhận rủi ro).
+  3. Lợi lộc và thua thiệt (Phân phối công bằng).
+  4. Tối thiểu hóa rủi ro.
+- Mô hình PAPA (Mason) - 4 vấn đề đạo đức thông tin:
+  + P - Privacy (Tính riêng tư): Kiểm soát thông tin cá nhân, giữ bí mật.
+  + A - Accuracy (Tính chính xác): Ai chịu trách nhiệm khi thông tin sai lệch?
+  + P - Property (Sở hữu): Bản quyền, sở hữu trí tuệ, kênh truyền thông.
+  + A - Accessibility (Quyền truy nhập): Ai được quyền truy cập thông tin gì?
+
+7. TÁC ĐỘNG CỦA CNTT ĐẾN CON NGƯỜI
+- Việc làm: Tạo việc làm mới nhưng gây thất nghiệp cho lao động cũ (thay thế bởi tự động hóa).
+- Tính cách: Phi nhân tính (xem con người như con số), cứng nhắc, thiếu trắc ẩn.
+- Điều kiện làm việc:
+  + Tích cực: Giảm đơn điệu, tăng thú vị.
+  + Tiêu cực: Nhập liệu nhàm chán, áp lực khi bị máy tính giám sát (Computer monitoring).
+- Giám sát bằng máy tính: Gây căng thẳng (stress), xâm phạm quyền riêng tư, giảm phẩm giá người lao động.
