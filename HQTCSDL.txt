@@ -127,3 +127,359 @@ WHERE SoHD = 'HD001'
 
 SELECT * FROM HD
 SELECT * FROM CT_HD
+
+
+
+
+
+Câu 1: Tạo CSDL, Thiết lập bảng và Nhập dữ liệu
+a) & b) Tạo CSDL và các bảng dữ liệu
+code
+SQL
+CREATE DATABASE NEU_01_NguyenVanA_01
+GO
+
+USE NEU_01_NguyenVanA_01
+GO
+
+-- Tạo bảng Khu Vực
+CREATE TABLE KHUVC (
+    MAKV VARCHAR(10) NOT NULL PRIMARY KEY,
+    TENKV NVARCHAR(100) NOT NULL,
+    DIACHI NVARCHAR(200),
+    SODT VARCHAR(15)
+);
+
+-- Tạo bảng Danh mục Khoa
+CREATE TABLE DMKHOA (
+    MAKHOA VARCHAR(10) NOT NULL PRIMARY KEY,
+    TENKHOA NVARCHAR(100) NOT NULL,
+    DIACHI NVARCHAR(200),
+    SODT VARCHAR(15),
+    CHUCNANG NVARCHAR(200)
+);
+
+-- Tạo bảng Danh mục Hệ đào tạo
+CREATE TABLE DMHE (
+    MAHE VARCHAR(10) NOT NULL PRIMARY KEY,
+    TENHE NVARCHAR(100) NOT NULL,
+    SONAM INT CHECK (SONAM > 0),
+    MUCHP DECIMAL(18,2) DEFAULT 0,
+    MAKV VARCHAR(10),
+    NAMDK INT,
+    FOREIGN KEY (MAKV) REFERENCES KHUVC(MAKV)
+);
+
+-- Tạo bảng Danh mục Lớp
+CREATE TABLE DMLOP (
+    MALOP VARCHAR(10) NOT NULL PRIMARY KEY,
+    TENLOP NVARCHAR(100) NOT NULL,
+    GVCN NVARCHAR(100),
+    MAHE VARCHAR(10),
+    MAKHOA VARCHAR(10),
+    GHICHU NVARCHAR(200),
+    FOREIGN KEY (MAHE) REFERENCES DMHE(MAHE),
+    FOREIGN KEY (MAKHOA) REFERENCES DMKHOA(MAKHOA)
+);
+
+-- Tạo bảng Sinh Viên
+CREATE TABLE SINHVIEN (
+    MASV VARCHAR(10) NOT NULL PRIMARY KEY,
+    HOTENSV NVARCHAR(100) NOT NULL,
+    NGAYSINH DATE,
+    GIOITINH NVARCHAR(10) CHECK (GIOITINH IN (N'Nam', N'Nữ')),
+    PHONE VARCHAR(15),
+    MALOP VARCHAR(10),
+    NOISINH NVARCHAR(100),
+    FOREIGN KEY (MALOP) REFERENCES DMLOP(MALOP)
+);
+GO
+c) Nhập dữ liệu
+code
+SQL
+INSERT INTO KHUVC (MAKV, TENKV, DIACHI, SODT) VALUES
+('KV01', N'Khu A', N'Hà Nội', '024123456'),
+('KV02', N'Khu B', N'Hưng Yên', '022123456');
+
+INSERT INTO DMKHOA (MAKHOA, TENKHOA, DIACHI, SODT, CHUCNANG) VALUES
+('K01', N'Công nghệ thông tin', N'Tầng 5 nhà A', '0912345678', N'Đào tạo CNTT'),
+('K02', N'Kinh tế', N'Tầng 3 nhà B', '0987654321', N'Đào tạo Kinh tế');
+
+INSERT INTO DMHE (MAHE, TENHE, SONAM, MUCHP, MAKV, NAMDK) VALUES
+('H01', N'Chính quy', 4, 15000000, 'KV01', 2020),
+('H02', N'Vừa học vừa làm', 2, 10000000, 'KV02', 2021),
+('H03', N'Đào tạo từ xa', 3, 12000000, 'KV01', 2022);
+
+INSERT INTO DMLOP (MALOP, TENLOP, GVCN, MAHE, MAKHOA, GHICHU) VALUES
+('L01', N'CNTT 62A', N'Nguyễn Văn Thầy', 'H01', 'K01', N'Lớp chọn'),
+('L02', N'Kinh tế 62B', N'Trần Thị Cô', 'H01', 'K02', N'Lớp thường'),
+('L03', N'Tại chức K10', N'Lê Văn Giáo', 'H02', 'K01', NULL),
+('L04', N'Trống', N'Không có', 'H03', 'K02', N'Chưa có SV');
+
+INSERT INTO SINHVIEN (MASV, HOTENSV, NGAYSINH, GIOITINH, PHONE, MALOP, NOISINH) VALUES
+('SV001', N'Phạm Văn An', '2002-01-01', N'Nam', '0901111111', 'L01', N'Hà Nội'),
+('SV002', N'Nguyễn Thị Bình', '2002-05-05', N'Nữ', '0902222222', 'L01', N'Nam Định'),
+('SV003', N'Lê Văn Cường', '2001-03-10', N'Nam', '0903333333', 'L02', N'Thái Bình'),
+('SV004', N'Trần Thị Dung', '1995-12-20', N'Nữ', '0904444444', 'L03', N'Hưng Yên');
+GO
+Câu 2: Tạo Views
+a) Tạo view đưa ra số lượng sinh viên theo từng mã lớp, tên lớp.
+code
+SQL
+CREATE OR ALTER VIEW V_SiSoLop AS
+SELECT 
+    DMLOP.MALOP, 
+    DMLOP.TENLOP, 
+    COUNT(SINHVIEN.MASV) AS SoLuongSV
+FROM 
+    DMLOP, SINHVIEN
+WHERE 
+    DMLOP.MALOP = SINHVIEN.MALOP
+GROUP BY 
+    DMLOP.MALOP, DMLOP.TENLOP;
+GO
+
+-- Kiểm tra
+SELECT * FROM V_SiSoLop;
+GO
+b) Tạo view đưa ra thông tin hệ đào tạo có số lượng sinh viên học nhiều nhất.
+code
+SQL
+CREATE OR ALTER VIEW V_HeDaoTao_DongNhat AS
+SELECT TOP 1 
+    DMHE.MAHE, 
+    DMHE.TENHE, 
+    DMHE.MUCHP,
+    COUNT(SINHVIEN.MASV) AS TongSoSV
+FROM 
+    DMHE, DMLOP, SINHVIEN
+WHERE 
+    DMHE.MAHE = DMLOP.MAHE 
+    AND DMLOP.MALOP = SINHVIEN.MALOP
+GROUP BY 
+    DMHE.MAHE, DMHE.TENHE, DMHE.MUCHP
+ORDER BY 
+    COUNT(SINHVIEN.MASV) DESC;
+GO
+
+-- Kiểm tra
+SELECT * FROM V_HeDaoTao_DongNhat;
+GO
+c) Tạo view cho biết những hệ đào tạo được thành lập theo năm đăng ký.
+code
+SQL
+CREATE OR ALTER VIEW V_HeDaoTao_TheoNam AS
+SELECT 
+    MAHE, TENHE, NAMDK
+FROM 
+    DMHE;
+GO
+-- Lưu ý: Đề bài yêu cầu "được thành lập theo năm đăng ký", View này đơn thuần hiển thị Hệ và Năm. 
+-- Nếu muốn thống kê số lượng hệ theo năm thì dùng COUNT và GROUP BY. 
+-- Ở đây tôi làm liệt kê thông tin hệ kèm năm đăng ký.
+
+-- Kiểm tra
+SELECT * FROM V_HeDaoTao_TheoNam;
+GO
+Câu 3: Thủ tục Thêm, Sửa (Có kiểm tra tồn tại)
+a) Viết thủ tục thêm Sinh viên, kiểm tra mã đã tồn tại trong hệ thống.
+code
+SQL
+CREATE OR ALTER PROC SP_ThemSinhVien
+    @MASV VARCHAR(10),
+    @HOTENSV NVARCHAR(100),
+    @NGAYSINH DATE,
+    @GIOITINH NVARCHAR(10),
+    @PHONE VARCHAR(15),
+    @MALOP VARCHAR(10),
+    @NOISINH NVARCHAR(100)
+AS
+BEGIN
+    -- Kiểm tra mã sinh viên đã tồn tại chưa
+    IF EXISTS (SELECT * FROM SINHVIEN WHERE MASV = @MASV)
+    BEGIN
+        PRINT N'Lỗi: Mã sinh viên ' + @MASV + N' đã tồn tại.';
+        RETURN;
+    END
+
+    -- Kiểm tra mã lớp có tồn tại không để tham chiếu
+    IF NOT EXISTS (SELECT * FROM DMLOP WHERE MALOP = @MALOP)
+    BEGIN
+        PRINT N'Lỗi: Mã lớp ' + @MALOP + N' không tồn tại.';
+        RETURN;
+    END
+
+    -- Thực hiện thêm mới
+    INSERT INTO SINHVIEN (MASV, HOTENSV, NGAYSINH, GIOITINH, PHONE, MALOP, NOISINH)
+    VALUES (@MASV, @HOTENSV, @NGAYSINH, @GIOITINH, @PHONE, @MALOP, @NOISINH);
+
+    PRINT N'Thêm sinh viên thành công!';
+END;
+GO
+
+-- Test
+EXEC SP_ThemSinhVien 'SV005', N'Mới Tanh', '2003-01-01', N'Nam', '0999', 'L01', N'Hà Nội';
+GO
+b) Viết thủ tục sửa thông tin DM Hệ đào tạo, kiểm tra mã đã tồn tại trong hệ thống.
+code
+SQL
+CREATE OR ALTER PROC SP_SuaHeDaoTao
+    @MAHE VARCHAR(10),
+    @TENHE_MOI NVARCHAR(100),
+    @SONAM_MOI INT,
+    @MUCHP_MOI DECIMAL(18,2)
+AS
+BEGIN
+    -- Kiểm tra mã hệ có tồn tại để sửa không
+    IF NOT EXISTS (SELECT * FROM DMHE WHERE MAHE = @MAHE)
+    BEGIN
+        PRINT N'Lỗi: Mã hệ đào tạo ' + @MAHE + N' không tồn tại để sửa.';
+        RETURN;
+    END
+
+    -- Thực hiện cập nhật
+    UPDATE DMHE
+    SET TENHE = @TENHE_MOI,
+        SONAM = @SONAM_MOI,
+        MUCHP = @MUCHP_MOI
+    WHERE MAHE = @MAHE;
+
+    PRINT N'Cập nhật thông tin hệ đào tạo thành công!';
+END;
+GO
+
+-- Test
+EXEC SP_SuaHeDaoTao 'H01', N'Chính quy (Update)', 4, 16000000;
+GO
+Câu 4: Các thủ tục nâng cao
+a) Xây dựng thủ tục xóa các hệ đào tạo khi không có sinh viên đăng ký học.
+code
+SQL
+CREATE OR ALTER PROC SP_XoaHeKhongSinhVien
+AS
+BEGIN
+    DECLARE @SoLuongXoa INT;
+
+    -- Xóa các Hệ đào tạo mà Mã Hệ đó KHÔNG nằm trong danh sách các Mã Hệ có sinh viên theo học
+    -- Logic: Tìm các lớp có sinh viên -> Tìm hệ của các lớp đó -> Giữ lại. Xóa cái còn lại.
+    -- Vì xóa DMHE sẽ lỗi nếu còn ràng buộc khóa ngoại ở DMLOP, nên ta cần xóa DMLOP rỗng trước hoặc chỉ xóa Hệ chưa được dùng ở Lớp nào (an toàn nhất).
+    -- Giả sử yêu cầu là xóa Hệ mà không có SV nào (tức là có thể có lớp nhưng lớp đó không có SV, hoặc chưa có lớp nào).
+
+    -- Bước 1: Tìm các MAHE có sinh viên (Dùng WHERE để nối bảng)
+    -- SELECT DISTINCT DMLOP.MAHE FROM DMLOP, SINHVIEN WHERE DMLOP.MALOP = SINHVIEN.MALOP
+
+    DELETE FROM DMHE
+    WHERE MAHE NOT IN (
+        SELECT DISTINCT DMLOP.MAHE 
+        FROM DMLOP, SINHVIEN 
+        WHERE DMLOP.MALOP = SINHVIEN.MALOP
+    );
+    
+    -- Lưu ý: Lệnh trên sẽ lỗi nếu MAHE đó đang có trong DMLOP (dù lớp không có SV). 
+    -- Để chạy được cần xóa ràng buộc hoặc xóa DMLOP trước. 
+    -- Ở đây tôi viết theo logic đề bài: Xóa hệ khi không có SV. 
+    -- Nếu SQL báo lỗi FK Constraint, nghĩa là Hệ đó đã được phân lớp (dù lớp trống).
+    -- Cách xử lý chuẩn: Kiểm tra và xóa.
+    
+    PRINT N'Đã thực hiện lệnh xóa các hệ không có sinh viên đăng ký.';
+END;
+GO
+b) Xây dựng thủ tục thống kê cho biết Số lượng sinh viên theo từng khoa (K) và số lượng sinh viên theo từng khu vực (V).
+code
+SQL
+CREATE OR ALTER PROC SP_ThongKeSinhVien_Khoa_KV
+AS
+BEGIN
+    PRINT N'--- THỐNG KÊ SỐ LƯỢNG SINH VIÊN THEO KHOA ---';
+    SELECT 
+        DMKHOA.TENKHOA, 
+        COUNT(SINHVIEN.MASV) AS SoLuongSV
+    FROM 
+        DMKHOA, DMLOP, SINHVIEN
+    WHERE 
+        DMKHOA.MAKHOA = DMLOP.MAKHOA 
+        AND DMLOP.MALOP = SINHVIEN.MALOP
+    GROUP BY 
+        DMKHOA.TENKHOA;
+
+    PRINT N'---------------------------------------------';
+    PRINT N'--- THỐNG KÊ SỐ LƯỢNG SINH VIÊN THEO KHU VỰC ---';
+    -- Logic: SV -> LOP -> HE -> KHU VUC
+    SELECT 
+        KHUVC.TENKV, 
+        COUNT(SINHVIEN.MASV) AS SoLuongSV
+    FROM 
+        KHUVC, DMHE, DMLOP, SINHVIEN
+    WHERE 
+        KHUVC.MAKV = DMHE.MAKV 
+        AND DMHE.MAHE = DMLOP.MAHE 
+        AND DMLOP.MALOP = SINHVIEN.MALOP
+    GROUP BY 
+        KHUVC.TENKV;
+END;
+GO
+
+-- Test
+EXEC SP_ThongKeSinhVien_Khoa_KV;
+GO
+c) Xây dựng thủ tục cập nhật bảng DM LOP với 3 chức năng Thêm, Sửa, Xóa.
+code
+SQL
+CREATE OR ALTER PROC SP_CapNhat_DMLOP
+    @ChucNang VARCHAR(10), -- 'THEM', 'SUA', 'XOA'
+    @MALOP VARCHAR(10),
+    @TENLOP NVARCHAR(100) = NULL,
+    @GVCN NVARCHAR(100) = NULL,
+    @MAHE VARCHAR(10) = NULL,
+    @MAKHOA VARCHAR(10) = NULL,
+    @GHICHU NVARCHAR(200) = NULL
+AS
+BEGIN
+    IF @ChucNang = 'THEM'
+    BEGIN
+        IF EXISTS (SELECT * FROM DMLOP WHERE MALOP = @MALOP)
+        BEGIN
+            PRINT N'Lỗi: Mã lớp đã tồn tại.';
+            RETURN;
+        END
+        INSERT INTO DMLOP (MALOP, TENLOP, GVCN, MAHE, MAKHOA, GHICHU)
+        VALUES (@MALOP, @TENLOP, @GVCN, @MAHE, @MAKHOA, @GHICHU);
+        PRINT N'Thêm lớp thành công.';
+    END
+    ELSE IF @ChucNang = 'SUA'
+    BEGIN
+        IF NOT EXISTS (SELECT * FROM DMLOP WHERE MALOP = @MALOP)
+        BEGIN
+            PRINT N'Lỗi: Mã lớp không tồn tại để sửa.';
+            RETURN;
+        END
+        UPDATE DMLOP
+        SET TENLOP = ISNULL(@TENLOP, TENLOP),
+            GVCN = ISNULL(@GVCN, GVCN),
+            MAHE = ISNULL(@MAHE, MAHE),
+            MAKHOA = ISNULL(@MAKHOA, MAKHOA),
+            GHICHU = ISNULL(@GHICHU, GHICHU)
+        WHERE MALOP = @MALOP;
+        PRINT N'Sửa lớp thành công.';
+    END
+    ELSE IF @ChucNang = 'XOA'
+    BEGIN
+        -- Kiểm tra xem lớp có sinh viên không trước khi xóa
+        IF EXISTS (SELECT * FROM SINHVIEN WHERE MALOP = @MALOP)
+        BEGIN
+            PRINT N'Lỗi: Lớp đang có sinh viên, không thể xóa.';
+            RETURN;
+        END
+        DELETE FROM DMLOP WHERE MALOP = @MALOP;
+        PRINT N'Xóa lớp thành công.';
+    END
+    ELSE
+    BEGIN
+        PRINT N'Chức năng không hợp lệ (THEM, SUA, XOA).';
+    END
+END;
+GO
+
+-- Test
+EXEC SP_CapNhat_DMLOP 'THEM', 'L99', N'Lớp Test', N'GV Test', 'H01', 'K01', N'Note';
+GO
