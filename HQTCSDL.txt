@@ -1,0 +1,129 @@
+CREATE DATABASE SQL02_NGUYENTHANHDAT_QLHD
+USE  SQL02_NGUYENTHANHDAT_QLHD
+
+
+CREATE TABLE HH (
+    MaHH VARCHAR(10) NOT NULL PRIMARY KEY,
+    TenHH NVARCHAR(100) NOT NULL,
+    DVT NVARCHAR(20),
+    Dongia INT CHECK (Dongia >= 0),
+    TrangThai INT CHECK (TrangThai IN (0, 1)) 
+);
+
+CREATE TABLE KH (
+    MaKH VARCHAR(10) NOT NULL PRIMARY KEY,
+    Hoten NVARCHAR(100) NOT NULL,
+    Diachi NVARCHAR(200),
+    SoDT VARCHAR(15),
+    Hinhthuc INT CHECK (Hinhthuc IN (0, 1)) 
+);
+
+CREATE TABLE HD (
+    SoHD VARCHAR(10) PRIMARY KEY,
+    Ngaylap DATE NOT NULL,
+    Ngaygiao DATE,
+    Tongcong DECIMAL(18, 2) DEFAULT 0 CHECK (Tongcong >= 0),
+    MaKH VARCHAR(10),
+    Nguoilap NVARCHAR(100),
+    FOREIGN KEY (MaKH) REFERENCES KH(MaKH)
+);
+
+CREATE TABLE CT_HD (
+    SoHD VARCHAR(10),
+    MaHH VARCHAR(10),
+    Soluong INT CHECK (Soluong > 0),
+    Thanhtien INT DEFAULT 0 CHECK (Thanhtien >= 0),
+    PRIMARY KEY (SoHD, MaHH),
+    FOREIGN KEY (SoHD) REFERENCES HD(SoHD),
+    FOREIGN KEY (MaHH) REFERENCES HH(MaHH)
+);
+
+INSERT INTO HH (MaHH, TenHH, DVT, Dongia, TrangThai) VALUES
+('HH001', N'Tivi Samsung 4K', N'Cái', 15000000.00, 1),
+('HH002', N'Tủ lạnh Panasonic', N'Cái', 8500000.00, 1),
+('HH003', N'Máy giặt LG', N'Cái', 6000000.00, 0),
+('HH004', N'Bếp từ Hafele', N'Cái', 4500000.00, 1);
+
+INSERT INTO KH (MaKH, Hoten, Diachi, SoDT, Hinhthuc) VALUES
+('KH001', N'Nguyễn Văn A', N'Hà Nội', '0912345678', 1), 
+('KH002', N'Trần Thị B', N'TP Hồ Chí Minh', '0987654321', 0), 
+('KH003', N'Lê Văn C', N'Đà Nẵng', '0901112223', 1); 
+
+INSERT INTO HD (SoHD, Ngaylap, Ngaygiao, MaKH, Nguoilap) VALUES
+('HD001', '2025-10-01', '2025-10-03', 'KH001', N'NV1'),
+('HD002', '2025-10-05', '2025-10-06', 'KH002', N'NV2'),
+('HD003', '2025-10-10', NULL, 'KH001', N'NV1');
+
+INSERT INTO CT_HD (SoHD, MaHH, Soluong, Thanhtien) VALUES
+('HD001', 'HH001', 2, 0), 
+('HD001', 'HH002', 1, 0), 
+('HD002', 'HH004', 3, 0), 
+('HD003', 'HH001', 5, 0); 
+
+SELECT * FROM HH;
+SELECT * FROM KH;
+SELECT * FROM HD;
+SELECT * FROM CT_HD;
+EXEC SP_HELP HH;
+exec sp_help KH;
+exec sp_help HD;
+exec sp_help CT_HD;
+
+CREATE OR ALTER VIEW V_TONGHOP_HH
+AS 
+SELECT HH.TenHH, KH.Hoten, SUM(Soluong*Dongia) as thanhtien FROM HH, KH, CT_HD, HD
+WHERE KH.MaKH = HD.MaKH AND HH.MaHH = CT_HD.MaHH AND HD.SoHD  = CT_HD.SoHD
+GROUP BY HH.TenHH, KH.Hoten, thanhtien
+
+SELECT * FROM V_TONGHOP_HH
+
+UPDATE CT_HD
+    SET CT_HD.Thanhtien = Soluong * HH.Dongia
+    FROM CT_HD, HH
+	WHERE HH.MaHH = CT_HD.MaHH
+
+select * from CT_HD
+
+CREATE OR ALTER PROC SP_TinhTongGiaTriHoaDon
+    @SoHD VARCHAR(10),
+    @MaKH VARCHAR(10) 
+AS
+BEGIN
+    DECLARE @Tong INT;
+
+    SELECT @Tong = SUM(Thanhtien)
+    FROM CT_HD
+    WHERE SoHD = @SoHD;
+
+    UPDATE HD
+    SET Tongcong = @Tong
+    WHERE SoHD = @SoHD AND MaKH = @MaKH;
+END;
+
+EXEC SP_TinhTongGiaTriHoaDon 'HD001', 'KH001';
+
+
+SELECT
+    MaKH, Hoten, Diachi, SoDT
+FROM
+    KH
+WHERE
+    Hinhthuc = 1;
+
+CREATE OR ALTER TRIGGER Trg_TinhThanhtien_CTHD
+ON CT_HD
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    UPDATE CT_HD
+    SET CT_HD.Thanhtien = inserted.Soluong * HH.Dongia
+    FROM CT_HD, HH, inserted
+	WHERE CT_HD.SoHD = inserted.SoHD AND CT_HD.MaHH = inserted.MaHH AND HH.MaHH = CT_HD.MaHH
+END;
+
+UPDATE CT_HD 
+SET CT_HD.Soluong = 31
+WHERE SoHD = 'HD001'
+
+SELECT * FROM HD
+SELECT * FROM CT_HD
