@@ -949,3 +949,7 @@ sau: a = {0.9/T + 0.7/L + 0.4/H + 0.6/V + 0.8/S}.
 • Điểm khác biệt so với tập rõ: Phép lấy phần bù không thỏa mãn tính chất A∪-A /=U và A∩-A/=∅.
 • Tổng đại số (Algebraic Sum): A+B có hàm thuộc: μA+B(x)=μA(x)+μB(x)−μA(x)⋅μB(x).
 • Tích đại số (Algebraic Product): A⋅B có hàm thuộc: μA⋅B(x)=μA(x)⋅μB(x).
+
+Khai phá dữ liệu (Data Mining): Tìm ra các mối liên hệ, quy luật, xu hướng trong dữ liệu mà con người khó có thể phát hiện ra bằng các phương pháp thông thường.
+Các bài toán khai phá dữ liệu: Khai phá tập mục thường xuyên (Frequent Itemset Mining), khai phá luật kết hợp (Association Rule Mining), phân lớp (Classification), hồi quy (Regression), phân cụm (Clustering).
+Giải thuật di truyền (GA - Genetic Algorithm): Phương pháp tìm kiếm và tối ưu hóa dựa trên nguyên lý chọn lọc tự nhiên và di truyền học của sinh học.
