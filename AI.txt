@@ -1,31 +1,33 @@
-Vào khoảng năm 1930: Người nghĩ ra TTNT là Alan Turing 
+Chương 1: Tổng quan về TTNT
+
+1930: Người nghĩ ra TTNT là Alan Turing 
  Năm 1956: J.Mc Carthy, M. Minsky, A. Newell, Shannon. 
 Simon,… đưa ra khái niêm “trí tuệ nhân tạo” 
- Năm 1960: Tại Đại học MIT (Massachussets Institure of 
+1960: Tại Đại học MIT (Massachussets Institure of 
 Technology) ra đời ngôn ngữ lập trình LISP (ngôn ngữ đầu tiên 
 dùng cho TTNT) 
- Năm 1961: Thuật ngữ “trí tuệ nhân tạo” lần đầu tiên được dùng 
+1961: Thuật ngữ “trí tuệ nhân tạo” lần đầu tiên được dùng 
 tại đại học MIT. Thập kỷ 1960 là thời kỳ lạc quan của TTNT: Các 
 chương trình trò chơi, chứng minh tự động, tính tích phân bất 
 định, điều khiển robot,… 
- Đầu những năm 1970 (từ 1970 -> 1971): TTNT bế tắc do hạn 
+1970 (từ 1970 -> 1971): TTNT bế tắc do hạn 
 chế về bộ nhớ và tốc độ tính toán của máy tính 
- Từ năm 1972 -> 1980: TTNT tiếp tục phát triển như: ra đời vấn 
+1972 -> 1980: TTNT tiếp tục phát triển như: ra đời vấn 
 đề xử lý ngôn ngữ tự nhiên, biểu diễn tri thức và giải quyết vấn 
 đề; ngôn ngữ lập trình LISP, Prolog, các hệ chuyên gia,… 
- Những năm 1980: TTNT được ứng dụng trong các thiết bị dân 
+1980: TTNT được ứng dụng trong các thiết bị dân 
 dụng: máy giặt, máy ảnh,....; ra đời hệ thống nhận dạng, xử lý 
 ảnh, xử lý tiếng nói,… 
- Từ năm 1990 đến nay: TTNT tập trung nghiên cứu về: cơ chế 
+1990 đến nay: TTNT tập trung nghiên cứu về: cơ chế 
 suy diễn, TTNT phân tạo, các mô hình tác tử,...
 
 Định nghĩa 1: Theo Alan Turing: Trí tuệ là những gì có 
 thể được đánh giá thông qua các trắc nghiệm thông 
 minh 
- Định nghĩa 2: Theo từ điển Webster: Trí tuệ là sự phản 
+Định nghĩa 2: Theo từ điển Webster: Trí tuệ là sự phản 
 ứng 1 cách thích hợp trước những tình huống mới thông 
 qua việc hiệu chỉnh hành vi 1 cách thích đáng 
- Định nghĩa 3: Theo các nhà tâm lý học: Trí tuệ con người 
+Định nghĩa 3: Theo các nhà tâm lý học: Trí tuệ con người 
 được tiến hành thông qua 4 thao tác cơ bản: 
 • Thao tác 1: Xác định đích cần đạt tới 
 • Thao tác 2: Xác định các sự kiện, các luật, các quy tắc luật có 
@@ -48,17 +50,21 @@ tượng trưng, danh sách
 • Khả năng xử lý các thông tin không đầy đủ, không chính 
 xác
 
- Trí tuệ nhân tạo (AI - Artificial Intelligence): Là một 
+Trí tuệ nhân tạo (AI - Artificial Intelligence): Là một 
 ngành của khoa học máy tính liên quan đến việc 
 tự động hóa các hành vi thông minh 
-• TTNT: Phải được đặt trên những nguyên lý, lý 
+TTNT: Phải được đặt trên những nguyên lý, lý 
 thuyết vững chắc, có khả năng ứng dụng được  
  Những nguyên lý này bao gồm:  
 • Các cấu trúc dữ liệu để biểu diễn tri thức 
 • Các thuật toán để áp dụng cho những tri thức đó 
 • Các ngôn ngữ và kỹ thuật lập trình để cài đặt
 
-CHƯƠNG 2:
+
+CHƯƠNG 2:TÁC TỬ THÔNG MINH 
+Khái niệm: Một tác tử (agent) là bất cứ thứ gì cảm nhận môi 
+trường quanh nó thông qua các cảm biến và tác động trở lại môi 
+trường thông qua bộ kích hoạt
 Khi thiết kế một tác tử, cần phải xem xét 4 yếu tố:  
  Performance measure: hàm đo hiệu năng  
  Enviroment: môi trường  
@@ -77,6 +83,7 @@ tử hoạt động?
 được phân biệt một cách rõ ràng không? 
  Là Đơn tác tử hay đa tác tử: Trong môi trường, có một 
 hay nhiều tác tử cùng hoạt động?
+
 Phân loại: 
 Phản xạ đơn giản: chỉ phản ứng → “hành động ngay”.
 
@@ -88,8 +95,28 @@ Hướng lợi ích: chọn hành động tốt nhất → “tối ưu hóa k�
 
 Học được: tự cải thiện → “ngày càng thông minh hơn”.
 
-CHƯƠNG 3:
+
+CHƯƠNG 3:GIẢI QUYẾT VẤN ĐỀ BẰNG TÌM KIẾM 
+ GQVĐ là 1 quá trình với các yếu tố 
+ Cần gì?              => What? 
+ Có gì, biết gì? 
+ Cơ chế               => How? 
+ Ràng buộc 
+Ví dụ: Bài toán sinh sản của thỏ 
+ Cần: Số thỏ sau 12 tháng 
+ Biết: Ban đầu có 1 đôi thỏ 
+ Cơ chế: Sinh sản của thỏ 
+ Ràng buộc: Dãy Fibonaci
+
+ GQVĐ là 1 quá trình tìm lời giải thông qua các cách 
+ Phương pháp tính toán nhờ 1 giải thuật 
+ Tìm kiếm heuristic 
+ Dùng phương pháp THỬ và SAI 
+ Dùng phương pháp NHÁNH - CẬN 
+
 Cách GQVĐ của con người 
+ Mô hình xử lý thông tin gồm 3 thành phần: Hệ thống cảm 
+nhận,  hệ thống nhận thức, hệ thống hành động 
  Khái niệm: GQVĐ là quá trình riêng của xử lý thông tin, đó là 
 cách xuất phát từ 1 tình huống ban đầu nào đó để đi tới đích mong 
 muốn. Tuy nhiên, các phản xạ tức thời, các thao tác đơn thuần thì 
@@ -118,16 +145,17 @@ Ví dụ: Bài toán tính tích phân bất định.
 các ký hiệu làm cho bài toán dễ hiểu và dễ giải hơn. 
 Ví dụ: Bài toán sắp xếp.
 
- Định nghĩa: là quá trình xuất phát từ dạng ban đầu và 
+ Định nghĩa Vấn đề: là quá trình xuất phát từ dạng ban đầu và 
 tìm kiếm trong KGBT dãy các phép toán hay các hành 
 động cho phép để đạt được đích mong muốn 
- Phân loại 
- Vấn đề phát biểu chỉnh -> thỏa mãn các điều kiện: 
+
+Phân loại 
+Vấn đề phát biểu chỉnh -> thỏa mãn các điều kiện: 
  Đích được đặt ra 
  Biết trạng thái ban đầu 
  Xác định được các thao tác 
  Có thể nhận biết được 1 lời giải bài toán (đoán hoặc giải) 
- Vấn đề phát biểu không chỉnh -> thỏa mãn các điều kiện: 
+Vấn đề phát biểu không chỉnh -> thỏa mãn các điều kiện: 
  Đích đặt ra không tường minh 
  KGBT rời rạc 
  KGBT vô hạn 
@@ -141,34 +169,29 @@ là 1 quá trình hành động tư duy gồm 4 thao tác
  Thao tác 3: Rút gọn để GQVĐ đỡ phức tạp hơn 
  Thao tác 4: Sử dụng các cơ chế suy diễn phù hợp để đạt được 
 đích mong muốn 
- GQVĐ là truyền thống 
+
+GQVĐ là truyền thống 
  Chương trình = CTDL + GT (truyền thống) 
  Chương trình = Tri thức + Suy diễn (TTNT) 
  GQVĐ là các chiến lược điều khiển, tìm kiếm 
  Xử lý cạnh tranh 
  Kỹ thuật heuristic: Quay lui, hàm đánh giá
+Ví dụ: Hệ thống GQVĐ vừa có CSDL và CSTT: Hệ MYCIN 
 
- Tìm dạng biểu diễn thích hợp của các trạng thái 
- Xác định: Trạng thái ban đầu, tập các toán tử, tập T các 
-trạng thái kết thúc 
- Giả sử u là một trạng thái nào đó và R là một toán tử biến 
-đổi u thành v => Trạng thái v được gọi là trạng thái kề u 
-(hoặc v được sinh ra từ u bởi toán tử R) và quá trình áp 
-dụng các toán tử để sinh ra các trạng thái kề u gọi là phát 
-triển trạng thái u 
-Như vậy, khi biểu diễn một vấn đề thông qua các trạng thái 
-và các toán tử thì việc tìm lời giải của vấn đề được quy về 
-việc tìm đường đi từ trạng thái ban đầu tới một trạng thái kết 
-thúc nào đó
+CÁC PHƯƠNG PHÁP BIỂU DIỄN VẤN ĐỀ
+ Biểu diễn vấn đề bằng KGTT (State Space) 
+ Phương pháp quy bài toán thành các bài toán con 
+ Biểu diễn bằng lôgíc hình thức
+ Biểu diễn bằng đồ thị
 
 Phân loại chiến lược tìm kiếm 
- Tìm kiếm mù 
+Tìm kiếm mù 
  Không có sự hướng dẫn nào cho việc tìm kiếm 
  Phát triển các trạng thái ban đầu cho tới khi gặp một trạng 
 thái đích nào đó  
  Có 2 kỹ thuật: Tìm kiếm theo chiều rộng và tìm kiếm theo 
 chiều sâu 
- Tìm kiếm heuristic (kinh nghiệm, mẹo) 
+Tìm kiếm heuristic (kinh nghiệm, mẹo) 
  Sử dụng tri thức đánh giá về các trạng thái để hướng dẫn 
 việc tìm kiếm 
  Trong quá trình phát triển các trạng thái, ta chọn trạng thái 
@@ -179,14 +202,43 @@ Cây tìm kiếm
  Thể hiện quá trình tìm kiếm 
  Cây tìm kiếm là cây mà các đỉnh được gắn bởi các trạng thái của 
 KGTT: Gốc của cây tìm kiếm là trạng thái ban đầu, nếu một đỉnh ứng 
-với trạng thái u thì các đỉnh con của nó ứng với các trạng thái v kề u -> Mỗi chiến lược tìm kiếm có 1 cây tìm kiếm tương
+với trạng thái u thì các đỉnh con của nó ứng với các trạng thái v kề u -> Mỗi chiến lược tìm kiếm có 1 cây tìm kiếm tương ứng
+
+Tìm kiếm theo chiều rộng 
+PROCEDURE BREADTH_FIRST_SEARCH; 
+BEGIN 
+1. KHỞI TẠO DANH SÁCH L CHỈ CHỨA TRẠNG THÁI BAN ĐẦU; 
+2. LOOP DO 
+ 2.1 IF L RỖNG THEN 
+  {THÔNG BÁO TÌM KIẾM THẤT BẠI; STOP}; 
+ 2.2 LOẠI TRẠNG THÁI U Ở ĐẦU DANH SÁCH L; 
+ 2.3 IF U LÀ TRẠNG THÁI KẾT THÚC THEN 
+  {THÔNG BÁO TÌM KIẾM THÀNH CÔNG; STOP}; 
+ 2.4 FOR MỖI TRẠNG THÁI V KỀ U DO { 
+ĐẶT V VÀO CUỐI DANH SÁCH L; 
+FATHER(V) <- U} 
+END;
+
+Tìm kiếm theo chiều sâu
+PROCEDURE DEDTH_FIRST_SEARCH; 
+BEGIN 
+1. KHỞI TẠO DANH SÁCH L CHỈ CHỨA TRẠNG THÁI BAN ĐẦU; 
+2. LOOP DO 
+ 2.1 IF L RỖNG THEN 
+  {THÔNG BÁO TÌM KIẾM THẤT BẠI; STOP}; 
+ 2.2 LOẠI TRẠNG THÁI U Ở ĐẦU DANH SÁCH L; 
+ 2.3 IF U LÀ TRẠNG THÁI KẾT THÚC THEN 
+  {THÔNG BÁO TÌM KIẾM THÀNH CÔNG; STOP}; 
+ 2.4 FOR MỖI TRẠNG THÁI V KỀ U DO { 
+Đặt v vào ĐẦU danh sách L; 
+FATHER(V)  U} 
+END; 
 
 Tìm kiếm trên đồ thị VÀ/HOẶC 
- Thuật toán (tiếp…) 
 Function Solvable(u); 
 Begin 
  1. if u là đỉnh kết thúc then 
-  {Solvable  true; stop}; 
+  {Solvable <- true; stop}; 
  2. if u không là đỉnh kết thúc và không có đỉnh kề then 
   {Solvable(u)  false; stop}; 
  3. for mỗi toán tử R áp dụng được tại u do 
@@ -200,6 +252,16 @@ Begin
  4. Solvable(u)  false; 
 End;
 
+ Hàm đánh giá và tìm kiếm heuristic 
+ Hàm đánh giá: Sử dụng kinh nghiệm, tri thức của chúng ta về vấn đề 
+để đánh giá các trạng thái của vấn đề. Với mỗi trạng thái u, ta sẽ xác 
+định một giá trị số h(u), số này đánh giá “sự gần đích” của trạng thái u => 
+Hàm h(u) gọi là hàm đánh giá 
+ Tìm kiếm heuristic: Trong quá trình tìm kiếm, tại mỗi bước ta sẽ chọn 
+trạng thái để phát triển là trạng thái có giá trị hàm đánh giá nhỏ nhất, 
+trạng thái này được xem là trạng thái có nhiều hứa hẹn nhất để dẫn tới 
+đích. Các kỹ thuật tìm kiếm sử dụng hàm đánh giá để hướng dẫn sự tìm 
+kiếm được gọi chung là các kỹ thuật tìm kiếm kinh nghiệm (TK heuristic) 
  Tìm kiếm tốt nhất - đầu tiên 
  Ý tưởng: Tìm kiếm tốt nhất đầu tiên = Tìm kiếm theo bề rộng + Hàm đánh 
 giá. Ở mỗi bước, ta chọn đỉnh để phát triển là đỉnh tốt nhất được xác định 
@@ -254,8 +316,6 @@ ban đầu tới trạng thái đích?
  Hàm đánh giá đường đi ngắn nhất qua u: Giả sử u là 1 
 trạng thái đạt tới (có đường đi từ trạng thái ban đầu u0 tới u) => Ta 
 xác định 2 hàm đánh giá: 
-
- 
  g(u) là đánh giá độ dài đường đi ngắn nhất từ u0 tới u (đường đi từ 
 u0 tới u không phải là trạng thái đích được gọi là đường đi một 
 phần, đường đi đầy đủ là đường đi từ u0 tới trạng thái đích) 
@@ -263,7 +323,7 @@ h(u) là đánh giá độ dài đường đi ngắn nhất từ u tới trạng
 => h(u) gọi là chấp nhận được nếu với mọi u sao cho h(u) <= độ 
 dài đường đi ngắn nhất thực tế từ u tới trạng thái đích. 
  Hàm đánh giá đường đi ngắn nhất qua u: f(u) = g(u) + h(u) 
-87 
+
  Thuật toán A* 
  Ý tưởng: Thuật toán A* = Kỹ thuật tìm kiếm tốt nhất đầu tiên + hàm đánh giá 
 f(u). Ở mỗi bước chọn đỉnh để phát triển là đỉnh tốt nhất được xác định bởi hàm 
@@ -287,7 +347,143 @@ f(v) := g(v) + h(v);
 trạng thái có giá trị của hàm f nhỏ nhất ở đầu danh sách; 
 End;
 
-CHƯƠNG 5:
+ Thuật toán nhánh – cận 
+ Ý tưởng: Thuật toán nhánh – cận = Kỹ thuật tìm kiếm leo đồi + 
+hàm đánh giá f(u). Ở mỗi bước khi phát triển trạng thái u, ta chọn 
+trạng thái tốt nhất v (f(v) nhỏ nhất) trong số các trạng thái kề u để 
+phát triển. Đi xuống cho tới khi gặp trạng thái v là thạng thái đích 
+hoặc trạng thái v không có đỉnh kề hoặc trạng thái v mà f(v) lớn 
+hơn độ dài đường đi tối ưu tạm thời, tức là đường đi đầy đủ ngắn 
+nhất trong số các đường đi đầy đủ đã tìm được. Trong các 
+trường hợp này, ta không phát triển đỉnh v nữa, nghĩa là: ta cắt đi 
+các nhánh cây xuất phát từ v, và quay lên cha của v để tiếp tục đi 
+xuống trạng thái tốt nhất trong các trạng thái còn lại chưa được 
+phát triển
+
+CHƯƠNG 4 LÔGÍC MỆNH ĐỀ VÀ CHỨNG MINH TỰ ĐỘNG
+ Mệnh đề (Statement): là phát biểu khẳng định tính ĐÚNG hoặc SAI 
+(True/False) 
+ Câu (Sentence): Câu được cấu tạo từ những ký hiệu sơ cấp theo các luật 
+sau: Tất cả các ký hiệu mệnh đề, ký hiệu chân lý,…đều là câu. Các câu hợp lệ 
+được gọi là các công thức 
+ Biểu thức (Expression): Một biểu thức là một câu hay công thức của phép 
+toán mệnh đề khi và chỉ khi nó được tạo từ những ký hiệu hợp lệ thông qua 
+một dãy các luật 
+ Tri thức: Tri thức được mô tả dưới dạng các câu trong ngôn ngữ biểu diễn tri 
+thức gồm 2 thành phần: Cú pháp và Ngữ nghĩa 
+ Cú pháp: Các
+ký hiệu và các quy tắc liên kết các ký hiệu (các luật cú pháp) 
+để tạo thành các câu (công thức) trong ngôn ngữ 
+ Ngữ nghĩa: Xác định ý nghĩa của các câu của thế giới thực 
+ Cần cơ chế suy diễn: Ngôn ngữ biểu diễn tri thức cần được cung cấp cơ 
+chế suy diễn. Một luật suy diễn cho phép suy ra một công thức từ một tập 
+các công thức khác 
+ Ngôn ngữ biểu diễn tri thức 
+Ngôn ngữ biểu diễn tri thức = Cú pháp + Ngữ nghĩa + Cơ chế suy diễn 
+ Ngữ nghĩa: Xác định ý nghĩa của các công thức, ý nghĩa của các 
+phép kết nối logic được biểu diễn qua bảng chân lý
+Cú pháp: Tập các ký hiệu và tập các luật xây dựng công thức
+
+Dạng chuẩn Horn (câu Horn) 
+ Mọi công thức đều có thể đưa về dạng chuẩn hội, tức là hội của 
+các tuyển, mỗi câu tuyển có dạng: -P1 V... V -Pm V Q1 V... V Qn; 
+trong đó Pi, Qi là các ký hiệu mệnh đề (literal dương) => Câu này 
+tương đương với câu: P1 X...  X Pm => Q1 v... V Qn 
+ Dạng câu này được gọi là câu Kowalski (do nhà logic Kowalski 
+đưa ra năm 1971): 
+ Khi n <=1, tức là câu tuyển chỉ chứa nhiều nhất một literal 
+dương, ta có 1 dạng câu quan trọng gọi là câu Horn (tên nhà 
+logic Alfred Horn, năm 1951) 
+ Nếu m>0, n=1, câu Horn có dạng: P1X..... XPm => Q; trong đó Pi, 
+Q là các literal dương, các Pi được gọi là các điều kiện (giả 
+thiết), còn Q được gọi là kết luận (hệ quả). Các câu Horn dạng 
+này còn được gọi là các luật if-then và được biểu diễn như sau: 
+If P1 and....and Pm then Q 
+ Khi m=0, n=1 câu Horn trở thành câu đơn Q, hay sự kiện Q 
+ Nếu m>0, n=0 câu Horn trở thành dạng: -P1V...V -Pm 
+
+(A => B) = (-A V B)
+A V (B X C) = (A V B) X (A V C)
+A <=> B = (A => B) X (B => A)
+Luật ModusPones: (A => B và A) = B
+Luật ModusTolles: (A=>B và -B) = -A
+Luật loại bỏ hội: A1 X A2 X An =  Ai
+Luật đưa vào hội: A1,A2,An = A1 X A2 X An
+Luật đưa vào tuyển: A5 = A1 V A2 V A5
+Luật phân giải: (A V B và -B V C) = A V C
+Luật phân giải câu Horn: (A X S => Q và B => S) = A X B => Q
+                         (A X S => Q và S) = A => Q
+
+THUẬT TOÁN TÁCH CHUYỂN VẾ WONG.H:
+B1: Tập GT, Tập KL, luật => GT1, GT2,.., R1, R2,.. -> KL1,KL2,.. (GT, KL chuẩn hoặc)
+B2: chuyển vế -> phủ định
+B3: Nếu GT có V hay KL có X thì tách thành 2
+B4: KT VT X VP /= rỗng (dpcm)
+B5: vđ đc CM khi mọi dẫn xuất được CM
+
+- Vào: Các biểu thức giả thiết GT1, GT2, ...,GTn và các biểu thức kết luận KL1, KL2,...,KLm. - Ra: Chứng minh: GT1, GT2,...,GTn -> KL1, KL2,...,KLm: True. 
+ // Thông báo “Thành công!” nếu GT1 X GT2 X...X GTn -> KL1 V KL2 V... V KLm - Nội dung:  
+{ for i=1 to n do  
+ { TRANS(GTi);   //đưa từng GT về dạng CHUẨN HOẶC  
+    VT  <- {GTi} V VT; }  //đưa vào vế trái 
+for i=1 to m do  
+ { TRANS(KLi);   //đưa từng KL về dạng CHUẨN HOẶC 
+  VP <- {KLi} V VP; }  //đưa vào vế phải 
+P <- {(VT, VP)};     //P: tập chứa các bài toán (VT, VP) 
+While P ≠ rỗng do  
+ { (VT, VP) <- get (P);  //Lấy bài toán trong P 
+ if VT  VP =  then  
+  { CHUYEN(VT, VP); 
+  if VT X VP = RỖNG then  
+   if  not TACH(VT, VP) then Exit (“Không thành công!”); } 
+ }     //P: các bài toán con qua phép tach (VT,VP) mà có 
+Write(“Thành công!”);  
+
+• VT, VP: Các biến chỉ Vế trái, Vế phải của biểu thức 
+• TRANS(BT): thủ tục đưa biểu thức BT về dạng CHUẨN HOẶC (CHUẨN TUYỂN) 
+(biểu thức chỉ chứa các phép toán , ) 
+• CHUYEN (VT, VP): thủ tục chuyển các GTi , KLj ở dạng phủ định 
+• TACH(VT, VP): thủ tục tách (VT, VP) thành 2 danh sách con nếu GTi có phép  
+hoặc ở KLj có phép . Nếu tách được thì thủ tục TACH(VT,VP) nhận giá trị True 
+• get(P): Lấy bài toán trong P
+
+THUẬT TOÁN HỢP GIẢI ROBINSON:
+B1: Tập GT, Tập KL, luật => GT1, GT2,.., R1, R2,.. -> KL1,KL2,.. (GT, KL chuẩn hoặc)
+B2: Gỉa sử -KL1, -KL2,.. đúng
+B3: Đưa về dạng chuẩn hội nếu có
+B4: Hopgiai (-P V Q) X (P V T) => Q V T
+B5: Lặp B4 -> có mâu thuẫn (dpcm)
+
+- Vào: Các biểu thức giả thiết GT1, GT2, ...,GTn và các biểu thức kết luận KL1, KL2,...,KLm. 
+- Ra: Chứng minh: GT1, GT2,...,GTn -> KL1, KL2,...,KLm: True. 
+ // Thông báo “thành công!” nếu GT1 X GT2 X...X GTn V KL1 V KL2 V... V KLm 
+- Nội dung: 
+{ for i=1 to n do  
+ { TRANS(GTi);    //đưa từng GT về dạng CHUẨN HOẶC 
+    P  <- {GTi}; } 
+for i=1 to m do  
+ { TRANS(KLi);    //đưa từng KL về dạng CHUẨN HOẶC 
+  P <- {-KLi}; } 
+ if mauthuan(P) then Exit (“thành công”); //nếu mâu thuẫn P 
+ P1: = rỗng;  
+    While P ≠ P1 and  -mauthuan(P) do 
+  {P1: = P; 
+  hopgiai(P); } 
+  if mauthuan(P) then Write(“thành công!”) 
+  else Exit (“Không thành công!”); 
+} 
+
+• TRANS(BT): thủ tục đưa biểu thức BT về dạng CHUẨN HOẶC (CHUẨN 
+TUYỂN) (biểu thức chỉ chứa các phép toán -, V) 
+• mauthuan(P): Nếu trong P mà có 2 mệnh đề: p1 = -p2 hoặc -p1 = p2  
+(với p1 ≠ p2) thì trong P có “mâu thuẫn” 
+
+
+CHƯƠNG 5:BIỂU DIỄN VÀ XỬ LÝ TRI THỨC 
+Khái niệm: Là mô tả về thế giới bên ngoài dưới dạng sao cho các 
+máy tính thông minh có thể hiểu được, có thể đưa tới những kết luận 
+về môi trường xung quanh trên cơ sở mô tả các hình thức, các tri 
+thức nhận được  
 
  Các phương pháp biểu diễn 
  Biểu diễn bằng logíc hình thức 
@@ -302,15 +498,17 @@ CHƯƠNG 5:
 liệu, thể hiện: 
 Dữ liệu định lượng (bit, số, mảng,…)  Ký hiệu tượng trưng (xâu, danh sách,…)  Dữ liệu 
 phù hợp (hướng đối tượng, đa danh sách,…)  Tri thức (các phương pháp biểu diễn) 
-Tương ứng: 
+Tương ứng: 
  Chương trình = CTDL + Giải thuật 
  Chương trình heuristic = Ký hiệu tượng trưng + Giải thuật heuristic 
  Hệ dựa trên tri thức = Tri thức + Suy diễn 
- Phân loại tri thức 
- Tri thức định lượng: Tri thức mang đặc trưng định tính nhưng liên quan đến các kỹ 
+
+Phân loại tri thức 
+Tri thức định lượng: Tri thức mang đặc trưng định tính nhưng liên quan đến các kỹ 
 thuật tính toán, phụ thuộc vào chất lượng của hàm được đánh giá. Hàm đánh giá là cơ 
 sở để chọn chiến lược điều khiển: xử lý cạnh tranh và chọn hướng định tính phù hợp 
- Tri thức định tính 
+
+Tri thức định tính 
  Tri thức thủ tục: Đó là phương pháp cấu trúc tri thức, ghép nối và suy diễn các tri 
 thức mới từ các tri thức đã có. VD: If…..Then… 
  Tri thức mô tả: Là những thông tin về 1 sự kiện, hiện tượng hay 1 quá trình mà 
@@ -319,54 +517,435 @@ không phụ thuộc vào không gian và thời gian
  Tri thức điều khiển: Là tri thức điều khiển quá trình xử lý tri thức, nó phối hợp với tri 
 thức thủ tục và tri thức mô tả để thông qua nó điều khiển sự cạnh tranh 
 
+Phương pháp biểu diễn bằng lôgíc hình thức: 
+Tri thức được thể hiện qua các 
+mệnh đề (các ký hiệu mệnh đề, các giá trị chân lý: True/False, các phép toán lôgíc và các 
+phép biến đổi) (xem ở Chương 3) 
+=>Độ chắc chắn CF: Giả sử gọi MB(h,e) là độ tin tưởng vào giả 
+thuyết h với chứng cớ e (MB(h,e) thuộc [0;1]), MD(h,e) là độ nghi ngờ vào giả thuyết h với chứng 
+cớ e (MD(h,e) thuộc [0;1]) => Độ chắc chắn: CF(h,e) = MB(h,e) - MD(h,e) (CF(h,e)  [-1;1]) 
+
+Phương pháp biểu diễn bằng luật sản xuất: Gồm các sự kiện (Fact), các luật Horn 
+
+Phương pháp biểu diễn bằng bộ 3 tham số O – A - V: Các tri thức được biểu diễn bởi 
+bộ ba O-A-V, trong đó: O–Đối tượng (Object), A–Thuộc tính (Attribute), V–Giá trị (value) 
+Ví dụ: Biểu diễn tri thức: “An 32 tuổi” => Tuổi(An, 32) 
+ 
+Phương pháp biểu diễn bằng khung tri thức (Frame): Đây là dạng biểu diễn tri thức 
+phù hợp với biểu diễn đối tượng, nó gồm tập hợp các bộ ba O-A-V
+
+ Phương pháp biểu diễn bằng mạng ngữ nghĩa (semantic network): Mỗi 
+mạng ngữ nghĩa gồm: Các nút biểu diễn các sự kiện của đối tượng và giữa các nút 
+có quan hệ với nhau bằng các cung. Cung là tập hợp các sự liên kết giữa các nút 
+với nhau => Biểu diễn bằng mạng ngữ nghĩa là cách biểu diễn tri thức gần với cách 
+biểu diễn trong bộ não của con người và việc duyệt mạng ngữ nghĩa sẽ cho phép 
+ta suy ra được chế độ mới, tri thức mới
+Nhận xét: Phương pháp biểu diễn tri thức bằng lôgíc hình thức và luật sản 
+xuất được sử dụng phổ biến 
+
 Suy diễn tiến (lập luận tiến - forward chaining hoặc forward reasoning) 
  Thuật toán 
- Giải thích một số biến, hàm, thủ tục sử dụng: Gọi T là tập các sự kiện tại thời 
+ Gọi T là tập các sự kiện tại thời 
 điểm đang xét (khởi tạo tập T = F: tập sự kiện đúng ban đầu); xét các luật ri có 
-dạng: p1  p2  .... pn  q và pj T với mọi j, nghĩa là nếu left(ri)  T thì T:= T+ 
-right(ri). Quá trình lặp lại cho đến khi G  T hoặc không có luật nào sinh ra thêm 
+dạng: p1 x p2 x....x pn -> q và pj thuộc T với mọi j, nghĩa là nếu left(ri) thuộc T thì T:= T+ 
+right(ri). Quá trình lặp lại cho đến khi G C T hoặc không có luật nào sinh ra thêm 
 sự kiện mới 
  Thủ tục suy diễn tiến 
- 
- 
 Procedure SUY_DIEN_TIEN; 
 Begin 
  T:= F; 
  S:= loc(R, T);     {Tìm tập luật S: S gồm các luật lấy từ tập luật R có dạng: 
-              p1  p2  .... pn  q mà có pjT} 
- While G  T and S <>  do 
+              p1 x p2 x....x pn -> q} 
+ While G /C T and S <> rỗng do 
   Begin 
    r := get(S); {Lấy luật r trong S} 
    T:= T + right(r); {Thêm VP của r vào T} 
    R:= R \ {r}; {Loại luật r khỏi tập luật R} 
    S:= loc(R,T); {Tính lại tập S thỏa mãn tập R và T mới} 
   End; 
- If G  T then write (“thành công”) 
+ If G C T then write (“thành công”) 
  Else write (“không thành công”); 
 End; 
 
  Suy diễn lùi (lập luận lùi - backward chaining hoặc backward reasoning) 
- Thuật toán 
- Giải thích một số biến, hàm, thủ tục sử dụng: Gọi T là tập các sự kiện cần 
+ Gọi T là tập các sự kiện cần 
 chứng minh tại thời điểm đang xét (khởi tạo T= G, G là từng kết luận của tập). 
-S(p) = {ri  R | right(ri) = p} (là tập các luật trong R sao cho vế phải chứa p) 
+S(p) = {ri thuộc R | right(ri) = p} (là tập các luật trong R sao cho vế phải chứa p) 
  Thủ tục suy diễn lùi 
- 
- 
 Procedure SUY_DIEN_LUI(luat); 
 Begin 
  T:= {G}; //Khởi tạo bằng từng kết luận cần chứng minh của tập KẾT LUẬN 
- If  T F then write (‘g được chứng minh!‘) 
+ If  T C F then write (‘g được chứng minh!‘) 
  Else 
   Begin 
    p := get(T); 
    If  S(p) = {} then write (‘g không chứng minh được!‘) 
    Else 
-   For ri  S(p) do 
+   For ri thuộc S(p) do 
     Begin 
           T:= T \ right(ri); 
           T:= T + left(ri); 
-          For luat T \ F do SUY_DIEN_LUI(luat); 
+          For luat thuộc T \ F do SUY_DIEN_LUI(luat); 
     End; 
   End; 
 End;
+
+Nhận xét và so sánh 
+• Suy diễn tiến 
+• Ưu điểm - Làm việc tốt khi bài toán là đi thu thập thông tin rồi thấy điều cần suy diễn. - Cho ra khối lượng lớn các thông tin từ một số thông tin ban đầu. Nó sinh ra nhiều 
+thông tin mới - Suy diễn tiến là tiếp cận tốt đối với các loại bài toán cần giải quyết các nhiệm vụ 
+như: lập kế hoạch, điều hành, điều khiển và diễn dịch 
+• Nhược điểm - Không cảm nhận được rằng chỉ cần một vài thông tin quan trọng. Hệ thống hỏi các 
+câu hỏi có thể hỏi mà không biết rằng chỉ một ít câu đã đi đến kết luận được. - Hệ thống có thể hỏi cả câu hỏi không liên quan. Các câu trả lời cũng quan trọng 
+nhưng làm người dùng lúng túng khi trả lời các câu không liên quan đến chủ đề 
+• Suy diễn lùi 
+• Ưu điểm - Phù hợp với bài toán đưa ra giả thuyết và liệu giả thuyết đó có đúng hay không. - Tập trung vào đích đã cho. Nó tạo ra một loạt câu hỏi chỉ liên quan đến vấn đề 
+đang xét, thuận tiện đối với người dùng - Khi suy diễn một điều gì từ thông tin đã biết, nó chỉ tìm trên một phần của cơ sở 
+tri thức thích đáng đối với bài toán đang xét - Suy diễn lùi được đánh giá cao cho các bài toán: chẩn đoán, dự đoán và tìm lỗi 
+• Nhược điểm: Thường tiếp theo dòng suy diễn thay vì đúng ra phải dừng ở đó mà 
+chuyển sang nhánh khác
+
+
+CHƯƠNG 6
+ Khái niệm: Học máy (Machine Learning) là một ngành khoa học 
+nghiên cứu các thuật toán cho phép máy tính có thể học được các khái 
+niệm (concept) 
+ Phương pháp học máy: Có 2 loại phương pháp học máy chính: 
+ Phương pháp quy nạp: Máy học/phân biệt các khái niệm dựa trên dữ 
+liệu thu thập được trước đó, cho phép tận dụng được nguồn dữ liệu 
+nhiều và sẵn có 
+ Phương pháp suy diễn: Máy học/phân biệt các khái niệm dựa vào 
+các luật, cho phép tận dụng các kiến thức chuyên ngành để hỗ trợ 
+máy tính
+
+Biểu diễn bài toán học máy: Học máy cải thiện hiệu quả 
+một công việc thông qua kinh nghiệm, biểu diễn bởi bộ ba: 
+ Một công việc (nhiệm vụ) T. 
+ Các tiêu chí đánh giá hiệu năng P. 
+ Thông qua (sử dụng) kinh nghiệm E. 
+Một số bài toán học máy: 
+Lọc thư rác 
+ T: Dự đoán (để lọc) những thư nào 
+là thư rác. 
+ P: Tỷ lệ % của các thư gửi đến được 
+phân loại chính xác. 
+ E: Một tập các thư (emails) mẫu,  
+mỗi thư được biểu diễn bằng một tập  
+thuộc tính (VD: tập từ khóa) và nhãn lớp  
+(thư thường/thư rác) tương ứng
+
+Học có giám sát (supervised learning): Cho trước tập dữ liệu huấn luyện dưới dạng các 
+mẫu (ví dụ) cùng với giá trị đầu ra (đích) => Dựa trên dữ liệu huấn luyện, thuật toán học cần 
+xây dựng mô hình (hay hàm đích) để dự đoán giá trị đầu ra cho các trường hợp mới. 
+ Nếu giá trị đầu ra là rời rạc thì học có giám sát được gọi là phân loại hay phân lớp. 
+ Nếu đầu ra nhận giá trị liên tục (tức là số thực) thì học có giám sát được gọi là hồi quy 
+(regression). 
+
+Học không giám sát (unsupervised learning): Là dạng học máy mà các mẫu được cung 
+cấp nhưng không có giá trị đầu ra (đích). 
+ Thay vì xác định giá trị đích, thuật toán học máy dựa trên độ tương tự giữa các mẫu để 
+xếp chúng thành những nhóm, mỗi nhóm gồm các mẫu tương tự nhau. Hình thức học 
+không giám sát như vậy gọi là phân cụm (clustering). 
+ Ngoài phân cụm, một dạng học không giám sát phổ biến khác là phát hiện luật kết hợp 
+(association rule). Luật kết hợp có dạng P(A|B), cho thấy xác suất 2 tính chất A và B xuất 
+hiện cùng nhau. 
+
+Học tăng cường (reinforcement learning): Kinh nghiệm không được cho trực tiếp dưới 
+dạng đầu vào/đầu ra cho mỗi trạng thái hoặc mỗi hành động, thay vào đó hệ thống nhận 
+được 1 giá trị điểm thưởng (reward) là kết quả cho một chuỗi hành động nào đó => Thuật 
+toán cần học cách hành động để cực đại hóa giá trị reward. 
+
+Học bán giám sát (semi-supervised learning): Các bài toán khi có 1 lượng lớn dữ 
+liệu đầu vào nhưng chỉ 1 phần được gán nhãn gọi là học bán giám sát => Học bán 
+giám sát nằm giữa học có giám sát và học không giám sát.\\
+
+THIẾT KẾ HỆ THỐNG HỌC MÁY 
+Kiến trúc 
+Pha huấn luyện (training phase). 
+ Bộ trích chọn thuộc tính đặc trưng (Feature Extraction). 
+ Thuật toán học chính (Main Algorithms): Phân lớp,… 
+Pha kiểm tra (testing phase) 
+ Với dữ liệu thô đầu vào mới, sử dụng bộ trích chọn thuộc 
+tính đặc trưng để tạo ra các véc tơ đặc trưng. 
+ Sau đó, đưa các véc tơ đặc trưng vào thuật toán học máy 
+đã học được ở pha huấn luyện để dự đoán đầu ra.
+
+ Lựa chọn thiết kế hệ thống học máy 
+   Lựa chọn các mẫu học 
+ Các thông tin hướng dẫn quá trình học (training feedback) 
+được chứa ngay trong các mẫu học, hay được cung cấp 
+gián tiếp (VD: từ môi trường hoạt động). 
+ Các mẫu học theo kiểu có giám sát (supervised) hay không 
+có giám sát (unsupervised). 
+ Các mẫu học phải tương thích với (đại diện cho) các mẫu 
+học sẽ được sử dụng bởi hệ thống trong tương lai. 
+ Xác định hàm mục tiêu cần học 
+ F: F -> {0;1} 
+ F: F -> Tập các nhãn lớp 
+ F: F -> R+ (miền giá trị số thực dương) 
+   Lựa chọn cách biểu diễn cho hàm mục tiêu cần học  
+ Hàm đa thức (a polynomial function). 
+ Một tập các luật (a set of rules). 
+ Một cây quyết định (a decision tree). 
+ Một mạng nơron nhân tạo. 
+ …..v….v……. 
+   Lựa chọn phương pháp học máy có thể học (xấp xỉ) 
+được hàm mục tiêu 
+ Phương pháp học hồi quy (Regression). 
+ Phương pháp học quy nạp luật (Rule induction). 
+ Phương pháp học cây quyết định (ID3 hoặc C4.5). 
+ Phương pháp học lan truyền ngược (Back-propagation).
+
+
+CÁC VẤN ĐỀ TRONG HỌC MÁY
+1. Giải thuật học (Learning algorithm) 
+ Các giải thuật học máy nào có thể học (xấp xỉ) một hàm 
+mục tiêu cần học. 
+ Với những điều kiện nào, một giải thuật học máy đã 
+chọn sẽ hội tụ (tiệm cận) hàm mục tiêu cần học.  
+ Đối với một lĩnh vực bài toán cụ thể và đối với một cách 
+biểu diễn các mẫu (đối tượng) cụ thể, giải thuật học máy 
+nào thực hiện tốt nhất.
+ Định lý No-free-lunch [Wolpert and Macready,1997]: “No 
+algorithm can beat another on all domains.” (không 
+có thuật toán nào luôn hiệu quả nhất trên mọi miền ứng 
+dụng). 
+
+2. Khả năng/giới hạn học (Learning capability) 
+ Hàm mục tiêu nào mà hệ thống cần học? 
+ Biểu diễn hàm mục tiêu: Khả năng biểu diễn (hàm tuyến 
+tính/phi tuyến). 
+ Độ phức tạp của giải thuật học và quá trình học. 
+ Các giới hạn (trên lý thuyết) đối với khả năng học của các 
+giải thuật học máy? 
+ Khả năng khái quát hóa (generalize) của hệ thống từ các 
+mẫu học? -> Để tránh vấn đề “quá khớp” (overfitting) (đạt 
+độ chính xác cao trên tập học, nhưng trên tập thử nghiệm 
+thì đạt độ chính xác thấp). 
+ Khả năng hệ thống tự động thay đổi (thích nghi) biểu diễn 
+(cấu trúc) bên trong của nó? -> Để cải thiện khả năng 
+(của hệ thống) biểu diễn và hàm mục tiêu.
+
+3.Các mẫu học (ví dụ học) (training examples) 
+ Bao nhiêu mẫu học là đủ? 
+ Kích thước của tập học (tập huấn luyện) ảnh hưởng thế 
+nào đối với độ chính xác của hàm mục tiêu học được? 
+ Các mẫu học lỗi (nhiễu) và/hoặc các mẫu học thiếu giá 
+trị thuộc tính (missing-value) ảnh hưởng thế nào đến độ 
+chính xác? 
+
+4. Quá trình học (Learning process) 
+ Chiến lược tối ưu cho việc lựa chọn thứ tự sử dụng 
+(khai thác) các mẫu học. 
+ Các chiến lược lựa chọn này làm thay đổi mức độ phức 
+tạp của bài toán học máy như thế nào? 
+ Các tri thức cụ thể của bài toán (ngoài các mẫu học của 
+bài toán) có thể đóng góp thế nào đối với quá trình học?
+
+ Biểu diễn quá trình học máy 
+- Tập dữ liệu: Được chia thành 3 tập dữ liệu con phân hoạch nhau: 
+ Tập dữ liệu huấn luyện (tập học) (Training set). 
+ Tập dữ liệu kiểm tra (tập tối ưu) (Validation set). 
+ Tập dữ liệu đánh giá (tập thử nghiệm) (Test set). 
+- Huấn luyện hệ thống. 
+- Tối ưu hóa (các tham số của hệ thống). 
+- Thử nghiệm hệ thống. 
+
+
+Khái niệm: Các nơ ron (tế bào thần kinh) là đơn vị cơ sở đảm nhiệm các chức 
+năng xử lý trong hệ thần kinh, gồm: não, tuỷ sống và các dây thần kinh. Mỗi nơ 
+ron có phần thân với nhân bên trong (soma), một đầu thần kinh ra (axon) và một 
+hệ thống dạng cây các dây thần kinh vào (dendrite) (hình dưới). Phần lớn các 
+quá trình xử lý thông tin đều xảy ra trên vỏ não 
+
+ Các chức năng cơ bản của bộ não 
+ Bộ nhớ được tổ chức theo các bó thông tin và truy nhập theo nội dung 
+ Khả năng tổng quát hoá, có thể  truy xuất các tri thức 
+ Khả năng dung thứ lỗi theo nghĩa có thể điều chỉnh hoặc tiếp tục thực hiện 
+ngay khi có những sai lệch do thông tin bị thiếu hoặc không chính xác 
+ Khả năng xuống cấp và thay thế dần dần 
+ Khả năng học 
+
+Khái niệm: Mạng nơ ron nhân tạo (Artificial Neural Network – ANN) gọi tắt là 
+MNR bao gồm: các nút (đơn vị xử lý, nơ ron) được nối với nhau bởi các liên kết 
+nơ ron. Mỗi liên kết có một trọng số để đặc trưng cho đặc tính kích hoạt/ức chế 
+giữa các nơ ron. Các trọng số là phương tiện để lưu giữ thông tin dài hạn trong 
+mạng nơ ron và nhiệm vụ của quá trình huấn luyện (học) mạng là cập nhật các 
+trọng số khi có thêm các thông tin về các mẫu học (nghĩa là: các trọng số được 
+điều chỉnh sao cho dáng điệu vào ra mà nó mô phỏng hoàn toàn phù hợp với môi 
+trường thực. Trong mạng, một số nơ ron được nối với môi trường bên ngoài như 
+các đầu ra, đầu vào 
+
+Mô hình nơ ron nhân tạo:
+ Mỗi nơ ron được nối với các nơ ron khác và nhận được các tín hiệu sj với 
+các trọng số wj. Tổng các thông tin vào có trọng số là: Net = wj*sj; là thành 
+phần tuyến tính 
+ Hàm kích hoạt g (hàm chuyển) biến đổi từ Net sang tín hiệu đầu ra out:  
+ out = g(Net); là thành phần phi tuyến
+
+Có 3 dạng hàm kích hoạt phổ biến:
+1. step(x): 1 nếu x>=0, 0 nếu x <0
+2. sign(x):  1 nếu x>=0, -1 nếu x <0
+3. Sigmoid(x) = 1/(1+ e^(-@(x+0)))
+
+
+Mạng nơ ron: là hệ thống gồm nhiều phần tử xử lý đơn giản (nơ ron) hoạt động song 
+song. Tính năng của hệ thống tuỳ thuộc vào cấu trúc của hệ, các trọng số liên kết nơ ron 
+và quá trình tính toán tại các nơ ron. Mạng nơ ron có thể học từ dữ liệu mẫu và tổng quát 
+hóa dựa trên các dữ liệu mẫu học được.Trong mạng nơ ron, các nơ ron nhận tín hiệu vào 
+gọi là nơ ron vào và các nơ ron đưa thông tin ra gọi là nơ ron ra
+Phân loại mạng nơ ron: 
+• Theo kiểu liên kết nơ ron: 
+- Mạng nơ ron truyền thẳng (feed-forward Neural Network): 
+các liên kết nơ ron đi theo một hướng nhất định, không tạo thành đồ thị có chu trình 
+(directed acyclic graph) với các đỉnh là các nơ ron, các cung là các liên kết giữa chúng. 
+
+- Mạng nơ ron hồi qui (recurrent NN): cho phép các liên kết nơ ron tạo thành chu trình. Do 
+các thông tin ra của các nơ ron được truyền lại cho các nơ ron đã góp phần kích hoạt 
+chúng nên ngoài các trọng số liên kết nơ ron thì mạng hồi qui còn có khả năng lưu giữ 
+trạng thái trong của nó dưới dạng các ngưỡng kích hoạt
+
+Theo số lớp (tầng): Các nơ ron tổ chức thành các lớp (tầng) sao cho mỗi nơ ron 
+của lớp này chỉ được nối với các nơ ron ở lớp tiếp theo, không cho phép các liên 
+kết giữa các nơ ron trong cùng một lớp hoặc từ nơ ron lớp dưới lên nơ ron lớp 
+trên và không cho phép các liên kết nơ ron nhảy qua 1 lớp
+
+ Các kỹ thuật học nhằm hiệu chỉnh các trọng số liên kết gọi là học tham số; còn các kỹ 
+thuật học nhằm hiệu chỉnh, sửa đổi cấu trúc của mạng (gồm: số lớp, số nơ ron, kiểu và 
+trọng số các liên kết) gọi là học cấu trúc 
+
+1. Học tham số: Giả sử có k nơ ron trong mạng và mỗi nơ ron có l liên kết vào với 
+các nơ ron khác. Khi đó, ma trận trọng số liên kết W sẽ có kích thước (kxl). Các 
+thủ tục học tham số nhằm tìm ma trận W sao cho: Ys = TINHTOAN(Xs, W) với mọi 
+mẫu học s = (Xs,Ys)
+
+2. Học cấu trúc: Học cấu trúc của mạng truyền thẳng để tìm ra số lớp của mạng L và 
+số nơ ron trên mỗi lớp nj. Đối với mạng hồi qui thì cần phải xác định thêm: Các 
+tham số ngưỡng 0 của các nơ ron trong mạng, nghĩa là phải xác định bộ tham số 
+P = (L,n1,...,nl,01,...,0k) với: k = nj sao cho Ys = TINHTOAN(Xs, P) với mọi mẫu học 
+s = (Xs,Ys)
+
+ Mạng HopField (HF) 
+ Kiến trúc mạng: Năm 1982, J. Hopfield (Mỹ) đề xuất mô hình MNR 1 lớp NN cho 
+phép tạo ánh xạ dữ liệu từ tín hiệu vào sang tín hiệu ra theo kiểu tự kết hợp (auto - 
+association) tức là: nếu tín hiệu vào là X và kết quả ra Y = TINHTOAN(X,NN) cùng 
+thuộc vào miền giá trị D. Mạng HF mô phỏng được khả năng tự kết hợp (hồi tưởng) 
+của bộ não người, mạng HF thường được dùng để giải quyết các bài toán tối ưu, xử 
+lý dữ liệu trong điều khiển tự động 
+ Mạng có 1 lớp ra, với số nơ ron bằng số tín hiệu vào, các liên kết nơ ron là liên 
+kết đầy đủ 
+Nếu có m tín hiệu vào thì ma trận trọng số W sẽ có kích thước (mxm): 
+W=(wji)mxm; trong đó: wji là trọng số liên kết nơ ron thứ j ở lớp vào sang nơ ron 
+thứ i ở lớp ra. Các tín hiệu vào của mạng có giá trị lưỡng cực: -1 và 1; hàm kích 
+hoạt tại các nơ ron là hàm dấu: outj = sign(Netj) = sign (Tổng(wji*xi))
+
+ Huấn luyện mạng 
+ Mạng học dựa trên nguyên tắc có giám sát. Giả sử có p mẫu học tương ứng với 
+các vectơ tín hiệu vào: Xs với s = 1,…,p; thì mạng sẽ xác định bộ trọng số W 
+sao cho: Xs = TINHTOAN(Xs,W) với s = 1, 2, …, p 
+Tính ma trận trọng số W: W = (wji)mxm, với: wji = Tổng(Xsi*Xsj)(nếu i /= j) và 0 (nếui =j)
+
+Sử dụng mạng: Giả sử đưa vào mạng HF vectơ tín hiệu X thì: Sử dụng mạng để 
+tính đầu ra tương ứng với tín hiệu vào X là quá trình lặp gồm các bước:
+ B1: Đặt X(0) = X. Gọi Y(t) là véc tơ tín hiệu ra tương ứng với một lần cho 
+X(t) lan truyền trong mạng: Y(t) = out(t) = TINHTOAN(HF, X(t)) 
+ B2: Lặp: Nếu Y(t)  X(t) thì tiếp tục bước lặp với t = t+1 và X(t+1) = Y(t) = out(t). 
+Nếu Y(t) = X(t) thì dừng và khi đó X(t) là kết quả xử lý của mạng
+
+Mạng Perceptron 
+ Kiến trúc mạng: Do F. Rosenblatt đề xuất (1960), là mạng truyền thẳng 1 
+lớp có một hoặc nhiều đầu ra (để đơn giản, giả sử xét mạng có 1 đầu ra) 
+
+Huấn luyện mạng 
+ Mạng học dựa trên nguyên tắc có giám sát với tập mẫu học: {(Xs,Ys)}. 
+ Ý tưởng cơ bản: Xác định bộ trọng số W sao cho: outs = 
+TINHTOAN(Xs,W) = Ys với mọi mẫu học s. Ban đầu, các trọng số được 
+gán ngẫu nhiên trong khoảng [-0,5; 0,5]. Sau đó hiệu chỉnh các trọng số 
+sao cho phù hợp với các mẫu học, làm giảm sai số giữa giá trị quan sát 
+Ys với giá trị tính toán outs. Các bước thực hiện: 
+ - Xác định ngẫu nhiên bộ trọng số trong khoảng [-0,5;0,5] 
+ - Với mỗi mẫu học: (Xs,Ys), với Xs= (Xs1,..,Xsn), thực hiện các bước: 
+   Tính giá trị outs theo công thức trên 
+   Xác định giá trị lỗi: Err = Ys – outs và hiệu chỉnh các trọng số Wj 
+theo công thức: Wj = Wj + @*Xsj*Err; với @ là hằng số học 
+Sử dụng mạng: Các nơ ron riêng lẻ có thể biểu diễn các hàm logic sơ 
+cấp: AND, OR, NOT => Do đó, một lớp các hàm có thể tính toán được nhờ 
+mạng Perceptron
+
+Mạng nơ ron nhiều lớp lan truyền ngược 
+ Kiến trúc mạng 
+Các nơ ron ở lớp thứ t được nối đầy đủ với các nơ ron ở lớp thứ (t+1). Để 
+đơn giản, ta sử dụng mạng có 1 lớp ẩn, số nơ ron trong lớp ẩn được xác 
+định dựa trên kinh nghiệm hoặc sử dụng các kỹ thuật tìm kiếm khác nhau 
+
+Huấn luyện mạng: Huấn luyện mạng là quá trình học có giám sát với 
+tập mẫu: {(Xs,Ys)}. Thủ tục học tóm tắt như sau: Mỗi khi đưa một mẫu 
+học: Xs = (xs1,..., Xsi,…., xsn) vào mạng, ta thực hiện các công việc: 
+-Lan truyền mẫu học Xs qua mạng và tính: outs = TINHTOAN(Xs, NN) 
+- Tính sai số Errs của mạng dựa trên sai lệch: outs - Ys 
+- Hiệu chỉnh các trọng số liên kết nơ ron dẫn tới lớp ra Wij từ nơ ron j 
+tại lớp ẩn cuối cùng tới nơ ron i tại lớp ra: wij = wij + @*aj*$i; với: 
+@ là hệ số học, 
+aj là đầu ra của nơ ron j, 
+$i  là sai số mà nơ ron i ở lớp ra 
+phải đảm nhiệm, được xác định theo công thức: $i = Erri*g'(Neti) (với 
+Erri là sai số thành phần thứ i trong Errs, Neti là tổng thông tin vào có 
+trọng số của nơ ron thứ i (Neti = Tổng(wij*aj) và g'(.) là đạo hàm của hàm 
+kích hoạt g dùng trong các nơ ron) 
+- Hiệu chỉnh các trọng số liên kết nơ ron Wjk dẫn tới tất cả lớp ẩn từ nơ 
+ron thứ k sang nơ ron j (các lớp ẩn được xét lần lượt từ dưới lên): 
+   Tính tổng sai số tại nơ ron j phải đảm nhiệm: $i = Tổng(wij*$i)*g'(Neti)
+   Hiệu chỉnh trọng số wjk: wjk = wjk +@*ak*$j 
+ (trường hợp nếu xét liên kết từ nơ ron vào thứ k sang nơ ron j trên 
+lớp ẩn thứ nhất thì ak = lk và chính là tín hiệu vào) 
+
+Sử dụng mạng: Giả sử đã huấn luyện mạng với tập mẫu {(Xs,Ys)} và 
+được ma trận trọng số W, quá trình lan truyền trong mạng một vectơ tín 
+hiệu vào: X = (x1,x2,x3) được cho bởi: 
+out = g(w64*a4 + w65*a5)  
+= g(w64*g(w41*x1 + w42*x2 + w43*x3) + w65*g(w51*x1 + w52*x2 + w53*x3))  
+= F(X,W); với F là biểu diễn một hàm 
+->Khả năng tính toán của mạng nhiều lớp: 
+ Với 1 lớp ẩn, mạng có thể tính toán xấp xỉ 1 hàm liên tục đối với các 
+biến tương ứng là các tín hiệu đầu vào 
+ Với 2 lớp ẩn, mạng có thể tính toán xấp xỉ 1 hàm bất kỳ. Tuy nhiên, 
+số nơ ron trong các lớp ẩn tăng theo hàm mũ đối với số đầu vào 
+
+
+LOGIC MỜ:
+Có tập các môn học: U = {T, L, H, V, S}, giả sử điểm thi của học sinh được chuẩn hóa 
+trong trong đoạn [0; 1] thì: Kết quả học tập của mỗi học sinh là tập mờ được biểu diễn như 
+sau: a = {0.9/T + 0.7/L + 0.4/H + 0.6/V + 0.8/S}. 
+
+3.1. KHÁI NIỆM VÀ ĐỊNH NGHĨA VỀ TẬP MỜ
+• Hàm đặc trưng (Characteristic Function): Trong tập hợp kinh điển (tập rõ), hàm đặc trưng μA(x) chỉ nhận giá trị 1 (nếu phần tử x thuộc tập A) hoặc 0 (nếu x không thuộc A).
+• Độ thuộc của phần tử (Membership Degree): Trong tập mờ, mỗi phần tử x có thể thuộc vào tập với một độ thuộc μA(x) nằm trong khoảng [0; 1].
+• Định nghĩa Tập mờ: Cho U là không gian tham chiếu (không gian vũ trụ). Tập mờ A được gọi là “tập mờ con” của U (A⊂U) nếu A được biểu diễn là tập hợp các cặp: A={(x,μA(x))∣x∈U}.
+• Biểu diễn Tập mờ:
+    ◦ Nếu U đếm được (U={x1,x2,…,xn}): Tập mờ A được biểu diễn là: A=∑μA(xi)/xi
+    ◦ Nếu U không đếm được (tập R): Tập mờ A được biểu diễn là: A=∫μA(x)/x.
+3.2. ĐẠI SỐ TẬP MỜ
+Đại số tập mờ định nghĩa các phép toán cơ bản dựa trên hàm thuộc μ(x):
+• Tập con: A là tập con của B (A⊂B) nếu μA(x)≤μB(x) với mọi x∈U.
+• Phép Hợp (Union): Hàm thuộc của A∪B là: μA∪B(x)=max(μA(x),μB(x)) (hoặc μA(x)∨μB(x)).
+• Phép Giao (Intersection): Hàm thuộc của A∩B là: μA∩B(x)=min(μ A(x),μ B(x)) (hoặc μA(x)∧μB(x)).
+• Phép Phần bù (Complement): Hàm thuộc của A là: μÃ(x)=1−μA(x).
+• Tích Đề các (Cartesian Product): Đối với các tập mờ A1,…,An, hàm thuộc của tích Đề các là: μA1×⋯×An(x1,…,xn)=min{μA1(x1),…,μA(xn)}.
+• Khoảng cách Hamming: d(A,B)=∑∣μA(xi)−μB(xi)∣.
+    ◦ Khoảng cách Hamming tương đối: δ(A,B)=d(A,B)/m.
+• Khoảng cách Ơclít (Euclidean Distance): e(A,B)=Căn 2(∑(μA(xi)−μB(xi))2)
+• Tập rõ gần tập mờ nhất (Ã): Tập rõ Ã gần tập mờ A nhất theo khoảng cách Hamming được định nghĩa bởi hàm thuộc: 
+μÃ(x)=1 nếu μA(x)≥0.5, và μÃ(x)=0 nếu μA(x)<0.5.
+• Chỉ số mờ (Fuzziness Index): Đo lường mức độ mờ của một tập A dựa trên khoảng cách của nó với tập rõ gần nhất Ã
+    ◦ Chỉ số mờ theo khoảng cách Hamming: νA=2⋅δ(A,Ã).
+
+3.3. QUAN HỆ GIỮA TẬP MỜ VÀ TẬP RÕ
+• Tập mức α (α-level, α-cut): Tập mức Aα của tập mờ A là tập tất cả các phần tử x∈U sao cho độ thuộc của chúng μA(x)≥α.
+• Tập mức α chặt (Aα0): Là tập tất cả các x∈U sao cho μA(x)>α. (GIÁ CỦA TẬP MỜ)
+• Phân tích tập mờ qua tập rõ: Tập mờ A có thể được biểu diễn như là hợp của các tập rõ Aα được nhân với các giá trị αi tương ứng: A=⋃αi⋅Aαi
+
+3.4. ĐẠI SỐ CÁC TẬP MỜ
+Đại số các tập mờ có các tính chất tương tự như đại số các tập rõ (như giao hoán, kết hợp, lũy đẳng, phân phối).
+• Điểm khác biệt so với tập rõ: Phép lấy phần bù không thỏa mãn tính chất A∪-A /=U và A∩-A/=∅.
+• Tổng đại số (Algebraic Sum): A+B có hàm thuộc: μA+B(x)=μA(x)+μB(x)−μA(x)⋅μB(x).
+• Tích đại số (Algebraic Product): A⋅B có hàm thuộc: μA⋅B(x)=μA(x)⋅μB(x).
