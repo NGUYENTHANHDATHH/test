@@ -1,0 +1,480 @@
+Class Q1
+Điện toán đám mây là gì
+Điện toán đám mây là việc cung cấp các dịch vụ cho khách hàng qua Internet, kích hoạt các dịch vụ quy mô lớn mà không cần đầu tư trước
+Tại sao chúng ta cần điện toán đám mây?
+Tiết kiệm chi phí, dễ mở rộng, an toàn, linh hoạt, và hỗ trợ đổi mới nhanh chóng so với hạ tầng truyền thống
+Khách hàng có thể chạy và thậm chí cài đặt những loại dịch vụ đám mây nào trong các trung tâm dữ liệu ảo?
+IaaS
+PaaS
+SaaS
+PaaS là gì và khách hàng có thể làm gì với nó?
+PaaS là một môi trường lập trình ở trên cloud và chúng ta dùng nó để phát triển các dịch vụ trên cloud
+Hoặc PaaS là một nền tảng điện toán đám mây cho phép khách hàng phát triển, thử nghiệm, triển khai và quản lý ứng dụng mà không cần lo về hạ tầng phần cứng.
+Khách hàng cần gì khi sử dụng dịch vụ phần mềm?
+Cần 1 web browser và internet
+Sự khác biệt chính giữa dịch vụ Đám mây Công cộng và Đám mây Riêng là gì?
+Mức độ chia sẻ
+Public Cloud: Tài nguyên dùng chung cho nhiều tổ chức (multi-tenant).
+Private Cloud: Tài nguyên dành riêng cho một tổ chức.
+Vị trí hạ tầng
+Public Cloud: Đặt tại trung tâm dữ liệu của nhà cung cấp (AWS, Azure, Google Cloud…).
+Private Cloud: Đặt tại trung tâm dữ liệu riêng (on-premise) hoặc thuê riêng biệt.
+Chi phí
+Public Cloud: Thấp, trả tiền theo nhu cầu (pay-as-you-go).
+Private Cloud: Cao, cần đầu tư phần cứng, phần mềm, nhân sự.
+Bảo mật & kiểm soát
+Public Cloud: Kiểm soát hạn chế, phụ thuộc nhà cung cấp.
+Private Cloud: Toàn quyền kiểm soát, bảo mật cao.
+Khả năng mở rộng
+Public Cloud: Linh hoạt, mở rộng nhanh.
+Private Cloud: Bị giới hạn bởi hạ tầng sẵn có, mở rộng chậm hơn
+Đám mây lai là gì?
+là sự kết hợp giữa các đám mây
+Gán các danh mục dịch vụ đám mây này cho các lớp trong hình
+Sass, tro choi dam may, in an dam may
+PaaS, HDH
+IaaS, HPCaaS, HuaaS
+9. Gán các danh mục dịch vụ đám mây này cho các lớp trong hình
+SaaS: Google Cloud Print, Google Apps, OnLive, Amazon Mechanical Turk
+PaaS: Google App Engine, eyeOS
+IaaS: Amazon EC2, EC2 Cluster Compute Instances
+ 
+10. Một công ty khởi nghiệp muốn cung cấp dịch vụ SaaS. Công ty cần 20 máy chủ. Mỗi máy chủ có giá 5.000 đô la, khấu hao trong 10 năm. Công suất tiêu thụ điện trên mỗi phiến máy chủ: 400 watt. Giá điện là 0,24 đô la/kWh. Để quản lý các máy chủ này, cần một quản trị viên, lương là 2.000 đô la/tháng. Biết rằng giá thuê một máy chủ ảo có cùng cấu hình với máy chủ vật lý là 20 đô la/tháng. Tính chi phí của 2 giải pháp: Có máy chủ chuyên dụng và thuê máy chủ ảo từ đám mây.
+Giải pháp 1: Mua 20 máy chủ chuyên dụng
+Khấu hao: 5000*20*10%=10000$
+Tiền điện: 0,4*0,24*24*365*20=16819,2$
+Tiền quản trị viên: 2000*12=24000$
+Tổng chi phí cho 20 máy chủ chuyên dụng hàng năm: 10000+16819,2+24000=50819,2$/năm
+Giải pháp 2: Thuê máy ảo
+20*12*20=4800$/năm
+11. Một công ty du lịch đang vận hành 20 máy chủ web trị giá 5.000 đô la/máy với tỷ lệ khấu hao là 10%/năm. Thông thường, trong năm, các máy chủ chạy ở mức tải 20%, chỉ trong 3 tháng hè, các máy chủ chạy ở mức tải 80%. Nếu công ty du lịch này chuyển sang thuê máy chủ ảo từ đám mây, chi phí sẽ giảm bao nhiêu lần? Biết rằng giá thuê máy chủ ảo có cấu hình tương đương máy chủ vật lý là 20 đô la/tháng. Và để đảm bảo chất lượng dịch vụ, máy chủ chỉ chạy ở mức tải tối đa 80%.
+Giải pháp 1: Dùng máy chủ web vật lý
+Chi phí chỉ là khấu hao: 20*5000*10%=10000$/năm
+Giải pháp 2: Thuê máy chủ ảo  
+Số máy chủ ảo được dùng trong năm nếu chạy 100% mức tải: (0,2*9+3*0,8)*20=84(máy)
+Nhưng máy chủ chỉ chạy mức tải tối đa 80% thì 84 máy 100% tương đương với 84/0,8=105 máy.
+Chi phí thuê là: 105*20=2100$
+Chi phí giảm: 10000/2100=4,7 lần
+
+Class Q2:
+Trình bày khái niệm CPU trong máy ảo
+Máy chủ không dành riêng CPU để sử dụng một máy ảo cụ thể; thay vào đó, khi VM cần xử lý tài nguyên, trình quản lý ảo sẽ nhận yêu cầu, lên lịch các hoạt động và chuyển kết quả trở lại VM thông qua trình điều khiển thiết bị thích hợp.
+CPU vật lý – lõi
+CPU ảo – vCPU
+1 CPU vật lý có thể được thiết lập để xử lý nhiều vCPU
+
+2. Trình bày các yêu cầu về lập lịch CPU cho công nghệ máy ảo?
+Công bằng (Fairness): mỗi VM được chia sẻ CPU hợp lý, tránh VM này chiếm hết.
+
+
+Cách ly (Isolation): VM này không ảnh hưởng hiệu năng của VM khác.
+
+
+Hiệu quả (Efficiency): tận dụng tối đa tài nguyên CPU, tránh lãng phí.
+
+
+QoS (Quality of Service): đáp ứng SLA (Service Level Agreement), đảm bảo VM ưu tiên cao được phục vụ trước.
+
+
+Khả năng mở rộng (Scalability): vẫn hiệu quả khi số lượng VM lớn.
+3. Trình bày thuật toán vòng tròn được sử dụng để lập lịch CPU
+Ý tưởng: Set 1 tượng thời gian nhỏ (time quantum), mỗi tiến trình/VM được cấp CPU đúng bằng lượng thời gian time quantum đó
+Cơ chế hoạt động:
+Xếp các VM vào hàng đợi
+Lần lượt cấp CPU cho từng VM trong thời gian time quantum
+Hết time quantum mà chưa xong, VM được đưa về cuối hàng chờ
+4. Trình bày ý tưởng cơ bản của thuật toán tín dụng được sử dụng để lập lịch CPU
+Ý tưởng: mỗi VM được cấp 1 giá trị tín dụng, lượng tín dùng của VM càng cao thì giá trị ưu tiên cao và ngược lại, sau mỗi khe thời gian, VM được sử dụng CPU sẽ trừ 1 đơn vị tín dụng, CPU có credit (độ ưu tiên) cao hơn sẽ được ưu tiên sử dụng CPU
+Cơ chế hoạt động:
+Xếp các VM vào hàng đợi, mỗi VM được cấp giá trị credit là như nhau
+Lần lượt cấp CPU cho từng VM, sau khi chạy hết timeslice, VM bị trừ 1 đơn vị tín dụng, nếu chưa xong -> được xếp vào cuối hàng chờ
+Tiếp theo,sẽ đưa vào VM trong local queue với mức độ ưu tiên cao, nếu không, chạy VM ở queue khác với mức độ ưu tiên cao, VM   trong queue với mức độ ưu tiên thấp hơn hoặc VM trong queue khác với Mức ưu tiên theo thức tự
+
+
+ Class Q3:
+1. Nêu khái niệm cơ bản về ảo hóa bộ nhớ
+Ảo hóa bộ nhớ là kỹ thuật trong hệ thống ảo hóa, cho phép nhiều máy ảo sử dụng chung tài nguyên bộ nhớ vật lý. Hypervisor tạo ra không gian bộ nhớ ảo riêng cho từng máy ảo, ánh xạ nó tới bộ nhớ vật lý, giúp các máy ảo hoạt động như thể chúng có bộ nhớ độc lập
+2. Tại sao chúng ta cần gọi lại bộ nhớ?
+Động lực chính: do hiện tượng cung cấp quá mức (overcommitment) — tổng bộ nhớ được gán cho các máy ảo lớn hơn bộ nhớ vật lý thực tế.
+Cần gọi lại bộ nhớ để:
+
+
+Sử dụng bộ nhớ hiệu quả hơn.
+
+
+Tăng tỷ lệ tích hợp (chạy nhiều máy ảo trên cùng 1 máy chủ).
+
+
+Đảm bảo hiệu năng và phân phối công bằng tài nguyên khi bộ nhớ khan hiếm
+3. Kể tên 3 kỹ thuật gọi lại bộ nhớ phổ biến
+Chia sẻ Trang Trong Suốt (Transparent Page Sharing – TPS): loại bỏ các trang trùng lặp.
+Tăng áp lực bộ nhớ giả tạo bên trong VM: ép máy ảo giải phóng bộ nhớ.
+Hoán đổi Hypervisor (Hypervisor swapping): hypervisor trực tiếp swap bộ nhớ VM ra đĩa.
+
+4. Nêu cơ chế hoạt động của kỹ thuật gọi lại bộ nhớ chia sẻ trang trong suốt.
+Khi nhiều máy ảo cùng chạy, một số trang bộ nhớ có nội dung giống hệt nhau (ví dụ cùng hệ điều hành, ứng dụng).
+Hypervisor nhận diện các trang giống nhau thông qua thuật toán (hashing) → chỉ giữ một bản duy nhất trong RAM.
+Các máy ảo khác trỏ tới trang dùng chung này.
+Nếu một máy ảo cần ghi dữ liệu khác vào trang (write), hypervisor sẽ tạo bản sao riêng (Copy-on-Write)
+5. Khi nào kỹ thuật chia sẻ trang trong suốt không hiệu quả?
+Khi các máy ảo chạy ứng dụng/dữ liệu khác nhau → ít trang trùng lặp.
+
+
+Khi bộ nhớ của VM liên tục thay đổi (nhiều thao tác ghi), làm TPS phải copy liên tục → giảm hiệu quả.
+
+
+Với dữ liệu ngẫu nhiên hoặc mã hóa (mã hóa, nén sẵn), khả năng trùng lặp gần như bằng 0.
+
+Class Q4:
+1. Trong công nghệ máy ảo, mạng nội bộ là gì?
+Là mạng ảo được tạo ra giữa các máy ảo (VM) trong cùng một host hoặc cùng một nhóm host.
+Các NIC ảo (Virtual Interface – VIF) của máy ảo được kết nối với switch ảo, tạo thành một mạng cục bộ riêng.
+Chỉ các máy ảo cùng trong mạng nội bộ mới giao tiếp được với nhau.
+Không có kết nối ra ngoài host vật lý hay Internet.
+
+2. Trong công nghệ máy ảo, mạng ngoài là gì?
+Khi gắn thêm NIC ảo vào NIC vật lý (PIF) của máy chủ, mạng nội bộ sẽ trở thành mạng ngoài.
+Các máy ảo có thể giao tiếp không chỉ với nhau mà còn với mạng bên ngoài host (LAN vật lý hoặc Internet).
+VM khi gửi dữ liệu ra ngoài sẽ dùng IP của VM, nhưng MAC đích là của router/gateway. Switch ảo sẽ chuyển tiếp qua PIF (NIC thật).
+NIC vật lý có thể hoạt động ở chế độ hỗn tạp (promiscuous) để xử lý mọi frame.
+
+Class Q5
+1. Đĩa ảo là gì?
+Đĩa ảo là một tệp vật lý lớn hoặc tập hợp các tệp, dùng để lưu HĐH, chương trình, dữ liệu của máy ảo.
+Đĩa ảo có thể sao chép, di chuyển, lưu trữ, sao lưu như file bình thường.
+2. Liệt kê các thành phần chính của ảo hóa lưu trữ.
+Máy ảo (VM) – gửi lệnh SCSI.
+Đĩa ảo (Virtual Disk) – nằm trên datastore.
+Datastore – chạy trên thiết bị lưu trữ vật lý.
+Thiết bị lưu trữ vật lý (local disk, SAN, NAS...).
+HBA – Host Bus Adapter – giao diện kết nối giữa máy chủ và thiết bị lưu trữ.
+3. Liệt kê cơ chế hoạt động của lưu trữ cục bộ
+Máy chủ chỉ sử dụng một kết nối duy nhất đến ổ đĩa.
+Không có mạng lưu trữ riêng, chỉ gắn trực tiếp vào server.
+Dễ tạo điểm lỗi đơn (SPOF) → gây mất dữ liệu khi hỏng kết nối.
+4. Liệt kê cơ chế hoạt động của lưu trữ mạng
+Thiết bị lưu trữ được chia sẻ qua mạng.
+Nhiều máy chủ truy cập đồng thời vào dữ liệu.
+Có nhiều công nghệ: Virtual SAN, Fibre Channel, iSCSI…
+5. Liệt kê các thành phần của SAN (Mạng lưu trữ khu vực)
+Thành phần máy chủ (Server side):
+Máy chủ (Host).
+HBA – Host Bus Adapter.
+Cáp kết nối (cáp quang).
+Thành phần mạng (Fabric):
+Các switch Fibre Channel.
+Thành phần lưu trữ (Storage side):
+Mảng lưu trữ (Disk Array).
+Thiết bị lưu trữ băng (Tape Library)
+6. Bộ điều hợp Bus máy chủ là gì?
+HBA là Host Bus Adapter, gắn trong máy chủ.
+Dùng để chuyển đổi tín hiệu số sang tín hiệu quang, đóng gói dữ liệu theo Fibre Channel và gửi lên SAN.
+Là giao diện kết nối chính giữa máy chủ và mạng SAN
+7. Cấu trúc (Fabric) của SAN là gì?
+Fabric là mạng lưới được tạo khi một hoặc nhiều switch SAN kết nối với nhau.
+Là phần mạng thực sự của SAN.
+Dùng giao thức Fibre Channel để truyền dữ liệu.
+Có thể kết nối nhiều fabric trong một SAN.
+8. Thiết kế một hệ thống SAN chuyển mạch FC cho cấu hình sau
+Số máy chủ = 10. Mỗi máy chủ có 1 cổng HBA.
+Số mảng lưu trữ = 2. Mỗi mảng có 2 cổng giao tiếp.
+Các thành phần chuyển mạch (SAN switch) 16 cổng
+
+9. Thiết kế một hệ thống SAN chuyển mạch FC cho cấu hình sau
+Số máy chủ = 20. Mỗi máy chủ có 1 cổng HBA.
+Số mảng lưu trữ = 2. Mỗi mảng có 4 cổng giao tiếp.
+Thiết bị chuyển mạch SAN 16 cổng
+
+10. Một tổ chức muốn xây dựng một trung tâm dữ liệu ảo hóa sử dụng công nghệ lưu trữ SAN đầy đủ (tất cả các thiết bị chuyển mạch được kết nối với tất cả các thiết bị chuyển mạch trong cấu hình fabric). Sau đây là thông số kỹ thuật của máy chủ, hệ thống lưu trữ và thiết bị chuyển mạch được sử dụng trong thiết kế:
+Số lượng máy chủ = 30. Mỗi máy chủ có hai cổng HBA.
+Số lượng mảng lưu trữ = 4. Mỗi mảng có tám cổng giao tiếp.
+Các thành phần chuyển mạch (thiết bị chuyển mạch SAN):
+Thiết bị chuyển mạch mô-đun FC với 16 cổng. Số lượng cổng trong một thiết bị chuyển mạch có thể tăng lên 32 cổng bằng cách thêm các card cổng bổ sung. Mỗi card cổng có 8 cổng.
+Phải có ít nhất hai liên kết liên thiết bị chuyển mạch (ISL) giữa hai thiết bị chuyển mạch bất kỳ để đảm bảo tính khả dụng cao.
+
+Cần tối thiểu bao nhiêu thiết bị chuyển mạch để đáp ứng các yêu cầu đã cho? Điều chỉnh số lượng cổng trong mỗi thiết bị chuyển mạch FC để tối ưu hóa chi phí.
+Giải:
+- Vì các switch liên kết với các switch khác bằng liên kết fabric-> liên kết giữa các switch là 1 đồ thị đầy đủ-> Số liên kết giữa các switch là: (n*(n-1))/2
+Cần ít nhất 2 liên kết chuyển mạch (ISL) mà mỗi liên kết cần 2 cổng
+-> Tổng số cổng cần thiết cho liên kết các switch là 2*2*(n*(n-1)/2)= 2n*(n-1)
+-Số cổng cần cho máy chủ: 30*2=60
+Số cổng cần cho mảng lưu trữ là: 4*8=32
+Tổng cố cổng cần là: 60+32+2n*(n-1)= 92+ 2n(n-1)
+-Thiết bị chuyển mạch FC có 16 cổng có thể tăng lên 32 cổng với card 8 cổng-> max số cổng trong 1 switch  gồm thiết bị FC 16 cổng + 2 card 8 cổng= 32 cổng
+->Tổng số cổng có là: 32n
+-Ta có: 32*n  92+ 2n(n-1)
+⇔ 2n^2- 34n+920
+⇔ 3,37n13,62
+=> Số switch tối thiểu là n=4
+-Ta có: 
+Tổng cổng tối đa: 32×4=128
+Cổng ISL: 2×4×(4−1)=24.
+Cổng còn lại cho máy chủ và mảng lưu trữ 128−24=104
+Số cổng còn dư là: 104-92=12 cổng
+->Có thể bớt 1 card 8 cộng
+Vậy cần 4 switch và 7 card 8 cổng
+Class Q6
+Hadoop là gì?
+Hadoop là khung phần mềm mã nguồn mở (thuộc Apache) được thiết kế để lưu trữ và xử lý dữ liệu quy mô lớn trên cụm nhiều máy tính thông thường.
+Được Yahoo phát triển dựa trên ý tưởng từ Google.
+Cốt lõi gồm:
+HDFS – hệ thống file phân tán
+MapReduce – mô hình lập trình xử lý dữ liệu lớn
+
+Nêu kiến trúc Hadoop nguyên thủy
+HDFS hệ thống tệp phân tán.
+MapReduce mô hình lập trình phân tán
+Các công cụ cải thiện khả năng lập trình, truy cập dữ liệu
+
+HDFS là gì?
+
+HDFS là viết tắt của Hadoop Distributed File System, là một hệ thống lưu trữ dữ liệu phân tán được thiết kế để lưu trữ và quản lý khối lượng dữ liệu lớn trên nhiều máy chủ. HDFS đảm bảo độ tin cậy, khả năng chịu lỗi và khả năng mở rộng, cho phép xử lý dữ liệu lớn hiệu quả bằng cách phân tán dữ liệu và tính toán song song. Hệ thống này sử dụng kiến trúc NameNode và DataNode để triển khai, cung cấp khả năng truy cập với hiệu suất cao đến các dữ liệu trên các cụm của Hadoop
+
+Trong HDFS, data node là gì?
+Chỉ cần lưu trữ và truy xuất các khối khi chúng được yêu cầu (bởi khách hàng hoặc nút tên). Trong nội bộ, một tệp được chia thành một hoặc nhiều khối và các khối này được lưu trữ trong một tập hợp các nút dữ liệu.
+
+Trong HDFS, name node là gì?
+Quản lý cây hệ thống tệp và siêu dữ liệu cho tất cả các tệp và thư mục
+Biết các nút dữ liệu mà trên đó nằm tất cả các khối cho một tệp nhất định
+
+Tại sao trong HDFS, kích thước block thường rất lớn?
+Để làm cho metadata nhỏ, quản lý dễ dàng, truy cập nhanh hơn.
+
+Nêu cơ chế thực hiện đọc HDFS 
+Ứng dụng khách muốn đọc một tệp (hoặc một phần trong đó) phải trước tiên liên hệ với nút tên để xác định nơi dữ liệu thực được lưu trữ
+Đáp lại yêu cầu của khách hàng, nút tên trả về:
+id khối liên quan
+vị trí nơi các khối được giữ (tức là các nút dữ liệu)
+Sau đó máy khách liên hệ với các nút dữ liệu để lấy dữ liệu
+Nêu cơ chế thực hiện ghi HDFS
+dữ liệu không bao giờ được di chuyển qua nút tên
+tất cả chuyển dữ liệu xảy ra trực tiếp giữa máy khách và nút dữ liệu
+giao tiếp với nút tên chỉ liên quan đến việc chuyển siêu dữ liệu
+Một hệ thống HDFS có hệ số sao chép (replication factor) là 4, kích thước block là 128MB. Client ghi 1 file có kích thước 1.2GB vào hệ thống HDFS.
+Tính số block để chứa file đó
+Tính kích thước không gian lưu trữ HDFS dùng để chứa file đó
+Tính lượng dữ liệu truyền trên mạng khi thực hiện ghi file đó
+Giải
+Số block để chứa 1,2GB  là: 1200/128=9,375.-> cần 10 block
+Vì hệ số sao chép là 4 nên số block để chứa file là: 10 * 4 = 40 block
+Mỗi block lưu được 4 bản replication
+Dung lượng dùng: 10* 128*4=5120MB
+Khi client ghi file vào datanode 1,2 GB sẽ được truyền vào. Có 4 bản sao có datanode nên sẽ có 4 lần ghi. Khi đó lượng dữ liệu truyền trên mạng khi thực hiện khi file trên là: 1,2 * 1024 * 4 = 4915.2 MB
+Một hệ thống HDFS có hệ số sao chép (replication factor) là 3, kích thước block là 128MB. 1 file test.txt kích thước 640 MB được lưu như sau
+
+Các datanode và client được nối với nhau qua switch 1Gbps. Tốc độ đọc/ghi đĩa cứng của Datanode là 40MB/s.  Hãy tính thời gian nhỏ nhất có thể để client đọc file test.txt từ hệ thống này.
+Giải: 
+Tốc độ đọc ghi đĩa cứng 40MB/s
+Tốc độ đọc trên switch 1Gbps=128MB/s
+	Số block=640/128=5 block
+Thời gian truyền qua switch T1=640 /128=5s
+Vì 4 node chạy song song nên thời gian tối thiểu đọc 5 block là T2=128*2/40=6,4s
+Vậy thời gian nhỏ nhất là max(T1,T2)=6,4s
+Một hệ thống HDFS có hệ số sao chép (replication factor) là 4, kích thước block là 128MB. Client ghi 1 file test.txt có kích thước 1.2GB vào hệ thống HDFS. Mỗi block được ghi trên các datanode khác nhau. Các datanode và client được nối với nhau qua switch 1Gbps. Tốc độ đọc/ghi đĩa cứng của Datanode là 40MB/s.  Hãy tính thời gian nhỏ nhất có thể để client ghi file test.txt vào hệ thống này.
+Client gửi file vào mạng vào node 1(bước này phụ thuộc vào tốc độ mạng) -> Node1 ghi vào -> từ node1 nó truyền sang node 2-> sang node 3 cho tới khi đủ 4 bản sao chép (t hiểu là thế)
+Kích thước file 1228.8MB => cần 10 block 128MB (thế thì tính cái block này làm gì nhi·
+T1=1200/128=9,4s (thời gian gửi file vào mạng) 
+T21=128/40=3,2s (thời gian ghi từ block ra data node)
+Tswitch=128/128=1s 
+T22=T23=T24=max(Tswitch, datanode)=3,2s
+Do cần ghi xong node 1 rồi mới sang node 2 rồi sang node 3-> 4=>T2=3,2*4=12,8s
+Vậy để client đọc hết file cần ít nhất max(T1,T2)=12,8s
+
+Làm lại
+Thời gian để client gửi file tới mạng là: T1 = 1228.8/125 = 9.8s
+
+Class Q7
+Thuật toán MapReduce thường được dùng cho các dạng bài toán nào?
+Lặp lại song song một số lượng lớn các bản ghi
+Trích xuất một cái gì đó quan tâm từ mỗi lần lặp lại
+Nêu các thành phần cơ bản của thuật toán MapReduce.
+Map: nhận đầu vào một đối tượng có khóa (k, v) và trả về một loạt các cặp khóa-giá trị: (k1, v1), (k2, v2),…, (kn, vn)
+Khung chức năng tập hợp tất cả các cặp có cùng khóa k và liên kết với k tất cả các giá trị của k: (k, [v1, .., vn])
+Reduce: nhận đầu vào là khóa và danh sách các giá trị (k, [v1, .., vn]) và kết hợp chúng bằng cách nào đó.
+Nêu cơ chế hoạt động của thuật toán MapReduce.
+Map -> Lặp lại song song một số lượng lớn các bản ghiS
+Trích xuất một cái gì đó quan tâm từ mỗi lần lặp lại
+Trộn và sắp xếp các kết quả trung gian của các kết quả khác nhau của sự lặp lại đồng thời
+Tổng hợp kết quả trung gian
+Tạo đầu ra cuối cùng -> Reduce lên cái q m gà
+
+
+Class Q8
+A trong CAP là gì?
+Khả dụng (Availability)
+Hệ thống vẫn hoạt động khi bị lỗi điểm giao
+Tất cả các khách hàng luôn có thể đọc và viết
+C trong CAP là gì?
+Tính nhất quán (Consistency)
+Tất cả các bản sao đều chứa cùng một phiên bản dữ liệu
+Khách hàng luôn có cùng cái nhìn về dữ liệu (bất kể nút nào)
+P trong CAP là gì?
+Chịu lỗi phân vùng (Partition tolerance)
+nhiều điểm truy cập
+Hệ thống vẫn hoạt động trên hệ thống bị phân chia (sự cố về truyền thông)
+Hệ thống hoạt động tốt trên toàn bộ phân vùng mạng vật lý
+Mongodb ứng với đặc điểm nào trong CAP? CP
+Nêu mô hình triển khai mongoDB
+Shard (Replica Set) – nơi lưu dữ liệu thực.
+
+
+Config Server (Replica Set) – lưu metadata.
+
+
+Mongos Router – định tuyến truy vấn.
+
+Cơ chế ghi của mongoDB trong chế độ mặc định w:majority như thế nào?
+MongoDB với writeConcern: { w: "majority" } (mặc định) ghi theo cơ chế:
+
+Ghi được xác nhận chỉ khi đa số (majority) các node trong Replica Set đã ghi xong vào journal.
+
+Cụ thể:
+
+Primary ghi dữ liệu → ghi vào journal.
+
+Primary gửi oplog entry cho Secondary.
+
+Khi > 50% số node (bao gồm Primary) đã ghi (commit) vào journal, Primary mới trả về thành công cho client.
+
+=> Đảm bảo dữ liệu an toàn, không mất khi Primary failover.
+
+
+Một hệ thống Mongodb có 3 shard, dữ liệu được lưu trữ bội 3, router dự phòng bội 2. Cần bao nhiêu server cho hệ thống này?
+Giải:
+	3 shard(lưu trữ bội 3)
+Shard: dữ liệu được phân nhỏ trên nhiều máy chủ, mỗi phần dữ liệu phân tán được gọi là shard
+Router: là giao diện mà client kết nối vào, router biết dữ liệu client cần tìm để ở shard nào và định tuyến các thao tác đọc -  ghi tới shard tương ứng
+
+Theo đề bài, có 3 shard bội 3 (mỗi mảnh dữ liệu được lưu trữ 3 bản sao tại 3 server độc lập)
+-> vậy cần 3 * 3 = 9 server cho shard
+Router điều hướng -> cần 1 server cho mỗi router -> 2 server
+-> tổng 11 server
+
+1 tập hợp sao chép trong mongodb có 5 phần tử: 1 chính, 4 phụ. Để ghi thành công, dữ liệu cần xuất hiện trên mấy phần tử?
+Giải
+W:majority cần quá một nữa/tổng số phần tử ghi thành công([N/2] + 1 số phần tủ) -> thành công 
+=> cần ⅗ tổng số phần tử ghi thành công -> sao chép thành công
+
+1 tập hợp sao chép trong mongodb có 3 phần tử: 1 chính, 2 phụ. Người dung cần ghi 1 file dữ liệu 2GB vào tập hợp theo chế độ w:majority. Hỏi hệ thống cần ít nhất bao nhiêu không gian lưu trữ để chứa file dữ liệu này? Hỏi hệ thống cần nhiều nhất bao nhiêu không gian lưu trữ để chứa file dữ liệu này?
+Giải
+Chế độ majority -> quá bán số phần tử ghi thành công thì mới được tính là thành công
+Cần ít nhất [3/2] + 1 = 2 phần tử ghi thành công
+-> Cần ít nhất: 2 phần tử ghi thành công (1 chính, 1 phụ): 2GB * 2 =  4GB không gian lưu trữ
+-> Cần nhiều nhất: cả 3 phần tử ghi thành công: 3 * 2 = 6GB không gian lưu trữ
+
+1 tập hợp sao chép trong mongodb có 7 phần tử: 1 chính, 6 phụ. Người dùng cần ghi 1 file dữ liệu 2GB vào tập hợp theo chế độ w:majority. Tốc độ truyền dữ liệu mạng là 1Gbps. Tốc độ ghi của đĩa cứng là 50MB/s. Hãy tính thời gian ngắn nhất để ghi thành công file trên.
+Đổi 2GB = 16Gb
+Thời gian truyền dữ liệu đến primary: 16/1(Gbps) = 16s
+Đổi 2GB = 2*1024MB
+Thời gian để ghi vào đĩa là: (2 * 1024)/50 = 40.96s
+Do quá trình truyền dữ liệu và ghi dữ liệu diễn ra song song, nên thời gian để hoàn tất để ghi thành công = thời gian ghi vào đĩa = 40.96
+Theo chế độ W:majority, cần [7/2] + 1 = 4 phần tử (1 chính, 3 phụ) ghi thành công thì được tính là ghi dữ liệu thành công
+-> thời gian ngắn nhất là: 4 * 40.96 = 163.84s
+Class Q9
+Cân bằng tải là gì?
+Cân bằng tải là phân tải đến các máy chủ khác nhau để cùng xử lý.
+Cân bằng tải tầng 4 hoạt động như thế nào?
+Cân bằng tải tầng 4 sẽ chuyển tiếp lưu lượng truy cập của người dùng dựa trên dải IP và cổng. 
+Người dùng truy cập vào bộ cân bằng tải, công cụ này sẽ chuyển tiếp yêu cầu của người dùng đến nhóm máy chủ phụ trợ web. 
+Bất kỳ máy chủ phụ trợ nào được chọn sẽ phản hồi trực tiếp yêu cầu của người dùng. 
+Nói chung, tất cả các máy chủ trong web-backend phải cung cấp nội dung giống hệt nhau – nếu không người dùng có thể nhận được nội dung không nhất quán.
+Cân bằng tải tầng 7 hoạt động như thế nào?
+Sử dụng lớp 7 cho phép bộ cân bằng tải chuyển tiếp các yêu cầu đến các máy chủ phụ trợ khác nhau dựa trên nội dung yêu cầu của người dùng. 
+Chế độ cân bằng tải này cho phép bạn chạy nhiều máy chủ ứng dụng web trong cùng một miền và cổng.
+
+Độ sẵn sàng cao là gì?
+Thiết lập tính sẵn sàng cao (HA) là một cơ sở hạ tầng không có một điểm lỗi nào. 
+Nó ngăn chặn một lỗi máy chủ duy nhất trở thành sự kiện thời gian chết bằng cách thêm dự phòng vào mọi lớp kiến ​​trúc của bạn.
+Bạn cũng cần phải có bộ cân bằng tải dự phòng.
+
+Round-robin có trọng số
+Trọng số được chỉ định cho mỗi máy chủ dựa trên các tiêu chí do quản trị viên trang web chọn; tiêu chí được sử dụng phổ biến nhất là khả năng xử lý lưu lượng truy cập của máy chủ. Trọng số càng cao, tỷ lệ yêu cầu máy khách mà máy chủ nhận được càng lớn. Ví dụ: nếu máy chủ A được chỉ định trọng số là 3 và máy chủ B có trọng số là 1, bộ cân bằng tải sẽ chuyển tiếp 3 yêu cầu đến máy chủ A cho mỗi yêu cầu mà nó gửi đến máy chủ B.
+Một cluster có 3 máy chủ A, B, C với trọng số tương ứng la 4, 3, 2. Có 180 request đến bộ cân bằng tải. Hãy tính số request phân phối cho các máy chủ dùng thuật toán Round-robin có trọng số.
+ Tổng trọng số: 4 + 3 + 2 = 9
+-> A: nhận 4/9 request, B nhận 3/9 request, C nhận 2/9 request
+Ta có: A: 180/9*4=80 request
+B: 60 request
+C: 40 request
+
+Một cluster có 3 máy chủ A, B, C với số connection đang xử lý tương ứng la 433, 413, 403. Có 180 request đến bộ cân bằng tải. Hãy tính số request phân phối cho các máy chủ dùng thuật toán least connection.
+Least connection: Máy chủ nào nhận ít request nhất sẽ được phân thêm request
+Theo bài ta thấy C có ít request nhất (403) -> thêm 10 request cho C, còn 180 - 10 = 170 request
+C = B = 413 request ( < A) thêm C, B 20 request nữa, còn 170 - (20 * 2) = 130 request
+A = B = C (433 request)
+Chia đều 43 request cho mỗi máy chủ, A = B = C = 476, còn 130 - (3 * 43) = 1 request
+Còn 1 request thì thầy bảo thêm vào cái nào cũng được 😀 nên là thêm vào A
+-> B = C = 476, A = 477
+ Class Q10
+Tại sao mọi người vẫn e ngại việc sử dụng điện toán đám mây?
+Đám mây hoạt động như một hộp đen lớn, không có gì bên trong đám mây hiển thị cho khách hàng
+Khách hàng không có ý tưởng hoặc không kiểm soát được những gì xảy ra bên trong một đám mây
+Ngay cả khi nhà cung cấp đám mây trung thực, nó có thể có những quản trị viên hệ thống độc hại, những người có thể giả mạo các máy ảo và vi phạm tính bảo mật và tính toàn vẹn
+Nguy cơ mất kiểm soát là gì?
+Dữ liệu, ứng dụng, tài nguyên được định vị với nhà cung cấp
+Quản lý danh tính người dùng do đám mây xử lý
+Các quy tắc kiểm soát quyền truy cập của người dùng, chính sách bảo mật và việc thực thi được quản lý bởi nhà cung cấp đám mây
+Người tiêu dùng tin tưởng vào nhà cung cấp để đảm bảo
+Bảo mật dữ liệu và quyền riêng tư
+Nguồn lực sẵn có
+Giám sát và sửa chữa các dịch vụ / tài nguyên
+
+Vấn đề của sự thiếu tin tưởng là gì?
+Tin tưởng vào một bên thứ ba đòi hỏi phải chấp nhận rủi ro
+Vấn đề gây ra do nhiều người thuê là gì?
+Xung đột giữa các mục tiêu đối lập của người thuê dịch vụ
+Người thuê chia sẻ cùng nguồn tài nguyên và có mục tiêu đối lập
+Việc cho nhiều người thuê đối phó với xung đột lợi ích như thế nào?
+Những người thuê có thể hòa thuận với nhau và ‘chơi đẹp’ không?
+Nếu họ không thể, chúng ta có thể cách ly họ không?
+Làm thế nào để cung cấp sự tách biệt giữa những người thuê?
+Nêu 3 giải pháp giải quyết nguy cơ mất kiểm soát.
+Giám sát
+Sử dụng các đám mây khác nhau
+Quản lý kiểm soát truy cập
+Quản lý danh tính (IDM)
+Nêu 3 giải pháp giải quyết sự thiếu tin tưởng.
+Ngôn ngữ chính sách
+Chứng nhận
+Nêu giải pháp giải quyết vấn đề nhiều người thuê.
+Có thể cố gắng tăng cường sự cô lập giữa những người thuê 
+Kỹ thuật cách ly mạnh (VPC ở một mức độ nào đó)
+C.f. Các cuộc tấn công kênh bên VM (T. Ristenpart et al.)
+Yêu cầu QoS cần được đáp ứng
+Giả sử bạn la 1 ngân hàng muốn dùng cloud, hãy xây dựng một bộ yêu cầu cụ thể với cloud provider (cân bằng tải, instance VM, dữ liệu, logging, ) nhằm giảm các nguy cơ an ninh, an toàn khi sử dụng dịch vụ.  
+
+
+
+
+Hạ tầng: VPC tách biệt, isolation VM, LB chống DDoS
+Dữ liệu; Mã hóa AES-256, quản lý khóa bởi ngân hàng, chống sao chép trái phép
+IAM/IDM
+Federation, MFA, RBAC, kiểm soát truy cập đa lớp
+Logging
+Log đầy đủ, gửi về SIEM, không thể chỉnh sửa
+Giám sát
+Realtime monitoring, cảnh báo, IR ≤ 15 phút
+SLA
+Uptime 99.99%, chứng nhận ISO/SOC/PCI
+Multi-cloud
+Không vendor lock-in
+An ninh
+WAF, IDS/IPS, Anti-DDoS
+Bảo mật nội bộ provider
+Kiểm soát truy cập nhân viên, kiểm toán định kỳ
+
+
+1 ví nhận diện người dùng có các thông tin sau:
+Tên, ngày-tháng-năm sinh, username, password, email, tel, address, tax code, credit card, job, office, marital status.
+Xác định các thông tin cần thiết cho các dịch vụ sau:
+Web mail
+Google meet
+Shoppee customer
+Shoppee seller
+Facebook
+
+
+
+
+
+
+
