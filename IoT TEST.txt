@@ -1,0 +1,598 @@
+Chương 1: Giới thiệu IoT
+Các thuật ngữ, khái niệm cần biết:
+IoT (Internet of Things): Có nhiều khái niệm và định nghĩa về IoT khác nhau. Ví dụ, theo IoT Association: "IoT là mạng lưới các thiết bị vật lý được kết nối với Internet, cho phép thu thập và trao đổi dữ liệu mà không cần sự can thiệp của con người."
+ Thiết bị thông minh (Smart Devices): Các thiết bị có khả năng thu thập dữ liệu thông qua cảm biến, xử lý và truyền dữ liệu, thường được kết nối với Internet.
+Vật thể (Thing): Một đối tượng vật lý hoặc ảo có thể được định danh và tích hợp vào mạng truyền thông.
+Gateway (Cổng kết nối): Thiết bị trung gian giúp kết nối các thiết bị IoT với mạng Internet.
+M2M (Machine to Machine): Giao tiếp trực tiếp giữa các thiết bị mà không cần sự can thiệp của con người.
+RFID (Radio Frequency Identification): Công nghệ nhận dạng bằng sóng vô tuyến, dùng để định danh và theo dõi đối tượng.
+NFC (Near Field Communication): Công nghệ truyền dữ liệu không dây tầm ngắn, thường dùng trong thanh toán và nhận dạng.
+Smart Home (Nhà thông minh): Hệ thống nhà ở sử dụng thiết bị IoT để tự động hóa và điều khiển từ xa.
+Thiết bị đeo thông minh (Wearables): Các thiết bị như đồng hồ, vòng tay, kính,... có khả năng theo dõi sức khỏe và hoạt động.
+Smart City (Thành phố thông minh): Ứng dụng IoT trong quản lý đô thị như giao thông, môi trường, năng lượng,...
+Smart Farming (Nông nghiệp thông minh): Sử dụng cảm biến và thiết bị IoT để giám sát và tối ưu hóa quá trình trồng trọt và chăn nuôi.
+Smart Retail (Bán lẻ thông minh): Kệ hàng và máy bán hàng tự động tích hợp cảm biến để giám sát và phân tích hành vi khách hàng.
+Câu hỏi lý thuyết:
+1. Định nghĩa: "IoT là một cơ sở hạ tầng toàn cầu cho xã hội thông tin, cho phép các dịch vụ tiên tiến bằng cách liên kết các vật thể (vật lý hoặc ảo) dựa trên các công nghệ thông tin và truyền thông hiện có và tương lai." là định nghĩa của tổ chức nào sau đây?
+
+A. ITU (International Telecommunication Union) ✅
+
+B. IETF (Internet Engineering Task Force)
+
+C. IEEE (Institute of Electrical and Electronics Engineers)
+
+D. WSIS (World Summit on the Information Society)
+
+2. Định nghĩa: "IoT là mạng lưới các đối tượng vật lý có chứa công nghệ nhúng để tương tác với các trạng thái bên trong của chúng hoặc môi trường bên ngoài." là định nghĩa của tổ chức/cá nhân nào sau đây?
+
+A. Kevin Ashton
+
+B. Gartner ✅
+
+C. IEEE (Institute of Electrical and Electronics Engineers)
+
+D. WSIS (World Summit on the Information Society)
+
+3. Đâu không phải là ưu điểm khi ứng dụng IoT vào trong các dây chuyền sản xuất (các cảm biến được gắn vào máy móc để theo dõi hoạt động của chúng)?
+
+A. Đưa ra cảnh báo về sự cố hỏng hóc có thể xảy ra
+
+B. Theo dõi lượng năng lượng tiêu thụ
+
+C. Đưa ra chế độ hoạt động tiết kiệm nhất
+
+D. Có nguy cơ bị đánh cắp dữ liệu ✅
+
+4. Đâu không phải là một ứng dụng IoT?
+
+A. Nhà thông minh
+
+B. Hệ thống giao thông thông minh
+
+C. Web 2.0 ✅
+
+D. Tự động hóa công nghiệp
+
+5. IoT giúp gì cho doanh nghiệp?
+
+A. Giảm hiệu suất
+
+B. Nâng cao hiệu quả hoạt động ✅
+
+C. Tăng chi phí sản xuất
+
+D. Thu thập thông tin khách hàng
+
+6. Thuật ngữ "Internet of Things" đã được Kevin Ashton đề xuất vào năm nào?
+
+A. Năm 1969
+
+B. Năm 1984
+
+C. Năm 1999 ✅
+
+D. Năm 2010
+
+7. Đâu không phải là một ứng dụng IoT trong nhà thông minh (Smart home)?
+
+A. Bật/tắt thiết bị bằng công tắc cơ học ✅
+
+B. Bật/tắt thiết bị từ xa
+
+C. Kiểm soát an ninh
+
+D. Tự động điều chỉnh hệ thống chiếu sáng
+
+8. Rủi ro khi dữ liệu được truyền qua các kênh IoT không an toàn là gì?
+
+A. Giảm tốc độ kết nối
+
+B. Phát tán phần mềm độc hại
+
+C. Tăng chi phí bảo trì
+
+D. Mất kiểm soát thiết bị ✅
+
+9. IoT cần đảm bảo điều gì khi xử lý dữ liệu?
+
+A. Chỉ lưu dữ liệu trên thiết bị
+
+B. Bảo mật dữ liệu ✅
+
+C. Phải có kết nối vào mạng LAN
+
+D. Phải có cơ cấu chấp hành trong hệ thống
+
+10. Đặc điểm "kết nối liên tục" của IoT mang lại lợi ích gì?
+
+A. Giao tiếp thời gian thực ✅
+
+B. Giảm thiểu dữ liệu lưu trữ
+
+C. Không cần quan tâm đến bảo mật
+
+D. Tăng cường giao tiếp giữa con người và thiết bị
+
+Chương 2: Xử lý dữ liệu cảm biến
+Các thuật ngữ, khái niệm cần biết:
+Cảm biến (Sensor): Thiết bị chuyển đổi đại lượng vật lý (như nhiệt độ, áp suất...) thành tín hiệu điện (như điện áp, dòng điện...) để đo lường và xử lý.
+Cơ cấu chấp hành (Actuator): Thiết bị thực hiện hành động dựa trên tín hiệu nhận được từ cảm biến.
+Đường cong chuẩn cảm biến: Biểu đồ hoặc phương trình mô tả mối quan hệ giữa đầu vào (đại lượng đo) và đầu ra (tín hiệu điện) của cảm biến.
+Chuẩn cảm biến (Sensor Calibration): Quá trình xác lập mối quan hệ giữa giá trị đo được và giá trị thực của đại lượng đo, nhằm đảm bảo độ chính xác.
+Độ nhạy của cảm biến: Mức độ thay đổi của tín hiệu đầu ra khi đại lượng đầu vào thay đổi. Độ nhạy cao giúp cảm biến phản ứng tốt với biến đổi nhỏ.
+Độ tuyến tính của cảm biến: Mức độ mà đầu ra của cảm biến thay đổi tuyến tính theo đầu vào. Cảm biến tuyến tính dễ xử lý và hiệu chỉnh.
+Sai số và độ chính xác: Sai số là sự chênh lệch giữa giá trị đo được và giá trị thực của đại lượng cần đo. Độ chính xác phản ánh mức độ gần đúng của kết quả đo so với giá trị thực.
+Thời gian hồi đáp: Khoảng thời gian cảm biến cần để phản ứng với sự thay đổi của đại lượng đo và đạt đến giá trị ổn định.
+Vùng làm việc danh định: Khoảng giá trị của đại lượng đo mà cảm biến có thể hoạt động ổn định và chính xác.
+Dữ liệu cảm biến (Sensor Data): Là dữ liệu được thu thập từ các cảm biến đo lường các yếu tố vật lý như nhiệt độ, độ ẩm, ánh sáng, áp suất,... và được sử dụng để phân tích, điều khiển hoặc ra quyết định.
+Xử lý dữ liệu (Data Processing): Quá trình thu thập, làm sạch, biến đổi, lưu trữ và phân tích dữ liệu để tạo ra thông tin có giá trị phục vụ cho các ứng dụng IoT.
+Thuật toán K-Means: Một thuật toán phân cụm dữ liệu, chia dữ liệu thành K nhóm dựa trên khoảng cách giữa các điểm dữ liệu và tâm cụm.
+Giải thuật cây nhị phân (Binary Tree Classification): Phương pháp phân loại dữ liệu bằng cách chia nhỏ tập dữ liệu theo các thuộc tính, tạo thành cây quyết định với các nhánh là điều kiện và lá là kết quả phân loại.
+Mô hình Gaussian Mixture (GMM): Mô hình xác suất dùng để phân cụm dữ liệu theo cách tiếp cận mềm, cho phép một điểm dữ liệu thuộc về nhiều cụm với xác suất khác nhau.
+Xử lý dữ liệu ngoại lệ (Outlier Detection): Quá trình phát hiện và xử lý các giá trị bất thường trong dữ liệu cảm biến, nhằm đảm bảo độ chính xác và tin cậy của phân tích.
+Phân tích thành phần chính (PCA - Principal Component Analysis): Kỹ thuật giảm chiều dữ liệu, trích xuất các thành phần chính để phát hiện các điểm dữ liệu bất thường hoặc ngoại lệ.
+Câu hỏi lý thuyết:
+1. Đâu là mô tả đúng nhất về thuộc tính “Độ nhạy” của cảm biến IoT?
+
+A. Giá trị tối đa của hiện tượng mà cảm biến có thể đo được
+
+B. Khoảng giá trị tối đa và tối thiểu của hiện tượng mà cảm biến có thể đo được
+
+C. Sự thay đổi tối thiểu của thông số đo được gây ra thay đổi có thể phát hiện được trong tín hiệu đầu ra ✅
+
+D. Giá trị tối thiểu của hiện tượng mà cảm biến có thể đo được
+
+2. Đâu là mô tả đúng nhất về thuộc tính “Độ phân giải” của cảm biến IoT?
+
+A. Khoảng giá trị tối đa và tối thiểu của hiện tượng mà cảm biến có thể đo được
+
+B. Sự thay đổi tối thiểu trong hiện tượng mà cảm biến có thể phát hiện ✅
+
+C. Sự thay đổi tối thiểu của thông số đo được gây ra thay đổi có thể phát hiện được trong tín hiệu đầu ra
+
+D. Ngưỡng giá trị cảm biến có thể phát hiện được sự xuất hiện của đối tượng cần quan sát
+
+3. Đâu không phải là một tính năng mà một cảm biến tốt cần có?
+
+A. Có độ phân giải cao với các hiện tượng vật lý khác với hiện tượng mà nó đo ✅
+
+B. Có độ nhạy cao với hiện tượng mà nó đo
+
+C. Không nhạy với các hiện tượng vật lý khác với hiện tượng mà nó đo
+
+D. Không sửa đổi hiện tượng đo trong quá trình đo
+
+4. Đâu là phát biểu sai khi nói về Cơ cấu chấp hành (bộ truyền động; thiết bị chấp hành) IoT?
+
+A. Cơ cấu chấp hành IoT là một thiết bị quan sát một hoặc nhiều thuộc tính của một thực thể vật lý và chuyển đổi các thuộc tính đó thành thông tin ✅
+
+B. Cơ cấu chấp hành IoT là một thiết bị có thể thay đổi một hoặc nhiều thuộc tính của một thực thể vật lý để đáp ứng với thông tin nhận được
+
+C. Một hệ thống IoT có thể không cần sử dụng đến cơ cấu chấp hành IoT
+
+D. Có thể phân loại cơ cấu chấp hành IoT theo nguồn năng lượng mà chúng cần để tạo chuyển động
+
+5. Tại sao cần phải xử lý dữ liệu cảm biến?
+
+A. Để tăng tốc độ truyền dữ liệu cảm biến
+
+B. Để giảm chi phí triển khai hệ thống
+
+C. Để tăng tuổi thọ thiết bị
+
+D. Dữ liệu có thể bị thiếu hoặc nhiễu ✅
+
+6. Ký hiệu các bước xử lý như sau: (1) Thu thập dữ liệu; (2) Biến đổi dữ liệu; (3) Lọc dữ liệu; (4) Phân tích dữ liệu; (5) Trình bày kết quả; (6) Tổ chức và lưu trữ: Đâu là thứ tự đúng trong quá trình xử lý dữ liệu cảm biến?
+
+A. 1-2-3-4-5-6
+
+B. 1-3-2-6-4-5 ✅
+
+C. 1-6-2-3-4-5
+
+D. 1-2-3-5-4-6
+
+7. Ở bước tổ chức và lưu trữ trong quá trình xử lý dữ liệu cảm biến, “Sắp xếp và lưu trữ dữ liệu theo một cách có tổ chức” để làm gì?
+
+A. thu thập dữ liệu từ các nguồn khác nhau
+
+B. loại bỏ dữ liệu không chính xác
+
+C. dễ dàng truy cập và tìm kiếm ✅
+
+D. chuyển đổi dữ liệu ban đầu thành định dạng phù hợp
+
+8. Một trong những ứng dụng chính của cảm biến tiệm cận là gì?
+
+A. Phát hiện mức chất lỏng
+
+B. Đo cường độ ánh sáng 
+
+C. Xác định sự hiện diện của vật thể ✅
+
+D. Phân tích nồng độ chất khí
+
+9. Đại lượng đầu vào của cảm biến thường được gọi là gì?
+
+A. Đáp ứng
+
+B. Kích thích ✅
+
+C. Tín hiệu
+
+D. Vùng làm việc danh định
+
+10. Nguyên lý hoạt động của cảm biến quang dựa trên hiện tượng gì?
+
+A. Phản xạ ánh sáng
+
+B. Hấp thụ ánh sáng
+
+C. Khúc xạ ánh sáng
+
+D. Biến đổi ánh sáng thành điện ✅
+
+Chương 3: Kiến trúc mạng IoT
+Các thuật ngữ, khái niệm cần biết:
+Giao thức định tuyến cho mạng tổn hao năng lượng thấp (RPL - Routing Protocol for Low-power Lossy Networks): Giao thức định tuyến cho mạng cảm biến không dây và mạng tổn hao năng lượng thấp, xây dựng cấu trúc định tuyến dạng cây.
+Mô hình kiến trúc IoT 3 lớp: mô hình cơ bản của hệ thống IoT, gồm lớp thiết bị, lớp mạng, lớp ứng dụng.
+Mô hình kiến trúc IoT 5 lớp: mô hình gồm các lớp: đối tượng, trừu tượng đối tượng, quản lý dịch vụ, ứng dụng, nghiệp vụ.
+Mô hình kiến trúc IoT 7 lớp: mô hình gồm các lớp: thiết bị, kết nối, điện toán biên, tích lũy dữ liệu, trừu tượng hóa, ứng dụng, hợp tác & quy trình.
+Giao thức CoAP (Constrained Application Protocol):Giao thức ứng dụng dùng cho thiết bị IoT có tài nguyên hạn chế, hoạt động qua UDP để tiết kiệm năng lượng.
+Giao thức MQTT (Message Queuing Telemetry Transport): Giao thức nhắn tin sử dụng mô hình xuất bản/đăng ký, phù hợp với mạng băng thông thấp và thiết bị hạn chế tài nguyên.
+Giao thức XMPP (Extensible Messaging and Presence Protocol): Giao thức nhắn tin tức thời dựa trên XML, hỗ trợ xác thực, mã hóa và tương thích cao, có thể dùng trong IoT.
+Giao thức 6LoWPAN (IPv6 over Low power Wireless Personal Area Networks): Giao thức cho phép truyền IPv6 qua mạng không dây công suất thấp như IEEE 802.15.4, hỗ trợ nén tiêu đề (header) và phân mảnh gói tin.
+Chuẩn IEEE 802.15.4: Chuẩn cho mạng không dây tốc độ thấp, tiêu thụ năng lượng thấp, hỗ trợ nhiều cấu trúc liên kết như hình sao, lưới.
+BLE (Bluetooth Low Energy): Bluetooth tiết kiệm năng lượng, phạm vi rộng, độ trễ thấp, rất phù hợp cho các ứng dụng IoT như thiết bị đeo, cảm biến.
+EPC (Electronic Product Code): Mã sản phẩm điện tử lưu trên thẻ RFID, dùng để nhận dạng duy nhất sản phẩm trong chuỗi cung ứng.
+RFID (Radio Frequency Identification): Công nghệ nhận dạng bằng sóng vô tuyến, gồm thẻ (tag) và đầu đọc (reader), dùng trong quản lý hàng hóa và IoT.
+Z-Wave: Giao thức truyền thông không dây công suất thấp, dùng trong nhà thông minh, hoạt động ở tần số 900 MHz.
+Câu hỏi lý thuyết:
+1. Đâu là phát biểu sai khi nói về giao thức định tuyến cho mạng tổn hao năng lượng thấp (RPL)?
+
+A. RPL có hỗ trợ phương thức truyền dữ liệu: đa điểm đến điểm (MP2P)
+
+B. RPL có hỗ trợ phương thức truyền dữ liệu: điểm đến đa điểm (P2MP)
+
+C. RPL không hỗ trợ phương thức truyền dữ liệu: đa điểm đến điểm (MP2P) ✅
+
+D. RPL có hỗ trợ phương thức truyền dữ liệu: điểm đến điểm (P2P)
+
+2. Thứ tự đúng từ lớp 1 đến lớp 5 trong mô hình tham chiếu IoT 5 lớp là:
+
+A. Object Abstraction, Objects, Service Management, Business, Application
+
+B. Objects, Object Abstraction, Business, Service Management, Application
+
+C. Object Abstraction, Objects, Application, Service Management, Business
+
+D. Objects, Object Abstraction, Service Management, Application, Business ✅
+
+3. Trong mô hình tham chiếu IoT 7 lớp, lớp "Trừu tượng hóa dữ liệu" không bao gồm chức năng nào sau đây?
+
+A. Giao tiếp với các thiết bị ở lớp 1 ✅
+
+B. Bảo vệ dữ liệu với xác thực và phân quyền thích hợp
+
+C. Lập chỉ mục dữ liệu để cung cấp quyền truy cập ứng dụng nhanh chóng
+
+D. Đảm bảo ngữ nghĩa nhất quán của dữ liệu giữa các nguồn
+
+4. Đâu không phải là một phương pháp định danh (Identification) đối tượng trong IoT?
+
+A. Electronic Product Codes (EPC)
+
+B. ubiquitous Codes (uCode)
+
+C. IPv6
+
+D. Semantic ✅
+
+5. Phát biểu nào sau đây là đúng khi nói đến lớp Quản lý dịch vụ (Service Management) trong mô hình tham chiếu IoT 5 lớp?
+
+A. Lớp này cung cấp các dịch vụ theo yêu cầu của khách hàng
+
+B. Lớp này quản lý các hoạt động và dịch vụ hệ thống IoT tổng thể
+
+C. Lớp này cho phép các lập trình viên ứng dụng IoT làm việc với các đối tượng không đồng nhất mà không cần xem xét đến một nền tảng phần cứng cụ thể ✅
+
+D. Lớp này thực hiện việc xây dựng mô hình kinh doanh, đồ thị, lưu đồ,...dựa trên dữ liệu nhận được từ lớp Ứng dụng
+
+6. Đâu không phải là nền tảng phần cứng phổ biến để chạy các ứng dụng IoT?
+
+A. Arduino
+
+B. Intel Galileo
+
+C. NFC ✅
+
+D. Raspberry Pi
+
+7. Đâu không phải là hệ điều hành phổ biến để chạy các ứng dụng IoT?
+
+A. TinyOS
+
+B. Contiki
+
+C. Android
+
+D. FPGA ✅
+
+8. Trong thành phần ngữ nghĩa (Semantics) trong IoT, Khuyến nghị Trao đổi XML hiệu quả (EXI) đã chuyển đổi các thông điệp XML sang dạng nào để giảm băng thông và giảm thiểu kích thước lưu trữ cần thiết?
+
+A. Website (.html)
+
+B. Rich Text Format (.rft)
+
+C. Comma Separated Values (.csv)
+
+D. XML nhị phân ✅
+
+9. Mô hình tham chiếu IoT 3 lớp không bao gồm lớp nào?
+
+A. Lớp Kết nối ✅
+
+B. Lớp Thiết bị
+
+C. Lớp Mạng
+
+D. Lớp Ứng dụng
+
+10. Trong số các giao thức sau đây, giao thức nào không thuộc nhóm giao thức cơ sở hạ tầng? 
+
+A. 6LoWPAN
+
+B. LTE-A
+
+C. XMPP ✅
+
+D. IEEE 802.15.4
+
+Chương 4: Xây dựng ứng dụng IoT
+Các thuật ngữ, khái niệm cần biết:
+Arduino: Nền tảng phần cứng mã nguồn mở dùng để lập trình điều khiển thiết bị điện tử.
+Arduino IDE (Integrated Development Environment): Môi trường lập trình tích hợp để viết mã chương trình cho các bo mạch Arduino, biên dịch mã và nạp chương trình vào bo mạch Arduino.
+Digital I/O: Các chân vào/ra số trên bo mạch Arduino.
+Analog I/O: Các chân vào/ra tương tự trên bo mạch Arduino, dùng để đọc giá trị cảm biến analog.
+Động cơ servo: Thiết bị điều khiển góc quay chính xác.
+LED RGB: Đèn LED có thể phát nhiều màu bằng cách điều chỉnh 3 màu cơ bản.
+LCD: Màn hình hiển thị thông tin từ Arduino.
+Câu hỏi lý thuyết:
+1. Trong lập trình Arduino, câu lệnh nào cho phép chương trình dừng trong thời gian 1 giây?
+
+A. delay(1)
+
+B. delay(100)
+
+C. delay(1000) ✅
+
+D. delay(0.01)
+
+2. Trong lập trình Arduino với Board Arduino Uno R3, sử dụng hàm nào để lấy giá trị của cảm biến điện trở quang (photoresistor)?
+
+A. sensor()
+
+B. Serial.print("Giá trị: ")
+
+C. digitalRead()
+
+D. analogRead() ✅
+
+3. Trong lập trình Arduino, câu lệnh: Serial.begin (9600) có ý nghĩa là gì?
+
+A. Khai báo sử dụng truyền Serial với tối đa 9600 khung dữ liệu
+
+B. Khai báo sử dụng truyền Serial với tốc độ baud là 9600 ✅
+
+C. Bắt đầu truyền Serial với nội dung khung dữ liệu đầu tiên có giá trị là 9600, không có ký tự kết thúc dòng
+
+D. Bắt đầu truyền Serial với nội dung khung dữ liệu đầu tiên có giá trị là 9600, có ký tự kết thúc dòng
+
+4. Trong lập trình Arduino với Board Arduino Uno R3, câu lệnh nào sau đây là sai?
+
+A. pinMode(Pin5, INPUT)
+
+B. pinMode(Pin5, OUTPUT)
+
+C. pinMode(Pin5, INPUT_PULLUP)
+
+D. pinMode(Pin5, DIGITAL) ✅
+
+5. Board Arduino Uno R3 sử dụng nguồn điện áp bao nhiêu volt?
+
+A. 3V
+
+B. 5V ✅
+
+C. 110V
+
+D. 220V
+
+ANSWER: B
+
+6. Trong lập trình Arduino, câu lệnh nào không thuộc nhóm hàm Digital I/O?
+
+A. digitalSerial() ✅
+
+B. digitalRead()
+
+C. digitalWrite()
+
+D. pinMode()
+
+7. Trong lập trình giao tiếp Arduino với màn hình LCD 16x2 sử dụng thư viện LiquidCrystal.h, câu lệnh nào sau đây dùng để thiết lập loại LCD sử dụng là 16 cột và 2 dòng?
+
+A. lcd.set(16,2);
+
+B. lcd.set(2,16);
+
+C. lcd.begin(16,2); ✅
+
+D. lcd.begin(2,16);
+
+8. Trong lập trình điều khiển với Arduino, nếu giá trị của sensor là 5 thì kết quả trả về của hàm constrain(sensor,10,150) là bao nhiêu?
+
+A. 5
+
+B. 10 ✅
+
+C. 75
+
+D. 30
+
+9. Trong lập trình điều khiển động cơ servo, biết myservo là biến được khai báo kiểu Servo, sử dụng hàm nào để thay đổi góc quay của servo với tọa độ góc quay là 90 độ?
+
+A. myservo.write(90); ✅
+
+B. write (myservo,90);
+
+C. myservo.deg(90);
+
+D. myservo.(write,90);
+
+10. Trong Arduino, Lệnh nào sau đây giúp đọc giá trị từ một cảm biến analog gắn vào chân A0?
+
+A. readAnalog(A0);
+
+B. Read.analog(A0)
+
+C. analogWrite(A0);
+
+D. analogRead(A0); ✅
+
+Bài tập thực hành:
+Bài 1: Đèn Led nhấp nháy
+
+*) Sơ đồ
+
+
+
+*) Lập trình
+
+void setup()
+
+{
+
+  pinMode(9, OUTPUT);
+
+}
+
+void loop()
+
+{
+
+  digitalWrite(9, HIGH);
+
+  delay(1000); 
+
+  digitalWrite(9, LOW);
+
+  delay(1000); 
+
+}
+
+Bài 2: Đọc cảm biến siêu âm đưa ra 3 mức cảnh báo bằng đèn Xanh, Đỏ, Vàng  
+
+*) Sơ đồ
+
+
+
+*) Lập trình
+
+const unsigned int TRIG_PIN=7;
+
+const unsigned int ECHO_PIN=8;
+
+int LED_G=4;
+
+int LED_Y=3;
+
+int LED_R=2;
+
+void setup() {
+
+  pinMode(TRIG_PIN, OUTPUT);
+
+  pinMode(ECHO_PIN, INPUT);
+
+  pinMode(LED_G, OUTPUT);
+
+  pinMode(LED_Y, OUTPUT);
+
+  pinMode(LED_R, OUTPUT);
+
+  Serial.begin(9600);
+
+}
+
+void loop() {
+
+  digitalWrite(TRIG_PIN, LOW);
+
+  delayMicroseconds(2);
+
+  digitalWrite(TRIG_PIN, HIGH);
+
+  delayMicroseconds(10);
+
+  digitalWrite(TRIG_PIN, LOW);
+
+  const unsigned long duration= pulseIn(ECHO_PIN, HIGH);
+
+ int distance= duration/29/2;
+
+ if(duration==0){
+
+   Serial.println("Warning: no pulse from sensor");
+
+   } 
+
+  else{
+
+      Serial.print("distance to nearest object: ");
+
+                Serial.println(distance);
+
+      Serial.println("cm");
+
+  }
+
+ if(distance<50)
+
+ {
+
+              digitalWrite(LED_R,HIGH);
+
+ }
+
+  else
+
+    digitalWrite(LED_R,LOW);
+
+ if(distance>200)
+
+ {
+
+              digitalWrite(LED_G,HIGH);
+
+ }
+
+   else
+
+     digitalWrite(LED_G,LOW);
+
+ if(distance<=200&&distance>=50)
+
+  {
+
+              digitalWrite(LED_Y,HIGH);
+
+ }
+
+  else
+
+   digitalWrite(LED_Y,LOW);
+
+  delay(100);
+
+ }
