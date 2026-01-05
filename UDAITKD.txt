@@ -1,0 +1,22 @@
+AI trong Logistics và Chuỗi cung ứng:
+  - Tối ưu hóa vận chuyển
+  - Dự báo nhu cầu
+AI trong tài chính và Ngân hàng: (NGÀNH TÀI CHÍNH LÀ 1 TRONG NHỮNG LĨNH VỰC UD AI SỚM NHẤT VÀ MẠNH MẼ NHẤT) 
+  - Phát hiện gian lận
+  - Đánh giá tín dụng
+  - Giao dịch thuật toán
+AI trong bảo hiểm:
+  - Định giá bảo hiểm cá nhân hóa dựa trên hành vi
+  - Phát hiện gian lận bồi thường tự động
+  - Chatbot tư vấn sp
+  - Đánh giá rủi ro
+AI trong nghiên cứu khoa học:
+  - Vật lý hạt
+  - Thiên văn học
+  - Khí hậu học
+
+Phân loại UD AI theo ngành nghề:
+1. Y tế 2. Tài chính 3. Giao dục 4. Sản xuất 5. Giao thông 6. Bán lẻ
+
+Phân loại theo loại bài toán:
+Nhận thức -> Dự đoán -> Ra quyết định
