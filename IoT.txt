@@ -1,0 +1,126 @@
+CHƯƠNG I: GIỚI THIỆU
+Theo EU: IoT là cơ sở hạ tầng mạng toàn cầu,
+liên kết các đối tượng vật lý và ảo thông qua việc
+khai thác khả năng thu thập dữ liệu và giao tiếp
+
+Theo ITU: IoT là một cơ sở hạ tầng toàn cầu cho 
+xã hội thông tin, cho phép các dịch vụ tiên tiến 
+bằng cách liên kết các vật thể (vật lý hoặc ảo) dựa 
+trên các công nghệ thông tin và truyền thông hiện 
+có và tương lai. [ITU-T Y.2060]
+
+Theo IETF: IoT là một mạng lưới toàn cầu 
+gồm các đối tượng được kết nối với nhau, 
+có khả năng định danh duy nhất, dựa trên 
+các giao thức truyền thông tiêu chuẩn.
+
+Theo IEEE: IoT là một mạng lưới các đối 
+tượng, mỗi đối tượng được nhúng cảm biến 
+và kết nối với Internet
+
+Theo WSIS 2005 (World Summit on the Information Society): 
+Bằng cách nhúng các thiết bị truyền tín hiệu di động tầm 
+ngắn vào nhiều thiết bị và đồ vật hàng ngày, tạo ra các hình 
+thức giao tiếp mới giữa con người và thiết bị, cũng như giữa 
+các thiết bị với nhau.
+
+Theo Gartner: IoT là mạng lưới các đối tượng vật lý có chứa 
+công nghệ nhúng để tương tác với các trạng thái bên trong 
+của chúng hoặc môi trường bên ngoài.
+
+Theo Kevin Ashton: IoT là khái niệm sử dụng cảm biến để 
+kết nối thế giới vật lý với thế giới số, cho phép hệ thống máy 
+tính hiểu và phản ứng với môi trường.
+
+Theo IoTAgenda: IoT là một hệ thống các thiết bị máy tính, 
+máy cơ khí và thiết bị số, các vật thể, động vật hoặc con 
+người có liên quan với nhau được cung cấp mã định danh 
+duy nhất (UID) và có khả năng truyền dữ liệu qua mạng mà 
+không cần tương tác giữa con người với nhau hoặc giữa con 
+người với máy tính.
+
+Theo Forbes: IoT là một khái niệm kết nối bất kỳ thiết bị nào 
+có công tắc bật/tắt với Internet (và/hoặc với nhau), từ điện 
+thoại di động, máy pha cà phê, máy giặt, tai nghe, đèn, thiết 
+bị đeo tay đến các thiết bị phức tạp hơn như động cơ phản 
+lực hoặc giàn khoan dầu.
+
+Theo IoT Association: IoT là mạng lưới các thiết bị vật lý 
+được kết nối với Internet, cho phép thu thập và trao đổi dữ 
+liệu mà không cần sự can thiệp của con người.
+
+Theo Cisco Systems: IoT mô tả mạng lưới gồm hàng tỷ đối 
+tượng vật lý trên thế giới, được kết nối với nhau thông qua 
+Internet và có khả năng chia sẻ dữ liệu.
+
+MỘT SỐ MỐC THỜI GIAN
+➢ 1990: Máy nướng bánh mì được cho là đồ vật đầu tiên được kết nối
+internet.
+➢ 1999: Thuật ngữ “internet of things” được đề xuất bởi Kevin Ashton khi
+thuyết trình về một hệ thống cảm biến và nhãn nhận dạng qua tần số radio
+(RFID) gắn trên hàng hóa để quản lý chuỗi cung ứng.
+➢ 2000: LG giới thiệu chiếc tủ lạnh có kết nối internet đầu tiên trên thế giới
+➢ 2008: Hội nghị quốc tế đầu tiên về IoT được tổ chức tại Zurich, Thụy Sĩ.
+➢ 2009: Theo Cisco, đây là thời điểm mà mạng internet vạn vật thực sự được
+khai sinh, khi số lượng thiết bị được kết nối internet vượt dân số thế giới.
+➢ 2012: Hội nghị Internet Châu Âu diễn ra với chủ đề “Internet of Things”.
+➢ 2021: Ước tính có hơn 46 tỷ thiết bị được kết nối trên Internet.
+
+MỘT SỐ ĐẶC ĐIỂM CỦA IOT
+➢Khả năng định danh duy nhất
+➢Kết nối liên tục
+➢Tính tự động.
+➢Tính tương tác
+➢Đa dạng thiết bị
+➢Tính mở rộng
+➢Thu thập và phân tích dữ liệu
+➢Tính an toàn và bảo mật
+➢Ứng dụng đa dạng
+
+ MỘT SỐ VẤN ĐỀ
+ Tính khả dụng 
+ Độ tin cậy
+ Tính di động
+ Hiệu suất: Các chỉ số đánh giá hiệu suất bao gồm:
+    Tốc độ xử lý
+    Tốc độ truyền thông
+    Chi phí
+ Sự quản lý
+ Khả năng mở rộng
+ Khả năng tương tác
+ Bảo mật và quyền riêng tư
+
+MỘT SỐ THÁCH THỨC
+ Các lỗ hổng bảo mật (quyền riêng tư, phá hoại, từ chối 
+dịch vụ)
+ Các vấn đề pháp lý
+ Cơ sở hạ tầng mạng, triển khai trên các hạ tầng cũ đã có
+ Nhiều chuẩn công nghệ khác nhau, thiếu sự chuẩn hóa 
+ Nguồn năng lượng cho các thiết bị, cảm biến duy trì hoạt 
+động lâu dài
+
+MỘT SỐ GIẢI PHÁP AN TOÀN BẢO MẬT
+ Bảo mật thiết bị IoT
+ Bảo mật vật lý, lưu trữ dữ liệu an toàn, bảo mật chip, khởi động an 
+toàn, xác thực thiết bị và nhận dạng thiết bị.
+ Bảo mật truyền thông 
+ Kiểm soát truy cập, tường lửa, IPS, IDS, mã hóa dữ liệu với IPSec, 
+SSL, chip mã hóa bảo mật (security ICs).
+ Hạn chế tối đa quyền truy cập của các thiết bị kết nối
+ Triển khai chính sách an ninh mạng
+ Quản lý lưu trữ dữ liệu quan trọng, xác minh tính toàn vẹn 
+của ứng dụng
+
+MỘT SỐ GIẢI PHÁP AN TOÀN BẢO MẬT
+ Bảo mật thiết bị IoT
+ Bảo mật vật lý, lưu trữ dữ liệu an toàn, bảo mật chip, khởi động an 
+toàn, xác thực thiết bị và nhận dạng thiết bị.
+ Bảo mật truyền thông 
+ Kiểm soát truy cập, tường lửa, IPS, IDS, mã hóa dữ liệu với IPSec, 
+SSL, chip mã hóa bảo mật (security ICs).
+ Hạn chế tối đa quyền truy cập của các thiết bị kết nối
+ Triển khai chính sách an ninh mạng
+ Quản lý lưu trữ dữ liệu quan trọng, xác minh tính toàn vẹn 
+của ứng dụng
+
+CHƯƠNG II: 
