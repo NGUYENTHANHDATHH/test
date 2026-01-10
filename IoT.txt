@@ -111,16 +111,154 @@ SSL, chip mã hóa bảo mật (security ICs).
  Quản lý lưu trữ dữ liệu quan trọng, xác minh tính toàn vẹn 
 của ứng dụng
 
-MỘT SỐ GIẢI PHÁP AN TOÀN BẢO MẬT
- Bảo mật thiết bị IoT
- Bảo mật vật lý, lưu trữ dữ liệu an toàn, bảo mật chip, khởi động an 
-toàn, xác thực thiết bị và nhận dạng thiết bị.
- Bảo mật truyền thông 
- Kiểm soát truy cập, tường lửa, IPS, IDS, mã hóa dữ liệu với IPSec, 
-SSL, chip mã hóa bảo mật (security ICs).
- Hạn chế tối đa quyền truy cập của các thiết bị kết nối
- Triển khai chính sách an ninh mạng
- Quản lý lưu trữ dữ liệu quan trọng, xác minh tính toàn vẹn 
-của ứng dụng
 
-CHƯƠNG II: 
+CHƯƠNG II: CẢM BIẾN
+2.1. SENSOR VÀ ACTUATOR
+Cảm biến (Sensor) IoT là thiết bị quan sát một hoặc nhiều 
+thuộc tính của một thực thể vật lý và chuyển đổi các thuộc 
+tính đó thành thông tin.
+ Đầu ra của cảm biến có thể là tín hiệu tương tự hoặc là tín 
+hiệu số
+Cơ cấu chấp hành (Actuator) (bộ truyền động) là thiết bị có 
+thể thay đổi một hoặc nhiều thuộc tính của một thực thể vật lý 
+để đáp ứng với thông tin nhận được
+
+MỘT SỐ HIỆU ỨNG ĐỂ CHẾ TẠO SENSOR
+1. HIỆU ỨNG HỎA ĐIỆN ĐO BỨC XẠ ÁNH SÁNG: Khi tinh thể hấp thụ ánh sáng, nó thay đổi nhiệt độ dẫn đến phân cực điện
+2. HIỆU ỨNG ÁP ĐIỆN ĐO LỰC, ÁP SUẤT, GIA TỐC: Khi tác động 1 lực lên vật làm bằng chất áp điện (thạch anh,..) nó sẽ bị biến dạng 
+và làm xuất hiện trên 2 mặt vật một lượng điện tích bằng nhau, trái dấu
+3. HIỆU ỨNG CẢM ỨNG ĐIỆN TỪ ĐO TỐC ĐỘ DI CHUYỂN: Khi một thanh dẫn di chuyển trong từ trường, tạo ra
+một sức điện động tỉ lệ với tốc độ
+4. HIỆU ỨNG QUANG ĐIỆN ĐO CẢM BIẾN QUANG: Khi vật liệu chịu bức xạ AS dẫn đến giải phóng điện tích tự do
+5. HIỆU ỨNG HALL ĐO VỊ TRỊ CỦA VẬT TRONG KHÔNG GIAN: Khi một tấm mỏng dẫn điện cần liên kết cơ học với thanh nam châm
+
+PHÂN LOẠI CẢM BIẾN
+1. Theo nguyên lý chuyển đổi giữa đáp ứng và kích thích:
+Hiện tượng vật lý: Nhiệt điện, Quang điện, Quang từ, Điện từ, Quang đàn hồi, Từ điện, Nhiệt từ
+Hiện tượng Hoá học: Biến đổi hoá học, Biến đổi điện hoá, Phân tích phổ
+Sinh học: Biến đổi sinh hoá, Biến đổi vật lý, Hiệu ứng trên cơ thể sống
+2. Theo dạng kích thích:
+Âm thanh: - Biên pha, phân cực - Phổ - Tốc độ truyền sóng
+Điện: - Điện tích, dòng điện - Điện thế, điện áp - Điện trường (biên, pha, phân cực, phổ) - Điện dẫn, hằng số điện môi ...
+Từ: - Từ trường (biên, pha, phân cực, phổ) - Từ thông, cường độ từ trường - Độ từ thẩm
+Quang: - Biên, pha, phân cực, phổ - Tốc độ truyền - Hệ số phát xạ, khúc xạ - Hệ số hấp thụ, hệ số bức xạ
+Cơ: - Vị trí - Lực, áp suất - Gia tốc, vận tốc - Ứng suất, độ cứng - Mô men - Khối lượng, tỉ trọng - Vận tốc chất lưu, độ nhớt
+Nhiệt: - Nhiệt độ - Thông lượng - Nhiệt dung, tỉ nhiệt
+Bức xạ: - Kiểu - Năng lượng - Cường độ ..
+3. Theo tính năng các bộ cảm biến: 
+- Độ nhạy - Độ chính xác - Độ phân
+giải - Độ chọn lọc - Độ tuyến tính 
+Công suất tiêu thụ - Dải tần - Khả năng quá tải - Tốc độ đáp ứng - Độ ổn
+định - Tuổi thọ - Điều kiện môi trường 
+Kích thước, trọng lượng- Độ trễ
+4. Theo phạm vi sử dụng các bộ cảm biến:
+- Công nghiệp- Nghiên cứu khoa học- Môi trường, khí tượng- Thông tin, viễn thông- Nông nghiệp- Dân dụng- Giao thông- Vũ trụ- Quân sự
+5. Theo thông số của mô hình mạch thay thế:
++ Cảm biến tích cực có đầu ra là nguồn áp hoặc nguồn dòng.
++ Cảm biến thụ động được đặc trưng bằng các thông số R, L, C, M .... tuyến tính hoặc
+phi tuyến
+
+CÁC ĐẶC TRƯNG CƠ BẢN CỦA CẢM BIẾN
+1. Hàm truyền: Cho biết quan hệ giữa đáp ứng và kích thích
+ Quan hệ tuyến tính: y = a + bx
+ Logarit, dạng mũ, …
+2. Độ lớn của tín hiệu vào: Là giá trị lớn nhất của tín hiệu đặt vào bộ cảm biến mà sai 
+số không vượt quá ngưỡng cho phép
+3. Sai số và độ chính xác
+4. Đường cong chuẩn cảm biến
+ Là đường cong biểu diễu sự phụ thuộc của đại lượng (S) ở đầu ra của 
+cảm biến vào giá trị của đại lượng đo (M) ở đầu vào.
+ Có thể biểu diễn bằng biểu thức đại số dạng S =F(M), hoặc biểu diễn 
+bằng đồ thị.
+5. Độ nhạy của cảm biến
+6. Độ nhanh và thời gian hồi đáp
+7. Giới hạn sử dụng của cảm biến
+
+CÁC LOẠI CẢM BIẾN THÔNG DỤNG
+ Cảm biến đo nhiệt độ
+ Cảm biến hồng ngoại
+ Cảm biến đo độ ẩm
+ Cảm biến đo chuyển động
+ Cảm biến khí
+ Cảm biến khói
+ Cảm biến áp suất
+ Cảm biến gia tốc
+
+KHUẾCH ĐẠI, LỌC VÀ XỬ LÝ TÍN HIỆU:
+Khuếch đại thuật toán (Op-amp):
+ Đây là một loại mạch khuếch đại đa năng, có thể được sử dụng
+trong nhiều ứng dụng khác nhau, bao gồm khuếch đại điện áp,
+khuếch đại dòng điện, và tạo ra các bộ lọc. Trong IoT, op-amp
+thường được dùng để khuếch đại tín hiệu từ các cảm biến như
+nhiệt độ, độ ẩm, ánh sáng, v.v., trước khi chúng được xử lý bởi
+các vi điều khiển hoặc bộ xử lý khác.
+Lọc nhiễu cho tín hiệu cảm biến:  Các tín hiệu truyền về theo chuẩn công nghiệp hiện nay 
+chủ yếu là dùng tín hiệu 4-20mA
+
+CHUYỂN ĐỔI ADC, DAC
+1. Chuyển đổi ADC (Analog-to-Digital Converter) giúp kết
+nối thế giới vật lý với thế giới số. ADC có chức năng
+chuyển đổi tín hiệu tương tự – như nhiệt độ, ánh sáng,
+âm thanh, áp suất…– thành tín hiệu số để các vi điều
+khiển hoặc máy tính có thể xử lý.
+Quá trình chuyển đổi ADC gồm ba bước chính: lấy mẫu, lượng tử 
+hóa, mã hóa.
+ ADC được ứng dụng rộng rãi trong các thiết bị IoT như: cảm biến
+nhiệt độ, độ ẩm, ánh sáng trong nông nghiệp thông minh; hệ thống
+giám sát môi trường; thiết bị y tế như máy đo nhịp tim, điện tâm đồ,
+
+2. DAC (Digital-to-Analog Converter) là mạch chuyển đổi dữ
+liệu số thành tín hiệu analog để tương tác với thế giới thực.
+DAC giúp hệ thống số điều khiển các thiết bị vật lý như loa,
+động cơ, van điện tử...
+ Một số ứng dụng của DAC- Thiết bị: điều chỉnh độ sáng đèn, tốc độ quạt, âm lượng loa…- Y tế: điều khiển máy bơm thuốc, máy đo nhịp tim, ...- Nông nghiệp thông minh: điều khiển van nước, hệ thống tưới tiêu 
+tự động, …- Ô tô và robot tự hành: điều khiển động cơ, hệ thống lái, phát âm 
+thanh cảnh báo,…
+
+ THU THẬP VÀ XỬ LÝ DỮ LIỆU CẢM BIẾN
+Nếu không có quá trình xử lý dữ liệu, dữ liệu sẽ tồn tại
+dưới dạng không cấu trúc và không thể hiện thông tin hữu
+ích. Dữ liệu không xử lý có thể gây ra các vấn đề và hậu
+quả sau:
+1. Thất thoát thông tin: Dữ liệu không xử lý thường không thể
+được tận dụng để trích xuất thông tin quan trọng. Thông tin cần
+thiết có thể bị che khuất hoặc mất đi, làm giảm giá trị của dữ liệu.
+2. Khó khăn trong quản lý: Nếu không tổ chức và lưu trữ dữ liệu
+đúng cách, doanh nghiệp sẽ gặp khó khăn trong việc tìm kiếm và
+truy xuất thông tin khi cần. Điều này có thể làm chậm quy trình
+làm việc và ra quyết định.
+3. Khó khăn trong phân tích: Dữ liệu không được biến đổi và 
+chuẩn hóa có thể làm cho việc phân tích và hiểu rõ thông tin trở 
+nên phức tạp và khó khăn.
+4. Khả năng sai sót cao: Dữ liệu không được kiểm tra và làm 
+sạch có thể chứa nhiễu, lỗi hoặc thông tin không chính xác. 
+Điều này có thể dẫn đến việc đưa ra quyết định sai lầm.
+5. Sử dụng không hiệu quả tài nguyên: Dữ liệu không được xử 
+lý có thể làm cho việc sử dụng tài nguyên (như lưu trữ và máy 
+tính) không hiệu quả và tốn kém.
+6. Thiếu thông báo và giao tiếp: Dữ liệu không được tổ chức và
+biểu thị đúng cách có thể làm mất đi khả năng truyền tải thông
+điệp quan trọng đến người sử dụng.
+7. Mất cơ hội: Nếu không được xử lý, dữ liệu không thể cung
+cấp thông tin để tối ưu hóa hoạt động, dự đoán xu hướng, phát
+triển sản phẩm hoặc cải thiện quy trình.
+
+QUÁ TRÌNH XỬ LÝ DỮ LIỆU 
+1. Thu thập dữ liệu: 
+2. Lọc dữ liệu: 
+Loại bỏ dữ liệu không chính xác, không cần thiết hoặc lặp lại.
+3. Biến đổi dữ liệu: 
+Chuyển đổi dữ liệu ban đầu thành định dạng phù hợp để dễ dàng 
+phân tích. Các biến đổi có thể bao gồm việc chuyển đổi đơn vị đo, 
+mã hóa dữ liệu, hoặc làm phẳng cấu trúc dữ liệu.
+4. Tổ chức và lưu trữ:
+5. Phân tích dữ liệu: 
+Áp dụng các kỹ thuật và công cụ phân tích để tìm kiếm mẫu, xu
+hướng và thông tin hữu ích từ dữ liệu. Phân tích dữ liệu có thể bao
+gồm thống kê, khai phá dữ liệu, học máy...
+6. Trình bày kết quả: 
+Trình bày kết quả phân tích dưới dạng biểu đồ, bảng, báo cáo hoặc
+hình ảnh sẽ giúp người sử dụng hiểu rõ hơn về thông tin được trích
+xuất từ dữ liệu. Kết quả có thể được lưu trữ và tiếp tục xử lý, sử
+dụng trong thời gian tiếp theo.
+
