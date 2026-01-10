@@ -1,5 +1,33 @@
-3 nguồn Vốn Tri Thức của tổ chức: 
-- Vốn nhân lực (Human Capital),
-- Vốn cấu trúc (Structural Capital),
-- Vốn quan hệ (Relationship Capital).
+CHƯƠNG I: GIỚI THIỆU
+1. Định nghĩa về Quản trị Tri thức (KM)
+• Quản trị tri thức (KM) được định nghĩa một cách đơn giản là làm những gì cần thiết để tận dụng tối đa các nguồn lực tri thức.
+• Trọng tâm của KM là việc tổ chức và cung cấp tri thức quan trọng ở bất cứ đâu và bất cứ khi nào cần thiết.
+• KM có mối liên hệ chặt chẽ với khái niệm vốn trí tuệ (intellectual capital).
+2. Bốn động lực chính thúc đẩy KM (Forces Driving KM)
+  1. Tăng độ phức tạp của lĩnh vực (Increasing Domain Complexity): Các quy trình nội bộ và bên ngoài trở nên phức tạp hơn do sự cạnh tranh và tiến bộ công nghệ nhanh chóng. Ví dụ, phát triển sản phẩm mới hiện nay đòi hỏi sự phối hợp của các nhóm liên ngành thay vì chỉ các nhà thiết kế đơn lẻ.
+  2. Biến động thị trường tăng tốc (Accelerating Market Volatility): Tốc độ thay đổi trong các lĩnh vực thị trường tăng lên nhanh chóng, các ảnh hưởng từ môi trường có thể làm thay đổi một tổ chức chỉ sau một đêm.
+  3. Tốc độ đáp ứng được tăng cường (Intensified Speed of Responsiveness): Thời gian cần thiết để hành động dựa trên những thay đổi nhỏ đang giảm dần; nếu không quyết định nhanh, cửa sổ cơ hội sẽ đóng lại.
+  4. Kinh nghiệm cá nhân bị giảm sút (Diminishing Individual Experience): Tỷ lệ luân chuyển nhân sự cao dẫn đến việc những người có quyền ra quyết định thường có thời gian làm việc tại tổ chức ngắn hơn trước. Do các xu hướng thay đổi quá nhanh, kinh nghiệm cũ có thể không còn phù hợp với những quyết định mới.
+3. Vốn trí tuệ (Intellectual Capital)
+Vốn trí tuệ thường được định giá cao hơn gấp 3 đến 8 lần so với vốn tài chính của các công ty thâm dụng tri thức. Nó được chia thành hai loại:
+• Vốn con người (Human capital): Toàn bộ tri thức nằm trong tâm trí của nhân viên, khách hàng, nhà cung cấp và các đối tác liên kết.
+• Vốn cấu trúc (Structural capital): Những gì còn lại trong tổ chức sau khi nhân viên đi về nhà, bao gồm bản quyền, hồ sơ khách hàng, phần mềm quy trình kinh doanh, cơ sở dữ liệu, hướng dẫn và cấu trúc tổ chức.
+4. Hệ thống Quản trị Tri thức (KMS)
+• Hệ thống quản trị tri thức (KMS) là sự kết hợp (synergy) giữa các công nghệ thông tin mới nhất và các cơ chế xã hội/cấu trúc của tổ chức.
+• Cơ chế KM (KM mechanisms) là các phương tiện tổ chức hoặc cấu trúc được sử dụng để thúc đẩy quản trị tri thức.
+• Phân loại KMS dựa trên các quy trình KM gồm 4 loại: Hệ thống Khám phá (Discovery), Hệ thống Thu nhận (Capture), Hệ thống Chia sẻ (Sharing), và Hệ thống Vận dụng (Application) tri thức.
+5. Các con số và nguyên tắc cốt lõi khác
+• Tỷ lệ 80/20: Quản trị tri thức hiệu quả bao gồm 80% yếu tố con người và văn hóa tổ chức, và chỉ 20% là công nghệ.
+• Tốc độ tăng trưởng tri thức: Ước tính tri thức hiện nay tăng gấp đôi sau mỗi 18 tháng và tốc độ này vẫn đang tiếp tục tăng.
+• Bản chất của KM:
+  1. Tri thức đầu tiên được tạo ra trong tâm trí con người; do đó, các thực hành KM phải
+khuyến khích và kích thích khả năng phát triển tri thức mới của nhân viên. 
+  2. Các phương pháp và công nghệ KM phải
+cho phép những cách hiệu quả để gợi ra, trình bày,
+tổ chức, tái sử dụng và làm mới kiến thức này.
+  3. KM không nên tạo khoảng cách với
+những người sở hữu kiến thức, mà thay vào đó lại tôn vinh và
+thừa nhận vị trí của họ với tư cách là chuyên gia trong lĩnh vực
+tổ chức.
+Để dễ hình dung, bạn có thể coi quản trị tri thức giống như việc quản lý một thư viện khổng lồ nhưng không chỉ có sách (vốn cấu trúc) mà còn bao gồm cả sự hiểu biết của các thủ thư và độc giả (vốn con người). Mục tiêu là làm sao để khi bất kỳ ai cần một câu trả lời, họ không chỉ tìm thấy đúng quyển sách mà còn có thể kết nối được với đúng chuyên gia để giải quyết vấn đề ngay lập tức.
 
