@@ -11,7 +11,9 @@ CHƯƠNG I: GIỚI THIỆU
 3. Vốn trí tuệ (Intellectual Capital)
 Vốn trí tuệ thường được định giá cao hơn gấp 3 đến 8 lần so với vốn tài chính của các công ty thâm dụng tri thức. Nó được chia thành hai loại:
 • Vốn con người (Human capital): Toàn bộ tri thức nằm trong tâm trí của nhân viên, khách hàng, nhà cung cấp và các đối tác liên kết.
-• Vốn cấu trúc (Structural capital): Những gì còn lại trong tổ chức sau khi nhân viên đi về nhà, bao gồm bản quyền, hồ sơ khách hàng, phần mềm quy trình kinh doanh, cơ sở dữ liệu, hướng dẫn và cấu trúc tổ chức.
+• Vốn cấu trúc (Structural capital): Những gì còn lại trong tổ chức sau khi nhân viên đi về nhà, 
+bao gồm bản quyền, hồ sơ khách hàng, phần mềm quy trình kinh doanh, cơ sở dữ liệu, hướng dẫn và cấu trúc tổ chức.
+• Vốn tổ chức: Tri thức tích lũy trong các quy trình nghiệp vụ, văn hóa, hệ thống của tổ chức
 4. Hệ thống Quản trị Tri thức (KMS)
 • Hệ thống quản trị tri thức (KMS) là sự kết hợp (synergy) giữa các công nghệ thông tin mới nhất và các cơ chế xã hội/cấu trúc của tổ chức.
 • Cơ chế KM (KM mechanisms) là các phương tiện tổ chức hoặc cấu trúc được sử dụng để thúc đẩy quản trị tri thức.
