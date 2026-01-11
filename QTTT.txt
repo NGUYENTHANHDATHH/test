@@ -33,3 +33,42 @@ thừa nhận vị trí của họ với tư cách là chuyên gia trong lĩnh v
 tổ chức.
 Để dễ hình dung, bạn có thể coi quản trị tri thức giống như việc quản lý một thư viện khổng lồ nhưng không chỉ có sách (vốn cấu trúc) mà còn bao gồm cả sự hiểu biết của các thủ thư và độc giả (vốn con người). Mục tiêu là làm sao để khi bất kỳ ai cần một câu trả lời, họ không chỉ tìm thấy đúng quyển sách mà còn có thể kết nối được với đúng chuyên gia để giải quyết vấn đề ngay lập tức.
 
+CHƯƠNG II: BẢN CHẤT CỦA TRI THỨC
+1. Phân biệt Dữ liệu, Thông tin và Tri thức (Hệ thống phân cấp DIK)
+Đây là nội dung cơ bản và quan trọng nhất của chương.
+• Dữ liệu (Data): Là những con số hoặc khẳng định thô, bao gồm các sự kiện, quan sát hoặc nhận thức. Dữ liệu đơn thuần là các bit (số 0 và 1) và có thể bao gồm cả những phần "rác" không có giá trị sử dụng.
+• Thông tin (Information): Là dữ liệu đã có ngữ cảnh và sự phù hợp. Thông tin liên quan đến việc xử lý dữ liệu thô để chỉ ra các xu hướng hoặc mô hình có ý nghĩa và mang tính ngữ nghĩa.
+• Tri thức (Knowledge): Là thông tin có mục đích sử dụng để ra quyết định và hành động. Tri thức nằm ở cấp cao nhất trong hệ thống phân cấp, là thực thể giàu có, sâu sắc và giá trị nhất. Tri thức giúp tạo ra thông tin từ dữ liệu hoặc tạo ra thông tin có giá trị hơn từ thông tin ít giá trị hơn.
+2. Các quan điểm về Tri thức
+Có hai luồng quan điểm đối lập về bản chất của tri thức:
+• Quan điểm chủ quan (Subjective View): Thực tại phụ thuộc hoàn toàn vào nhận thức của con người và được xây dựng thông qua tương tác xã hội. Tri thức không tồn tại độc lập với trải nghiệm và thực hành xã hội.
+    ◦ Tri thức là trạng thái tâm trí (State of Mind) hoặc Tri thức là thực hành (Practice).
+• Quan điểm khách quan (Objective View): Thực tại độc lập với nhận thức của con người.
+    ◦ Tri thức là vật thể (Objects): Có thể được lưu trữ, chuyển giao và thao tác.
+    ◦ Tri thức là khả năng truy cập thông tin: Cho phép sử dụng thông tin hiệu quả.
+    ◦ Tri thức là năng lực (Capability): Là một năng lực chiến lược có thể áp dụng để tìm kiếm lợi thế cạnh tranh.
+3. Phân loại Tri thức (Nội dung trọng tâm thi trắc nghiệm)
+Tri thức được chia thành nhiều cặp phạm trù khác nhau:
+• Tri thức Tuyên bố (Declarative/Know-what) vs. Tri thức Quy trình (Procedural/Know-how):
+    ◦ Tuyên bố: Tập trung vào niềm tin về mối quan hệ giữa các biến số (ví dụ: tăng giá sẽ giảm doanh số).
+    ◦ Quy trình: Tập trung vào các bước hoặc hành động để đạt được kết quả (ví dụ: quy trình đấu thầu).
+• Tri thức Hiện (Explicit) vs. Tri thức Ẩn (Tacit):
+    ◦ Tri thức Hiện: Đã được thể hiện qua từ ngữ, con số, công thức, bản vẽ, phần mềm... và có thể chia sẻ một cách hệ thống.
+    ◦ Tri thức Ẩn: Bao gồm hiểu biết sâu sắc, trực giác và linh cảm chưa được văn bản hóa; rất khó diễn đạt và chia sẻ.
+• Tri thức Chung (General) vs. Tri thức Đặc thù (Specific):
+    ◦ Chung: Được sở hữu bởi nhiều người và dễ dàng chuyển giao.
+    ◦ Đặc thù: Chỉ một số ít người sở hữu, chi phí chuyển giao rất đắt đỏ. Tri thức đặc thù có hai loại: đặc thù về kỹ thuật (kiến thức sâu về một lĩnh vực) và đặc thù về ngữ cảnh (kiến thức về hoàn cảnh, thời gian và địa điểm cụ thể).
+4. Đặc điểm của Tri thức
+Bốn đặc điểm ảnh hưởng đến việc quản trị:
+• Tính hiện hữu (Explicitness): Mức độ tri thức tồn tại dưới dạng hiện so với dạng ẩn.
+• Khả năng mã hóa (Codifiability): Mức độ tri thức có thể được khớp nối hoặc hệ thống hóa.
+• Khả năng giảng dạy (Teachability): Mức độ tri thức có thể dạy cho người khác (thông qua đào tạo, học việc).
+    ◦ Lưu ý: Nếu vừa có thể mã hóa vừa có thể dạy được thì chắc chắn là tri thức hiện; nếu không thể làm cả hai thì là tri thức ẩn.
+• Tính đặc thù (Specificity): Mức độ tri thức gắn liền với những người hoặc bối cảnh nhất định.
+5. Chuyên môn và Các loại Chuyên môn (Expertise)
+Chuyên môn là tri thức có chất lượng cao.
+• Chuyên môn liên kết (Associational): Làm việc dựa trên việc liên kết các quan sát/triệu chứng với hành động sửa chữa nhờ kinh nghiệm (ví dụ: thợ sửa TV), dù có thể không hiểu lý thuyết sâu xa bên dưới.
+• Chuyên môn kỹ năng vận động (Motor Skills): Mang tính thể chất hơn là nhận thức, học thông qua thực hành lặp đi lặp lại (ví dụ: đạp xe).
+• Chuyên môn lý thuyết/Sâu (Theoretical/Deep): Đòi hỏi sự sáng tạo và hiểu biết về lý thuyết nền tảng của lĩnh vực, giúp giải quyết các vấn đề kỹ thuật phức tạp.
+6. Nơi lưu trữ tri thức (Knowledge Reservoirs)
+Tri thức nằm ở nhiều thực thể trong tổ chức: Con người (cá nhân, nhóm), Các tạo vật (quy trình, thói quen), Kho lưu trữ (giấy tờ, điện tử) và Công nghệ (hệ thống thông tin).
