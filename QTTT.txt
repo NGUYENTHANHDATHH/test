@@ -72,3 +72,38 @@ Chuyên môn là tri thức có chất lượng cao.
 • Chuyên môn lý thuyết/Sâu (Theoretical/Deep): Đòi hỏi sự sáng tạo và hiểu biết về lý thuyết nền tảng của lĩnh vực, giúp giải quyết các vấn đề kỹ thuật phức tạp.
 6. Nơi lưu trữ tri thức (Knowledge Reservoirs)
 Tri thức nằm ở nhiều thực thể trong tổ chức: Con người (cá nhân, nhóm), Các tạo vật (quy trình, thói quen), Kho lưu trữ (giấy tờ, điện tử) và Công nghệ (hệ thống thông tin).
+
+CHƯƠNG 3: GIẢI PHÁP QTTT
+3.1. Khái niệm về Quản trị Tri thức (KM) và Nguồn lực Tri thức
+• Định nghĩa KM: Là thực hiện những gì cần thiết để tận dụng tối đa các nguồn lực tri thức. Cụ thể hơn, đó là việc thực hiện các hoạt động khám phá, thu nhận, chia sẻ và vận dụng tri thức nhằm tăng cường hiệu quả đạt được mục tiêu của tổ chức một cách tiết kiệm chi phí.
+• Nguồn lực tri thức: Bao gồm tri thức hiện có của cá nhân, của tổ chức (công ty, chi nhánh, phòng ban) và tri thức có thể thu thập được từ các cá nhân hoặc tổ chức khác.
+3.2. Bốn cấp độ của Giải pháp Quản trị Tri thức
+Thinking about KM solutions takes the broadest
+view – overlooking all aspects of KM.
+Các giải pháp KM được facilitation (thúc đẩy) thông qua 4 cấp độ lồng ghép vào nhau:
+    1. Quy trình KM (KM Processes): Các hoạt động mà tri thức trải qua.
+    2. Hệ thống KM (KM Systems): Sự tích hợp của các công nghệ và cơ chế để hỗ trợ quy trình KM.
+    3. Cơ chế và Công nghệ KM (KM Mechanisms and Technologies): Các phương thức tổ chức/xã hội và các công cụ kỹ thuật.
+    4. Hạ tầng KM (KM Infrastructure): Nền tảng dài hạn hỗ trợ cho toàn bộ hệ thống.
+3.3. Các Quy trình KM và Quy trình con (Trọng tâm thi)
+Đây là phần quan trọng nhất, bạn cần phân biệt rõ 4 quy trình và các quy trình con đi kèm:
+• Khám phá Tri thức (Knowledge Discovery): Phát triển tri thức ẩn hoặc hiện mới từ dữ liệu/thông tin hoặc từ việc tổng hợp tri thức cũ.
+    ◦ Combination (Phối hợp): Kết hợp các khối tri thức hiện để tạo ra tri thức hiện mới phức tạp hơn (ví dụ: lập đề án mới từ các tài liệu cũ).
+    ◦ Socialization (Xã hội hóa): Tổng hợp tri thức ẩn giữa các cá nhân thông qua hoạt động chung (ví dụ: học việc, thực tập).
+• Thu nhận Tri thức (Knowledge Capture): Lấy tri thức hiện hoặc ẩn đang nằm trong con người, vật thể hoặc thực thể tổ chức.
+    ◦ Externalization (Ngoại hiện hóa): Chuyển tri thức ẩn sang hiện (ví dụ: viết tài liệu rút kinh nghiệm sau dự án).
+    ◦ Internalization (Nội hiện hóa): Chuyển tri thức hiện sang ẩn, đây chính là quá trình "học tập" (ví dụ: đọc sách hướng dẫn và hiểu cách làm).
+• Chia sẻ Tri thức (Knowledge Sharing): Chuyển giao tri thức hiện hoặc ẩn cho người khác.
+    ◦ Socialization: Dùng để chia sẻ tri thức ẩn thông qua tương tác trực tiếp.
+    ◦ Exchange (Trao đổi): Chuyển giao tri thức hiện (ví dụ: gửi bản hướng dẫn thiết kế cho đồng nghiệp).
+• Vận dụng Tri thức (Knowledge Application): Sử dụng tri thức để hướng dẫn các quyết định và hành động.
+    ◦ Direction (Chỉ đạo): Người có tri thức hướng dẫn người khác hành động mà không chuyển giao kiến thức nền tảng cho họ (ví dụ: thợ sửa máy hướng dẫn công nhân nhấn nút để sửa lỗi tạm thời).
+    ◦ Routines (Quy trình chuẩn): Tri thức được nhúng trực tiếp vào các quy trình, quy tắc và chuẩn mực của tổ chức (ví dụ: hệ thống quản lý kho tự động tính toán lượng đặt hàng).
+3.4. Cơ sở hạ tầng Quản trị Tri thức (KM Infrastructure)
+Hạ tầng KM bao gồm 5 thành phần chính:
+  1. Văn hóa tổ chức: Các chuẩn mực, niềm tin, sự hỗ trợ của lãnh đạo và các khuyến khích chia sẻ tri thức.
+  2. Cấu trúc tổ chức: Cách phân cấp, phi tập trung hóa để thúc đẩy tương tác.
+  3. Cộng đồng thực hành (COPs): Các nhóm tự phát cùng chung sở thích/chuyên môn tương tác thường xuyên để chia sẻ tri thức.
+  4. Hạ tầng Công nghệ thông tin: Được xem xét qua 4 khía cạnh: Reach (Phạm vi kết nối), Depth (Độ sâu thông tin), Richness (Độ phong phú của kênh truyền tin - như video, âm thanh), và Aggregation (Khả năng tổng hợp dữ liệu lớn).
+  5. Tri thức chung (Common Knowledge): Ngôn ngữ chung, vốn kinh nghiệm tích lũy giúp hiểu nhau và ngăn chặn rò rỉ tri thức ra ngoài.
+  6. Môi trường vật lý: Thiết kế tòa nhà, văn phòng mở, khu vực uống trà/cafe để tạo ra các "tai nạn tri thức" (gặp gỡ và trao đổi tình cờ).
