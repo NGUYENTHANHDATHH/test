@@ -85,7 +85,7 @@ Các giải pháp KM được facilitation (thúc đẩy) thông qua 4 cấp đ�
     2. Hệ thống KM (KM Systems): Sự tích hợp của các công nghệ và cơ chế để hỗ trợ quy trình KM.
     3. Cơ chế và Công nghệ KM (KM Mechanisms and Technologies): Các phương thức tổ chức/xã hội và các công cụ kỹ thuật.
     4. Hạ tầng KM (KM Infrastructure): Nền tảng dài hạn hỗ trợ cho toàn bộ hệ thống.
-3.3. Các Quy trình KM và Quy trình con (Trọng tâm thi)
+3.3. Quy trình KM 
 Đây là phần quan trọng nhất, bạn cần phân biệt rõ 4 quy trình và các quy trình con đi kèm:
 • Khám phá Tri thức (Knowledge Discovery): Phát triển tri thức ẩn hoặc hiện mới từ dữ liệu/thông tin hoặc từ việc tổng hợp tri thức cũ.
     ◦ Combination (Phối hợp): Kết hợp các khối tri thức hiện để tạo ra tri thức hiện mới phức tạp hơn (ví dụ: lập đề án mới từ các tài liệu cũ).
@@ -99,6 +99,29 @@ Các giải pháp KM được facilitation (thúc đẩy) thông qua 4 cấp đ�
 • Vận dụng Tri thức (Knowledge Application): Sử dụng tri thức để hướng dẫn các quyết định và hành động.
     ◦ Direction (Chỉ đạo): Người có tri thức hướng dẫn người khác hành động mà không chuyển giao kiến thức nền tảng cho họ (ví dụ: thợ sửa máy hướng dẫn công nhân nhấn nút để sửa lỗi tạm thời).
     ◦ Routines (Quy trình chuẩn): Tri thức được nhúng trực tiếp vào các quy trình, quy tắc và chuẩn mực của tổ chức (ví dụ: hệ thống quản lý kho tự động tính toán lượng đặt hàng).
+
+3.4. KM Mechanisms and tech
+Cơ chế Quản trị Tri thức (Knowledge Management Mechanisms) được định nghĩa là các phương tiện mang tính tổ chức hoặc cấu trúc được sử dụng để thúc đẩy việc quản trị tri thức trong một doanh nghiệp
+• Cơ chế KM có thể sử dụng hoặc không sử dụng công nghệ điện tử
+Cơ chế KM liên quan đến một số loại
+ sắp xếp tổ chức, hoặc
+ phương tiện xã hội, hoặc
+ phương tiện mang tính cấu trúc để tạo điều kiện thuận lợi cho KM
+• Ví dụ:
+ Ngắn hạn: vừa học vừa làm, vừa học vừa làm, vừa học vừa làm
+quan sát, gặp mặt trực tiếp,…
+ Dài hạn: tuyển Giám đốc tri thức, dự án hợp tác
+giữa các phòng ban, các mối quan hệ phân cấp truyền thống, tổ chức
+chính sách, tiêu chuẩn, quy trình tiếp nhận nhân viên mới, nhân viên
+luân chuyển giữa các phòng ban,…
+
+Các loại công nghệ quản trị tri thức phổ biến
+Các công nghệ này rất đa dạng, từ các hệ thống lưu trữ cơ bản đến trí tuệ nhân tạo phức tạp:
+• Trí tuệ nhân tạo (AI): Bao gồm các công nghệ thu nhận tri thức, hệ thống chuyên gia (expert systems) và hệ thống suy luận dựa trên tình huống (case-based reasoning).
+• Các công cụ truyền thông và cộng tác: Như nhóm thảo luận điện tử, hội nghị truyền hình (videoconferencing), hệ thống định vị chuyên gia (expertise locator systems), và các nhóm chat.
+• Hệ thống quản lý doanh nghiệp: Bao gồm hệ thống hoạch định nguồn lực doanh nghiệp (ERP), hệ thống thông tin quản lý (MIS) và hệ thống hỗ trợ ra quyết định (DSS).
+• Kho lưu trữ tri thức: Các cơ sở dữ liệu về bài học kinh nghiệm (lessons learned systems) và các thực hành tốt nhất (best practices databases).
+• Xu hướng Web 2.0: Nhiều công nghệ truyền thống hiện nay đang được đổi mới dưới tên gọi Web 2.0, bao gồm các nền tảng như Wiki, Blog, và các mạng xã hội nội bộ giúp tăng cường tương tác.
 3.4. Cơ sở hạ tầng Quản trị Tri thức (KM Infrastructure)
 Hạ tầng KM bao gồm 5 thành phần chính:
   1. Văn hóa tổ chức: Các chuẩn mực, niềm tin, sự hỗ trợ của lãnh đạo và các khuyến khích chia sẻ tri thức.
