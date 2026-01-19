@@ -20,3 +20,7 @@ Phân loại UD AI theo ngành nghề:
 
 Phân loại theo loại bài toán:
 Nhận thức -> Dự đoán -> Ra quyết định
+
+Machine Learning tools
+Scikit-learn: Thư viên ML cơ bản cho classfication, regression, clustering-lý tưởng để tạo baseline model
+Metrics cơ bản: Accuracy, Precision, Recall, F1-Score
