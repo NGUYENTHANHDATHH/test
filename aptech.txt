@@ -1,0 +1,72 @@
+function findDuplicates(nums) {
+    let res = [];
+    for (let i = 0; i < nums.length; i++) {
+        let index = Math.abs(nums[i]) - 1;
+        if (nums[index] < 0) res.push(index + 1);
+        nums[index] = -nums[index];
+    }
+    return res;
+}
+
+function lengthOfLongestSubstring(s) {
+    let map = new Map();
+    let left = 0, maxLen = 0;
+    for (let right = 0; right < s.length; right++) {
+        if (map.has(s[right])) {
+            left = Math.max(map.get(s[right]) + 1, left);
+        }
+        map.set(s[right], right);
+        maxLen = Math.max(maxLen, right - left + 1);
+    }
+    return maxLen;
+}
+
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+let db = []; // Giả lập database
+
+// API 1: POST /api/products
+app.post('/api/products', async (req, res, next) => {
+    try {
+        const { name, sku, quantity, price } = req.body;
+
+        // Validation logic
+        if (!name || !sku || quantity < 0 || price < 0) {
+            return res.status(400).json({ error: "Invalid input data" });
+        }
+
+        const isExist = db.find(p => p.sku === sku);
+        if (isExist) return res.status(409).json({ error: "SKU already exists" });
+
+        const newProduct = { id: Date.now(), name, sku, quantity, price };
+        db.push(newProduct);
+        
+        res.status(201).json(newProduct);
+    } catch (err) {
+        res.status(500).json({ error: "Server Error" });
+    }
+});
+
+// API 2: GET /api/products (Pagination & Search)
+app.get('/api/products', (req, res) => {
+    let { page = 1, limit = 10, search = "" } = req.query;
+    page = parseInt(page);
+    limit = parseInt(limit);
+
+    // Search logic
+    let filteredData = db.filter(p => p.name.toLowerCase().includes(search.toLowerCase()));
+
+    // Pagination logic
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    const results = filteredData.slice(startIndex, endIndex);
+
+    res.json({
+        total: filteredData.length,
+        page,
+        limit,
+        data: results
+    });
+});
