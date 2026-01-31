@@ -1,3 +1,152 @@
+1. Dạng: Mảng và Hash Map (Tối ưu O(n))
+Đề bài (Two Sum): Cho một mảng số nguyên nums và một số nguyên target. Hãy tìm chỉ số (index) của hai số trong mảng sao cho tổng của chúng bằng target.
+Yêu cầu: Độ phức tạp O(n).
+code
+JavaScript
+/**
+ * Ví dụ: nums = [2, 7, 11, 15], target = 9
+ * Kết quả: [0, 1] (vì 2 + 7 = 9)
+ */
+
+function twoSum(nums, target) {
+    const map = new Map(); // Dùng Map để lưu giá trị đã đi qua
+
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i]; // Số còn thiếu để đủ target
+        
+        if (map.has(complement)) {
+            return [map.get(complement), i];
+        }
+        
+        map.set(nums[i], i); // Lưu giá trị hiện tại và index vào map
+    }
+    return [];
+}
+Tại sao hay ra đề này? Kiểm tra xem ứng viên có biết dùng Hash Map để khử vòng lặp lồng nhau (giảm từ 
+O
+(
+n
+2
+)
+O(n 
+2
+ )
+ xuống 
+O
+(
+n
+)
+O(n)
+) hay không.
+2. Dạng: Xử lý Chuỗi (String) & Two Pointers
+Đề bài (Valid Palindrome): Kiểm tra một chuỗi có phải là chuỗi đối xứng hay không (đọc xuôi hay ngược đều giống nhau), bỏ qua các ký tự đặc biệt và chữ hoa/thường.
+code
+JavaScript
+/**
+ * Ví dụ: "A man, a plan, a canal: Panama" -> true
+ * Ví dụ: "race a car" -> false
+ */
+
+function isPalindrome(s) {
+    // Làm sạch chuỗi: bỏ ký tự không phải chữ/số và chuyển về chữ thường
+    const cleanStr = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+    let left = 0;
+    let right = cleanStr.length - 1;
+
+    while (left < right) {
+        if (cleanStr[left] !== cleanStr[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+Tại sao hay ra đề này? Kiểm tra kỹ năng sử dụng Regex và tư duy tối ưu bộ nhớ bằng kỹ thuật Two Pointers (hai con trỏ).
+3. Dạng: Nhóm dữ liệu (Group Anagrams)
+Đề bài: Cho một mảng các chuỗi, hãy nhóm các chuỗi là biến thể của nhau (Anagrams) lại thành từng nhóm.
+code
+JavaScript
+/**
+ * Ví dụ: ["eat", "tea", "tan", "ate", "nat", "bat"]
+ * Kết quả: [["bat"],["nat","tan"],["ate","eat","tea"]]
+ */
+
+function groupAnagrams(strs) {
+    const map = {};
+
+    for (let str of strs) {
+        // Sắp xếp các ký tự trong chuỗi để tạo "khóa" chung
+        // Ví dụ: "eat", "tea" đều thành "aet"
+        const sortedKey = str.split('').sort().join('');
+        
+        if (!map[sortedKey]) {
+            map[sortedKey] = [];
+        }
+        map[sortedKey].push(str);
+    }
+
+    return Object.values(map);
+}
+Tại sao hay ra đề này? Đây là bài toán thực tế thường gặp khi cần phân loại hoặc chuẩn hóa dữ liệu đầu vào.
+4. Dạng: Tìm số bị thiếu (Logic toán học)
+Đề bài: Cho một mảng chứa 
+n
+n
+ số nguyên riêng biệt trong khoảng 
+[
+0
+,
+n
+]
+[0,n]
+. Hãy tìm số duy nhất còn thiếu trong mảng.
+code
+JavaScript
+/**
+ * Ví dụ: nums = [3, 0, 1] (n=3, khoảng [0,3])
+ * Kết quả: 2
+ */
+
+function missingNumber(nums) {
+    const n = nums.length;
+    // Công thức tính tổng từ 0 đến n: (n * (n + 1)) / 2
+    const expectedSum = (n * (n + 1)) / 2;
+    
+    const actualSum = nums.reduce((acc, curr) => acc + curr, 0);
+    
+    return expectedSum - actualSum;
+}
+Tại sao hay ra đề này? Kiểm tra xem ứng viên có tư duy tìm giải pháp thông minh (toán học) thay vì chỉ biết dùng vòng lặp để tìm kiếm.
+5. Dạng: Flatten Array (Đệ quy)
+Đề bài: Viết một hàm để làm phẳng một mảng đa cấp thành mảng 1 cấp. (Không dùng hàm .flat() có sẵn của JS).
+code
+JavaScript
+/**
+ * Ví dụ: [1, [2, [3, 4], 5], 6]
+ * Kết quả: [1, 2, 3, 4, 5, 6]
+ */
+
+function flatten(arr) {
+    let result = [];
+    
+    arr.forEach(item => {
+        if (Array.isArray(item)) {
+            // Nếu là mảng thì gọi đệ quy rồi nối vào kết quả
+            result = result.concat(flatten(item));
+        } else {
+            result.push(item);
+        }
+    });
+    
+    return result;
+}
+Tại sao hay ra đề này? Kiểm tra kiến thức về Recursion (Đệ quy) – một khái niệm cực kỳ quan trọng trong lập trình backend.
+
+
+
+
 function findDuplicates(nums) {
     let res = [];
     for (let i = 0; i < nums.length; i++) {
