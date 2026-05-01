@@ -1,18 +1,67 @@
 Chương 1: Tổng quan về quản trị mạng
 Các thuật ngữ, khái niệm cần biết:
 Quản trị mạng (Network Administration): Quản lý, vận hành, giám sát và bảo trì các thành phần của mạng máy tính.
+   5 lĩnh vực chức năng của công tác quản trị mạng (Computer
+  Network Management)
+   Mô hình quản trị mạng do ISO (International Standard 
+  Organization) đề xuất bao gồm 5 lĩnh vực chức năng:
+   Fault Management
+   Configuration Management
+   Accounting Management
+   Performance Management
+   Security Management
 Hệ thống mạng (Network System): Tập hợp các thiết bị mạng (máy tính, router, switch...) kết nối với nhau nhằm chia sẻ tài nguyên.
 Quản trị viên mạng (Network Administrator): Người chịu trách nhiệm giám sát, vận hành và khắc phục sự cố mạng.
 Thiết bị mạng (Network Devices): Bao gồm router, switch, hub, access point, tường lửa...
 Hệ thống quản trị mạng (Network Management System - NMS): Hệ thống bao gồm phần mềm và phần cứng dùng để giám sát, cấu hình, và quản lý toàn bộ mạng.
 Giám sát mạng (Network Monitoring): Theo dõi hoạt động mạng để kịp thời phát hiện và xử lý sự cố.
 SNMP (Simple Network Management Protocol): Giao thức quản trị mạng đơn giản, cho phép giám sát và điều khiển các thiết bị mạng.
+   3 phiên bản
+   SNMP v1: 1990
+   SNMP v2: 1996
+   SNMP v3: 2003
+   Sử dụng giao thức vận chuyển UDP:
+   Port 161: polling
+   Port 162: trapping
+Một thiết bị hỗ trợ SNMP có thể cung cấp nhiều thông
+tin khác nhau, mỗi thông tin đó gọi là một object.
+ Mỗi object có một tên gọi và một mã số để nhận dạng
+object đó, mã số gọi là Object ID (OID)
+Tên thiết bị được gọi là sysName, OID là 1.3.6.1.2.1.1.5.
+ Tổng số port giao tiếp (interface) được gọi là ifNumber, OID là 
+1.3.6.1.2.1.2.1.
+ Địa chỉ Mac Address của một port được gọi là ifPhysAddress, 
+OID là 1.3.6.1.2.1.2.2.1.6.
+ Số byte đã nhận trên một port được gọi là ifInOctets, OID là 
+1.3.6.1.2.1.2.2.1.10.
+
+
 Agent (Tác nhân): Phần mềm được cài đặt trên thiết bị mạng, cung cấp thông tin cho hệ thống quản trị.
 Manager (Trình quản lý): Phần mềm trung tâm thu thập, phân tích thông tin từ các Agent.
 MIB (Management Information Base): Cơ sở dữ liệu chứa thông tin quản lý các đối tượng mạng, được SNMP sử dụng.
+  MIB được thể hiện thành 1 file (MIB file), và có thể biểu diễn thành 1
+  cây (MIB tree).
+   MIBcóthể được chuẩn hóa hoặc tự tạo.
+   Một MIB định nghĩa các thuộc tính sau cho mỗi đối tượng:
+   Tên và mã số
+   Kiểu dữ liệu
+   Chú giải đối tượng
+ Ví dụ:
+ Các OID của các hãng tự thiết kế nằm dưới
+iso.org.dod.internet.private.enterprise. Ví dụ : Cisco nằm dưới
+iso.org.dod.internet.private.enterprise.cisco hay 1.3.6.1.4.1.9, Microsoft nằm dưới 
+iso.org.dod.internet.private.enterprise.microsoft 
+hay 1.3.6.1.4.1.311. 
+ Số 9 (Cisco) hay 311 (Microsoft) là số dành riêng cho các công ty do 
+IANA cấp. Nếu Cisco hay Microsoft chế tạo ra một thiết bị nào đó, thì
+thiết bị này có thể hỗ trợ các MIB chuẩn đã được định nghĩa sẵn (như
+mib-2) hay hỗ trợ MIB được thiết kế riêng. Các MIB được công ty nào
+thiết kế riêng thì phải nằm bên dưới OID của công ty đó.
+
 Polling (Thăm dò tuần tự): Phương thức mà thiết bị quản lý (Manager) chủ động gửi yêu cầu định kỳ đến các thiết bị mạng để kiểm tra trạng thái hoặc lấy thông tin.
 Trap: Thông báo tự động do thiết bị gửi về hệ thống quản trị khi có sự kiện bất thường xảy ra.
 RFC (Request for Comments): Bộ tài liệu mô tả tiêu chuẩn kỹ thuật về các giao thức mạng, bao gồm cả SNMP.
+
 
 Chương 2:  Quản trị thiết bị mạng
 Các thuật ngữ, khái niệm cần biết:
