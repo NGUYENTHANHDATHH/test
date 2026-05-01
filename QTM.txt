@@ -1,0 +1,67 @@
+Chương 1: Tổng quan về quản trị mạng
+Các thuật ngữ, khái niệm cần biết:
+Quản trị mạng (Network Administration): Quản lý, vận hành, giám sát và bảo trì các thành phần của mạng máy tính.
+Hệ thống mạng (Network System): Tập hợp các thiết bị mạng (máy tính, router, switch...) kết nối với nhau nhằm chia sẻ tài nguyên.
+Quản trị viên mạng (Network Administrator): Người chịu trách nhiệm giám sát, vận hành và khắc phục sự cố mạng.
+Thiết bị mạng (Network Devices): Bao gồm router, switch, hub, access point, tường lửa...
+Hệ thống quản trị mạng (Network Management System - NMS): Hệ thống bao gồm phần mềm và phần cứng dùng để giám sát, cấu hình, và quản lý toàn bộ mạng.
+Giám sát mạng (Network Monitoring): Theo dõi hoạt động mạng để kịp thời phát hiện và xử lý sự cố.
+SNMP (Simple Network Management Protocol): Giao thức quản trị mạng đơn giản, cho phép giám sát và điều khiển các thiết bị mạng.
+Agent (Tác nhân): Phần mềm được cài đặt trên thiết bị mạng, cung cấp thông tin cho hệ thống quản trị.
+Manager (Trình quản lý): Phần mềm trung tâm thu thập, phân tích thông tin từ các Agent.
+MIB (Management Information Base): Cơ sở dữ liệu chứa thông tin quản lý các đối tượng mạng, được SNMP sử dụng.
+Polling (Thăm dò tuần tự): Phương thức mà thiết bị quản lý (Manager) chủ động gửi yêu cầu định kỳ đến các thiết bị mạng để kiểm tra trạng thái hoặc lấy thông tin.
+Trap: Thông báo tự động do thiết bị gửi về hệ thống quản trị khi có sự kiện bất thường xảy ra.
+RFC (Request for Comments): Bộ tài liệu mô tả tiêu chuẩn kỹ thuật về các giao thức mạng, bao gồm cả SNMP.
+
+Chương 2:  Quản trị thiết bị mạng
+Các thuật ngữ, khái niệm cần biết:
+Thiết bị mạng (Network Devices): Các thiết bị phần cứng dùng để kết nối, truyền dữ liệu trong mạng như router, switch, hub, access point...
+Router: Thiết bị định tuyến, kết nối các mạng khác nhau, chuyển tiếp gói tin giữa các mạng.
+Switch: Thiết bị chuyển mạch, kết nối các thiết bị trong cùng một mạng nội bộ (LAN).
+Hub: Thiết bị kết nối mạng đơn giản, truyền dữ liệu tới tất cả các cổng.
+Access Point (AP): Thiết bị phát sóng WiFi, kết nối mạng không dây với mạng có dây.
+Cấu hình thiết bị mạng: Quá trình thiết lập thông số, chức năng cho thiết bị mạng hoạt động đúng mục đích.
+Địa chỉ IP (IP Address): Địa chỉ định danh thiết bị trong mạng.
+Giao thức định tuyến (Routing Protocol): Tập hợp các quy tắc giúp thiết bị mạng xác định đường đi tối ưu cho dữ liệu.
+Định tuyến tĩnh (Static Routing): Hình thức cấu hình sẵn đường đi của dữ liệu, do quản trị viên thiết lập thủ công.
+Định tuyến động (Dynamic Routing): Thiết bị tự động tìm và cập nhật đường đi nhờ các giao thức định tuyến động.
+Default Gateway: Cổng mặc định để thiết bị truy cập ra ngoài mạng nội bộ.
+CLI (Command Line Interface): Giao diện dòng lệnh, nơi nhập lệnh cấu hình thiết bị mạng.
+VLAN (Virtual LAN): Mạng LAN ảo, chia mạng nội bộ thành các phân vùng logic khác nhau.
+
+Chương 3: Quản trị hệ thống Windows Server
+Các thuật ngữ, khái niệm cần biết:
+Windows Server: Hệ điều hành máy chủ của Microsoft, cung cấp các dịch vụ và chức năng quản lý mạng cho doanh nghiệp.
+Active Directory (AD): Dịch vụ quản lý tập trung người dùng, máy tính, nhóm và tài nguyên mạng.
+Domain: Miền quản lý tập trung trong mạng, nơi các tài khoản và thiết bị được kiểm soát bởi AD.
+Forest: Tập hợp một hoặc nhiều domain có quan hệ tin cậy với nhau.
+Organizational Unit (OU): Đơn vị tổ chức, giúp phân nhóm người dùng hoặc máy tính trong AD để dễ quản lý.
+User Account: Tài khoản người dùng, cho phép truy cập tài nguyên và dịch vụ trong hệ thống.
+Group (Nhóm): Tập hợp người dùng hoặc tài khoản, giúp phân quyền truy cập dễ dàng.
+Group Policy (Chính sách nhóm - GPO): Tập hợp quy định quản lý, cấu hình hệ thống, áp dụng cho người dùng hoặc máy tính trong domain.
+File Server: Máy chủ lưu trữ và chia sẻ tệp tin trong mạng.
+Disk Management: Công cụ quản lý ổ đĩa, phân vùng trên Windows Server.
+Partition: Phân vùng ổ đĩa.
+Volume: Phần không gian lưu trữ được định dạng để sử dụng.
+Service (Dịch vụ mạng): Các dịch vụ như DHCP, DNS, File Server, giúp mạng hoạt động.
+Backup: Sao lưu dữ liệu để phòng ngừa sự cố.
+Restore: Phục hồi dữ liệu từ bản sao lưu sau sự cố.
+
+Chương 4: Bảo mật mạng
+Các thuật ngữ, khái niệm cần biết:
+Bảo mật mạng (Network Security): Tập hợp các biện pháp nhằm đảm bảo an toàn cho dữ liệu và tài nguyên mạng, ngăn chặn truy cập trái phép và các cuộc tấn công mạng.
+Tính bí mật (Confidentiality): Đảm bảo thông tin chỉ người có quyền mới được truy cập.
+Tính toàn vẹn (Integrity): Đảm bảo dữ liệu không bị thay đổi, chỉnh sửa trái phép.
+Tính sẵn sàng (Availability): Đảm bảo hệ thống và dữ liệu luôn sẵn sàng khi cần thiết.
+Tấn công mạng (Cyber Attack): Hành động cố ý xâm nhập, phá hoại hoặc lấy cắp dữ liệu mạng.
+Malware: Phần mềm độc hại bao gồm virus, sâu (worm), trojan, spyware...
+Phishing: Hình thức lừa đảo qua email hoặc website giả mạo để lấy thông tin cá nhân.
+DoS/DDoS (Denial of Service): Tấn công từ chối dịch vụ, làm hệ thống ngừng hoạt động.
+Firewall (Tường lửa): Hệ thống kiểm soát lưu lượng vào/ra mạng, ngăn chặn truy cập trái phép.
+IDS/IPS (Hệ thống phát hiện và ngăn chặn xâm nhập): Giám sát và cảnh báo/tự động ngăn chặn các hành động xâm nhập trái phép.
+VPN (Virtual Private Network): Mạng riêng ảo, mã hóa kết nối để đảm bảo an toàn khi truy cập mạng từ xa.
+Antivirus: Phần mềm phòng chống virus và phần mềm độc hại.
+Mã hóa (Encryption): Biến đổi dữ liệu thành dạng mã để ngăn chặn truy cập trái phép.
+Xác thực (Authentication): Quá trình kiểm tra danh tính người dùng khi truy cập hệ thống.
+Backup dữ liệu: Sao lưu dữ liệu định kỳ để đề phòng mất mát do tấn công.
