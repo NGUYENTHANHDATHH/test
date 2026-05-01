@@ -35,17 +35,78 @@ OID là 1.3.6.1.2.1.2.2.1.6.
  Số byte đã nhận trên một port được gọi là ifInOctets, OID là 
 1.3.6.1.2.1.2.2.1.10.
 
+SNMP message được gói trong UDP-IP-Link header
+SNMP message = Version + Community string + SNMP PDU
+PDU type   PDU
+0       GetRequest: Manager gửi GetRequest cho agent để yêu cầu agent cung 
+      cấp thông tin nào đó dựa vào ObjectID (trong GetRequest 
+      có chứa OID)
+1       GetNextRequest:  Manager gửi GetNextRequest có chứa một ObjectID cho 
+      agent để yêu cầu cung cấp thông tin nằm kế tiếp ObjectID 
+      đó trong MIB. snmpget –v 2c –c public localhost  system.sysContact.0
+2       Response: Agent gửi GetResponse cho Manager để trả lời khi nhận 
+      được GetRequest/GetNextRequest
+3       SetRequest: Manager gửi SetRequest cho agent để đặt giá trị cho đối 
+      tượng của agent dựa vào ObjectID. snmpset -v 2c -c private localhost system.sysContact.0 s “BMCNTT”
+4       Trap (obsolete
+5       GetBulkRequest
+6       InformRequest
+7       Trap (SNMPv2): Agent tự động gửi Trap cho Manager khi có một sự kiện 
+      xảy ra đối với một object nào đó trong agent
+      Có 2 loại trap:
+       trap phổ biến (generic trap): được quy định trong các chuẩn SNMP
+          Ý nghĩa của các bản tin generic-trap như sau : 
+- coldStart: thông báo rằng thiết bị gửi bản tin này đang khởi động lại
+(reinitialize) và cấu hình của nó có thể bị thay đổi sau khi khởi động.
+- warmStart: thông báo rằng thiết bị gửi bản tin này đang khởi động lại
+và giữ nguyên cấu hình cũ.
+- linkDown: thông báo rằng thiết bị gửi bản tin này phát hiện được một
+trong những kết nối truyền thông (communication link) của nó gặp
+lỗi. Trong bản tin trap có tham số chỉ ra ifIndex của kết nối bị lỗi.
+-  linkUp: thông báo rằng thiết bị gửi bản tin này phát hiện được một
+trong những kết nối truyền thông của nó đã khôi phục trở lại. Trong
+bản tin trap có tham số chỉ ra ifIndex của kết nối được khôi phục.
+- authenticationFailure: thông báo rằng thiết bị gửi bản tin này đã
+nhận được một bản tin không được chứng thực thành công (bản tin
+bị chứng thực không thành công có thể thuộc nhiều giao thức khác
+nhau như telnet, ssh, snmp, ftp, …). Thông thường trap loại này
+xảy ra là do user đăng nhập không thành công vào thiết bị.
+- egpNeighborloss: thông báo rằng một trong số những “EGP
+neighbor” (Exterior Gateway Protocol ) của thiết bị gửi trap đã bị coi
+là down và quan hệ đối tác (peer relationship) giữa 2 bên không còn
+được duy trì.
+- enterpriseSpecific: thông báo rằng bản tin trap này không thuộc các
+kiểu generic như trên mà nó là một loại bản tin do người dùng tự
+định nghĩa
+       trap đặc thù (specific trap):  do người dùng tự định nghĩa 
+
+8       Report
+
+Error status: số nguyên xác định trạng thái lỗi.
+Giá trị     Tên lỗi      Ý nghĩa
+0       noError        Không có lỗi
+1       tooBig       Kích thước thông tin trả lời vượt quá kích thước PDU
+2       noSuchName    Đối tượng không tồn tại
+3       badValue     Giá trị không phù hợp
+4       readOnly       Không được phép ghi
+5       genErr      Lỗi không xác định
+
+◼ Error index: số nguyên xác định đối tượng (OID) gây lỗi
+VARIABLE BINDINGS
+ Chứa danh sách OID và giá trị tương ứng
+ Mỗi SNMP PDU có thể chứa nhiều variable binding
+
 
 Agent (Tác nhân): Phần mềm được cài đặt trên thiết bị mạng, cung cấp thông tin cho hệ thống quản trị.
 Manager (Trình quản lý): Phần mềm trung tâm thu thập, phân tích thông tin từ các Agent.
 MIB (Management Information Base): Cơ sở dữ liệu chứa thông tin quản lý các đối tượng mạng, được SNMP sử dụng.
   MIB được thể hiện thành 1 file (MIB file), và có thể biểu diễn thành 1
   cây (MIB tree).
-   MIBcóthể được chuẩn hóa hoặc tự tạo.
+   MIB có thể được chuẩn hóa hoặc tự tạo.
    Một MIB định nghĩa các thuộc tính sau cho mỗi đối tượng:
-   Tên và mã số
-   Kiểu dữ liệu
-   Chú giải đối tượng
+      Tên và mã số
+      Kiểu dữ liệu
+      Chú giải đối tượng
  Ví dụ:
  Các OID của các hãng tự thiết kế nằm dưới
 iso.org.dod.internet.private.enterprise. Ví dụ : Cisco nằm dưới
@@ -61,7 +122,17 @@ thiết kế riêng thì phải nằm bên dưới OID của công ty đó.
 Polling (Thăm dò tuần tự): Phương thức mà thiết bị quản lý (Manager) chủ động gửi yêu cầu định kỳ đến các thiết bị mạng để kiểm tra trạng thái hoặc lấy thông tin.
 Trap: Thông báo tự động do thiết bị gửi về hệ thống quản trị khi có sự kiện bất thường xảy ra.
 RFC (Request for Comments): Bộ tài liệu mô tả tiêu chuẩn kỹ thuật về các giao thức mạng, bao gồm cả SNMP.
+ Community string là một chuỗi ký tự được cài đặt giống nhau trên
+cả SNMP manager và SNMP agent, đóng vai trò như “mật khẩu”
+giữa 2 bên khi trao đổi dữ liệu.
+ Community string có 3 loại: 
+    Read-community: Get-Request
+    Write-Community : Set-Request
+    Trap-Community.
 
+SNMPACL ( access control list ) là một danh sách các địa chỉ IP được phép quản lý/giám
+sát agent, nó chỉ áp dụng riêng cho giao thức SNMP và được cài trên
+agent
 
 Chương 2:  Quản trị thiết bị mạng
 Các thuật ngữ, khái niệm cần biết:
