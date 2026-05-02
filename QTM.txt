@@ -138,7 +138,111 @@ Chương 2:  Quản trị thiết bị mạng
 Các thuật ngữ, khái niệm cần biết:
 Thiết bị mạng (Network Devices): Các thiết bị phần cứng dùng để kết nối, truyền dữ liệu trong mạng như router, switch, hub, access point...
 Router: Thiết bị định tuyến, kết nối các mạng khác nhau, chuyển tiếp gói tin giữa các mạng.
+ CÁC THÀNH PHẦN CHÍNH CỦA ROUTER
+   ❖Các thành phần bên trong của Router:
+    CPU
+    ROM: Chứa chương trình kiểm tra khởi động (POST- Power On Self Test Definition), 
+Bootstrap (giống BIOS của máy tính) và Mini-IOS (recovery password, upgrade 
+IOS). 
+ Nhiệm vụ chính của ROM là kiểm tra phần cứng khi khởi động, sau đó chép HĐH 
+Cisco IOS từ flash vào RAM. 
+
+    RAM: Lưu trữ routing table, ARP cache, fast-switching cache, packet buffering (shared 
+RAM), và packet hold queues 
+ Đa số HĐH Cisco IOS chạy trên RAM; RAM còn lưu trữ file cấu hình đang chạy 
+của router (running-config).
+    Flash: ưu toàn bộ HĐH Cisco IOS;
+    NVRAM: lưu trữ file cấu hình backup/startup 
+của router (startup-config)
+ Nội dung của NVRAM vẫn được giữ khi tắt nguồn hoặc restart router
+   ❖Các thành phần bên ngoài của Router: 
+    LAN:  Gigabit, Fast Ethernet
+    WAN:  Serial: Có 3 loại kết nối WAN thường 
+      được thuê từ nhà cung cấp 
+      dịch vụ:
+      o Thuê kênh riêng
+      o Kết nối chuyển mạch kênh
+      o Kết nối chuyển mạch gói
+    Console/AUX (Auxiliary – hỗ trợ):  rollover, dùng để cấu hình trực tiếp cho router. 
+Cáp thẳng: 1-1,2-2,3-3,..
+cáp chéo: 1-3,2-6,3-1,4-4,5-5,6-2,7-7,8-8
+Cáp rollover: 1-8,2-7,..
+Cisco IOS cung cấp các dịch vụ mạng như sau: 
+    Định tuyến và chuyển mạch. 
+    Đảm bảo và bảo mật cho việc truy cập vào tài nguyên mạng. 
+    Mở rộng hệ thống mạng.
+
+Vùng tự trị (Autonomous System–AS): 
+ Internet được chia thành các vùng nhỏ hơn gọi là các vùng tự trị. 
+ AS bao gồm tập hợp các mạng con được kết nối với nhau bởi Router
+
+Khoảng cách quản trị - AD (Administrative Distance) 
+ AD được sử dụng để đánh giá độ tin cậy của thông tin định tuyến mà 
+Router nhận từ router láng giềng. 
+ AD là một số nguyên nhận giá trị từ 0(max) đến 255(min)
+Connected-0,static-1,BGP(ex)-20,EIGRP(in)-90,IGRP-100,OSPF-110,IS-IS-115,RIP-120,EIGRP(ex)-170,BGP(in)-200
+
+Metric: 
+ Metric là giá trị dùng để định lượng mức độ tối ưu của 1 đường đi trong
+tính toán định tuyến
+ Đường đi nào có metric nhỏ nhất, đường đi đó được xem là tối ưu nhất
+và được đưa vào bảng định tuyến để được sử dụng
+      RIP thực hiện metric dựa vào số router trên đường đi đến đích gọi là hop-count.
+      o OSPF tính metric dựa vào băng thông (Bandwidth) của các đường truyền.
+      o EIGRP tính metric dựa vào một bộ các thông số khác nhau trên đường đi đến đích
+      như:
+      • Băng thông (Bandwidth)
+      • Độ trễ (delay)
+      • Độ tin cậy (reliability)
+      • Tải (load) của đường truyền
+
+Sự hội tụ mạng (convergence): 
+ Là một đặc tính quan trọng đối với các giao thức định tuyến, đó là các thông tin 
+định tuyến trong các bảng định tuyến của tất cả các Router trong mạng phải 
+cùng chính xác. 
+ Sự hội tụ là tiến trình đưa tất cả các bảng định tuyến của các router vào một 
+trạng thái đồng nhất và chính xác.
+ Thời gian hội tụ: là thời gian cần thiết để chia sẻ thông tin qua mạng và để 
+cho tất cả các Router tính toán tuyến đường tốt nhất của nó
+
+Cân bằng tải (Load balancing) 
+ Mục đích của Load balancing là để sử dụng băng thông của mạng một 
+cách hiệu quả hơn và có thể sử dụng làm tuyến dự phòng trong khi 
+tuyến đường chính bị ngắt. 
+ Nếu một giao thức tìm thấy nhiều tuyến có chi phí bằng nhau, nó sẽ tự 
+động phân chia lưu lượng mạng giữa các tuyến này. 
+
 Switch: Thiết bị chuyển mạch, kết nối các thiết bị trong cùng một mạng nội bộ (LAN).
+Chế độ cấu hình VLAN
+    Switch#vlan database
+❖Thêm mới VLAN
+    Switch(vlan)# vlan VLAN-ID name VLAN-Name
+❖Cập nhật
+    Switch(vlan)# exit
+Gán cổng vào VLAN
+    Switch(config)# interface Interface-ID
+    Switch(config-if)# switchport mode access
+    Switch(config-if)# switchport access vlan VLAN-ID
+    Switch(config-if)# end
+❖Kiểm tra
+    Switch# show vlan brief
+    Switch# show interface Interface-ID switchport
+❖Chú ý:
+    Switch(config)#interface range Interface-ID-range
+    Switch(config-if-range)#
+VTP : VLAN trunking protocol
+❖Chỉ định switch làm VTP server
+    Switch(vlan)#vtp server // Thiết lập chế độ VTP server mode
+    Switch(vlan)#vtp domain Domain-Name //đặt switch vào domain
+❖Chỉ định switch làm VTP client
+    Switch(vlan)#vtp client // Thiết lập chế độ VTP server mode
+    Switch(vlan)#vtp domain Domain-Name //đặt switch vào domain
+❖Gán 1 cổng làm trunking port
+    Switch(config-if)#switchport mode trunk
+    Switch(config-if)#switchport trunk encapsulation isl // đóng gói kiểu isl (hoặc dot1q) để đi qua 
+đường trunk
+    Switch(config-if)#switchport trunk allowed vlan VLAN-ID
+
 Hub: Thiết bị kết nối mạng đơn giản, truyền dữ liệu tới tất cả các cổng.
 Access Point (AP): Thiết bị phát sóng WiFi, kết nối mạng không dây với mạng có dây.
 Cấu hình thiết bị mạng: Quá trình thiết lập thông số, chức năng cho thiết bị mạng hoạt động đúng mục đích.
@@ -148,6 +252,82 @@ Giao thức định tuyến (Routing Protocol): Tập hợp các quy tắc giúp
 Định tuyến động (Dynamic Routing): Thiết bị tự động tìm và cập nhật đường đi nhờ các giao thức định tuyến động.
 Default Gateway: Cổng mặc định để thiết bị truy cập ra ngoài mạng nội bộ.
 CLI (Command Line Interface): Giao diện dòng lệnh, nơi nhập lệnh cấu hình thiết bị mạng.
+Router> User chỉ có khả năng hiển thị các thông số cấu hình 
+      trên router. 
+      Không thể cấu hình để thay đổi các thông số cấu hình 
+      và hoạt động của router.
+Router# có thể nhìn thấy file cấu hình và thay đổi các tham số 
+   cấu hình trên file cấu hình đó
+Router(config)# Chuyển người dùng vào chế độ Global Configuration. 
+      Có thể cấu hình những thay đổi cho router
+Router# ? Hiển thị tất cả các câu lệnh có khả năng thực thi ở chế độ hiện thời
+Router# c? Hiển thị tất cả các câu lệnh bắt đầu từ ký tự c
+Router# clock
+% Imcomplete command: Nhắc nhở sẽ còn nhiều tham số khác nữa của câu lệnh này mà cần phải nhập vào.
+Router# clock ?
+Set: Hiển thị tất cả các câu lệnh phụ của câu lệnh này (trong trường hợp này, Set, dùng để đặt các tham số ngày tháng, và thời gian)
+Ctrl – A Di chuyển con trỏ về đầu dòng
+Esc – B Di chuyển con trỏ về trước một từ
+Ctrl – B Di chuyển con trỏ trước một ký tự
+Ctrl – E Di chuyển con trỏ về cuối dòng
+Ctrl – F Di chuyển con trỏ về sau một ký tự
+Esc – F Di chuyển con trỏ về sau một từ
+Ctrl – Z Di chuyển con trỏ từ mọi chế độ cấu hình trở về chế độ 
+cấu hình Privileged
+Router# terminal no editing Tắt khả năng sử dụng các phím tắt
+Router# terminal editing Bật lại khả năng sử dụng các phím tắt và sử dụng các tổ 
+      hợp phím trong quá trình xử dụng câu lệnh
+Router# show version Hiển thị các thông tin về phần mềm Cisco IOS hiện thời
+Router# show flash Hiển thị các thông tin về bộ nhớ Flash
+Router# show history Hiển thị các câu lệnh đã được lưu trữ trong bộ đệm history
+Router#show ? Hiển thị tất cả các câu lệnh show có khả năng thực thi
+Router#show interfaces Hiển thị trạng thái cho tất cả các Interface
+Router#show interface serial 0/0/0 Hiển thị trạng thái cho một interface đã được chỉ ra
+Router#show ip interface brief Hiển thị các thông tin tổng quát nhất cho tất cả các interface
+Router#show controllers serial 0/0/0 Hiển thị các thông tin về phần cứng của một interface.
+Router#show clock Hiển thị thời gian đã được cấu hình trên router.
+Router#show hosts Hiển thị bảng host (bảng ánh xạ giữa địa chỉ IPvới host name).
+Router#show protocol xem trạng thái của các giao thức được định tuyến (routed 
+protocol) ở layer 3 đang chạy trên router
+Router#show user danh sách các “user” đã kết nối tới router 
+Router#show cdp interfaces xem trạng thái của tất cả các interface đang chạy CDP 
+
+CDP (Cisco Discovery Protocol) là một giao thức hoạt động tại layer 
+2 của mô hình OSI → giúp các thiết bị chia sẻ các thông tin cấu hình 
+cơ bản cho nhau. 
+❖CDP không phải là giao thức định tuyến. 
+Router#show cdp interfaces xem trạng thái của tất cả các interface đang chạy CDP 
+Router#show cdp neighbors thông tin về các „hàng xóm‟ đang được kết nối trực tiếp tới 
+Router này
+Router#show cdp neighbors detail: thông tin chi tiết hơn về các “hàng xóm” được kết nối trực 
+   tiếp tới Router này
+Router(config)# enable password cisco Cấu hình enable password
+Router(config)# enable secret class Cấu hình password mã hóa của chế độ enable.
+Router(config)# line console 0 Vào chế độ line console
+Router(config-line)# password console   Cấu hình password cho line console
+Router(config-line)# login   Cho phép kiểm tra password khi login vào router bằng port console
+Router(config)# line vty 0 4   Vào chế độ line vty để cho phép telnet
+Router(config-line)# password telnet   Cấu hình password để cho phép telnet
+Router(config-line)# login   Cho phép kiểm tra password khi người dùng telnet vào router
+Router(config)# line aux 0   Vào chế độ line auxiliary
+Router(config-line)# password backdoor   Cấu hình password cho line aux
+Router(config-line)# login   Cho phép router kiểm tra password khi người dùng login vào router thông qua port AUX
+Router(config)# service password encryption Khi câu lệnh được thực thi trên router hoặc switch thì tất cả các loại password
+      trên router hoặc switch đó sẽ được mã hóa. (Trừ enable secret password)
+Router(config)# enable password abc123 Cấu hình enable password là abc123
+Router(config)# line console 0
+Router(config-line)# password abc1234
+Router(config-line)# login
+      Cấu hình password cho line console là
+      abc1234
+Router(config)# no service passwordencryption Tắt tính năng mã hóa password trên router hoặc switch
+❖Cấu hình định tuyến tĩnh :
+ Router(config)#ip route DestinationNet Netmask OutgoingPort
+❖Xóa 1 đường định tuyến tĩnh:
+ Router(config)#no ip route DestinationNet Netmask OutgoingPort
+❖Chế độ cấu hình định tuyến
+ Router(config)#router Protocol
+ Router(config-router)#network Network-Address
 VLAN (Virtual LAN): Mạng LAN ảo, chia mạng nội bộ thành các phân vùng logic khác nhau.
 
 Chương 3: Quản trị hệ thống Windows Server
