@@ -693,6 +693,31 @@ Service (Dịch vụ mạng): Các dịch vụ như DHCP, DNS, File Server, giú
 Backup: Sao lưu dữ liệu để phòng ngừa sự cố.
 Restore: Phục hồi dữ liệu từ bản sao lưu sau sự cố.
 
+ Khi sao chép 1 thư mục đã được chia sẻ thì thư mục nguồn vẫn được chia sẻ
+nhưng thư mục copy thì không.
+ Khi di chuyển thư mục đến chỗ khác thì thư mục không được chia sẻ nữa.
+
+❖Một số quy tắc được áp dụng khi cấp quyền:
+ Quyền Allow được cộng dồn (tích lũy): nếu người dùng nhận được các
+quyền Allow từ nhiều nguồn khác nhau, thì các quyền đó sẽ được kết hợp lại.
+ Quyền Deny có độ ưu tiên cao hơn quyền Allow: khi người dùng nhận được
+quyền Allow do kế thừa, hoặc nhận được do là thành viên của nhóm người dùng,
+bạn vẫn có thể vô hiệu các quyền đó bằng cách gán quyền Deny tương ứng.
+ Quyền gán công khai có độ ưu tiên cao hơn: khi người dùng nhận được
+quyền do kế thừa hoặc do là thành viên của nhóm người dùng, bạn có thể vô
+hiệu hóa các quyền đó bằng cách gán quyền công khai.
+
+❖Quyền NTFS là tích luỹ
+❖Quyền File át quyền thư mục
+❖Quyền từ chối (Deny) mạnh hơn quyền khá
+Thao tác,Vị trí đích,Kết quả về quyền
+Copy,Cùng phân vùng,Thừa hưởng từ thư mục đích
+Copy,Khác phân vùng,Thừa hưởng từ thư mục đích
+Copy,Phân vùng Non-NTFS,Mất hoàn toàn quyền NTFS
+Thao tác,Vị trí đích,Cơ chế về quyền
+Move,Cùng phân vùng,Giữ nguyên quyền từ thư mục gốc
+Move,Khác phân vùng,Thừa hưởng quyền từ thư mục đích
+Move,Phân vùng Non-NTFS,Mất toàn bộ quyền NTFS
 
 Chương 4: Bảo mật mạng
 Các thuật ngữ, khái niệm cần biết:
