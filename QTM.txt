@@ -719,18 +719,212 @@ Move,Cùng phân vùng,Giữ nguyên quyền từ thư mục gốc
 Move,Khác phân vùng,Thừa hưởng quyền từ thư mục đích
 Move,Phân vùng Non-NTFS,Mất toàn bộ quyền NTFS
 
+
+
 Chương 4: Bảo mật mạng
-Các thuật ngữ, khái niệm cần biết:
+Liên minh Viện thông Quốc tế (ITU):
+ “Bảo mật mạng là tập hợp các công cụ, chính sách, khái niệm về bảo mật, 
+hướng dẫn, phương pháp quản lý rủi ro, phản ứng, đào tạo, diễn tập, thiết bị và 
+công nghệ có thể được dùng để bảo vệ hệ thống mạng và tài sản"
+
 Bảo mật mạng (Network Security): Tập hợp các biện pháp nhằm đảm bảo an toàn cho dữ liệu và tài nguyên mạng, ngăn chặn truy cập trái phép và các cuộc tấn công mạng.
+
+CÁC YẾU TỐ ĐẢM BẢO AN TOÀN THÔNG TIN
 Tính bí mật (Confidentiality): Đảm bảo thông tin chỉ người có quyền mới được truy cập.
 Tính toàn vẹn (Integrity): Đảm bảo dữ liệu không bị thay đổi, chỉnh sửa trái phép.
 Tính sẵn sàng (Availability): Đảm bảo hệ thống và dữ liệu luôn sẵn sàng khi cần thiết.
+Tính chính xác: Thông tin phải chính xác, tin cậy
+Tính không khước từ (chống chối bỏ): Thông tin có thể kiểm chứng
+được nguồn gốc hoặc người đưa tin
+
 Tấn công mạng (Cyber Attack): Hành động cố ý xâm nhập, phá hoại hoặc lấy cắp dữ liệu mạng.
+Nguy cơ = Mối đe dọa(Threat) + Lỗ hổng hệ thống
+
+TẤN CÔNG QUÉT MẠNG 
+❖Các kiểu Scanning:
+Phòng Chống Ping Sweep 
+Hầu hết các hệ thống IDS 
+(Instruction Detect System) 
+đều có thể nhận biết được 
+dạng tấn công Ping Sweep 
+và gửi cảnh báo về cho 
+quản trị hệ thống mạng.
+ Port Scanning: Kẻ tấn công sẽ gửi một loạt các thông điệp đến mục tiêu nhằm
+xác định các cổng đang mở, và thông qua các cổng này → sẽ biết được có những
+dịch vụ nào đang chạy trên máy tính mục tiêu. Một trong các ứng dụng port
+scanning phổ biến là Nmap.
+- Komodiapacketcrafter cho phép thiết
+lập các giá trị flag thích hợp của gói tin
+cũng như số hiệu port muốn kiểm tra khi
+gởi từ máy tính có IP 192.168.168.10 đến
+máy tính 192.168.168.11
+ Vulnerability Scanning: Là quá trình quét lỗi nhằm xác định ra các lỗ hổng bảo
+mật của các ứng dụng hay máy chủ, máy trạm → đưa ra các phương án tấn
+công thích hợp. Tiến trình quét lỗi có thể xác định được các bản cập nhật hệ
+thống bị thiếu, hay những lỗi hệ thống chưa được vá. (Các chuyên gia bảo mật
+cũng thường tiến hành vulnerability scanning trong công tác bảo vệ hệ thống
+mạng của mình)
+ Network Scanning: Quá trình này dùng để xác định các máy đang hoạt động
+trên hệ thống mạng (thường được các hacker, chuyên gia bảo mật hay những
+quản trị hệ thống thực hiện)
+Phòng chống quét cổng
+ Các hệ thống cần triển khai firewall và thiết lập các chính sách ngăn chặn những 
+tín hiệu dò tìm hay khởi tạo kết nối không hợp lệ.
+ Triển khai IDS để phát hiện dấu hiệu khi bị quét cổng.
+ Che dấu các cổng mở như một số hệ thống tường lửa có chức năng hidden port. 
+ Chỉ mở các cổng cần thiết cho quá trình vận hành, đối với các dịch vụ không 
+hoạt động → đóng những cổng liên quan.
+
+TẤN CÔNG GIẢ MẠO ĐỊA CHỈ IP
+❖ Một hacker có thể giả mạo địa chỉ IP khi quét máy hệ thống để hạn chế thấp nhất 
+khả năng bị phát hiện.
+❖ Source routing cho phép kẻ tấn công chỉ định việc định tuyến một gói tin có
+thông qua Internet. Điều này cũng có thể giảm thiểu cơ hội phát hiện bằng cách bỏ
+qua IDS và tường lửa
+❖Biện pháp đối phó
+ Để phát hiện giả mạo địa chỉ IP, có thể so sánh thời gian sống (TTL) các giá trị:
+TTL của kẻ tấn công sẽ khác với TTL của địa chỉ giả mạo.
+
+TẤN CÔNG CHIẾM QUYỀN MÁY CHỦ
+❖Session Hijacking là hình thức tấn công vào phiên làm việc giữa client và
+server cách đánh cắp cookie của người sử dụng sau khi họ đã qua bước xác
+thực với máy chủ, sau đó sẽ chiếm quyền điều khiển của phiên làm việc
+này.
+❖Phân biệt Spoofing và Hijacking: trong tình huống tấn công spoofing các
+hacker sẽ nghe lén dữ liệu truyền trên mạng từ người gởi đến nơi nhận sau
+đó sử dụng các thông tin thu thập được giả mạo địa chỉ (hoặc sử dụng
+ngay các địa chỉ đã lấy trộm) nhằm qua mặt các hệ thống kiểm tra. Trong
+khi đó hình thức tấn công hijacking sẽ làm cho kết nối của nạn nhân đến
+máy chủ bị ngắt khi đã xác thực thành công sau đó cướp lấy phiên làm việc
+này của người dùng nhằm vượt qua bước kiểm tra của máy chủ.
+Quá trình tấn công Session Hijacking gồm 3 bước: 
+ Dò tìm Session: Hacker sẽ dò tìm các session đang mở và tính toán giá
+trị tuần tự của gói tin tiếp theo.
+ Tái đồng bộ kết nối: Hacker gửi các tín hiệu TCP reset (RST) hay FIN để
+yêu cầu khởi động lại quá trình kết nối đồng thời đóng phiên làm việc cũ.
+ Chèn các packet tấn công: lúc này hacker sẽ gửi đến máy chủ những gói
+tin TCP với số hiệu tuần tự đã được tính toán thích hợp với phiên làm việc
+do đó máy chủ sẽ chấp nhận những thông tin này giống như là các dữ
+liệu hợp lệ tiếp theo của người dùng bị tấn công.
+Một số công cụ tấn công Session Hijacking: 
+ Juggernaut: chuyên bắt giữ (sniff) các TCP 
+session trong môi trường mạng hoạt động với 
+hub
+ Hunt: giả mạo địa chỉ MAC với cơ chế ARP 
+spoofing, reset và giám sát các kết nối, nghe 
+lén đường truyền.
+ Burp Suite: có khả năng thay đổi dữ liệu trên 
+quá trình truyền, đánh cướp session hay giả 
+mạo cả các chứng chỉ điện tử dùng trong xác 
+thực https
+
 Malware: Phần mềm độc hại bao gồm virus, sâu (worm), trojan, spyware...
 Phishing: Hình thức lừa đảo qua email hoặc website giả mạo để lấy thông tin cá nhân.
+
 DoS/DDoS (Denial of Service): Tấn công từ chối dịch vụ, làm hệ thống ngừng hoạt động.
-Firewall (Tường lửa): Hệ thống kiểm soát lưu lượng vào/ra mạng, ngăn chặn truy cập trái phép.
-IDS/IPS (Hệ thống phát hiện và ngăn chặn xâm nhập): Giám sát và cảnh báo/tự động ngăn chặn các hành động xâm nhập trái phép.
+Một số công cụ tấn công DoS:
+ Ping of Death: Các công cụ tấn công Ping of Death gởi nhiều gói tin IP với kích 
+thước lớn đến mục tiêu làm cho các máy này phải mất nhiều thời gian và tài 
+nguyên hệ thống để xử lý, kết quả là không thể đáp ứng được các yêu cầu kết 
+nối thông thường của những máy tính khác dẫn đến bị từ chối dịch vụ. 
+ LAND Attack: Những công cụ có chức năng tấn công LAND Attack sẽ gởi các 
+gói tin có địa chỉ IP trùng lắp với các địa chỉ IP đích khiến cho việc xử lý các yêu 
+cầu này có thể dẫn đến tình trạng bị lặp lại (loop) và không thể tiếp nhận thêm 
+các yêu cầu truy cập khác. 
+ WinNuke: Chương trình này tìm kiếm các máy tính  đang mở port 139 để  gởi 
+các gói tin IP rác đến mục tiêu. Dạng tấn công này còn được gọi là Out of Bound 
+(OOB) và làm tràn ngập bộ nhớ đệm của giao thức IP.
+ CPU Hog: Công cụ này làm quá tải nguồn tài nguyên CPU của các máy bị tấn 
+công . 
+ Bubonic: Là công cụ DoS  hoạt động bằng cách gởi các gói tin TCP với những 
+thiết lập ngẫu nhiên làm cho mục tiêu bị tấn công bị quá tãi hay thậm chí bị gãy 
+đổ. 
+ RPC Locator: Đây là một dịch vụ nếu như không được vá lỗi có khả năng bị tấn 
+công gây tràn bộ đệm. Dịch vụ này hoạt động trên các hệ thống Windows để 
+phân phối các bản cài đặt hay ứng dụng trên toàn hệ thống, đây cũng là một 
+dịch vụ dễ bị tấn công gây ra tình trạng từ chối  dịch vụ trên các máy chủ.  
+ SSPing hay Targa: có thể gửi các gói tin với kích thước lớn đến mục tiêu làm tê 
+liệt khả năng đáp ứng cũng như xử lý các dữ liệu này,  dẫn đến tình trạng “từ 
+chối dịch vụ”.
+❖Thông thường DDoS gồm có 3 thành phần : 
+ Master hay Handler: Chương trình dùng để điều khiển.
+ Slave hay zombie, bot: là các máy tính bị cài đặt hay lây nhiễm các chương
+trình nguy hiểm và bị điều khiển bởi các Master / Handler.
+ Victim: Những mục tiêu bị tấn công từ chối dịch vụ.
+❖Phòng chống tấn công DoS và DDoS:
+ Network-ingress filtering: Tất cả các hệ thống hay thiết bị cung cấp những kết
+nối và truy cập mạng cần thực hiện cơ chế lọc Network-infgress filtering nhằm
+loại bỏ các luồn dữ liệu xuất phát từ các địa chỉ giả mạo, có nguồn gốc không rõ
+ràng. Điều này không ngăn ngừa được các cuộc tấn công nhưng có thể giúp
+ngăn chặn và truy tìm khi có những hành động trái phép diễn ra.
+ Rate-limiting network system: Nhiều bộ định tuyến hiện nay có khả năng hạn
+chế và kiểm soát băng thông trên những giao thức khác nhau, kỹ thuật này còn
+được gọi là trafic shapping.
+ Instruction Detect System: Triển khai các hệ thống dò tìm xâm phạm trái phép để
+phát hiện kịp thời các luồng truyền thông nguy hiểm, những cuộc tấn công hay các
+virus / worm lan truyền trên mạng.
+ Sử dụng công cụ Host-auditing: Một số chương trình có khả năng quét các tập tin
+trên hệ thống để tìm ra các công cụ tấn công DDoS hay các chương trình botnet
+nguy hiểm.
+ Sử dụng công cụ Network-auditing: Chạy các chương trình quét mạng để phát hiện
+các agent (các thành viên của mạng botnet) và loại bỏ chúng.
+ Sửdụng các chương trình dò tìm công cụ DoS: Thường xuyên quét tìm các công cụ
+DoS trên hệ thống với những chương trình thích hợp như Find_ddos, SARA, Zombi
+Zapper để phát hiện và xử lý kịp thời các mầm mống gây nên sự cố từ chối dịch vụ
+ Tắt các dịch vụ không cần thiết: Đóng các cổng hay tắt những dịch vụ không
+cần thiết hay hạn chế sự dụng những chức năng như get, strcpy …
+ Cấu hình firewall để chặn tất cả các tín hiệu ICMP từ bên ngoài.
+ Thường xuyên cập nhật hệ thống: Cập nhật các bản vá lỗi mới nhất cho hệ
+thống và ứng dụng liên quan.
+ Sử dụng các hệ thống bảo vệ DDoS chuyên dụng như IntelliGuard DDoS
+Protection System (DPS) hay các chương trình phòng chống DDoS như
+FortGuard, NetScaler, Advanced Denial of Service Protection…
+
+4.3. MỘT SỐ GIẢI PHÁP BẢO MẬT MẠNG
+❖4.3.1. Hệ thống phát hiện xâm nhập (IDS):  là
+một hệ thống giám sát lưu thông mạng, các hoạt động khả nghi và cảnh
+báo cho hệ thống, nhà quản trị.
+- IDS phát hiện dựa trên các dấu hiệu đặc biệt về các nguy cơ đã biết (giống 
+như cách các phần mềm diệt virus dựa vào các dấu hiệu đặc biệt để phát 
+hiện và diệt virus) hay dựa trên so sánh lưu thông mạng hiện tại với 
+baseline (thông số đo đạc chuẩn của hệ thống) để tìm ra các dấu hiệu khác thường
+❖Theo một cách riêng biệt nào đó, các thiết bị bảo mật dưới đây không phải
+là IDS:
+ Hệ thống đăng nhập mạng được sử dụng để phát hiện lỗ hổng đối với vấn đề tấn
+công từ chối dịch vụ (DoS) trên một mạng nào đó. Ở đó sẽ có hệ thống kiểm tra lưu
+lượng mạng.
+ Các công cụ đánh giá lỗ hổng kiểm tra lỗi và lỗ hổng trong hệ điều hành, dịch vụ
+mạng (các bộ quét bảo mật).
+ Các sản phẩm chống virus đã thiết kế để phát hiện phần mềm mã nguy hiểm như
+virus, Trojan horse, worm... Mặc dù những tính năng mặc định có thể rất giống hệ
+thống phát hiện xâm phạm và thường cung cấp một công cụ phát hiện lỗ hổng bảo
+mật hiệu quả.
+ Tường lửa
+ Các hệ thống bảo mật/mật mã, ví dụ như VPN, SSL, S/MIME, Kerberos, Radius
+CHỨC NĂNG CỦA IDS
+❖Chức năng quan trọng nhất là: giám sát – cảnh báo – bảo vệ
+ Giám sát: lưu lượng mạng và các hoạt động khả nghi
+ Cảnh báo: báo cáo về tình trạng mạng cho hệ thống và nhà quản trị.
+ Bảo vệ: Dùng những thiết lập mặc định và sự cấu hình từ nhà quản trị mà có 
+những hành động thiết thực chống lại kẻ xâm nhập và phá hoại.
+❖Chức năng mở rộng:
+ Phân biệt: tấn công bên trong và tấn công bên ngoài.
+ Phát hiện: những dấu hiệu bất thường dựa trên những gì đã biết hoặc nhờ vào 
+sự so sánh thông lượng mạng hiện tại với baseline.
+❖Ngoài ra hệ thống phát hiện xâm nhập IDS còn có chức năng:
+ Ngăn chặn sự gia tăng của những tấn công
+ Bổ sung những điểm yếu mà các hệ thống khác chưa làm được
+ Đánh giá chất lượng của việc thiết kế hệ thống
+❖Có hai phương pháp khác nhau trong việc phân tích các sự kiện để
+phát hiện các vụ tấn công:
+ Phát hiện dựa trên dấu hiệu: Phương pháp này nhận dạng các sự kiện hoặc tập
+hợp các sự kiện phù hợp với một mẫu các sự kiện đã được định nghĩa là tấn
+công.
+ Phát hiện sự bất thường: công cụ này thiết lập một hiện trạng các hoạt động
+bình thường và sau đó duy trì một hiện trạng hiện hành cho một hệ thống. Khi
+hai yếu tố này xuất hiện sự khác biệt, nghĩa là đã có sự xâm nhập
+
+❖4.3.2. Hệ thống tường lửa (Firewall)
 VPN (Virtual Private Network): Mạng riêng ảo, mã hóa kết nối để đảm bảo an toàn khi truy cập mạng từ xa.
 Antivirus: Phần mềm phòng chống virus và phần mềm độc hại.
 Mã hóa (Encryption): Biến đổi dữ liệu thành dạng mã để ngăn chặn truy cập trái phép.
