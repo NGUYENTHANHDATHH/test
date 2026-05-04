@@ -881,52 +881,71 @@ Protection System (DPS) hay các chương trình phòng chống DDoS như
 FortGuard, NetScaler, Advanced Denial of Service Protection…
 
 4.3. MỘT SỐ GIẢI PHÁP BẢO MẬT MẠNG
-❖4.3.1. Hệ thống phát hiện xâm nhập (IDS):  là
-một hệ thống giám sát lưu thông mạng, các hoạt động khả nghi và cảnh
-báo cho hệ thống, nhà quản trị.
-- IDS phát hiện dựa trên các dấu hiệu đặc biệt về các nguy cơ đã biết (giống 
-như cách các phần mềm diệt virus dựa vào các dấu hiệu đặc biệt để phát 
-hiện và diệt virus) hay dựa trên so sánh lưu thông mạng hiện tại với 
-baseline (thông số đo đạc chuẩn của hệ thống) để tìm ra các dấu hiệu khác thường
-❖Theo một cách riêng biệt nào đó, các thiết bị bảo mật dưới đây không phải
-là IDS:
- Hệ thống đăng nhập mạng được sử dụng để phát hiện lỗ hổng đối với vấn đề tấn
-công từ chối dịch vụ (DoS) trên một mạng nào đó. Ở đó sẽ có hệ thống kiểm tra lưu
-lượng mạng.
- Các công cụ đánh giá lỗ hổng kiểm tra lỗi và lỗ hổng trong hệ điều hành, dịch vụ
-mạng (các bộ quét bảo mật).
- Các sản phẩm chống virus đã thiết kế để phát hiện phần mềm mã nguy hiểm như
-virus, Trojan horse, worm... Mặc dù những tính năng mặc định có thể rất giống hệ
-thống phát hiện xâm phạm và thường cung cấp một công cụ phát hiện lỗ hổng bảo
-mật hiệu quả.
- Tường lửa
- Các hệ thống bảo mật/mật mã, ví dụ như VPN, SSL, S/MIME, Kerberos, Radius
-CHỨC NĂNG CỦA IDS
-❖Chức năng quan trọng nhất là: giám sát – cảnh báo – bảo vệ
- Giám sát: lưu lượng mạng và các hoạt động khả nghi
- Cảnh báo: báo cáo về tình trạng mạng cho hệ thống và nhà quản trị.
- Bảo vệ: Dùng những thiết lập mặc định và sự cấu hình từ nhà quản trị mà có 
-những hành động thiết thực chống lại kẻ xâm nhập và phá hoại.
-❖Chức năng mở rộng:
- Phân biệt: tấn công bên trong và tấn công bên ngoài.
- Phát hiện: những dấu hiệu bất thường dựa trên những gì đã biết hoặc nhờ vào 
-sự so sánh thông lượng mạng hiện tại với baseline.
-❖Ngoài ra hệ thống phát hiện xâm nhập IDS còn có chức năng:
- Ngăn chặn sự gia tăng của những tấn công
- Bổ sung những điểm yếu mà các hệ thống khác chưa làm được
- Đánh giá chất lượng của việc thiết kế hệ thống
-❖Có hai phương pháp khác nhau trong việc phân tích các sự kiện để
-phát hiện các vụ tấn công:
- Phát hiện dựa trên dấu hiệu: Phương pháp này nhận dạng các sự kiện hoặc tập
-hợp các sự kiện phù hợp với một mẫu các sự kiện đã được định nghĩa là tấn
-công.
- Phát hiện sự bất thường: công cụ này thiết lập một hiện trạng các hoạt động
-bình thường và sau đó duy trì một hiện trạng hiện hành cho một hệ thống. Khi
-hai yếu tố này xuất hiện sự khác biệt, nghĩa là đã có sự xâm nhập
+PHẦN 1: HỆ THỐNG PHÁT HIỆN XÂM NHẬP (IDS)
 
-❖4.3.2. Hệ thống tường lửa (Firewall)
-VPN (Virtual Private Network): Mạng riêng ảo, mã hóa kết nối để đảm bảo an toàn khi truy cập mạng từ xa.
-Antivirus: Phần mềm phòng chống virus và phần mềm độc hại.
-Mã hóa (Encryption): Biến đổi dữ liệu thành dạng mã để ngăn chặn truy cập trái phép.
-Xác thực (Authentication): Quá trình kiểm tra danh tính người dùng khi truy cập hệ thống.
-Backup dữ liệu: Sao lưu dữ liệu định kỳ để đề phòng mất mát do tấn công.
+1. Định nghĩa & Mục đích
+- IDS (Intrusion Detection System): Hệ thống giám sát lưu thông mạng, phát hiện các hoạt động khả nghi và cảnh báo cho quản trị viên.
+- Mục tiêu: Bảo vệ 4 tính chất (Tính toàn vẹn, Tính bí mật, Tính khả dụng, Tính riêng tư).
+- Phân biệt: IDS khác với Firewall (ngăn chặn), Anti-virus (diệt mã độc), VPN (mã hóa), hay công cụ quét lỗ hổng.
+
+2. Chức năng của IDS
+- Chức năng cốt lõi: Giám sát (lưu lượng) -> Cảnh báo (báo cáo) -> Bảo vệ (hành động thiết thực).
+- Chức năng mở rộng: Phân biệt tấn công nội bộ/bên ngoài, phát hiện dấu hiệu bất thường, đánh giá chất lượng thiết kế mạng và bổ sung điểm yếu cho các hệ thống khác.
+
+3. Phương pháp phân tích (Cách phát hiện)
+- Dựa trên dấu hiệu (Signature-based): So sánh với mẫu tấn công đã biết (giống virus scan).
+- Dựa trên sự bất thường (Anomaly-based): So sánh lưu thông hiện tại với Baseline (thông số chuẩn). Nếu khác biệt -> Xâm nhập.
+
+4. Ba yếu tố nền tảng (IDS Task)
+- Thu thập thông tin (Information source): Kiểm tra các gói tin.
+- Phân tích (Analysis): Xác định hành động tấn công.
+- Cảnh báo (Response): Đưa ra phản hồi.
+
+5. Phân loại IDS (Quan trọng)
+
+a. Network-based IDS (NIDS):
+- Vị trí: Đặt tại các điểm kết nối trong mạng, dùng cảm biến (Sensor) theo dõi thời gian thực.
+- Ưu điểm: Quản lý cả phân đoạn mạng, "trong suốt" với người dùng, độc lập với OS.
+- Hạn chế: Không đọc được dữ liệu mã hóa (SSL/VPN), có thể gây nghẽn cổ chai, báo động giả (False Positive), khó xử lý gói tin phân mảnh chồng chéo.
+
+b. Host-based IDS (HIDS):
+- Vị trí: Cài đặt phần mềm trực tiếp trên các máy chủ xung yếu (Server, DMZ).
+- Nhiệm vụ: Giám sát log file, Registry, CPU, tính toàn vẹn file hệ thống.
+- Ưu điểm: Xác định được user thực hiện hành động, biết cuộc tấn công có thành công hay không, đọc được dữ liệu mã hóa.
+- Hạn chế: Không phát hiện được dò quét mạng (Nmap), tiêu tốn tài nguyên máy chủ, dễ bị vô hiệu hóa nếu OS bị chiếm quyền.
+
+------------------------------------------------------------------------
+
+PHẦN 2: HỆ THỐNG TƯỜNG LỬA (FIREWALL)
+
+1. Khái niệm chung
+- Là rào chắn giữa mạng an toàn (Nội bộ) và mạng không an toàn (Internet).
+- Điều khiển truy cập (cho phép/từ chối) dựa trên Tập luật (Policy).
+
+2. Các vùng mạng cơ bản
+- Mạng Nội bộ (LAN): Máy trạm, máy chủ nội bộ.
+- Vùng DMZ (Demilitarized Zone): Vùng trung lập chứa Web, Mail, DNS... cho phép truy cập từ Internet.
+- Server Farm: Chứa Database, LDAP... không cung cấp dịch vụ trực tiếp ra Internet.
+- Internet: Mạng ngoài.
+
+3. Phân loại Firewall
+- Theo vị trí: Network Firewall & Host Firewall.
+- Theo nền tảng: Software Firewall & Hardware Firewall.
+- Theo khả năng xử lý:
+  + Packet Filter: Tầng 3-4 (IP, Port).
+  + Application Filter: Tầng 7 (Ứng dụng).
+  + State Full Filter: Tầng 3-7 (Theo dõi trạng thái kết nối).
+
+4. Chính sách Firewall (7 thuộc tính của một Luật/Rule)
+1. Chiều đi (In/Out)
+2. Giao thức (TCP/UDP)
+3. IP Nguồn
+4. Cổng (Port) nguồn
+5. IP Đích
+6. Cổng (Port) đích
+7. Hành động (Accept/Deny)
+
+5. Các mô hình triển khai phổ biến
+- Mô hình 1: 1 Firewall phân tách 3 vùng (Internet - LAN - DMZ).
+- Mô hình 2: 2 Firewall nối tiếp (Internet -> FW1 -> DMZ -> FW2 -> LAN). LAN được bảo vệ 2 lớp.
+- Mô hình 3: Firewall đặt giữa tất cả các cặp vùng mạng để kiểm soát tối đa.
