@@ -1033,10 +1033,7 @@ Chức năng của Active Directory (Cả 3 đáp án trên)
 22.	Cụm từ nào sau đây không phải là tên của một lĩnh vực trong công tác quản trị mạng?
 Đáp án: Group management
 ////D:////
-23.	DHCPACK, đây là gói tin nhằm giúp (DHCP server xác nhận thông tin áp dụng cho client)
-DHCPREQUEST, đây là thông điệp trao đổi giữa DHCP Client và DHCP Server. Thông điệp này nằm ở bước thứ mấy trong quy trình (3)
-DFS viết tắt cho... (Distributed File System)
-Đáp án nào ĐÚNG khi so sánh giữa System Policy và Group Policy (Chính sách nhóm chứa tất cả các chức năng của chính sách hệ thỐng)
+23.	
 Để kiểm tra dịch vụ DNS ta sử dụng lệnh nào? (nslookup) //
 Để làm cho các thay đổi về môi trường không tác động lên lược sử mạng, cần làm thao tác gì: (Thay đổi tên file ntuser.dat thành file ntuser.man) //
 Để nén một file đã được nén bằng NTFS, cần: (Khi mở file, hệ thỐng tự động giải nén) //
@@ -1055,26 +1052,15 @@ DFS viết tắt cho... (Distributed File System)
 Đáp án: Nslookup
 30.	Để liệt kê các luật hiện tại của Windows Firewall trên một máy tính đang chạy Windows Server 2012 R2, sử dụng lệnh Windows PowerShell nào?
 Đáp án: Get-NetFirewallRule, Show-NetFirewallRule
- 
 31.	Để triển khai một mẫu bảo mật cho tất cả các máy tính trong AD DS, bạn sử dụng các công cụ nào sau đây?
 Đáp án: Group Policy Object Editor, Group Policy Management
-32.	DHCPACK, đây là gói tin nhằm giúp
-Đáp án: DHCP server xác nhận thông tin áp dụng cho client
 33.	Đâu không phải là chức năng của hệ thỐng phát hiện xâm nhập IDS?
 Đáp án: Điều khiển luồng
 34.	Đâu không phải là một kiểu tấn công từ chỐi dịch vụ?
 Đáp án: Packet Sniffing Attack
-35.	Đâu không phải là tiêu chí đánh giá khi xác định mức độ nguy cơ hệ thỐng?
-Đáp án: Quy mô tấn công
 36.	Đâu là mô tả đúng cho phương thức Trap ở trong giao thức quản trị mạng đơn giản SNMP?
 Đáp án: Agent tự động gửi Trap đến Manager khi có một sự kiện xảy ra ở
 Object nào đó trong Agent
-37.	Đâu là phát biểu đúng khi nói về Network Base IDS?
-Đáp án: Không cho biết việc tấn công có thành công hay không thành công
-38.	Đâu là phát biểu đúng nhất về nguy cơ hệ thỐng: Nguy cơ hệ thỐng (Risk) được hình thành bởi sự kết hợp giữa….
-Đáp án: Lỗ hổng hệ thống và các mối đe dọa đến hệ thống
-39.	Dịch vụ nào sau đây cần thiết để cho dịch vụ Active Directory hoạt động?
-Đáp án: DNS
 ///F:///
 40.	FTP sử dụng cổng nào để truyền hình?
 Đáp án: 21
@@ -1085,13 +1071,8 @@ Group policy dùng để (Tất cả) //
 Đáp án: Từ Windows Server 2008 Standard lên Windows Server 2012 R2 Standard
 42.	Giải pháp tạo đường hầm tự động nào sau đây được hệ điều hành Windows sử dụng, trong trường hợp máy tính nằm sau NAT router?
 Đáp án: Teredo
- 
 43.	Giấy phép bản quyền của hệ điều hành nào sau đây không giới hạn sỐ lượng các bản cài trên máy ảo?
 Đáp án: Windows Server 2012 R2 Datacenter
-44.	Gói tin nào sau đây không được sử dụng trong quá trình trao đổi để cấp một địa chỉ IP cho client?
-Đáp án: DHCPINFORM
-45.	Group nào được sử dụng để tập hợp người dùng và group trên nhiều domain hoặc toàn forest?
-Đáp án: Universal
 46.	
 ////H:////
 Hệ điều hành Windows Server 2003 mặc định hỗ trợ cài đặt: (IIS 6.0) //
