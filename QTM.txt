@@ -949,3 +949,308 @@ PHẦN 2: HỆ THỐNG TƯỜNG LỬA (FIREWALL)
 - Mô hình 1: 1 Firewall phân tách 3 vùng (Internet - LAN - DMZ).
 - Mô hình 2: 2 Firewall nối tiếp (Internet -> FW1 -> DMZ -> FW2 -> LAN). LAN được bảo vệ 2 lớp.
 - Mô hình 3: Firewall đặt giữa tất cả các cặp vùng mạng để kiểm soát tối đa.
+
+Danh sách các câu hỏi trắc nghiệm và đáp án được sắp xếp theo thứ tự bảng chữ cái dựa trên ký tự đầu tiên của nội dung câu hỏi.
+////B:////
+1.	Bản ghi nào cho biết Mail server (MX)
+2.	Bản ghi nào sau đây có chứa thông tin phục vụ cho quá trình phân giải ngược của hệ thỐng DNS?
+Đáp án: PTR
+////C:////
+Chọn đáp án sai khi nói về quyền NTFS (Quyền thư mục NTFS trội hơn quyền file NTFS)
+Chức năng của Active Directory (Cả 3 đáp án trên)
+3.	Các (tiện ích) feature nào sau đây của Hyper-V, cho phép giá trị Minimum RAM trong một máy ảo có thể nhỏ hơn giá trị Startup RAM?
+Đáp án: Smart paging, Guest Integration Services
+4.	Các công cụ làm việc với nhóm chính sách có thể truy cập loại tập tin nào trong Central Store?
+Đáp án: ADMX
+5.	Các lý do nào sau đây dẫn tới việc chúng ta sẽ sử dụng cạc mạng kiểu emulated thay cho cạc mạng kiểu synthetic?
+Đáp án: Bạn muốn cài đặt hệ điều hành trên máy ảo bằng Windows Deployment Services server, Hệ điều hành bạn dự định cài trên máy ảo không có gói Guest Integration Services
+6.	Các lý do để sử dụng chế độ Server Core?
+Đáp án: Có thể chuyển server từ chế độ Server Core sang chế độ GUI mà không phải cài đặt lại hệ điều hành, Bản Server Manager mới trong Windows Server 2012 R2 giúp việc quản trị từ xa dễ dàng hơn
+7.	Các phát biểu nào sau đây mô tả đúng nhất về các yêu cầu khi muỐn mở rộng một volume trên đĩa kiểu dynamic?
+Đáp án: Nếu bạn muốn mở rộng một volume kiểu simple, và sau khi mở rộng nó vẫn thuộc kiểu simple, thì bạn chỉ có thể sử dụng không gian đĩa còn trống trên cùng một đĩa cứng vật lý, Bạn có thể mở rộng một volume kiểu simple sang các đĩa cứng khác, miễn là volume đó không phải là system volume hoặc boot volume
+8.	Các phát biểu nào sau đây nói đúng về volume kiểu striped?
+Đáp án: Volume kiểu striped giúp nâng cao hiệu suất xử lý so với volume kiểu simple
+ 
+9.	Các phát biểu nào sau đây nói không đúng về cạc mạng kiểu synthetic?
+Đáp án: Cạc mạng kiểu synthetic có thể khởi động máy ảo bằng kĩ thuật khởi động qua mạng PXE
+10.	Các thành phần mạng nào sau có thể hoạt động với vai trò giỐng như một trạm chuyển tiếp DHCP (DHCP relay agents)?
+Đáp án: Routers, Máy Windows Server 2012 R2
+11.	Các thông tin cấu hình TCP/IP nào sau đây thường được cấu hình ở mức scope option trong DHCP?
+Đáp án: Default Gateway
+12.	Cái nào sau đây cho phép điều chỉnh việc lưu tạm (caching) của hệ thỐng DNS?
+Đáp án: Táp Start of Authority (SOA) trong mục Properties của zone
+13.	Cái nào sau đây không phải là một thành phần của hệ thỐng DNS?
+Đáp án: Relay agents
+14.	Câu nào sau đây nói không đúng về Server Manager?
+Đáp án: Server Manager có thể cùng một lúc cài đặt nhiều chức năng cho nhiều server
+15.	Cho biết tên của thư mục mà Windows sử dụng để lưu toàn bộ các thành phần cần thiết liên quan đến việc cài đặt các chức năng của hệ điều hành sau này?
+Đáp án: WinSxS
+16.	Cho địa chỉ mạng là 172.16.32.0/19, vậy subnet mask sẽ là?
+Đáp án: 255.255.224.0
+17.	Có một chức năng trong hệ thỐng đã được thiết lập là disabled, bạn muỐn thay đổi chức năng này bằng cách sử dụng GPO, cụ thể, trong GPO bạn thiết lập giá trị cho nó là Not Configured. Kết quả của thiết lập này là?
+Đáp án: Trạng thái của chức năng đó vẫn là disabled
+18.	Có thể sử dụng vi xử lý nào dưới đây để cài đặt Windows Server 2012 R2?
+Đáp án: Chỉ có vi xử lý 64-bit
+19.	Công cụ nào sau đây được sử dụng để thực hiện các cấu hình cho thiết lập mẫu?
+Đáp án: Security Templates snap-in
+20.	Công nghệ nào cho phép người sử dụng kết nỐi đến một mạng LAN của công ty qua Internet thông qua một kênh được mã hóa an toàn?
+Đáp án: VPN
+21.	Công việc nào sau đây bạn không thể thực hiện được từ xa, khi server ở xa đang chạy Windows Server 2008?
+Đáp án: Cài đặt các role bằng Server Manager
+ 
+22.	Cụm từ nào sau đây không phải là tên của một lĩnh vực trong công tác quản trị mạng?
+Đáp án: Group management
+////D:////
+23.	DHCPACK, đây là gói tin nhằm giúp (DHCP server xác nhận thông tin áp dụng cho client)
+DHCPREQUEST, đây là thông điệp trao đổi giữa DHCP Client và DHCP Server. Thông điệp này nằm ở bước thứ mấy trong quy trình (3)
+DFS viết tắt cho... (Distributed File System)
+Đáp án nào ĐÚNG khi so sánh giữa System Policy và Group Policy (Chính sách nhóm chứa tất cả các chức năng của chính sách hệ thỐng)
+Để kiểm tra dịch vụ DNS ta sử dụng lệnh nào? (nslookup) //
+Để làm cho các thay đổi về môi trường không tác động lên lược sử mạng, cần làm thao tác gì: (Thay đổi tên file ntuser.dat thành file ntuser.man) //
+Để nén một file đã được nén bằng NTFS, cần: (Khi mở file, hệ thỐng tự động giải nén) //
+Để thay đổi chính sách về mật khẩu trên miền ta sử dụng công cụ nào trong Administrative Tools (Domain Security Policy) //
+24.	Đáp án nào đúng khi so sánh giữa System Policy và Group Policy?
+Đáp án: Chính sách nhóm chứa tất cả các chức năng của chính sách hệ thống
+25.	Để áp dụng GPO trên một nhóm người dùng cụ thể trong OU, bạn sử dụng kĩ thuật nào sau đây?
+Đáp án: Security filtering (lọc)
+26.	Để chuyển từ giao diện đồ họa (GUI) sang giao diện dòng lệnh (Server Core) cần gỡ bỏ các thiết lập nào?
+Đáp án: Graphical Management Tools and Infrastructure, Server Graphical Shell
+27.	Để chuyển Windows Server 2012 R2 từ chế độ Server Core sang Minimal Server Interface, bạn phải cài đặt feature nào?
+Đáp án: Graphical Management Tools and Infrastructure
+28.	Để kết nỐi (join) một máy tính vào domain, sử dụng lệnh của chương trình nào sau đây?
+Đáp án: Netdom.exe
+29.	Để kiểm tra dịch vụ DNS ta sử dụng lệnh nào?
+Đáp án: Nslookup
+30.	Để liệt kê các luật hiện tại của Windows Firewall trên một máy tính đang chạy Windows Server 2012 R2, sử dụng lệnh Windows PowerShell nào?
+Đáp án: Get-NetFirewallRule, Show-NetFirewallRule
+ 
+31.	Để triển khai một mẫu bảo mật cho tất cả các máy tính trong AD DS, bạn sử dụng các công cụ nào sau đây?
+Đáp án: Group Policy Object Editor, Group Policy Management
+32.	DHCPACK, đây là gói tin nhằm giúp
+Đáp án: DHCP server xác nhận thông tin áp dụng cho client
+33.	Đâu không phải là chức năng của hệ thỐng phát hiện xâm nhập IDS?
+Đáp án: Điều khiển luồng
+34.	Đâu không phải là một kiểu tấn công từ chỐi dịch vụ?
+Đáp án: Packet Sniffing Attack
+35.	Đâu không phải là tiêu chí đánh giá khi xác định mức độ nguy cơ hệ thỐng?
+Đáp án: Quy mô tấn công
+36.	Đâu là mô tả đúng cho phương thức Trap ở trong giao thức quản trị mạng đơn giản SNMP?
+Đáp án: Agent tự động gửi Trap đến Manager khi có một sự kiện xảy ra ở
+Object nào đó trong Agent
+37.	Đâu là phát biểu đúng khi nói về Network Base IDS?
+Đáp án: Không cho biết việc tấn công có thành công hay không thành công
+38.	Đâu là phát biểu đúng nhất về nguy cơ hệ thỐng: Nguy cơ hệ thỐng (Risk) được hình thành bởi sự kết hợp giữa….
+Đáp án: Lỗ hổng hệ thống và các mối đe dọa đến hệ thống
+39.	Dịch vụ nào sau đây cần thiết để cho dịch vụ Active Directory hoạt động?
+Đáp án: DNS
+///F:///
+40.	FTP sử dụng cổng nào để truyền hình?
+Đáp án: 21
+////G:////
+Giả sử ổ đĩa C: đã được định dạng với hệ thỐng tệp tin FAT, cần sử dụng lệnh nào dưới đây để chuyển đổi ổ này sang hệ thỐng tệp tin NTFS? (convert C: /fs:ntfs) //
+Group policy dùng để (Tất cả) //
+41.	Giải pháp nâng cấp lên Windows Server 2012 R2 nào sau đây có thể thực hiện được?
+Đáp án: Từ Windows Server 2008 Standard lên Windows Server 2012 R2 Standard
+42.	Giải pháp tạo đường hầm tự động nào sau đây được hệ điều hành Windows sử dụng, trong trường hợp máy tính nằm sau NAT router?
+Đáp án: Teredo
+ 
+43.	Giấy phép bản quyền của hệ điều hành nào sau đây không giới hạn sỐ lượng các bản cài trên máy ảo?
+Đáp án: Windows Server 2012 R2 Datacenter
+44.	Gói tin nào sau đây không được sử dụng trong quá trình trao đổi để cấp một địa chỉ IP cho client?
+Đáp án: DHCPINFORM
+45.	Group nào được sử dụng để tập hợp người dùng và group trên nhiều domain hoặc toàn forest?
+Đáp án: Universal
+46.	
+////H:////
+Hệ điều hành Windows Server 2003 mặc định hỗ trợ cài đặt: (IIS 6.0) //
+Hãy xác định 1 thành phần dưới đây không phải là thành phần trong cấu trúc logic của Active Directory (Site) //
+47.	Hai loại (lớp) đỐi tượng quan trọng trong AD là?
+Đáp án: Đối tượng nút lá, không thể chứa các đối tượng khác (Leaf), Thùng chứa (Container)
+48.	
+////K:////
+Khi lược sử của 1 NSD bị hỏng, không đăng nhập được, cần thực hiện thao tác gì (Xóa lược sử cũ của NSD) //
+Khi 1 file nén được copy từ 1 phân chương đến 1 thư mục nén trên 1 phân chương khác thì: (Phải giải nén, copy trong trạng thái không nén, sau đó lại nén lại.) //
+Khi nào quyền của file hoặc thư mục không thay đổi (Di chuyển trong một phân vùng NTFS) //
+49.	Khay chứa đĩa cứng dựa trên công nghệ JBOD có thể sử dụng để thay thế cho các công nghệ lưu trữ nào sau đây?
+Đáp án: RAID
+50.	Khi bạn cài role Hyper-V trên server Windows Server 2012 R2, hệ điều hành trên server đó sẽ được chuyển vào đỐi tượng nào?
+Đáp án: Parent partition
+51.	Khi bạn sử dụng Active Directory Users And Computers để xóa một group kiểu global, tuy nhiên, hệ thỐng không cho phép thực hiện. Đâu là nguyên nhân?
+Đáp án: Group có chứa thành viên được thiết lập là primary group, Tài khoản hiện tại không có quyền xóa các đối tượng
+52.	Khi sử dụng CSVDE, hàng dữ liệu đầu tiên trong tập tin .CSV được gọi là gì?
+Đáp án: Header record
+ 
+53.	Khi thiết kế hạ tầng Active Directory, để hạn chế tới mức tỐi đa việc tạo domain, lý do nào sau đây không hợp lý?
+Đáp án: Bạn phải trả tiền bản quyền cho Microsoft với mỗi domain được tạo ra
+54.	Khi xác định mức độ nguy cơ hệ thỐng, nếu hệ thỐng kết nỐi vật lý không an toàn thì hệ thỐng ở mức nguy cơ….
+Đáp án: Cao
+55.	Khẳng định nào sau đây là ĐÚNG? (Về Sub-id)
+Đáp án: Sub-id phải liên tục và phải bắt đầu từ 0
+56.	Khẳng định nào sau đây là ĐÚNG? (Về bản tin GetRequest)
+Đáp án: Trong một bản tin GetRequest có thể chứa nhiều OID
+57.	Kiểu cấu hình gộp cạc mạng nào sau đây, vừa cung cấp khả năng chịu lỗi, vừa tăng băng thông cho hệ thỐng?
+Đáp án: Switch Independent Mode
+58.	Kiểu volume nào sau đây được Windows Server 2012 R2 hỗ trợ khả năng chịu lỗi?
+Đáp án: Mirrored, RAID-5
+////L://// 59.
+Loại backup nào sau đây có thể được thực hiện qua mạng (Full Backup) // Loại nhóm nào không dùng để gán quyền cho tài nguyên: (Nhóm phân phỐi) //
+60.	Loại địa chỉ IPv6 nào sau đây tương đương với IPv4 private?
+Đáp án: Unique local unicast
+61.	Loại luật nào sau đây không có trong Software Restriction Policies của Windows Server 2012 R2?
+Đáp án: Firewall rules
+62.	Loại luật nào sau đây sẽ kiểm soát các tập tin có phần mở rộng là .msi?
+Đáp án: Windows Installer rules
+63.	Loại nhóm nào không dùng để gán quyền cho tài nguyên?
+Đáp án: Nhóm phân phối
+64.	
+////M:////
+Một Cơ sở đào tạo có 100 sinh viên và 20 giáo viên. Các giáo viên được in trên 2 máy in HP01 và HP02 thuộc 2 máy tính khác nhau trong domain của cơ sở. Sinh viên chỉ được sử dụng máy in HP02. Chiến lược phân nhóm nào sau đây là hợp lý (Tạo 2 nhóm cục bộ LG1 và LG2. Gán quyền sử dụng HP01 và HP02 cho LG1, HP02 cho LG2. Thêm các giáo viên vào LG1, các sinh viên vào LG2) //
+ 
+Một thư mục Dir1 được chia sẻ cho NSD u01 với quyền full-control. NSD u01 chỉ có quyền đọc với thư mục Dir1 theo quyền NTFS. Quyền thực sự của u01 trên Dir1 là quyền gì: (Read) //
+65.	Mặc định, hyper-V server có thể gán bao nhiêu địa chỉ MAC cho các cạc mạng ảo?
+Đáp án: 256
+66.	Một hệ thỐng muỐn được nhận ra trên Internet, thì nó phải sử dụng loại địa chỉ IP nào?
+Đáp án: Registered (được đăng kí)
+67.	Một máy tính có địa chỉ IP là 10.75.143.88, bản ghi nào sau đây trong reverse lookup zone là dạng tên đầy đủ (FQDN) của nó?
+Đáp án: 88.143.75.10.in-addr.arpa
+68.	Một thư mục DATA được chia sẻ cho người sử dụng U01 với quyền full-control. Người sử dụng U01 chỉ có quyền đọc với thư mục DATA theo quyền NTFS. Quyền thực sự của người sử dụng U01 trên thư mục DATA là quyền gì?
+Đáp án: Read
+69.	
+////N:////
+NSD u01 thuộc về hai nhóm g1 và g2. Nhóm g2 có quyền full control trên file (Read/Execute) //
+70.	Nếu đĩa định dạng là NTFS thì trong hộp thoại properties sẽ có thêm một Tab gì so với hộp thoại properties nếu ổ đĩa định dạng FAT?
+Đáp án: Tab Security
+71.	Những lí do nào sau đây cho thấy không nên thực hiện tạo ra checkpoint cho máy
+ảo?
+Đáp án: Checkpoint tiêu hao một không gian đĩa cứng rất lớn, Các checkpoint đã có sẽ làm giảm hiệu suất của các máy ảo
+72.	Những thao tác nào sau đây không thể thực hiện được với một dịch vụ (service) trong Server Manager?
+Đáp án: Vô hiệu một dịch vụ (Disable), Cấu hình để một dịch vụ tự chạy khi máy tính khởi động
+///p:///
+73.	Phát biểu nào không đúng về mục đích tạo OU?
+Đáp án: Để tạo một thùng chứa cố định, không thể di chuyển hoặc đổi tên
+74.	Phát biểu nào sau đây mô tả đúng nhất về đỐi tượng được cấp quyền (security principal) liên quan đến quá trình cấp quyền NTFS?
+Đáp án: Đối tượng được cấp quyền là người sẽ được nhận các quyền sử dụng tài nguyên
+ 
+75.	Phát biểu nào sau đây nói không đúng về đĩa cứng định dạng VHDX?
+Đáp án: Chỉ có thể mở các đĩa VHDX bằng Windows Server 2012 R2 và Windows Server 2012
+76.	Phát biểu nào sau đây phù hợp với ảo hóa loại 1, và loại 2?
+Đáp án: Trong ảo hóa loại 1, hypervisor chạy trực tiếp trên phần cứng của máy thật, Trong ảo hóa loại 2, hypervisor chạy trên nền hệ điều hành của máy thật
+77.	Phát biểu nào sau đây phù hợp với máy ảo thế hệ 1 và máy ảo thế hệ 2?
+Đáp án: Việc tạo máy ảo thế hệ 2 thì nhanh hơn so với việc tạo ra máy ảo thế hệ 1
+
+
+78.	Nếu đĩa định dạng là NTFS thì trong hộp thoại Properties sẽ có thêm một Tab gì so với hộp thoại Properties nếu ổ đĩa định dạng là FAT: (Tab Security) //
+
+
+79.	///R:///
+
+
+80.	Resource Record nào ánh xạ tên máy (hostname) vào địa chỉ IP version 6?
+Đáp án: AAAA
+81.	Roaming profile cho phép lưu profile của user trên đâu?
+Đáp án: Client
+///S:///
+1.	Sau đây là các mô tả về starter GPO, mô tả nào phù hợp nhất?
+Đáp án: Starter GPO được sử dụng như một bản mẫu để tạo ra các GPO mới
+2.	Server ở xa đang chạy Windows Server 2008, để kết nỐi tới server này bằng Server Manager từ Windows Server 2012 R2, bạn phải cập nhật các gói nào?
+Đáp án: .NET Framework 4.0, Windows Management Framework 3.0
+3.	SỐ shadow copies tỐi đa mà hệ thỐng Windows Server 2012 R2 cho phép duy trì trên mỗi volume là:
+Đáp án: 64
+4.	Switch ảo nào sau đây không cho phép hệ điều hành trên máy ảo giao tiếp với partition cha?
+Đáp án: Private
+ 
+5.	////Q:////
+Quyền nào trong các quyền sau đây cho phép thực hiện nội dung của file (Read/Execute) //
+6.	////T:////
+Thứ tự thực thi các GPOs trong cấu trúc của Active Directory (Site, Domain, OU) // Thông tin người dùng được quản lý bởi dịch vụ Active Directory và được lưu trữ trên Domain Controller với tập tin là: (NTDS.DIT) //
+Trong cơ chế Poll, khởi phát phiên truyền thông là: (Manager) //
+Trong giao thức quản trị mạng đơn giản SNMP, chọn mô tả đúng cho phương thức Trap: (Agent tự động gửi Trap đến Manager khi có một sự kiện xảy ra ở Object nào đó trong Agent) //
+7.	Tác vụ nào sau đây có thể thực hiện bằng quota trong File Server Resource Manager nhưng không thể thực hiện được bằng quota của NTFS?
+Đáp án: Gửi một email tới người quản trị, khi người dùng sử dụng vượt quá định mức của họ
+8.	Tập con của MIB được gọi là VIEW. Trên agent có thể định nghĩa	VIEW.
+Đáp án: nhiều
+9.	Thành phần nào sau đây giúp DHCP client có thể giao tiếp với DHCP server nằm trên mạng con khác?
+Đáp án: Relay agent
+10.	Thứ tự thực thi của GPOs trong cấu trúc Active Directory?
+Đáp án: Domain, OU, Site
+11.	Thuật ngữ nào sau đây diễn đạt quá trình hệ thỐng xem xét người dùng được phép làm gì trên một thư mục chia sẻ, bằng cách đọc các quyền mà họ đã được cấp? Đáp án: Authorization
+12.	Thuật ngữ nào sau đây nói về một thành phần giao tiếp mềm (software interface). Nó giúp máy tính giao tiếp với thiết bị in?
+Đáp án: Printer
+13.	Tiện ích nào sau đây được sử dụng để kết nỐi gián tiếp (offline) máy tính tới domain?
+Đáp án: Djoin
+14.	Tiện ích nào sau đây là một phương thức bảo mật truy cập từ xa tỐt hơn telnet?
+Đáp án: SSH
+15.	Tình huỐng nào sau đây làm cho hash rule bị mất tác dụng trong việc kiểm soát các phần mềm?
+Đáp án: Khi bạn nâng cấp tập tin đang được thiết lập hash rule lên phiên bản mới, Khi tập tin đang được thiết lập hash rule bị virus làm thay đổi nội dung
+ 
+16.	Trong các câu lệnh cấu hình router sử dụng định tuyến động với giao thức RIPv2 sau đây, câu lệnh nào là không hợp lệ?
+Đáp án: Router(config)#ripv2
+17.	Trong các chế độ cấp địa chỉ IP cho client của DHCP Windows Server 2012 R2, thuật ngữ nào sau đây tương đương với “reservation”?
+Đáp án: Cấp Manual
+18.	Trong các phát biểu liên quan đến thuộc tính (attribute) của một đỐi tượng (object), phát biểu nào sau đây không đúng?
+Đáp án: Các đối tượng thuộc kiểu leaf không chứa thuộc tính
+19.	Trong các tác vụ quản trị mạng, quy trình quản lý bảo mật không liên quan đến công việc nào?
+Đáp án: Thiết lập hạn ngạch sử dụng tài nguyên mạng cho các nhóm user khác nhau
+20.	Trong các tác vụ quản trị mạng, quy trình quản trị hiệu năng mạng không bao gồm giai đoạn nào?
+Đáp án: Khắc phục lỗi và kiểm tra sự hoạt động trở lại bình thường của hệ thống
+21.	Trong các domain đang chạy ở chế độ Windows Server 2012 R2 (Windows Server 2012 R2 domain functional level), các đỐi tượng nào KHÔNG thể là thành viên của group kiểu global?
+Đáp án: Group kiểu universal
+22.	Trong các domain đang chạy ở chế độ Windows Server 2012 R2 (Windows Server 2012 R2 domain functional level), các đỐi tượng nào có thể là thành viên của group kiểu global?
+Đáp án: Các tài khoản người dùng, Các tài khoản máy tính, Group kiểu global
+23.	Trong cấu hình chức năng dịch địa chỉ mạng (NAT) của router, câu lệnh nào là câu lệnh đúng?
+Đáp án: ip nat pool POOL-1 203.162.0.2 203.162.0.2 netmask 255.255.255.0
+24.	Trong cấu hình router, đâu là phát biểu đúng khi nói về khoảng giá trị - AD?
+Đáp án: AD là một số nguyên nhận giá trị từ 0 đến 255
+25.	Trong cấu hình router, sử dụng câu lệnh nào để cho phép chuyển tiếp các gói tin IP quảng bá của DHCP client tìm DHCP server trong mạng?
+Đáp án: Router (config-if)#ip helper-address 192.1.1.2
+26.	Trong giao thức quản trị mạng đơn giản SNMP, mỗi object có một tên gọi và một mã sỐ để nhận dạng object đó, mã sỐ đó được gọi là gì?
+Đáp án: OID
+27.	Trong hệ thỐng mạng có một trong các thiết bị in không hoạt động được, và bạn muỐn người dùng tạm thời không được phép gửi yêu cầu in tới printer nỐi với
+ 
+thiết bị đó. Bạn sẽ thực hiện hành động nào sau đây?
+Đáp án: Ngưng việc chia sẻ printer
+28.	Trong hệ thỐng quyền NTFS của Windows Server 2012 R2, kết hợp các quyền kiểu advanced sẽ tạo thành các quyền kiểu gì?
+Đáp án: Basic, Standard
+29.	Trong hoạt động của DNS, hệ thỐng sẽ tạo ra một truy vấn kiểu đệ quy trong tình huỐng nào sau đây?
+Đáp án: DNS client yêu cầu DNS server của nó phân giải tên miền www.adatum.com sang địa chỉ IP
+30.	Trong Hyper-V, switch ảo có sỐ cổng tỐi đa là?
+Đáp án: Không giới hạn
+31.	Trong máy cục bộ có nhiều local GPO, local GPO nào có quyền ưu tiên cao nhất?
+Đáp án: User-specific group policy
+32.	Trong môi trường Active Directory, dịch vụ nào sau đây được client sử dụng để tìm kiếm các đỐi tượng trên domain khác?
+Đáp án: Global Catalog
+33.	Trong môi trường AD, đỐi tượng nào sau đây không thể chứa các domain?
+Đáp án: OU
+34.	Trong Software Restriction Policies, chiến lược nào sẽ cấm chạy mọi phần mềm, ngoại trừ các phần mềm đã được Administrator cho phép chạy một cách tường minh?
+Đáp án: Disallowed
+35.	Trong vận hành thực tế, loại ảo hóa server nào sau đây cung cấp hiệu suất xử lý tỐt nhất cho các server đòi hỏi lưu lượng xử lý lớn?
+Đáp án: Ảo hóa loại 1
+36.	Trong việc truyền các gói tin IPv6 trên nền IPv4, giải pháp nào sau đây được sử dụng phổ biến?
+Đáp án: Tunneling
+37.	Trong Windows Server 2012 R2, các nhóm cục bộ của hệ thỐng (built-in) sẽ nhận các thiết lập đặc biệt thông qua cơ chế nào?
+Đáp án: Quyền hạn người dùng (user right)
+38.	Trong Windows Server 2012 R2, có hai tài khoản người dùng tạo sẵn (built-in) nào?
+Đáp án: Administrator, Guest
+39.	Trong Windows Server 2012 R2, loại tài khoản nào sau đây không cho phép cấu hình?
+Đáp án: Network accounts
+ 
+40.	Trong Windows Server 2012 R2, sau khi cấu hình và triển khai Audit Directory Service Access, bạn phải làm gì tiếp theo thì hệ thỐng mới thực hiện theo dõi việc truy cập Active Directory?
+Đáp án: Sử dụng Active Directory Users and Computers để lựa chọn các đối tượng trong Active Directory sẽ bị theo dõi
+41.	Trên máy tính A, người dùng NEU có quyền NTFS là Full Control trên thư mục D:. Sau đó chia sẻ thư mục này với tên DULIEU và cấp quyền truy cập thư mục chia sẻ cho người dùng NEU là cho phép Read. Người dùng NEU ngồi tại máy tính B và truy cập vào tài nguyên chia sẻ DULIEU thì sẽ có quyền gì?
+Đáp án: Read
+///v:///
+82.	Việc chuyển đổi kiểu của group nào sau đây không cho phép làm trong mọi tình huỐng?
+Đáp án: Từ global sang domain local
+83.	Với một đĩa cứng ảo kiểu pass-through, yêu cầu nào sau đây là đúng?
+Đáp án: Đĩa được sử dụng để làm đĩa ảo kiểu pass-through phải được thiết lập chế độ offline trong partition cha của Hyper-V server
+
+
+////U:////
+User đăng nhập bằng cách gõ tên đăng nhập và password. Windows 2003 kiểm chứng thông tin về user. Nếu đăng nhập vào domain-Windows 2003 kiểm chứng thông tin trên một: (Domain Controller) //
+///W:///
+42.	Write-Community được dùng trong bản tin nào?
+Đáp án: SetRequest
+///Y:///
+43.	Yêu cầu nào sau đây không cần phải có, khi gắn một cạc Fibre Channel tới một máy
+ảo trong Hyper-V?
+Đáp án: Bạn phải có một cáp nối SCSI để kết nối cạc Fibre Channel và thiết bị lưu trữ
