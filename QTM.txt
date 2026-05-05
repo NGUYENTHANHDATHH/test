@@ -10,11 +10,43 @@ Quản trị mạng (Network Administration): Quản lý, vận hành, giám sá
   Network Management)
    Mô hình quản trị mạng do ISO (International Standard 
   Organization) đề xuất bao gồm 5 lĩnh vực chức năng:
-   Fault Management
+   Fault Management: Theo ISO, đây là một lĩnh vực phức tạp nhất của công tác quản trị mạng
+1)Xác định “triệu chứng” và cô lập vấn đề căn nguyên của lỗi;
+ 2)Khắc phục lỗi và kiểm tra sự hoạt động trở lại bình thường của hệ thống;
+ 3)Ghi lại vấn đề/lỗi được phát hiện và giải pháp khắc phục chúng (chuẩn bị cho
+việc khắc phục lỗi lần sau.
+
    Configuration Management
-   Accounting Management
-   Performance Management
-   Security Management
+   Accounting Management: quan tâm đến việc chuẩn bị số
+liệu để báo cáo về việc sử dụng mạng và cấp phát tài
+nguyên của toàn hệ thống.
+ Quytrình quản lý kiểm toán bao gồm:
+ 1) Đo lường việc sử dụng của tất cả các tài nguyên mạng quan
+trọng;
+ 2) Phân tích các mẫu sử dụng hiện tại;
+ 3) Thiết lập hạn ngạch sử dụng tài nguyên mạng cho các nhóm
+user khác nhau 
+
+   Performance Management: quản lý/đo lường các khía cạnh khác nhau
+của hiệu năng mạng: Băng thông mạng, thời gian hồi đáp
+người dùng, … Mục tiêu là duy trì hiệu năng của mạng ở
+mức có thể truy cập được.
+ Quytrình quản lý hiệu năng bao gồm các giai đoạn:
+ 1) Thu thập dữ liệu hiệu năng;
+ 2) Phân tích dữ liệu;
+ 3) Thiết lập các ngưỡng hiệu năng cho giá trị của các thông số
+quan trọng.
+
+   Security Management: điều khiển truy cập đến tài
+nguyên mạng theo đặc quyền của người dùng, nhằm bảo
+vệ các tài nguyên nhạy cảm, ngăn chặn sự truy cập bất
+hợp lệ của người sử dụng không được phép.
+ Quytrình quản lý bảo mật liên quan đến:
+ 1) Định danh các tài nguyên (tài nguyên mạng) nhạy cảm;
+ 2) Xác định mối liên quan giữa tài nguyên nhạy cảm và nhóm user
+được quyền truy cập/không được quyền truy cập tài nguyên đó;
+ 3)Theo dõi việc truy cập đến tài nguyên nhạy cảm của user
+
 Hệ thống mạng (Network System): Tập hợp các thiết bị mạng (máy tính, router, switch...) kết nối với nhau nhằm chia sẻ tài nguyên.
 Quản trị viên mạng (Network Administrator): Người chịu trách nhiệm giám sát, vận hành và khắc phục sự cố mạng.
 Thiết bị mạng (Network Devices): Bao gồm router, switch, hub, access point, tường lửa...
