@@ -3,6 +3,10 @@
 Địa chỉ IP thuộc lớp C có phạm vi từ 192.0.0.x – 223.255.255.x.
 Lớp D có phạm vi từ 224.0.0.0 – 239.255.255.255.
 lớp E nằm trong khoảng từ 240.0.0.0 – 255.255.255.254
+Web proxy trên ISA chạy port là bao nhiêu? 8080
+Cổng mặc định của Remote desktop là? 3389
+Cổng mặc định của Remote web brower là? 8098
+Cổng hoạt động TCP của dịch vụ Web là? 80
 Chương 1: Tổng quan về quản trị mạng
 Các thuật ngữ, khái niệm cần biết:
 Quản trị mạng (Network Administration): Quản lý, vận hành, giám sát và bảo trì các thành phần của mạng máy tính.
@@ -394,15 +398,23 @@ Các loại bản ghi (Resource Records):
    PTR (Pointer): Chuyển đổi từ IP sang tên miền (truy vấn ngược)
 Phân loại Server: Primary (nguồn xác thực chính), Secondary (dự phòng, lấy dữ liệu từ Primary), Caching-only (chỉ lưu cache)
 Đồng bộ dữ liệu (Zone Transfer): AXFR (truyền toàn bộ), IXFR (truyền phần thay đổi)
+Khi cài đặt xong DNS, những thành phần nào có trong DNS?
+Forward Lookup Zones, Reverse Lookup Zones, Event 
+Chức năng của Forward Lookup Zones trong DNS là? Chứa tất cả 
+các Zone thuận của dịch vụ DNS, zone này được lưu tại máy
+Một nút trong DNS name space quy định tối đa bao 
+nhiêu ký tự? 63
 2. Dịch vụ cấp IP động (DHCP):
 Chức năng: Tự động cấp địa chỉ IP, Subnet mask, Default Gateway và địa chỉ DNS cho máy trạm
 Quy trình: Client yêu cầu IP từ Server, Server chọn một IP từ dãy địa chỉ (Pool) và cho thuê (Lease) trong một khoảng thời gian
+
 3. Dịch vụ Proxy và NAT:
 Proxy: Hoạt động ở mức ứng dụng, có chức năng Caching để tăng tốc độ truy cập và giảm băng thông
 Cache thụ động (Passive): Chỉ lưu đối tượng khi có yêu cầu
 Cache chủ động (Active): Tự động cập nhật các đối tượng thường xuyên được yêu cầu
 NAT (Network Address Translation): Chuyển đổi địa chỉ IP dùng riêng (Private) sang IP công cộng (Public) để ra Internet
 Dải IP Private: 10.x.x.x, 172.16.x.x - 172.31.x.x, 192.168.x.x
+
 4. Dịch vụ truy cập từ xa (Remote Access):
 Sử dụng giao thức PPP (Point-to-Point Protocol) là phổ biến nhất
 Xác thực: PAP (gửi mật khẩu dạng text, không an toàn) và CHAP (sử dụng cơ chế challenge/response, an toàn hơn)
@@ -988,7 +1000,6 @@ Danh sách các câu hỏi trắc nghiệm và đáp án được sắp xếp th
 2.	Bản ghi nào sau đây có chứa thông tin phục vụ cho quá trình phân giải ngược của hệ thỐng DNS?
 Đáp án: PTR
 ////C:////
-Chọn đáp án sai khi nói về quyền NTFS (Quyền thư mục NTFS trội hơn quyền file NTFS)
 Chức năng của Active Directory (Cả 3 đáp án trên)
 3.	Các (tiện ích) feature nào sau đây của Hyper-V, cho phép giá trị Minimum RAM trong một máy ảo có thể nhỏ hơn giá trị Startup RAM?
 Đáp án: Smart paging, Guest Integration Services
@@ -1002,7 +1013,6 @@ Chức năng của Active Directory (Cả 3 đáp án trên)
 Đáp án: Nếu bạn muốn mở rộng một volume kiểu simple, và sau khi mở rộng nó vẫn thuộc kiểu simple, thì bạn chỉ có thể sử dụng không gian đĩa còn trống trên cùng một đĩa cứng vật lý, Bạn có thể mở rộng một volume kiểu simple sang các đĩa cứng khác, miễn là volume đó không phải là system volume hoặc boot volume
 8.	Các phát biểu nào sau đây nói đúng về volume kiểu striped?
 Đáp án: Volume kiểu striped giúp nâng cao hiệu suất xử lý so với volume kiểu simple
- 
 9.	Các phát biểu nào sau đây nói không đúng về cạc mạng kiểu synthetic?
 Đáp án: Cạc mạng kiểu synthetic có thể khởi động máy ảo bằng kĩ thuật khởi động qua mạng PXE
 10.	Các thành phần mạng nào sau có thể hoạt động với vai trò giỐng như một trạm chuyển tiếp DHCP (DHCP relay agents)?
@@ -1011,16 +1021,12 @@ Chức năng của Active Directory (Cả 3 đáp án trên)
 Đáp án: Default Gateway
 12.	Cái nào sau đây cho phép điều chỉnh việc lưu tạm (caching) của hệ thỐng DNS?
 Đáp án: Táp Start of Authority (SOA) trong mục Properties của zone
-13.	Cái nào sau đây không phải là một thành phần của hệ thỐng DNS?
-Đáp án: Relay agents
 14.	Câu nào sau đây nói không đúng về Server Manager?
 Đáp án: Server Manager có thể cùng một lúc cài đặt nhiều chức năng cho nhiều server
 15.	Cho biết tên của thư mục mà Windows sử dụng để lưu toàn bộ các thành phần cần thiết liên quan đến việc cài đặt các chức năng của hệ điều hành sau này?
 Đáp án: WinSxS
 16.	Cho địa chỉ mạng là 172.16.32.0/19, vậy subnet mask sẽ là?
 Đáp án: 255.255.224.0
-17.	Có một chức năng trong hệ thỐng đã được thiết lập là disabled, bạn muỐn thay đổi chức năng này bằng cách sử dụng GPO, cụ thể, trong GPO bạn thiết lập giá trị cho nó là Not Configured. Kết quả của thiết lập này là?
-Đáp án: Trạng thái của chức năng đó vẫn là disabled
 18.	Có thể sử dụng vi xử lý nào dưới đây để cài đặt Windows Server 2012 R2?
 Đáp án: Chỉ có vi xử lý 64-bit
 19.	Công cụ nào sau đây được sử dụng để thực hiện các cấu hình cho thiết lập mẫu?
@@ -1029,7 +1035,9 @@ Chức năng của Active Directory (Cả 3 đáp án trên)
 Đáp án: VPN
 21.	Công việc nào sau đây bạn không thể thực hiện được từ xa, khi server ở xa đang chạy Windows Server 2008?
 Đáp án: Cài đặt các role bằng Server Manager
- 
+      Chương trình nào sau đây có thể sử dụng để thêm, xóa hoặc thay đổi các đối tượng trong
+AD, nếu cần thiết có thể thay đổi schema?
+B. LDIFDE
 22.	Cụm từ nào sau đây không phải là tên của một lĩnh vực trong công tác quản trị mạng?
 Đáp án: Group management
 ////D:////
@@ -1092,7 +1100,6 @@ Khi nào quyền của file hoặc thư mục không thay đổi (Di chuyển tr
 Đáp án: Group có chứa thành viên được thiết lập là primary group, Tài khoản hiện tại không có quyền xóa các đối tượng
 52.	Khi sử dụng CSVDE, hàng dữ liệu đầu tiên trong tập tin .CSV được gọi là gì?
 Đáp án: Header record
- 
 53.	Khi thiết kế hạ tầng Active Directory, để hạn chế tới mức tỐi đa việc tạo domain, lý do nào sau đây không hợp lý?
 Đáp án: Bạn phải trả tiền bản quyền cho Microsoft với mỗi domain được tạo ra
 54.	Khi xác định mức độ nguy cơ hệ thỐng, nếu hệ thỐng kết nỐi vật lý không an toàn thì hệ thỐng ở mức nguy cơ….
@@ -1117,9 +1124,7 @@ Loại backup nào sau đây có thể được thực hiện qua mạng (Full B
 Đáp án: Nhóm phân phối
 64.	
 ////M:////
-Một Cơ sở đào tạo có 100 sinh viên và 20 giáo viên. Các giáo viên được in trên 2 máy in HP01 và HP02 thuộc 2 máy tính khác nhau trong domain của cơ sở. Sinh viên chỉ được sử dụng máy in HP02. Chiến lược phân nhóm nào sau đây là hợp lý (Tạo 2 nhóm cục bộ LG1 và LG2. Gán quyền sử dụng HP01 và HP02 cho LG1, HP02 cho LG2. Thêm các giáo viên vào LG1, các sinh viên vào LG2) //
- 
-Một thư mục Dir1 được chia sẻ cho NSD u01 với quyền full-control. NSD u01 chỉ có quyền đọc với thư mục Dir1 theo quyền NTFS. Quyền thực sự của u01 trên Dir1 là quyền gì: (Read) //
+Một DNS domain namespace gồm? Root name, Top-Level Domain, Second-level-domain, Subdomain, host
 65.	Mặc định, hyper-V server có thể gán bao nhiêu địa chỉ MAC cho các cạc mạng ảo?
 Đáp án: 256
 66.	Một hệ thỐng muỐn được nhận ra trên Internet, thì nó phải sử dụng loại địa chỉ IP nào?
@@ -1195,7 +1200,7 @@ Trong giao thức quản trị mạng đơn giản SNMP, chọn mô tả đúng 
 Đáp án: SSH
 15.	Tình huỐng nào sau đây làm cho hash rule bị mất tác dụng trong việc kiểm soát các phần mềm?
 Đáp án: Khi bạn nâng cấp tập tin đang được thiết lập hash rule lên phiên bản mới, Khi tập tin đang được thiết lập hash rule bị virus làm thay đổi nội dung
- 
+      Truy vấn tới 1 name Server là công việc của? Resolver 
 16.	Trong các câu lệnh cấu hình router sử dụng định tuyến động với giao thức RIPv2 sau đây, câu lệnh nào là không hợp lệ?
 Đáp án: Router(config)#ripv2
 17.	Trong các chế độ cấp địa chỉ IP cho client của DHCP Windows Server 2012 R2, thuật ngữ nào sau đây tương đương với “reservation”?
@@ -1219,7 +1224,6 @@ Trong giao thức quản trị mạng đơn giản SNMP, chọn mô tả đúng 
 26.	Trong giao thức quản trị mạng đơn giản SNMP, mỗi object có một tên gọi và một mã sỐ để nhận dạng object đó, mã sỐ đó được gọi là gì?
 Đáp án: OID
 27.	Trong hệ thỐng mạng có một trong các thiết bị in không hoạt động được, và bạn muỐn người dùng tạm thời không được phép gửi yêu cầu in tới printer nỐi với
- 
 thiết bị đó. Bạn sẽ thực hiện hành động nào sau đây?
 Đáp án: Ngưng việc chia sẻ printer
 28.	Trong hệ thỐng quyền NTFS của Windows Server 2012 R2, kết hợp các quyền kiểu advanced sẽ tạo thành các quyền kiểu gì?
@@ -1246,17 +1250,14 @@ thiết bị đó. Bạn sẽ thực hiện hành động nào sau đây?
 Đáp án: Administrator, Guest
 39.	Trong Windows Server 2012 R2, loại tài khoản nào sau đây không cho phép cấu hình?
 Đáp án: Network accounts
- 
 40.	Trong Windows Server 2012 R2, sau khi cấu hình và triển khai Audit Directory Service Access, bạn phải làm gì tiếp theo thì hệ thỐng mới thực hiện theo dõi việc truy cập Active Directory?
 Đáp án: Sử dụng Active Directory Users and Computers để lựa chọn các đối tượng trong Active Directory sẽ bị theo dõi
-41.	Trên máy tính A, người dùng NEU có quyền NTFS là Full Control trên thư mục D:. Sau đó chia sẻ thư mục này với tên DULIEU và cấp quyền truy cập thư mục chia sẻ cho người dùng NEU là cho phép Read. Người dùng NEU ngồi tại máy tính B và truy cập vào tài nguyên chia sẻ DULIEU thì sẽ có quyền gì?
-Đáp án: Read
+
 ///v:///
 82.	Việc chuyển đổi kiểu của group nào sau đây không cho phép làm trong mọi tình huỐng?
 Đáp án: Từ global sang domain local
 83.	Với một đĩa cứng ảo kiểu pass-through, yêu cầu nào sau đây là đúng?
 Đáp án: Đĩa được sử dụng để làm đĩa ảo kiểu pass-through phải được thiết lập chế độ offline trong partition cha của Hyper-V server
-
 
 ////U:////
 User đăng nhập bằng cách gõ tên đăng nhập và password. Windows 2003 kiểm chứng thông tin về user. Nếu đăng nhập vào domain-Windows 2003 kiểm chứng thông tin trên một: (Domain Controller) //
