@@ -405,6 +405,7 @@ Phương pháp chuẩn:
 Chuẩn đơn giản: Chuẩn trực tiếp (dùng mẫu chuẩn) hoặc chuẩn gián tiếp (so sánh với cảm biến khác)
 Chuẩn nhiều lần: Áp dụng khi cảm biến có hiện tượng trễ
 
+Độ phân giải: Sự thay đổi tối thiểu trong hiện tượng mà cảm biến có thể phát hiện 
 5. Độ nhạy của cảm biến: Tỷ số giữa biến thiên đầu ra và biến thiên đầu vào (S=Δs/Δm)
 6. Độ nhanh và thời gian hồi đáp
 7. Giới hạn sử dụng của cảm biến: Gồm vùng làm việc danh định, vùng không gây hư hỏng (biến đổi thuận nghịch) và vùng không phá hủy (biến đổi không thuận nghịch, cần chuẩn lại)
