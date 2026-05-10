@@ -749,7 +749,7 @@ B. CẢM BIẾN VÀ CƠ CẤU CHẤP HÀNH (SENSING AND ACTUATOR)
 C. GIAO TIẾP (COMMUNICATION)
  Kết nối các đối tượng không đồng nhất, yêu cầu NĂNG LƯỢNG THẤP.
  RFID: Công nghệ đầu tiên cho M2M. Thẻ gồm 3 loại: Chủ động (có pin), Bị động (không pin), Bán chủ động (dùng pin khi cần).
- NFC: Hoạt động ở băng tần 13,56 MHz, khoảng cách dưới 10 cm.
+ NFC: Hoạt động ở băng tần 13,56 MHz, khoảng cách dưới 10 cm.  tốc độ truyền dữ liệu tối đa 424 Kbps
  UWB: Băng thông cao, năng lượng thấp, khoảng cách ngắn.
  WiFi sử dụng radio sóng để trao đổi dữ liệu giữa mọi thứ trong phạm vi 100 m
  BLUETOOTH: Bluetooth 4.1 cung cấp Bluetooth Low Energy (BLE) và kết nối IP cho IoT.
@@ -879,6 +879,7 @@ BLE (BLUETOOTH LOW ENERGY)
 lượng điện năng tối thiểu để hoạt động trong thời gian dài 
 hơn (thậm chí trong nhiều năm) so với các phiên bản trước 
 của nó.  
+BLE dùng FHSS kết hợp TDMA nhưng phát biểu đơn thuần TDMA thường được coi là chưa chính xác
  Ưu điểm: phạm vi phủ sóng (khoảng 100 mét) gấp mười lần 
 so với Bluetooth cổ điển trong khi độ trễ của nó thấp hơn 15 
 lần và có thể hoạt động với công suất truyền từ 0,01 mW đến 10 mW.
@@ -898,6 +899,7 @@ và tiêu chuẩn EPC và RFID
 
 LTE-A (LONG TERM EVOLUTION—ADVANCED )
 LTE-A bao gồm một tập hợp các giao thức truyền thông di động phù hợp tốt cho cơ sở hạ tầng Truyền thông kiểu máy (MTC) và IoT, đặc biệt là cho các thành phố thông minh nơi mong đợi độ bền lâu dài của cơ sở hạ tầng. Hơn nữa, nó vượt trội hơn các giải pháp di động khác về chi phí dịch vụ và khả năng mở rộng.
+LTE-A upload tối đa khoảng 500Mbps; LTE sử dụng OFDMA/SC-FDMA
 Kiến trúc của mạng LTE-A dựa trên 2 phần chủ yếu
  •	Đầu tiên là Mạng lõi (Core Network - CN): kiểm soát các thiết bị di động và xử lý các luồng gói IP.
  •	Phần khác là mạng truy cập vô tuyến (RAN): xử lý truyền thông không dây và truy cập vô tuyến, đồng thời thiết lập các giao thức mặt phẳng người dùng và mặt phẳng điều khiển.
