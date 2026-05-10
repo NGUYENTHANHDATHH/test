@@ -774,12 +774,20 @@ F. NGỮ NGHĨA (SEMANTICS)
 4 loại lớn là: Giao thức ứng dụng, giao thức dịch vụ, giao thức cơ sở hạ tầng và những giao thức có ảnh hưởng khác.
 
 A. Giao thức ứng dụng
-MQTT (MESSAGE QUEUING TELEMETRY TRANSPORT) 
+MQTT (MESSAGE QUEUING TELEMETRY TRANSPORT)
+được giới thiệu bởi Andy StanfordClark của IBM và Arlen Nipper của Arcom (nay là Eurotech)
+trong 1999 và được chuẩn hóa vào năm 2013 tại OASIS
+ phù hợp với các thiết bị hạn chế tài nguyên sử dụng các liên kết không đáng tin cậy hoặc băng thông thấp
+ Các thông số kỹ thuật cung cấp ba yếu tố: ngữ nghĩa kết nối, định tuyến và điểm cuối.
  MÔ HÌNH: XUẤT BẢN/ĐĂNG KÝ (PUBLISH/SUBSCRIBE). Chạy trên nền TCP.
  THÀNH PHẦN: Người xuất bản (Publisher), Người đăng ký (Subscriber) và NHÀ MÔI GIỚI (BROKER).
  ƯU ĐIỂM: Định tuyến linh hoạt (1-1, 1-nhiều), tiêu đề tin nhắn nhỏ (tiêu đề cố định chỉ 2 BYTE).
+ LOẠI TIN NHẮN: CONNECT (1), CONNACK (2), PUBLISH (3), SUBCRIBE (8)
 
 COAP (CONSTRAINED APPLICATIONS PROTOCOL)
+IETF Constrained RESTful Environments (CoRE) là tổ chức tạo ra CoAP
+CoAP nhằm mục đích cho phép các thiết bị nhỏ bé có khả năng giao tiếp, tính toán 
+và năng lượng thấp có thể sử dụng các tương tác RESTful
  CoAP truyền tải tài liệu theo mô hình client/server dựa trên
 internet tương tự như HTTP nhưng được thiết kế cho các
 thiết bị ràng buộc.
@@ -790,9 +798,12 @@ TCP nhưng không tích hợp công cụ bảo mật như SSL/TSL.
  ĐẶC ĐIỂM: Thiết kế theo kiến trúc RESTful, chạy trên nền UDP (mặc định). Thích hợp cho thiết bị tài nguyên hạn chế.
  CẤU TRÚC: Gồm 2 lớp con là NHẮN TIN (Message) và YÊU CẦU/PHẢN HỒI (Request/Response).
  LOẠI TIN NHẮN: Có thể xác nhận (CON), Không thể xác nhận (NON), Đặt lại (RST), Xác nhận (ACK).
- CÔNG NGHỆ CHÍNH: Sử dụng định dạng NHỊ PHÂN (Header cố định 4 byte), hỗ trợ quan sát tài nguyên (Observe), vận chuyển khối (Block-wise), bảo mật bằng DTLS.
+ CÔNG NGHỆ CHÍNH: Sử dụng định dạng NHỊ PHÂN (Header cố định 4 byte), hỗ trợ quan sát tài nguyên (Observe), vận chuyển khối (Block-wise),	Khám phá tài nguyên, Tương tác với HTTP, bảo mật bằng DTLS.
+Các trường trong tiêu dề như sau: Ver là phiên bản của CoAP, T là loại giao dịch, OC là số lựa chọn, Code biểu diễn phương thức yêu cầu(1-10) hoặc mã phản hồi(40-255). Ví dụ mã cho GET, POST, PUT, DELETE lần lượt là 1,2,3,4. ID giao dịch ở phần đầu là vật nhận dạng độc nhất cho việc ghép nối phản hồi
 
 XMPP (EXTENSIBLE MESSAGING AND PRESENCE PROTOCOL)
+được phát triển bởi mã nguồn mở Jabber cộng đồng để hỗ trợ một giao thức nhắn tin 
+mở, an toàn, không có thư rác và phi tập trung
  BẢN CHẤT: Dựa trên ngôn ngữ XML, phi tập trung, hỗ trợ tin nhắn tức thời (IM).
  CẤU TRÚC: Sử dụng các XML STANZAS (Message, Presence, Iq).
  TỐI ƯU: Sử dụng EXI (Efficient XML Interchange) để nén luồng XML nhằm giảm chi phí mạng
@@ -800,13 +811,21 @@ XMPP (EXTENSIBLE MESSAGING AND PRESENCE PROTOCOL)
 AMQP (Advanced Message Queuing Protocol):
  MÔ HÌNH: Giao tiếp điểm-điểm và Xuất bản/Đăng ký. Chạy trên TCP.
  THÀNH PHẦN: Bộ trao đổi (EXCHANGE) và HÀNG ĐỢI TIN NHẮN (Message Queue).
+ LOẠI THÔNG BÁO: tin nhắn và thông điệp
  ĐẶC ĐIỂM: Đảm bảo gửi tin nhắn (Ít nhất một lần, đúng một lần).
+Bốn byte đầu tiên hiển thị kích thước khung. DOFF (Data Offset) cho biết vị trí của phần thân bên trong khung. Loại trường cho biết định dạng và mục đích của khung.
 
 5. DDS (Data Distribution Service):
+được phát triển bởi Object Management Group (OMG)
  ĐẶC ĐIỂM: Kiến trúc KHÔNG MÔI GIỚI (BROKERLESS), tập trung vào dữ liệu, hỗ trợ THỜI GIAN THỰC.
  QUẢN LÝ: Hỗ trợ 23 CHÍNH SÁCH QoS (Chất lượng dịch vụ).
- LỚP CHÍNH: DCPS (Phân phối dữ liệu) và DLRL (Giao diện ứng dụng).
-
+ 2 LỚP: Data-Centric PublishSubscribe DCPS (Phân phối dữ liệu) và Data-Local Reconstruction Layer DLRL (Giao diện ứng dụng).
+Năm thực thể có liên quan đến luồng dữ liệu trong DCPS: 
+(1) Publisher phổ biến dữ liệu;
+(2)	DataWriter được ứng dụng sử dụng để tương tác với nhà xuất bản về các giá trị và thay đổi của dữ liệu cụ thể cho một loại nhất định.Sự liên kết giữa DataWriter và Publisher chỉ ra rằng ứng dụng sẽ xuất bản dữ liệu được chỉ định trong một định nghĩa bài văn; 
+(3) Subscriber nhận dữ liệu đã xuất bản và cung cấp của họ vào ứng dụng;
+(4)	DataReader được sử dụng bởi Subscriber để truy cập vào dữ liệu nhận được; 
+(5) một Topic là được xác định bởi một kiểu dữ liệu và một tên.
 Application Protocol,RESTful,Transport,Publish/Subscribe,Request/Response,Security,QoS,Header Size (Byte)
 COAP,✓,UDP,✓,✓,DTLS,✓,4
 MQTT,x,TCP,✓,x,SSL,✓,2
@@ -818,7 +837,7 @@ HTTP,✓,TCP,x,✓,SSL,x,-
 
 B. Các giao thức truyền thông trong tầng khám phá dịch vụ 
 mDNS (Multicast DNS): Không cần cấu hình server trung tâm. Gửi tin nhắn IP MULTICAST để tìm địa chỉ IP của các thiết bị trong mạng cục bộ qua tên.
-DNS-SD (DNS Service Discovery): Sử dụng các gói tin DNS chuẩn để tìm dịch vụ (ví dụ: tìm máy in) thông qua mDNS.
+DNS-SD (DNS Service Discovery): UDP,Sử dụng các gói tin DNS chuẩn để tìm dịch vụ (ví dụ: tìm máy in) thông qua mDNS.
 
 C. Các giao thức cơ sở hạ tầng
  6LoWPAN (IPv6 protocol over low-power wireless PANs) sử 
@@ -833,6 +852,7 @@ kỹ thuật 6LoWPAN sẽ bị loại bỏ.
 được chuyển tiếp.
  (11) Fragmentation: dùng với các dữ liệu có độ dài
 vượt quá một khung IEEE 802.15.4 (127 byte).
+-	Phân tích hiệu suất của 6LoWPAN trong mạng cảm biến không dây cho thấy độ trễ có tăng lên. Một số vấn đề khác như: tỷ lệ mất gói dữ liệu cao, dễ bị can thiệp
 
 IEEE 802.15.4
  IEEE 802.15.4 hoạt động ở lớp MAC và lớp vật lý cho mạng 
@@ -844,18 +864,20 @@ trên các nền tảng khác nhau và có thể xử lý một số lượng
 lớn các nút. 
  Cung cấp các dịch vụ bảo mật, mã hóa và xác thực ở mức 
 độ cao, nhưng không đảm bảo QoS.
-THIẾT BỊ: FFD (Đầy đủ chức năng) và RFD (Chức năng giảm - chỉ giao tiếp với FFD).
+HỖ TRỢ 2 LOẠI NÚT MẠNG: FFD (Đầy đủ chức năng) và RFD (Chức năng giảm - chỉ giao tiếp với FFD).
  IEEE 802.15.4 hỗ trợ ba băng tần kênh tần số và sử dụng 
 phương pháp trải phổ chuỗi trực tiếp (DSSS).
   250 kbps ở 2,4 GHz
   40 kbps ở 915 MHz
   20 kbps ở 868 MHz.
+Tiêu chuẩn của các cấu trúc liên kết để tạo thành mạng IEEE 802.15.4 là hình sao, peer-to-peer (mesh), và cluster-tree.
+-	Điện năng tiêu thụ của BLE thấp hơn IEEE 802.15.4, IEEE 802.11ah có khả năng truyền dữ liệu tốt hơn IEEE 802.15.4 kể cả khi ở trạng thái có tải và không tải. Tuy nhiên IEEE 802.15.4 lại tiết kiệm năng lượng hơn, đặc biệt trong các mạng lưới lớn.
 
 BLE (BLUETOOTH LOW ENERGY)
  Bluetooth năng lượng thấp sử dụng radio tầm ngắn với 
 lượng điện năng tối thiểu để hoạt động trong thời gian dài 
 hơn (thậm chí trong nhiều năm) so với các phiên bản trước 
-của nó. Phạm vi 100m
+của nó.  
  Ưu điểm: phạm vi phủ sóng (khoảng 100 mét) gấp mười lần 
 so với Bluetooth cổ điển trong khi độ trễ của nó thấp hơn 15 
 lần và có thể hoạt động với công suất truyền từ 0,01 mW đến 10 mW.
@@ -867,19 +889,18 @@ EPCGLOBAL (ELECTRONIC PRODUCT CODE)
  Mã sản phẩm điện tử (EPC) là một số nhận dạng duy nhất được lưu trữ 
 trên thẻ RFID và được sử dụng cơ bản trong quản lý chuỗi cung ứng để 
 xác định các sản phẩm.
+EPC được phân thành bốn loại: 96-bit, 64-bit (I), 64-bit (II) và 64-bit (III). Tất cả các loại EPC 64-bit hỗ trợ khoảng 16 000 công ty có danh tính riêng và bao gồm từ 1 đến 9 triệu loại sản phẩm và 33 triệu số sê-ri cho mỗi loại. Loại 96-bit hỗ trợ khoảng 268 triệu công ty có danh tính riêng, 16 triệu loại sản phẩm và 68 tỷ số sê-ri cho mỗi loại
 Hệ thống gồm: Bộ phát đáp (Tag) và Bộ đọc (Reader). Thông tin tag được tra cứu qua dịch vụ tên đối tượng ONS.
  EPCglobal là tổ chức chịu trách nhiệm phát triển EPC, quản lý công nghệ 
 và tiêu chuẩn EPC và RFID
+-	Qua một số bài nghiên cứu cho thấy giao thức EPC Gen-2 tốt hơn CDMA
 
 LTE-A (LONG TERM EVOLUTION—ADVANCED )
- Công nghệ LTE nâng cao (LTE-A) là phiên bản nâng cấp của
- LTE, đáp ứng yêu cầu 4G thực sự theo chuẩn ITU. Được
- thiết kế để cải thiện tốc độ, độ tin cậy và hiệu suất mạng.
-   Hiệu suất cao: truyền dữ liệu nhanh và ổn định
-   Khả năng mở rộng: hỗ trợ nhiều thiết bị kết nối đồng thời
-   Tiết kiệm năng lượng: phù hợp với thiết bị IoT có pin thấp
-   Tương thích ngược: hoạt động được với mạng LTE hiện có
- Kiến trúc gồm: Mạng lõi (CN) và Mạng truy cập vô tuyến (RAN).
+LTE-A bao gồm một tập hợp các giao thức truyền thông di động phù hợp tốt cho cơ sở hạ tầng Truyền thông kiểu máy (MTC) và IoT, đặc biệt là cho các thành phố thông minh nơi mong đợi độ bền lâu dài của cơ sở hạ tầng. Hơn nữa, nó vượt trội hơn các giải pháp di động khác về chi phí dịch vụ và khả năng mở rộng.
+Kiến trúc của mạng LTE-A dựa trên 2 phần chủ yếu
+ •	Đầu tiên là Mạng lõi (Core Network - CN): kiểm soát các thiết bị di động và xử lý các luồng gói IP.
+ •	Phần khác là mạng truy cập vô tuyến (RAN): xử lý truyền thông không dây và truy cập vô tuyến, đồng thời thiết lập các giao thức mặt phẳng người dùng và mặt phẳng điều khiển.
+RAN và CN được kết nối thông qua giao diện S1. Các thiết bị di động hoặc MTC có thể kết nối với các trạm gốc trực tiếp hoặc thông qua cổng MTC (MTCG). Tuy nhiên, giao thức này có những thách thức như tắc nghẽn mạng cao khi một số lượng lớn thiết bị đang truy cập mạng. Một thách thức khác, QoS có thể bị xâm phạm khi thiết bị MTC cố gắng truy cập mạng thông qua lựa chọn eNB hoặc MTCG.
 
 Z-WAVE
  Z-Wave cho phép kết nối điểm-điểm khoảng 30 mét, thường 
@@ -890,7 +911,7 @@ Networks-HAN), nhà thông minh.dải tần 900MHz
 1 trung tâm. Qua đó sẽ dễ dàng điều khiển bằng điện thoại/máy tính.
  Ưu điểm: độ tin cậy cao, khả năng mở rộng dễ dàng.
  Nhược điểm: cấu trúc khép kín, không tương thích được với 
-nhiều thiết bị, bị phụ thuộc vào đường truyền wifi.
+nhiều thiết bị, bị phụ thuộc vào đường truyền wifi, giá thành cao.
 
 PHY Protocol,Spreading Technique,Radio Band (MHz),MAC Access,Data Rate (bps),Scalability
 IEEE 802.15.4,DSSS,868/915/2400,"TDMA, CSMA/CA","20/40/250 K","65K nodes"
