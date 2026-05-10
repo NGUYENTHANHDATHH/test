@@ -3,18 +3,18 @@ Theo EU: IoT là cơ sở hạ tầng mạng toàn cầu,
 liên kết các đối tượng vật lý và ảo thông qua việc
 khai thác khả năng thu thập dữ liệu và giao tiếp
 
-Theo ITU: IoT là một cơ sở hạ tầng toàn cầu cho 
+Theo ITU (International Telecommunication Union):  IoT là một cơ sở hạ tầng toàn cầu cho 
 xã hội thông tin, cho phép các dịch vụ tiên tiến 
 bằng cách liên kết các vật thể (vật lý hoặc ảo) dựa 
 trên các công nghệ thông tin và truyền thông hiện 
 có và tương lai. [ITU-T Y.2060]
 
-Theo IETF: IoT là một mạng lưới toàn cầu 
+Theo IETF ((Internet Engineering Task Force): IoT là một mạng lưới toàn cầu 
 gồm các đối tượng được kết nối với nhau, 
 có khả năng định danh duy nhất, dựa trên 
 các giao thức truyền thông tiêu chuẩn.
 
-Theo IEEE: IoT là một mạng lưới các đối 
+Theo IEEE (Institute of Electrical and Electronics Engineers): IoT là một mạng lưới các đối 
 tượng, mỗi đối tượng được nhúng cảm biến 
 và kết nối với Internet
 
@@ -28,7 +28,7 @@ Theo Gartner: IoT là mạng lưới các đối tượng vật lý có chứa
 công nghệ nhúng để tương tác với các trạng thái bên trong 
 của chúng hoặc môi trường bên ngoài.
 
-Theo Kevin Ashton: IoT là khái niệm sử dụng cảm biến để 
+Theo Kevin Ashton(Người đầu tiên giới thiệu thuật ngữ IoT): IoT là khái niệm sử dụng cảm biến để 
 kết nối thế giới vật lý với thế giới số, cho phép hệ thống máy 
 tính hiểu và phản ứng với môi trường.
 
@@ -54,8 +54,11 @@ tượng vật lý trên thế giới, được kết nối với nhau thông qu
 Internet và có khả năng chia sẻ dữ liệu.
 
 MỘT SỐ MỐC THỜI GIAN
+- Những năm 1970: Ý tưởng về các thiết bị được kết nối khi đó được gọi là “pervasive computing – điện toán lan tỏa”.
+- Đầu những năm 1980: Thiết bị IoT đầu tiên trên thế giới được phát minh tại Đại học Carnegie Mellon. Một nhóm sinh viên đã nghĩ ra một cách để đảm bảo máy bán hàng tự động Coca-Cola trong khuôn viên trường sẽ báo cáo nội dung của nó thông qua mạng để giúp họ không phải ghé thăm máy nếu máy hết đồ uống. Họ lắp đặt các công tắc vi mô vào máy để báo cáo có bao nhiêu lon Coke và chúng có lạnh hay không.
 ➢ 1990: Máy nướng bánh mì được cho là đồ vật đầu tiên được kết nối
 internet.
+- 1991: Một nhóm sinh viên tại Đại học Cambridge đã sử dụng nguyên mẫu máy ảnh web đầu tiên để theo dõi lượng cà phê có trong bình cà phê trong phòng thí nghiệm máy tính của họ. Họ đã làm điều này bằng cách lập trình cho web camera để chụp ảnh bình cà phê ba lần một phút. Máy ảnh đã gửi hình ảnh đến máy tính cục bộ để người dùng có thể kiểm tra xem có cà phê hay không.
 ➢ 1999: Thuật ngữ “internet of things” được đề xuất bởi Kevin Ashton khi
 thuyết trình về một hệ thống cảm biến và nhãn nhận dạng qua tần số radio
 (RFID) gắn trên hàng hóa để quản lý chuỗi cung ứng.
@@ -63,8 +66,18 @@ thuyết trình về một hệ thống cảm biến và nhãn nhận dạng qua
 ➢ 2008: Hội nghị quốc tế đầu tiên về IoT được tổ chức tại Zurich, Thụy Sĩ.
 ➢ 2009: Theo Cisco, đây là thời điểm mà mạng internet vạn vật thực sự được
 khai sinh, khi số lượng thiết bị được kết nối internet vượt dân số thế giới.
+- 2010: Thuật ngữ Internet of Things bắt đầu được chú ý. Người ta biết rằng dịch vụ StreetView của Google không chỉ tạo ra những bức ảnh 360 độ mà còn lưu trữ dữ liệu về mạng Wifi của mọi người. Nó dẫn đến một cuộc tranh luận về việc liệu Google có kế hoạch không chỉ lập chỉ mục internet mà còn cả thế giới vật chất hay không. Cùng năm đó, chính phủ Trung Quốc tuyên bố rằng Internet of Things sẽ là ưu tiên chiến lược trong Kế hoạch 5 năm của nước này.
+- 2011: Gartner, công ty nghiên cứu thị trường đã phát minh ra “hype-cycle for emerging technologies – chu kỳ cường điệu cho các công nghệ mới nổi”, đã đưa Internet of Things vào danh sách của mình như một hiện tượng mới.
 ➢ 2012: Hội nghị Internet Châu Âu diễn ra với chủ đề “Internet of Things”.
+- 2014: Google thông báo sẽ mua Nest với giá 3,2 tỷ USD, trong một thỏa thuận giúp thị trường đại chúng nhận thức được Internet of Things. Triển lãm Điện tử Tiêu dùng (CES) tại Las Vegas được tổ chức cùng năm với Internet of Things làm chủ đề sự kiện.
+- Giữa/cuối những năm 2010: Trong suốt giai đoạn này, các thiết bị có kết nối Wifi và 3G/4G tích hợp trở nên nhỏ hơn, mạnh hơn và sản xuất rẻ hơn. Điều này làm tăng sự phát triển của IoT. 
 ➢ 2021: Ước tính có hơn 46 tỷ thiết bị được kết nối trên Internet.
+
+CÁCH THỨC HOẠT ĐỘNG
+1. Thu thập dữ liệu:
+2. Kết nối:
+3. Xử lý dữ liệu:
+4. Hành động/ Ra quyết định:
 
 MỘT SỐ ĐẶC ĐIỂM CỦA IOT
 ➢Khả năng định danh duy nhất
@@ -99,17 +112,235 @@ dịch vụ)
  Nguồn năng lượng cho các thiết bị, cảm biến duy trì hoạt 
 động lâu dài
 
-MỘT SỐ GIẢI PHÁP AN TOÀN BẢO MẬT
- Bảo mật thiết bị IoT
- Bảo mật vật lý, lưu trữ dữ liệu an toàn, bảo mật chip, khởi động an 
-toàn, xác thực thiết bị và nhận dạng thiết bị.
- Bảo mật truyền thông 
- Kiểm soát truy cập, tường lửa, IPS, IDS, mã hóa dữ liệu với IPSec, 
-SSL, chip mã hóa bảo mật (security ICs).
- Hạn chế tối đa quyền truy cập của các thiết bị kết nối
- Triển khai chính sách an ninh mạng
- Quản lý lưu trữ dữ liệu quan trọng, xác minh tính toàn vẹn 
-của ứng dụng
+MỘT SỐ LĨNH VỰC ỨNG DỤNG CỦA IOT (INTERNET OF THINGS)
+
+1. Smart Home (Nhà thông minh)
+- Điều khiển thiết bị từ xa: điều hòa, đèn, bình nóng lạnh, cửa nhà,...
+- Tự động hóa sinh hoạt, tiết kiệm thời gian và năng lượng.
+- Ứng dụng IoT phổ biến và phát triển mạnh.
+- Chi phí đầu tư ban đầu lớn nhưng giúp tối ưu cuộc sống.
+
+2. Thiết bị đeo thông minh
+- Bao gồm: tai nghe, kính thông minh, vòng tay, balo thông minh,...
+- Tích hợp cảm biến và phần mềm thu thập dữ liệu người dùng.
+- Theo dõi sức khỏe, hoạt động thể chất và giải trí.
+- Yêu cầu: công suất thấp, kích thước nhỏ, tính thẩm mỹ cao.
+- Các công ty lớn đầu tư mạnh: Google, Samsung,...
+
+3. Ô tô kết nối và bãi đỗ xe thông minh
+- Cảm biến phát hiện chỗ đỗ còn trống.
+- Dữ liệu truyền qua mạng LPWA đến ứng dụng/web.
+- Người dùng được hướng dẫn đến bãi đỗ gần nhất.
+- Hệ thống có thể tự động tính phí đỗ xe.
+- Giúp giám sát và quản lí bãi đỗ theo thời gian thực.
+
+4. IoT trong công nghiệp và sản xuất
+a) Kệ bán lẻ thông minh
+- Giám sát tồn kho và hành vi khách hàng từ xa.
+- Hỗ trợ quảng cáo kích thích mua sắm.
+- Giảm chi phí nghiên cứu thị trường và quản lí kho.
+
+b) Máy bán hàng tự động thông minh
+- Hoạt động 24/7.
+- Thu thập và phân tích dữ liệu thời gian thực.
+- Tự động quản lí và vận hành thiết bị.
+
+c) Máy đóng gói thông minh
+- Kết nối dữ liệu và điện toán đám mây.
+- Hỗ trợ bảo trì tiên đoán, giảm lỗi sản xuất.
+- Tăng khả năng giám sát và điều khiển từ xa.
+
+d) Giám sát máy bơm thông minh
+- Theo dõi tài sản từ xa bằng cảm biến và đám mây.
+- Ứng dụng trong nhà máy điện, xử lí nước, hóa chất,...
+- Tự động cảnh báo sự cố và hỗ trợ bảo trì.
+
+5. Smart City (Thành phố thông minh)
+- Ứng dụng trong giao thông, môi trường, năng lượng, an ninh,...
+- Giải quyết ô nhiễm, ùn tắc giao thông và thiếu năng lượng.
+- Ví dụ: thùng rác thông minh gửi cảnh báo khi đầy.
+- Hỗ trợ tìm cây xăng, siêu thị, bãi xe qua ứng dụng.
+- Cảm biến điện giúp phát hiện nhanh sự cố hệ thống.
+
+6. Ứng dụng IoT trong giáo dục
+a) Tương tác học tập
+- Kết nối bài giảng với video, hình ảnh, tài liệu trực tuyến.
+- Tăng khả năng tự học và sáng tạo của học sinh.
+- Học sinh có thể học theo tốc độ riêng.
+- Giáo viên tập trung nhiều hơn vào nội dung giảng dạy.
+
+b) An ninh giáo dục
+- Theo dõi học sinh bằng công nghệ định vị 3D.
+- Giám sát vị trí và hỗ trợ cảnh báo khi cần thiết.
+
+c) Các ứng dụng mới
+- Sách giáo khoa 3D, trò chơi giáo dục, bài giảng điện tử.
+- Thiết bị di động và máy tính bảng được sử dụng rộng rãi.
+- Sách điện tử giúp mang theo “thư viện”.
+- Google Apps hỗ trợ chia sẻ tài liệu trực tuyến.
+
+7. Ứng dụng trong xử lí rác thải
+- Cảm biến theo dõi mức đầy của thùng rác.
+- Tối ưu hóa tuyến đường thu gom rác.
+- Giảm chi phí, thời gian và nhiên liệu.
+- Ví dụ: SmartBin hỗ trợ công ty Corio tại Úc.
+
+8. Ứng dụng trong chăn nuôi và trồng trọt
+a) Chăn nuôi
+- Gắn cảm biến vào vật nuôi để theo dõi sức khỏe, nhiệt độ, thức ăn,...
+- Theo dõi vị trí, chống thất lạc và trộm cắp.
+- Kiểm soát chất lượng và sản lượng sữa.
+- Giảm sức lao động và tăng hiệu quả chăn nuôi.
+
+b) Trồng trọt
+- Theo dõi độ ẩm, dinh dưỡng đất, lượng phân bón,...
+- Phát hiện sớm sâu bệnh và kiểm soát lây lan.
+- Kiểm soát lượng thuốc bảo vệ thực vật.
+- Máy gặt thông minh tích hợp GPS, GPRS/3G.
+- Tăng năng suất và giảm chi phí sản xuất.
+
+9. Ứng dụng trong Logistic
+- Quản lí vận tải, hàng hóa và nhân sự hiệu quả hơn.
+- Theo dõi chất lượng lô hàng và quy trình vận hành.
+- Cảm biến nhiên liệu giúp kiểm soát tiêu hao và chống thất thoát.
+- Kiểm soát trọng tải xe, đảm bảo an toàn giao thông.
+- Tối ưu hóa chi phí vận hành doanh nghiệp.
+
+10. Thiết bị vận tải tiên tiến áp dụng IoT
+- Xe vận chuyển hàng tự động trong kho.
+- Xe nâng thông minh có cảm biến chống va chạm.
+- Xe tải thông minh kiểm soát nhiệt độ và liên kết xe.
+- Máy bay không người lái và định vị container chính xác.
+
+11. IoT trong chăm sóc sức khỏe
+- Thiết bị y tế thông minh kết nối internet.
+- Theo dõi và phân tích sức khỏe người dùng.
+- Hỗ trợ phòng chống bệnh tật.
+- Mang lại tiềm năng lớn cho ngành y tế và sản xuất thiết bị.
+
+MỘT SỐ VẤN ĐỀ BẢO MẬT VÀ THÁCH THỨC CỦA IOT
+
+1. Các vấn đề bảo mật IoT
+- Thiết bị IoT tồn tại nhiều lỗ hổng bảo mật hơn máy tính truyền thống.
+- Nguy cơ:
+  + Chiếm quyền camera, nhà thông minh.
+  + Mất kiểm soát hệ thống giao thông, dây chuyền sản xuất.
+  + Đánh cắp thông tin ngân hàng, đột nhập nhà ở.
+- Ví dụ:
+  + Botnet Mirai (2016) kiểm soát hơn 100.000 thiết bị IoT để tấn công DDoS.
+  + Khai thác lỗ hổng mật khẩu và tên người dùng.
+
+2. Tại sao cần bảo mật IoT?
+- Hệ thống IoT có lượng dữ liệu rất lớn và quan trọng.
+- Nếu không bảo mật:
+  + Dữ liệu dễ bị đánh cắp, kiểm soát.
+  + Ảnh hưởng nghiêm trọng đến hoạt động sản xuất, kinh doanh.
+- Bảo mật giúp:
+  + Giảm lỗ hổng an ninh.
+  + Đảm bảo an toàn dữ liệu.
+  + Tăng hiệu suất hoạt động hệ thống IoT.
+- Khó khăn:
+  + Thiết bị IoT hạn chế hiệu năng, pin và bộ nhớ.
+  + Các cơ chế bảo mật truyền thống (IPSec, PKI, Diffie-Hellman) yêu cầu tính toán lớn.
+  + Thiếu đồng bộ giao thức và hạ tầng giữa các nhà sản xuất.
+
+3. Bảo mật thiết bị IoT
+- Hacker có thể tạo botnet từ thiết bị IoT để tấn công DDoS.
+- Hacker chỉ cần truy cập bộ điều khiển để thay đổi cấu hình và trạng thái thiết bị.
+- Phương pháp bảo mật:
+  + Bảo mật vật lý.
+  + Lưu trữ dữ liệu an toàn.
+  + Bảo mật chip.
+  + Khởi động an toàn.
+  + Xác thực và nhận dạng thiết bị.
+
+4. Bảo mật truyền thông
+- Dữ liệu IoT truyền qua:
+  + WiFi, Ethernet, IPv6, MQTT, CoAP,...
+- Nguy cơ:
+  + Tấn công trung gian (Man-in-the-Middle).
+  + Đánh cắp dữ liệu.
+  + Tấn công hệ thống giao thông, camera giám sát, nhà thông minh.
+- Nếu hệ thống công nghiệp hoặc giao thông bị tấn công có thể ảnh hưởng diện rộng.
+- Phương pháp bảo mật:
+  + Kiểm soát truy cập.
+  + Tường lửa.
+  + IDS, IPS.
+  + Mã hóa IPSec, SSL.
+  + Chip mã hóa bảo mật.
+
+5. Một số giải pháp bảo mật khác
+- Hạn chế quyền truy cập của thiết bị kết nối.
+- Sử dụng IP bảo mật, tránh truy cập trực tiếp từ Internet công cộng.
+- Theo dõi và cập nhật chính sách an ninh mạng thường xuyên.
+- Đảm bảo các hệ thống kết nối tuân thủ tiêu chuẩn an ninh.
+- Lưu trữ dữ liệu quan trọng an toàn trên nền tảng đám mây.
+- Xác minh tính toàn vẹn của ứng dụng.
+
+6. Một số thách thức của IoT
+a) Lỗ hổng bảo mật
+- Nguy cơ phá hoại, từ chối dịch vụ, xâm phạm quyền riêng tư.
+- Ví dụ:
+  + Thay đổi chất khử trùng nhà máy nước.
+  + Dừng hệ thống làm mát nhà máy điện hạt nhân.
+
+b) Vấn đề pháp lý
+- Liên quan đến:
+  + Thiết bị y tế.
+  + Ngân hàng, bảo hiểm.
+  + Dược phẩm, thực phẩm.
+- Làm tăng thời gian và chi phí đưa sản phẩm ra thị trường.
+
+c) Cơ sở hạ tầng mạng
+- Độ trễ mạng đám mây khoảng 200ms trở lên.
+- Không phù hợp cho hệ thống cần phản hồi tức thời như an ninh.
+
+d) Thiếu kiến trúc và tiêu chuẩn chung
+- Hệ thống IoT bị phân mảnh.
+- Nhiều giao thức và nền tảng khác nhau.
+- Nguyên nhân:
+  + Lo ngại bảo mật.
+  + Cạnh tranh thị trường.
+  + Thiếu định hướng chung.
+
+e) Khả năng mở rộng
+- Khi số lượng thiết bị tăng:
+  + Tăng băng thông dữ liệu.
+  + Tăng thời gian xử lý và xác minh giao dịch.
+
+f) Hạn chế của cảm biến
+- Cảm biến hiện tại khó hoạt động hiệu quả trong môi trường phức tạp, đông đúc và nhiễu.
+- Giải pháp tương lai:
+  + Ứng dụng logic mờ và AI.
+
+g) Nguồn điện
+- Thiết bị IoT phụ thuộc pin hoặc điện lưới.
+- Thời lượng pin còn hạn chế.
+- Nhu cầu:
+  + Truyền điện không dây.
+  + Pin hoạt động lâu dài.
+
+h) Vấn đề không gian và thời gian
+- IoT yêu cầu xác định vị trí địa lý chính xác.
+- Khối lượng dữ liệu lớn gây khó khăn xử lý thời gian thực.
+- Dễ phát sinh dữ liệu dư thừa.
+
+7. Thách thức triển khai IoT tại Việt Nam
+a) Chi phí đầu tư lớn
+- Bao gồm:
+  + Chi phí hạ tầng.
+  + Chi phí kết nối dữ liệu.
+  + Chi phí duy trì hệ thống.
+- Các sự cố mạng và lỗi phần mềm làm tăng chi phí vận hành.
+
+b) Thiếu tiêu chuẩn chung
+- Nhiều giao thức kết nối khác nhau.
+- Hạ tầng IoT tại Việt Nam chưa đồng bộ.
+- Dữ liệu có thể bị trễ khi truyền tải.
+
+c) Khó thay thế thiết bị lỗi thời
+- Nhiều thiết bị cũ khó tích hợp với hệ thống IoT hiện đại.
+- Cần xây dựng nền tảng IoT linh hoạt và tương thích đa nền tảng.
 
 
 CHƯƠNG II: CẢM BIẾN
