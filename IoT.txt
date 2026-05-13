@@ -406,6 +406,16 @@ Chuẩn đơn giản: Chuẩn trực tiếp (dùng mẫu chuẩn) hoặc chuẩn
 Chuẩn nhiều lần: Áp dụng khi cảm biến có hiện tượng trễ
 
 Độ phân giải: Sự thay đổi tối thiểu trong hiện tượng mà cảm biến có thể phát hiện 
+Độ tuyến tính
+ Một cảm biến được gọi là tuyến tính trong một dải đo xác định nếu trong dải chế độ đó,
+ độ nhạy không phụ thuộc vào đại lượng đo.
+ Trong chế độ tĩnh, độ tuyến tính chính là sự không phụ thuộc của độ nhạy của cảm biến
+ vào giá trị của đại lượng đo, thể hiện bởi các đoạn thẳng trên đặc trưng tĩnh của cảm
+ biến và hoạt động của cảm biến là tuyến tính chừng nào đại lượng đo còn nằm trong
+ vùng này.
+ Trong chế độ động, độ tuyến tính bao gồm sự không phụ thuộc của độ nhạy ở chế độ
+ tĩnh S(0) vào đại lượng đo, đồng thời các thông số quyết định sự hồi đáp như tần số
+ riêng f0 của dao động không tắt, hệ số tắt dần ? cũng không phụ thuộc vào đại lượng đo
 5. Độ nhạy của cảm biến: Tỷ số giữa biến thiên đầu ra và biến thiên đầu vào (S=Δs/Δm)
 6. Độ nhanh và thời gian hồi đáp
 7. Giới hạn sử dụng của cảm biến: Gồm vùng làm việc danh định, vùng không gây hư hỏng (biến đổi thuận nghịch) và vùng không phá hủy (biến đổi không thuận nghịch, cần chuẩn lại)
@@ -885,7 +895,6 @@ BLE (BLUETOOTH LOW ENERGY)
 lượng điện năng tối thiểu để hoạt động trong thời gian dài 
 hơn (thậm chí trong nhiều năm) so với các phiên bản trước 
 của nó.  
-BLE dùng FHSS kết hợp TDMA nhưng phát biểu đơn thuần TDMA thường được coi là chưa chính xác
  Ưu điểm: phạm vi phủ sóng (khoảng 100 mét) gấp mười lần 
 so với Bluetooth cổ điển trong khi độ trễ của nó thấp hơn 15 
 lần và có thể hoạt động với công suất truyền từ 0,01 mW đến 10 mW.
@@ -904,8 +913,7 @@ và tiêu chuẩn EPC và RFID
 -	Qua một số bài nghiên cứu cho thấy giao thức EPC Gen-2 tốt hơn CDMA
 
 LTE-A (LONG TERM EVOLUTION—ADVANCED )
-LTE-A bao gồm một tập hợp các giao thức truyền thông di động phù hợp tốt cho cơ sở hạ tầng Truyền thông kiểu máy (MTC) và IoT, đặc biệt là cho các thành phố thông minh nơi mong đợi độ bền lâu dài của cơ sở hạ tầng. Hơn nữa, nó vượt trội hơn các giải pháp di động khác về chi phí dịch vụ và khả năng mở rộng.
-LTE-A upload tối đa khoảng 500Mbps; LTE sử dụng OFDMA/SC-FDMA
+LTE-A bao gồm một tập hợp các giao thức truyền thông di động phù hợp tốt cho cơ sở hạ tầng Truyền thông kiểu máy (MTC) và IoT, đặc biệt là cho các thành phố thông minh nơi mong đợi độ bền lâu dài của cơ sở hạ tầng. Hơn nữa, nó vượt trội hơn các giải pháp di động khác về chi phí dịch vụ và khả năng mở rộng.; LTE sử dụng OFDMA/SC-FDMA
 Kiến trúc của mạng LTE-A dựa trên 2 phần chủ yếu
  •	Đầu tiên là Mạng lõi (Core Network - CN): kiểm soát các thiết bị di động và xử lý các luồng gói IP.
  •	Phần khác là mạng truy cập vô tuyến (RAN): xử lý truyền thông không dây và truy cập vô tuyến, đồng thời thiết lập các giao thức mặt phẳng người dùng và mặt phẳng điều khiển.
